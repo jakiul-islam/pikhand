@@ -19,7 +19,7 @@ class CheckUserLogin
           $response = $next($request);
           return $response;
         }
-        return redirect()->route('admin.login');
+        return redirect()->route('/');
     }
     
     
