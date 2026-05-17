@@ -1,0 +1,20 @@
+.header-category{
+  margin:5px; 
+  cursor: pointer;
+  display:  flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+.header-category a {
+  white-space: nowrap;
+  font-size: 25px;
+}
+.header-subcategory-container{
+  display : none; 
+  height:auto;
+  position:absolute !important;
+  background-color: rgb(146,146,144);
+  border-radius: 20px;
+  width: auto;
+  padding: 4px;
+}

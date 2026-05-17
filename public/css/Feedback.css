@@ -1,0 +1,126 @@
+    body {
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container {
+      background: #fff;
+      padding: 10px 40px;
+      border-radius: 15px;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .feedbackHeader {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .Feedbackparagriph {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #555;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    #Feedbackbutton {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .rating {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 7px;
+    }
+    .rating i{
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .bi-star-fill{
+      color:yellow;
+    }
+    .nav-link{
+      text-decoration: none;
+      color:black;
+    }
+    .nav-link i{
+      font-size: 30px;
+    }
+    .showRatingNumber{
+      padding-bottom: 10px;
+    }
+    .loginbutton{
+      margin: auto;
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .buttonText{
+      background: none;
+      border: none;
+    }
+    .googleloginbutton button{
+      width:300px ;
+      margin: 5px;
+     
+    }
+    .googleloginbutton{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    #ShowFeedbackForm{
+      display: none;
+    }
+    #ShowAllFeedback{
+      display: none;
+    }
+    .showFeedback{
+      max-height: 600px;
+      overflow: auto;
+    }
+    .loginshowFeedback{
+      padding-top: 30px;
+    }
+    .logo{
+      margin: auto;
+      margin-top: -40px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: -20px;
+    }
+    .logomodel{
+      margin: auto;
+      margin-top:-10px ;
+      display: flex;
+      justify-content: center;
+      
+    }

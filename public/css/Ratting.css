@@ -1,0 +1,175 @@
+      .backbutton{
+        text-decoration: none;
+        color:black;
+      }
+      
+      .backbutton  i {
+        font-size:30px;
+      }
+      @media (max-width: 576px) {
+        .prodect_ditels{
+         width: 350px;
+         position: relative;
+         margin-left: 23px;
+        }
+      }
+      @media (min-width: 576px) {
+        .prodect_ditels{
+         width: 70%;
+         position: relative;
+         margin-left: 15%;
+        }
+      }
+      .prodect_ditels{
+        margin-top: 10px;
+      }
+      .savings{
+        height: 60px;
+        width: 100%;
+        border: 1px solid black;
+        display: flex;
+        padding-left: 2px;
+        align-items: center;
+        margin-bottom: 2px;
+        position: relative;
+      }
+      .savings:hover{
+        border: 2px solid green;
+      }
+      .price{
+        background-color: green;
+        margin-left: 30%;
+        width: 130px;
+        color:white;
+      }
+      .price-mani{
+        position: absolute;
+        right: 0px;
+        top: 30%;
+      }
+      .price-mani1{
+        display: inline;
+      }
+      .price-mani2{
+        display: inline;
+        position: absolute;
+        right: 0px;
+      }
+      .button{
+        background-color: green;
+        color: white;
+        text-decoration: none;
+        clip-path: inset(0 0 0 0 round 8px);
+        width: 100%;
+        cursor: pointer;
+        display: inline-block;
+       text-align: center;
+       border-radius: 5%;
+       line-height: 50px;
+      }
+      .button:hover{
+        background-color: black;
+      }
+      .button1{
+        width: 100%;
+        border:1px solid #C3C3C3;
+        text-decoration: none;
+        color:black;
+        display: inline-block;
+        text-align: center;
+        line-height: 45px;
+        clip-path: inset(0 0 0 0 round 8px);
+        
+      }
+      .alartdiv{
+        position: fixed;
+        bottom: 70px;
+        z-index: 1300;
+        background-color: rgba(0, 0, 0, 0.6);
+        margin-left: 30%;
+        border-radius: 30px;
+        display: none;
+        height: 37px;
+        line-height: 0;
+      }
+      
+      .ratting-div{
+        cursor: pointer;
+      }
+      .ratting-div i{
+        font-size: 35px;
+      }
+      
+      .bi-star-fill{
+        color: #FEFF33;
+      }
+      .img-input{
+        height: 60px;
+        width: 60px;
+        border:1px solid black;
+        overflow: hidden;
+        border-radius: 7px;
+        position: relative;
+        margin-top: 9px;
+      }
+      .img-input input[type="file"]{
+        background: none;
+        background-color: none;
+        color:green;
+        border:none;
+        margin-top: 15px;
+        width: 60px;
+        cursor: pointer;
+        opacity: 0;
+        transform: scale(3);
+        position: absolute;
+      }
+      .img-input i{
+        color: #C3C3C3;
+        padding-left:10px ;
+      }
+      .img-div-show{
+        display: flex;
+      }
+      #previewContainer img{
+        height: 60px;
+        width: 60px;
+        border-radius: 3px;
+        margin-left: 3px;
+      }
+      
+      .rating-show-div{
+        box-shadow:20px ;
+        margin-top: 25px;
+        width: 100%;
+        padding: 2px;
+        box-sizing: border-box;
+        display: flex;
+      }
+      .rating-show-div img{
+        height: 60px;
+        width: 60px;
+      }
+      .rating-show-div div{
+        margin: -2px;
+        margin-left:4px ;
+      }
+      .rating-show-div div h6{
+        margin-top: 5px;
+        line-height: 0.5;
+      }
+      .rating-show-div p{
+        margin-top:5px;
+      }
+      .reviewseditbutton{
+        margin-top: 10px;
+      }
+      .ratingCount{
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+      }
+      .buttonText{
+        background: none;
+        border:none;
+      }

@@ -1,0 +1,39 @@
+.admin-profile-container img{
+  height: 70px;
+  width: 70px;
+  background-color: green;
+  border-radius: 50%;
+}
+.admin-profile-container{
+  display: flex;
+  box-sizing: border-box;
+}
+.admin-profile-container div{
+  margin: 5px;
+  line-height: 0.1;
+}
+.active-dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: green;
+  margin-top: 7px;
+}
+.button-div{
+  display: flex;
+}
+
+.button-div button{
+  display: inline;
+  margin-top:-7px;
+}
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; 
+      }
+      
+       .container button{
+         margin-top:-7px;
+       }

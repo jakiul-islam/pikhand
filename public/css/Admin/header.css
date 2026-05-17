@@ -1,0 +1,70 @@
+    *{
+        box-sizing: border-box;
+    }
+    .name{
+        display: inline;
+    }
+  
+    .nav-inline-block{
+        display: inline-block;
+    }
+    .link-nav{
+        text-decoration:none;
+        color:#ffffff;
+        display:inline-block;
+    }
+    .link-active{
+        text-decoration: none;
+        color:black;
+        display:inline-block;
+    }
+    .search{
+        height:50px;
+        width: 360px;
+        background-color: #ffffff;
+        border-radius: 50px;
+        margin: 10px;
+        
+    }
+    .input-search{
+        height:50px ;
+        width: 80%;
+        border: none;
+    }
+    .button-s{
+        border-left: 1px solid black;
+        background: none;
+        border: none;
+        width: 15%;
+        
+    }
+    @media (min-width:400px){
+       .logout{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+    
+    .buttonText{
+      background: none;
+      border:none;
+      box-shadow: none;
+      outline:none;
+    }
+    .navshowdiv{
+      color:#ffffff;
+      font-size: 20px;
+      margin-left:20px;
+    }
+    .offcanvas{
+      width: 400px;
+    }
+    .Offcanvas_sm{
+      height: 100% !important;
+      width: 400px;
+      position: absolute;
+      left: 0px;
+    }
+    
+    

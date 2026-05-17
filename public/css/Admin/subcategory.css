@@ -1,0 +1,20 @@
+  .sbuttontext{
+    background: none;
+    border:none;
+    color: black;
+  }
+  
+.subcategory-tree{
+  height: 100%;
+  width: 50px;
+  background: black;
+}
+.subcategory-checkbox{
+  margin-top:10px ;
+}
+.subcategory-switch{
+  margin-top: 4px !important;
+}
+.subcategory-delete{
+  margin-right: 10px !important;
+}

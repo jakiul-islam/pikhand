@@ -1,0 +1,279 @@
+    html,body{
+        overflow-x: hidden;
+    }
+    .navbar{
+        background-color: #35239B;
+        color:#FFFFFF;
+    }
+    
+    .cra{
+        color:#FFFFFF;
+    }
+    
+    .submit{
+        background-color: #FFFFFF;
+    }
+    
+    .offcanvas{
+        width: 200px;
+    }
+    
+    .input{
+        position: relative;
+    }
+     .soper{
+        position: relative;
+        top: -20px;
+        text-decoration: none;
+     }
+@media (max-width:400px) {
+   .input{
+     width: 100%;
+   }
+   .logosvg{
+     width: 80px;
+   }
+   .br-di-nane{
+    display: none;
+   }
+   .name-div{
+        margin-top:0px;
+        
+        margin-left: -15%;
+    }
+}
+
+@media (min-width: 400px) {
+    .input{
+        position: absolute;
+        left: 0px;
+       
+    }
+    .web-name{
+       line-height: 0.5;
+    }
+    .crad{
+        right: 6px;
+        position: absolute;
+    }
+    
+    .navbar{
+        height: 90px;
+    }
+    .offcanvas-body{
+        background-color: #F2F2F2;
+        position: absolute;
+        top: 90px;
+        width: 100%;
+    }
+    
+    .text{
+       right: 0px;
+       position: absolute;
+    }
+    
+    .name-div{
+        margin-top:0px;
+        position: absolute;
+        left: 40%;
+    }
+    .logosvg{
+      width: 130px;
+    }
+  }
+
+.web-name{
+    line-height: 0.4;
+    
+}
+.contity{
+   background-color: #EBEBEB;
+    height: 22px;
+    width: 67px;
+    position: absolute;
+    right: 2px;
+    display: inline;
+    top: 70px;
+}
+  .text-button {
+    background: none;
+    border: none;
+   
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+    font: inherit;
+  }
+
+.footer-cat{
+    height: 130px;
+    width: 395px;
+    background-color: #EBEBEB;
+    position: absolute;
+    bottom: 0px;
+   right: 0px;
+    position: fixed;
+    bottom:0px;
+}
+.offcanvas-heaer{
+    background-color: #EBEBEB;
+    position: static;
+    top: 0px;
+}
+.search{
+    border: none;
+    background-color: none;
+}
+.input{
+    margin-left: 8px;
+    height: 36px;
+    background-color: #FFFFFF;
+    clip-path: inset(0 0 0 0 round 20px);
+}
+
+    .subcategory{
+      padding: 1px;
+      border: solid black 1px;
+      background-color:#C9C9C9;
+      border-radius: 10px;
+    }
+    
+    
+    
+    @media (max-width: 576px) {
+      .card{
+        width: 170px;
+        margin: 3px;
+      }
+      .p-img{
+        height: 150px;
+      }
+      .show-search-result{
+        top: 100px;
+        margin-left: 6px;
+      }
+    }
+  .prodect{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (min-width: 576px) {
+    .card{
+     margin-top: 5px;
+     margin-bottom: 5px;
+    }
+    
+    .p-img{
+      height: 280px;
+    }
+    .show-search-result{
+      top: 63px;
+      margin-left: -5px;
+    }
+  }
+
+  .prodect_dirals{
+    text-decoration: none;
+    color: black;
+  }
+  .crad_text{
+    
+    margin: -10px 10px 0px 13px;
+  }
+  .p-name{
+    height: 40px;
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 3px;
+    margin-left: 5%;
+  }
+  .discount{
+    position: absolute;
+    right: 3px;
+    background-color: red;
+  }
+  .buttontext{
+    background: none;
+    border: none;
+  }
+  .abuttontext{
+    text-decoration: none;
+    color:black;
+  }
+  .search{
+    color: black;
+    margin-top:5px ;
+    margin-right: 4px;
+  }
+  .search-div{
+    position: relative;
+    z-index: 990;
+  }
+  .search-div input{
+    display: inline;
+    top: -4px;
+    box-shadow: none;
+    margin-top: -1px;
+  }
+  .search-div div{
+    display: inline;
+    right: 15px;
+    border-left: solid 2px black;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-bottom: 4px;
+  }
+  .show-search-result{
+    position: absolute;
+    width: 350px;
+    color: black;
+    z-index: 1000;
+    background-color: #ffffff;
+    max-height: 300px;
+    display: none;
+    overflow: auto;
+  }
+  .show-search-result ul{
+    margin-left: 10px;
+    margin-bottom:20px;
+    display: inline-block;
+  }
+  .show-search-result div{
+    position: relative;
+  }
+  .show-search-result button{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: black;
+  }
+  .logoCenter{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -8px;
+  }
+  
+  
+  .notification {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  /* Badge for unread notifications */
+  .notification .badge {
+    position: absolute;
+    top: -5px;
+    right: -12px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    color: white;
+    font-size: 12px;
+  }
+  
+  
+  
+  

@@ -1,0 +1,68 @@
+    .buttontext{
+      background: none;
+      border:none;
+      color:black;
+    }
+    .delete-model{
+      background-color: rgba(0, 0, 0, 0.6) !important;
+      color:#ffffff !important;
+    }
+    .deleteAlert{
+      margin: 7px !important;
+    }
+    .CategoryShowTable{
+      overflow: auto;
+    }
+    @media(min-width:550px){
+      .modal-dialog{
+        width:80% !important;
+        max-width: 80% !important;
+      }
+    }
+    .category-action{
+      text-align:right;
+      margin:15px;
+      width:100px;
+      position: relative;
+    }
+    .Action-poopUp{
+      display:none;
+      position: absolute;
+      top: 10px;
+      right: 40px;
+      width: 100px;
+      background-color:rgba(0, 0, 0, 0.6);
+      padding: 4px;
+      box-sizing: border-box;
+      border-radius: 20px;
+      z-index: 1500;
+    }
+    .Action-poopUp .form-switch{
+      margin-top:-18px;
+      margin-left:9px;
+    }
+    .Action-poopUp .form-switch{
+      margin-top:-18px;
+      margin-left:9px;
+      
+    }
+    .Action-poopUp .input-chackbox{
+      margin-right:15px ;
+      margin-top:8px;
+      display:inline;
+    }
+    
+    .category-action div i{
+      color:#fff;
+    }
+    .category-action i{
+      font-size:20px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .subcategoryShow{
+      width: 100% !important;
+    }
+    .table-container{
+      overflow: auto;
+    }
