@@ -98,7 +98,7 @@ class DashboardController extends Controller
         $chartData[] = [$item->date, (int)$item->users_count];
     }
 
-    return view('Admin.dashboard.dashboard', [
+    return view('admin.dashboard.dashboard', [
       'userData'          => $userData,
       'orderData'         => $orderData,
       'orderproductData'  => $orderproductData,
