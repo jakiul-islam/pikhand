@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Session;
 
 class facebookController extends Controller
 {
-    public function googleLogin(){
+    public function facebookLogin(){
 
         return Socialite::driver('google')->redirect();
 
@@ -27,7 +27,7 @@ class facebookController extends Controller
 **/
 
 
-    public function googleAuthentication(){
+    public function facebookAuthentication(){
 
 
         $googleUser = Socialite::driver('google')->stateless()->user();
