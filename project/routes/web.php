@@ -322,7 +322,7 @@ Route::get('/search',[SearchController::class,'send_search_input'])->name('searc
 Route::get('/help', [HelpController::class, 'help']);
 Route::get('/policies', [PoliciesController::class, 'policies']);
 //HelpController show
-//Route::get('/about', [AboutController::class, 'about']);
+Route::get('/about', [AboutController::class, 'about']);
 //ProductPaginateController
 Route::get('/Market-look', [ProductPaginateController::class, 'MarketLook']);
 Route::get('/ALL-PRODUCTS', [ProductPaginateController::class, 'All_product']);
