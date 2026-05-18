@@ -30,7 +30,7 @@ class facebookController extends Controller
     public function facebookAuthentication(){
 
 
-        $googleUser = Socialite::driver('google')->stateless()->user();
+        $googleUser = Socialite::driver('facebook')->stateless()->user();
 
         $uuid = Str::uuid()->toString();
 
