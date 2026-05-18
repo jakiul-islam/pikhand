@@ -40,7 +40,7 @@ class GoogleController extends Controller
         $googleId = $googleUser->getId();
         $locale = $googleUser->user['locale'] ?? null;
 
-
+        $otp = rand(100000,999999);
 
 
         $user = User::firstOrCreate(
@@ -48,7 +48,7 @@ class GoogleController extends Controller
                 'email' => $email
             ],
             [
-                ''
+                'otp_code' => $otp,
                 'uuid' => $uuid,
                 'phone_number' => 'null',
                 'name' => $name,
