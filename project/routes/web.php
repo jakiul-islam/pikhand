@@ -63,6 +63,12 @@ Route::get('/', function () {return view('Frontend.index'); });
 Route::get('auth/google',[GoogleController::class,'googleLogin'])->name('auth.google');
 Route::get('/google/login',[GoogleController::class,'googleAuthentication'])->name('about');
 
+//google login controller
+Route::get('auth/facebook',[facebookController::class,'facebookLogin'])->name('auth.facebook');
+Route::get('/facebook/login',[facebookController::class,'facebookAuthentication'])->name('about');
+
+
+
 //PDF route section
 
 //Route::get('/check-php', function () {
