@@ -61,7 +61,7 @@ Route::get('/', function () {return view('Frontend.index'); });
 
 //google login controller
 Route::get('auth/google',[GoogleController::class,'googleLogin'])->name('auth.google');
-Route::get('/google/login',[GoogleController::class,'googleAuthentication'])->name('about');
+Route::get('/google/login',[GoogleController::class,'googleAuthentication'])->name('google.login');
 
 //google login controller
 Route::get('auth/facebook',[facebookController::class,'facebookLogin'])->name('auth.facebook');
