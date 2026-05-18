@@ -55,7 +55,7 @@
                 </div>
 
                 <a href="auth/google" class="btn btn-success" style='width:300px; margin-top:  10px; '> 🌐  Login with google</a>
-                <button class="btn btn-success" style='width:300px; margin-top: 10px;'>  🅵 Login with facebook</button>
+                <a href="auth/facebook" class="btn btn-success" style='width:300px; margin-top: 10px;'>  🅵 Login with facebook</a>
 
                 <br>
 
