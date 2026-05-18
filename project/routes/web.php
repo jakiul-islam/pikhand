@@ -66,6 +66,7 @@ Route::get('/google/login',[GoogleController::class,'googleAuthentication'])->na
 //google login controller
 Route::get('auth/facebook',[facebookController::class,'facebookLogin'])->name('auth.facebook');
 //Route::get('/facebook/login',[facebookController::class,'facebookAuthentication'])->name('facebook.login');
+Route::post('/facebook/login', [FeedbackController::class,'index'])->name('feedback.index');
 
 
 
