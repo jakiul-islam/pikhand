@@ -48,6 +48,7 @@ class GoogleController extends Controller
                 'email' => $email
             ],
             [
+                ''
                 'uuid' => $uuid,
                 'phone_number' => 'null',
                 'name' => $name,
