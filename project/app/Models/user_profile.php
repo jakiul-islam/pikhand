@@ -13,7 +13,7 @@ class user_profile extends Model
     protected $table = 'user_profile';
   
     protected $fillable = [
-        ''
+        'user_id',
         'phone',
         'address',
         'city',
