@@ -48,6 +48,7 @@ use App\Http\Controllers\Admin\MediaLinksController;
 
 
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\facebookController;
 
 
 Route::get('/images/{filename}', [ImageController::class, 'show']);
