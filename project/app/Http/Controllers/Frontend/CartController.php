@@ -69,10 +69,7 @@ class CartController extends Controller
             "quantity"      => 1
           ];
           
-          return response()->json([
-            'ststus' => false,
-            'message'=>'Products add to cart',
-          ],200);
+          
           
         }
         session()->put('cart', $cart);
