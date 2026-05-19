@@ -82,7 +82,7 @@ class CartController extends Controller
 
     //products carts section
     public function index(){
-      $userid = session('user_id');
+        $userid = session('user_id');
         $ipAddress = request()->ip();
         $carts          = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->orderBy('id','desc')->get();
         $countProduct   = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->count();
