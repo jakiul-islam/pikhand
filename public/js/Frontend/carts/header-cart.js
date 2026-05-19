@@ -404,9 +404,7 @@
   }
   // usershownotise();
   window.addCart = function(productId,cartPrice){
-      alert('jakiul islam');
-
-    let formData = new FormData();
+  let formData = new FormData();
     formData.append('productId',productId);
     formData.append('cartPrice',cartPrice);
     sendDataAjax('/cart/create',formData,'post','addCartForGuestUser','Nan','Nan','Nan','Nan');
