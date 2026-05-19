@@ -98,7 +98,6 @@ class CartController extends Controller
         return response()->json([
           'all_carts'     => $carts,
           'countProduct'  =>$countProduct,
-          'sessioncarts'  =>$sessioncarts,
           'sessioncountProduct' =>$sessioncountProduct,
           'voucher'            =>$voucher,
         ]);
