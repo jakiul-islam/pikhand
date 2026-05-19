@@ -141,6 +141,11 @@
           });
 
         }else if(response.sessioncountProduct){
+         
+         
+         
+         console.log(response.sessioncarts);
+         
           response.sessioncarts.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
           //  let cartid     =`${carts.id}`;
