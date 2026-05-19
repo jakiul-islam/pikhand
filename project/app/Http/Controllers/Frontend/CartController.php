@@ -83,21 +83,20 @@ class CartController extends Controller
     //products carts section
     public function index(){
       
-      if(session()->has('user_id')){
       
         $userid = session('user_id');
         $ipAddress = request()->ip();
         $carts          = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->orderBy('id','desc')->get();
         $countProduct   = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->count();
+        $sessioncarts   = array_values(session()->get('cart', []));
         //$sessioncarts   = session()->get('cart', []);
         $sessioncountProduct = count($sessioncarts);
         $voucher = DB::table('vouches')->get();
-      }else{
-        $carts   = array_values(session()->get('cart', []));
-      }
+
         return response()->json([
           'all_carts'     => $carts,
           'countProduct'  =>$countProduct,
+          'sessioncarts'  =>$sessioncarts,
           'sessioncountProduct' =>$sessioncountProduct,
           'voucher'            =>$voucher,
         ]);
