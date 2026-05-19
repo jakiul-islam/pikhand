@@ -93,7 +93,7 @@ class CartController extends Controller
         $sessioncountProduct = count($sessioncarts);
         $voucher = DB::table('vouches')->get();
       }else{
-        $sessioncarts   = array_values(session()->get('cart', []));
+        $carts   = array_values(session()->get('cart', []));
       }
         return response()->json([
           'all_carts'     => $carts,
