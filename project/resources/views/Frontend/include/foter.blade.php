@@ -142,7 +142,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-      <script src="{{ asset('public/js/Frontend/Preloader.js') }}"></script>
+      <script src="{{ asset('public/js/Frontend/preloader.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/common/common.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/show-user-order.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/carts/header-cart.js') }}"></script>
