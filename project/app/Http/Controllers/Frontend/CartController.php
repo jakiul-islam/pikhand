@@ -58,7 +58,7 @@ class CartController extends Controller
         return response()->json([
           'status' => false,
           'user'=>'guest',
-          'message'=>'Products add to cart ug',
+          'message'=>'Products add to cart',
           'productId' => $request->productId,
           'product_price' => $request->cartPrice
         ],200);
