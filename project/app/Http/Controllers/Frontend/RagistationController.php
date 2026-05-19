@@ -212,7 +212,7 @@ class RagistationController extends Controller
           if(session()->has('user')){
             session()->flush();
           }else{
-            session(['number' => $user_creat_session->email]);
+            session(['user_email' => $user_creat_session->email]);
             session(['name' => $user_creat_session->name]);
             session(['user_id' => $user_creat_session->id]);
             session(['phone_number' => $user_creat_session->phone_number]);
