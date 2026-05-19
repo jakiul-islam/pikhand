@@ -409,6 +409,8 @@
     formData.append('cartPrice',cartPrice);
     sendDataAjax('/cart/create',formData,'post','addCartForGuestUser','Nan','Nan','Nan','Nan');
   }
-  window.addCartForGuestUser = function(){
-    
+  window.addCartForGuestUser = function( response ){
+    if(response.user == 'guest'){
+      
+    }
   }
