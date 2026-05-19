@@ -148,7 +148,6 @@
             let quantity   =`${carts.quantity}`;
              //কষকদকদ
 
-
             //cart product show
             let formData = new FormData();
             formData.append('productId',carts.product_id);
