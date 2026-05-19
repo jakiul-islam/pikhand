@@ -59,7 +59,7 @@ class CartController extends Controller
           'status' => false,
           'user'=>'guest',
           'productId' => $request->productId,
-          'product_price' => $request->cartPrice,
+          'product_price' => $request->cartPrice
         ],200);
       }
     }
