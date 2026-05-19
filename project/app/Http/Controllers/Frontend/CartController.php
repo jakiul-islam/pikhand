@@ -49,7 +49,7 @@ class CartController extends Controller
           ],200);
         }else{
           return response()->json([
-            'status' => true,,
+            'status' => true,
             'message'=>'this products is allready add in cart',
             'errors' =>$validateUser->errors()->all(),
           ],200);
