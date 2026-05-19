@@ -141,6 +141,9 @@
           });
 
         }
+        
+        alert(response.sessioncountProduct);
+        
         if(response.sessioncountProduct){
           response.sessioncarts.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
