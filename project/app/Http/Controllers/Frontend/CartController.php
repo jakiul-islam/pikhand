@@ -56,8 +56,8 @@ class CartController extends Controller
         }
       }else{
         return response()->json([
-          'ststus' => false,
-          'message'=>'Products add to cart',
+          'status' => true,
+          'user'=>'Guest',
         ],200);
       }
     }
