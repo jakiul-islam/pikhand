@@ -43,7 +43,7 @@ class CartController extends Controller
             'product_price' =>$request->cartPrice,
           ]);
           return response()->json([
-            'ststus' => false,
+            'status' => true,
             'message'=>'Products add to cart',
             'errors' =>$validateUser->errors()->all(),
           ],200);
