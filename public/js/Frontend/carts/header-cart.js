@@ -411,6 +411,8 @@
   }
   window.addCartForGuestUser = function( response ){
     if(response.user == 'guest'){
-      
+      alert('jakiul islam');
+    }else{
+      FetchCarts();
     }
   }
