@@ -216,6 +216,8 @@
             //end peoduct fetch
           });
 
+        }else{
+          $('#cartsProdectshow').append(`cart is not found`);
         }
       },
       error:function(xhr,status,error){
