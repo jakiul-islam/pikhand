@@ -313,5 +313,5 @@
      <p class="text-center"><a class="link" href="">privice</a>   <a
      class="link" href="">Jakiul islam</a></p>
  <!--  <br><br>-->
- @vite('resources/js/Frontend/subscribers.js')
- @vite('resources/js/Frontend/newsletter.js')
+ <script src="{{ asset('public/js/Frontend/subscribers.js') }}" ></script>
+ <script src="{{ asset('public/js/Frontend/newsletter.js') }}" ></script>
