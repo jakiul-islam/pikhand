@@ -411,12 +411,7 @@
   }
   window.addCartForGuestUser = function( response ){
     if(response.user == 'guest'){
-      alert('jakiul islam');
-      console.log('Alert চালু হ য়ে  ছে');
     }else{
-            alert('jakiul 12 islam');
-
-      console.log('Alert চালু হয়েছে');
-      FetchCarts();
+     FetchCarts();
     }
   }
