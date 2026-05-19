@@ -153,7 +153,7 @@
   <script src="{{ asset('public/js/Frontend/user/user-login.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/user-dashboard.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/user-forgot-password.js') }}"></script>
-  <script src="{{ asset('public/js/Frontend/Voucher.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/voucher.js') }}"></script>
   
   <script src="{{ asset('public/js/Frontend/user/user-profile-setting.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/user-info.js') }}"></script>
