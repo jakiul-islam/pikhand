@@ -55,27 +55,10 @@ class CartController extends Controller
           ],200);
         }
       }else{
-        $productId = $request->productId;
-        $cart = session()->get('cart', []);
-        if (isset($cart[$productId])) {
-          return response()->json([
-            'ststus' => false,
-            'message'=>'this products is allready add in cart',
-          ],200);
-        } else {
-          $cart[$productId] = [
-            "product_id"    => $productId,
-            "product_price" =>$request->cartPrice,
-            "quantity"      => 1
-          ];
-          
-          return response()->json([
-            'ststus' => false,
-            'message'=>'Products add to cart',
-          ],200);
-          
-        }
-        session()->put('cart', $cart);
+        return response()->json([
+          'ststus' => false,
+          'message'=>'Products add to cart',
+        ],200);
       }
     }
   }
