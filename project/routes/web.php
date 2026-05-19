@@ -306,12 +306,7 @@ Route::middleware([CheckUserLogin::class])->group(function () {
   Route::POST('/user/order/info',[OrderController::class,'userOrderInfo'])->name('user.order.info');
   Route::POST('/SearchController/OrderController',[OrderController::class,'SearchControllerOrderController'])->name('SearchControllerOrderController');
   //add to CartControllers section
-  Route::POST('/cart/create',[CartController::class,'create'])->name('cart.create');
-  Route::POST('/cart/index',[CartController::class,'index'])->name('cart.index');
-  Route::POST('/carts/product/index',[CartController::class,'cartsProductIndex'])->name('carts.product.index');
-  Route::POST('/cart/quantity',[CartController::class,'quantity'])->name('cart.quantity');
   Route::POST('/chackout/index',[CartController::class,'chackoutIndex'])->name('chackout.index');
-  Route::POST('/cart/delete',[CartController::class,'delete'])->name('cart.delete');
   //address section
   Route::POST('/user/address/create',[UserController::class,'createAddress'])->name('user.address.create');
   Route::POST('/user/address/index',[UserController::class,'indexAddress'])->name('user.address.index');
@@ -320,6 +315,19 @@ Route::middleware([CheckUserLogin::class])->group(function () {
   Route::POST('/notification/index',[notificationController::class,'index'])->name('notification.index');
 
 });
+
+//crat route section
+  Route::POST('/cart/create',[CartController::class,'create'])->name('cart.create');
+  Route::POST('/cart/index',[CartController::class,'index'])->name('cart.index');
+  Route::POST('/carts/product/index',[CartController::class,'cartsProductIndex'])->name('carts.product.index');
+  Route::POST('/cart/quantity',[CartController::class,'quantity'])->name('cart.quantity');
+  Route::POST('/cart/delete',[CartController::class,'delete'])->name('cart.delete');
+
+
+
+
+
+
   Route::POST('/user/session/chack',[UserDashboardController::class,'UserSessionChack'])->name('dashbord.session.chack');
 
 Route::POST('/insert/new/password',[fogotPasswordController::class,'insertnewpassword'])->name('insert.new.password');
