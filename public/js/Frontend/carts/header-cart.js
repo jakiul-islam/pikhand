@@ -30,7 +30,7 @@
             let formData = new FormData();
             formData.append('productId',carts.id);
             $.ajax({
-              url : '/cartsProductFetch',
+              url : '/carts/product/index',
               type :'POST',
               processData: false,
               contentType: false,
