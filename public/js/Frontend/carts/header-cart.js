@@ -406,7 +406,6 @@
   window.addCart = function(productId,cartPrice){
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
-      
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingProduct = cart.find(item => item.id === productId);
       if(existingProduct){
