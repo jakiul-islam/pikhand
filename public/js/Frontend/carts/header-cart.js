@@ -16,8 +16,95 @@
     const countcarts =document.getElementById('countcarts');
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
+      
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      
       countcarts.innerText= cart.length;
+      if(cart.length === 0){
+          
+          cart.forEach(function(carts) {
+          //  let cartPrice  =`${carts.product_price }`;
+          //  let cartid     =`${carts.id}`;
+          //  let quantity   =`${carts.quantity}`;
+             //কষকদকদ
+
+            //cart product show
+            let formData = new FormData();
+            formData.append('productId',carts.id);
+            $.ajax({
+              url : '/cartsProductFetch',
+              type :'POST',
+              processData: false,
+              contentType: false,
+              data: formData,
+              headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+              },
+              success:function(response){
+                response.show_cart_product.forEach(function(cartsproducts) {
+                  $('#cartsProdectshow').append(`
+                    <li class="nav-item">
+                      <div class="card mb-3" style='width:100%;'>
+                        <div class="row g-0">
+                          <div class="col-4">
+                            <img src="/storage/${cartsproducts.image}"
+                            style='height:100px; width:100px;' class="img-fluid rounded-start"
+                            alt="...">
+                          </div>
+                          <div class="col-8">
+                            <div class="card-body">
+                              <p class="card-text">${cartsproducts.name}</p>
+                              <input type='checkbox' onclick='chackout(  );' class='cart-checkbox' id='product-' value='' style='position:absolute; top:5px; right:5px;' >
+                           <table border='1px solid black' style='position:absolute; right:6px;
+                             bottom:8px; border-radius: 20px;'>
+                               <tr>
+                                 <th style='font-size:16px; width:20px;
+                                 cursor: pointer;'><button
+                                 onclick='addquantity( 1111111
+                                 ,${cartsproducts.stock} );'><i
+                                 class="bi
+                                 bi-plus-lg"></i></button></th>
+                                 <input type='hidden' id='inputQuantity' value='${quantity}'>
+                                 <th style='font-size:20px; width:20px; '
+                                 id='quantity-'>${quantity}</th>
+                                 <th style='font-size:16px; width:20px;
+                                 cursor: pointer;'><button
+                                 id="misnesquantity"
+                                 onclick='addquantity(,${Number(quantity)-1});'><i
+                                 class="bi
+                                 bi-dash-lg"></i></button></th>
+                               </tr>
+                             </table>
+                              <p class="card-text"
+                              style='display:inline;'>${cartPrice}<small
+                             class="text-body-secondary" style=""> <i class="bi bi-star-fill"
+                             style="color:#FFDA25;"></i>4.5(777)
+                                 </small></p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  `);
+                });
+              },
+              error:function(xhr,status,error){
+              }
+
+            });
+            //end peoduct fetch
+          });
+
+        }else{
+          $('#cartsProdectshow').append(`cart is not found`);
+        }
+      
+      
+      
+      
+      
+      
+      
     }
     if(loginOrnotFor !== 'userNotLogin'){
       $.ajax({
@@ -128,9 +215,6 @@
             //end peoduct fetch
           });
         }
-        
-        
-        
       },
       error:function(xhr,status,error){
         alert ('Error:'+ xhr.responseText);
