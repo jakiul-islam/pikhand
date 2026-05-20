@@ -411,6 +411,9 @@
       
       
       let exists = cart.some(item => item.id === productId);
+      
+      alert(exists);
+      
       if (exists) {
         // quantity বাড়াও
         cart = cart.map(item => 
