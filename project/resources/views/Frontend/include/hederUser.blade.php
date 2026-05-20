@@ -16,7 +16,7 @@
               onclick='userDeshboard();'>
                 {{ session('name') }}
               </button>
-              <input type='hidden' id="loginOrnotFor" value="">
+              <input type='hidden' id="loginOrnotFor" value="session('user_uuid')">
             @else
               <button class="justify-content-end btn btn-outline-success" style='margin-top:-10px;margin-bottom:5px;' onclick="loginOrsignup()">LOGIN/SIGNUP</button>
             @endif
