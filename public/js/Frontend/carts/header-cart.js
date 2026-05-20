@@ -428,9 +428,4 @@
         sendDataAjax('/cart/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
     }
   }
-  window.addCartForGuestUser = function( response ){
-    if(response.user == 'guest'){
-    }else{
-     FetchCarts();
-    }
-  }
+ 
