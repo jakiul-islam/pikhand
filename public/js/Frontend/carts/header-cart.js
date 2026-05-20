@@ -15,6 +15,7 @@
   window.FetchCarts = function(){
     const countcarts =document.getElementById('countcarts');
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    $('#cartsProdectshow').html('');
     if(loginOrnotFor == 'userNotLogin'){
       
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -135,7 +136,6 @@
         if(response.countProduct){
           countcarts.innerText= cart.length + + + response.countProduct;
         }
-        $('#cartsProdectshow').html('');
         if(response.countProduct > 0){
           response.all_carts.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
