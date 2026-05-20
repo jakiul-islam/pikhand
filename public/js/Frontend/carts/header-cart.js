@@ -14,7 +14,10 @@
   // Fetct to carts section
   window.FetchCarts = function(){
     const countcarts =document.getElementById('countcarts');
-    $.ajax({
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    if(loginOrnotFor == 'userNotLogin'){
+    }else{
+      $.ajax({
       url : '/cart/index',
       type :'POST',
       processData: false,
@@ -208,6 +211,7 @@
         console.log(xhr.responseText);
       }
     });
+    }
   }
   FetchCarts();
 
