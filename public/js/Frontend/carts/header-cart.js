@@ -405,8 +405,6 @@
   // usershownotise();
   window.addCart = function(productId,cartPrice){
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
-              showalert( 'This product already in your cart','#ffffff','showalert');
-
     if(loginOrnotFor == 'userNotLogin'){
       
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
