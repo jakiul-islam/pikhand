@@ -20,7 +20,6 @@
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
       if(cart.length === 0){
-          
           cart.forEach(function(carts) {
           //  let cartPrice  =`${carts.product_price }`;
           //  let cartid     =`${carts.id}`;
