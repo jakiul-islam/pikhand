@@ -410,7 +410,7 @@
       let cart = [];
       
       
-      let exists = cart.some(item => item.id === productId);
+      let exists = cart.some(item =>String(item.id) === String(productId));
       
       alert(exists);
       
