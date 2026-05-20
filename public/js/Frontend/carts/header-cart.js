@@ -140,7 +140,11 @@
             //end peoduct fetch
           });
 
-        }else if(response.sessioncountProduct){
+        }
+        
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        
+        if(response.sessioncountProduct){
           
           response.sessioncarts.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
