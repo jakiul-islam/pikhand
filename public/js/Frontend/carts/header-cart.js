@@ -23,7 +23,7 @@
         'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
       },
       success:function(response){
-
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if(response.countProduct){
           countcarts.innerText= response.sessioncountProduct + + + response.countProduct;
         }
