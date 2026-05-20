@@ -421,6 +421,7 @@
       } else {
         // নতুন প্রোডাক্ট যোগ করো
         cart.push({ id: productId, price: cartPrice, quantity: 1 });
+        showalert( response.errors,'#ffffff','showalert');
       }
     }else{
       let formData = new FormData();
