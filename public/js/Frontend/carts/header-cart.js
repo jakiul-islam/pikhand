@@ -17,7 +17,6 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     $('#cartsProdectshow').html('');
     if(loginOrnotFor == 'userNotLogin'){
-      
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
       if(cart.length > 0){
@@ -119,9 +118,9 @@
             //end peoduct fetch
           });
 
-        }else{
-          $('#cartsProdectshow').append(`cart is not found`);
-        }
+      }else{
+        $('#cartsProdectshow').append(`cart is not found`);
+      }
     }
     if(loginOrnotFor == 'userNotLogin'){
       $.ajax({
