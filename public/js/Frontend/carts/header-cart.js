@@ -406,15 +406,18 @@
   window.addCart = function(productId,cartPrice){
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
-      let cart = [
-        {
-            id: productId,
-            price: cartPrice,
-            quantity: 1
-        }
+      if(){
         
-      localStorage.setItem("cart", JSON.stringify(cart));
+      }else{
+        let cart = [
+          {
+              id: productId,
+              price: cartPrice,
+              quantity: 1
+          }
         
+        localStorage.setItem("cart", JSON.stringify(cart));
+      }
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
