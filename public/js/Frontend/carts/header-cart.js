@@ -407,6 +407,14 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
+      
+      let existingProduct = cart.find(item => item.id === productId);
+
+      console.log(existingProduct);
+      
+      
+      
+      
       let cart = [
         { id: productId, price: cartPrice, quantity: 1 }
       ];
@@ -415,17 +423,6 @@
       
       
       
-      let raw = localStorage.getItem('cart');
-      let data = JSON.parse(raw);  // স্ট্রিং -> অ্যারে
-      
-      // ডেটা দেখতে এমন: [[{...}], [{...}], [{...}], [{...}]]
-      let flatCart = data.flat();  // সব এক অ্যারেতে
-      
-      // 89 id এর প্রথমটা নাও
-      let item89 = flatCart.find(item => item.id === '89');
-
-      console.log(item89);
-
       
       
      //console.log( localStorage.getItem('cart') );
