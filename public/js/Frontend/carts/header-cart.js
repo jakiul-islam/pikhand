@@ -134,7 +134,7 @@
 
             //cart product show
             let formData = new FormData();
-            formData.append('productId',carts.product_id);
+            formData.append('productId',carts.id);
             $.ajax({
               url : '/cartsProductFetch',
               type :'POST',
