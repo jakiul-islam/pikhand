@@ -414,7 +414,9 @@
       console.log(existingProduct);
       
       cart.push({
-        { id: productId, price: cartPrice, quantity: 1 }
+         id: productId,
+         price: cartPrice,
+         quantity: 1 
       });
       
       localStorage.setItem('cart', JSON.stringify(cart));
