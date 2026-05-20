@@ -413,7 +413,7 @@
             quantity: 1
         }
         
-      
+      localStorage.setItem("cart", JSON.stringify(cart));
         
     }else{
       let formData = new FormData();
