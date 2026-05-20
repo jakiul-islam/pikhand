@@ -407,6 +407,13 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
+      
+      
+      
+      
+      
+      
+      
       // let cart = [];
       // let exists = cart.some(item =>String(item.id) === String(productId));
       // console.log("productId:", productId, "Type:", typeof productId);
