@@ -408,16 +408,16 @@
     if(loginOrnotFor == 'userNotLogin'){
       let exists = cart.some(item => item.id === productId);
       if (exists) {
-    // quantity বাড়াও
-    cart = cart.map(item => 
-      item.id === productId 
-        ? { ...item, quantity: item.quantity + 1 } 
-        : item
-    );
-  } else {
-    // নতুন প্রোডাক্ট যোগ করো
-    cart.push({ id: productId, price: cartPrice, quantity: 1 });
-  }
+        // quantity বাড়াও
+        cart = cart.map(item => 
+          item.id === productId 
+            ? { ...item, quantity: item.quantity + 1 } 
+            : item
+        );
+      } else {
+        // নতুন প্রোডাক্ট যোগ করো
+        cart.push({ id: productId, price: cartPrice, quantity: 1 });
+      }
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
