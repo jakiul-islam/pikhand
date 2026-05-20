@@ -419,6 +419,7 @@
         
         localStorage.setItem("cart",JSON.stringify(cart));
           showalert( 'product add to cart','#ffffff','showalert');
+          FetchCarts();
       }
       
     }else{
