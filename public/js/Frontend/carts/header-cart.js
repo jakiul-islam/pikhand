@@ -116,8 +116,6 @@
             });
             //end peoduct fetch
           });
-      }else{
-        $('#cartsProdectshow').append(`cart is not found`);
       }
     if(loginOrnotFor !== 'userNotLogin'){
       $.ajax({
