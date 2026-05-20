@@ -126,7 +126,7 @@
         
         if(cart.length === 0){
           
-          response.sessioncarts.forEach(function(carts) {
+          cart.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
           //  let cartid     =`${carts.id}`;
             let quantity   =`${carts.quantity}`;
