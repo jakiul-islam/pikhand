@@ -412,7 +412,23 @@
       ];
       
       localStorage.setItem('cart', JSON.stringify(cart));
-      //let cartindex=localStorage.getItem('cart')
+      
+      
+      
+      let raw = localStorage.getItem('cart');
+      let data = JSON.parse(raw);  // স্ট্রিং -> অ্যারে
+      
+      // ডেটা দেখতে এমন: [[{...}], [{...}], [{...}], [{...}]]
+      let flatCart = data.flat();  // সব এক অ্যারেতে
+      
+      // 89 id এর প্রথমটা নাও
+      let item89 = flatCart.find(item => item.id === 89);
+
+console.log(item89);
+// {id: 89, price: 593.53, quantity: 1}
+      
+      
+      
      console.log( localStorage.getItem('cart') );
       
       
