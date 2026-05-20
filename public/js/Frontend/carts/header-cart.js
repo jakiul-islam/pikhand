@@ -413,8 +413,6 @@
         'contity' => '1'
       ];
       
-      
-      
       localStorage.setItem('carts',cart);
       
       
