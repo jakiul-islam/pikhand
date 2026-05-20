@@ -407,18 +407,17 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       let exists = cart.some(item => item.id === productId);
-      if(exists){
-        showalert( 'this products is allready add in cart','#ffffff','showalert');
-      }else{
-        let cart = [
-          {
-              id: productId,
-              price: cartPrice,
-              quantity: 1
-          }
-        
-        localStorage.setItem("cart", JSON.stringify(cart));
-      }
+      if (exists) {
+    // quantity বাড়াও
+    cart = cart.map(item => 
+      item.id === productId 
+        ? { ...item, quantity: item.quantity + 1 } 
+        : item
+    );
+  } else {
+    // নতুন প্রোডাক্ট যোগ করো
+    cart.push({ id: productId, price: cartPrice, quantity: 1 });
+  }
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
