@@ -413,7 +413,7 @@
       
       localStorage.setItem('cart', JSON.stringify(cart));
       
-      
+      localStorage.getItem('cart');
       
       
       // let cart = [];
