@@ -412,6 +412,8 @@
       
       let exists = cart.some(item =>String(item.id) === String(productId));
       
+      console.log("productId:", productId, "Type:", typeof productId);
+      
       alert(exists);
       
       console.log(cart)
