@@ -204,8 +204,8 @@
         }
       },
       error:function(xhr,status,error){
-        //alert ('Error:'+ xhr.responseText);
-        //console.log(xhr.responseText);
+        alert ('Error:'+ xhr.responseText);
+        console.log(xhr.responseText);
       }
     });
   }
