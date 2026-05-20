@@ -16,8 +16,7 @@
     const countcarts =document.getElementById('countcarts');
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     $('#cartsProdectshow').html('');
-    if(loginOrnotFor == 'userNotLogin'){
-      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
       if(cart.length > 0){
           cart.forEach(function(carts) {
