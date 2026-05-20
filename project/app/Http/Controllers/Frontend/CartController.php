@@ -87,9 +87,7 @@ class CartController extends Controller
     }
 
     public function cartsProductIndex(request $request){
-      if(session()->has('user_id')){
-        $userid = session('user_id');
-        $validateUser =validator::make(
+        $validateUser =Validator::make(
             $request->all(),
               [
                 'productId'      => 'required|numeric',
@@ -112,9 +110,6 @@ class CartController extends Controller
             'product_ratting_count' => $product_ratting_count,
           ]);
         }
-      }else{
-
-      }
     }
     //add addquantity
     public function quantity(request $request){
