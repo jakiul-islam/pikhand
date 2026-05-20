@@ -151,7 +151,7 @@
             console.log(xhr.responseText);
             showalert( response.errors,'#ffffff','showalert');
           }
-        }
+        },
       });
     }
 
