@@ -56,12 +56,10 @@ class CartController extends Controller
         }
       }else{
         return response()->json([
-          'status' => false,
-          'user'=>'guest',
-          'message'=>'Products add to cart',
-          'productId' => $request->productId,
-          'product_price' => $request->cartPrice
-        ],200);
+          'ststus' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>'Internal server error',
+        ],401);
       }
     }
   }
