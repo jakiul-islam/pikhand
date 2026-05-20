@@ -27,12 +27,7 @@
         if(response.countProduct){
           countcarts.innerText= response.sessioncountProduct + + + response.countProduct;
         }
-
         $('#cartsProdectshow').html('');
-       
-       
-                console.log(response.sessioncarts);
-
        
         if(response.countProduct > 0){
           response.all_carts.forEach(function(carts) {
