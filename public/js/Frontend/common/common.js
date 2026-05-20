@@ -146,7 +146,7 @@
           if(buttonId !== 'Nan'){
             pageNameButton.innerHTML = buttonName;
             pageNameButton.disabled = false;
-          }
+          // 
           const response = JSON.parse(xhr.responseText);
           console.log(xhr.responseText);
           showalert( response.errors,'#ffffff','showalert');
