@@ -18,7 +18,8 @@
     if(loginOrnotFor == 'userNotLogin'){
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
-    }else{
+    }
+    if(loginOrnotFor !== 'userNotLogin'){
       $.ajax({
       url : '/cart/index',
       type :'POST',
