@@ -104,7 +104,7 @@
       
       
     }
-    if(loginOrnotFor !== 'userNotLogin'){
+    if(loginOrnotFor == 'userNotLogin'){
       $.ajax({
       url : '/cart/index',
       type :'POST',
