@@ -412,6 +412,9 @@
             price: cartPrice,
             quantity: 1
         }
+        
+      
+        
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
