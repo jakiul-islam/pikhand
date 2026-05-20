@@ -429,10 +429,6 @@
         // নতুন প্রোডাক্ট যোগ করো
         cart.push({ id: productId, price: cartPrice, quantity: 1 });
         showalert( 'Products add to cart 11','#ffffff','showalert');
-        
-        console.log(cart);
-        
-        
       }
     }else{
       let formData = new FormData();
