@@ -411,7 +411,7 @@
       
       let existingProduct = cart.find(item => item.id === productId);
 
-      console.log(existingProduct);
+      console.log('cart'+existingProduct);
       
       cart.push({
          id: productId,
