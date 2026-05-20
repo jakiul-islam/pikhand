@@ -411,7 +411,7 @@
         { id: productId, price: cartPrice, quantity: 1 }
       ];
       
-      localStorage.setItem('arry_cart', JSON.stringify(cart));
+      localStorage.setItem('cart', JSON.stringify(cart));
       
       
       
