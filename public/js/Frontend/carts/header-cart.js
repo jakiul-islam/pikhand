@@ -410,7 +410,7 @@
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingProduct = cart.find(item => item.id === productId);
       if(existingProduct){
-          showalert( response.errors,'#ffffff','showalert');
+          showalert( "This product already in your cart",'#ffffff','showalert');
       }else{
         cart.push({
            id: productId,
