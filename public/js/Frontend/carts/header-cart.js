@@ -97,13 +97,6 @@
         }else{
           $('#cartsProdectshow').append(`cart is not found`);
         }
-      
-      
-      
-      
-      
-      
-      
     }
     if(loginOrnotFor == 'userNotLogin'){
       $.ajax({
@@ -115,7 +108,6 @@
         'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
       },
       success:function(response){
-        let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if(response.countProduct){
           countcarts.innerText= cart.length + + + response.countProduct;
         }
