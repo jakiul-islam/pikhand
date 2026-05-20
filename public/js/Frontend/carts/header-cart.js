@@ -414,6 +414,8 @@
       
       alert(exists);
       
+      console.log(cart)
+      
       if (exists) {
         // quantity বাড়াও
         cart = cart.map(item => 
