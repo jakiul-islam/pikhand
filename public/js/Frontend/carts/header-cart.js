@@ -407,9 +407,15 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
+      let cart = [
+        'id' => productId,
+        'price' => cartPrice,
+        'contity' => '1'
+      ];
       
       
       
+      localStorage.setItem('carts',cart);
       
       
       
