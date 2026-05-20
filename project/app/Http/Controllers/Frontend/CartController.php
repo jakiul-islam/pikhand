@@ -87,12 +87,12 @@ class CartController extends Controller
     }
 
     public function cartsProductIndex(request $request){
-        $validateUser =Validator::make(
-            $request->all(),
-              [
-                'productId'      => 'required|numeric',
-              ]
-          );
+      $validateUser =Validator::make(
+        $request->all(),
+          [
+            'productId'      => 'required|numeric',
+          ]
+      );
         if($validateUser->fails()){
             return response()->json([
               'ststus' => false,
