@@ -422,7 +422,7 @@
       let flatCart = data.flat();  // সব এক অ্যারেতে
       
       // 89 id এর প্রথমটা নাও
-      let item89 = flatCart.find(item => item.id === 89);
+      let item89 = flatCart.find(item => item.id === '89');
 
       console.log(item89);
 
