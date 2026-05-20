@@ -28,17 +28,12 @@
           countcarts.innerText= cart.length + + + response.countProduct;
         }
         $('#cartsProdectshow').html('');
-       
         if(response.countProduct > 0){
           response.all_carts.forEach(function(carts) {
-
             let cartPrice  =`${carts.product_price }`;
             let cartid     =`${carts.id}`;
             let quantity   =`${carts.quantity}`;
              //কষকদকদ
-
-
-
             //cart product show
             let formData = new FormData();
             formData.append('productId',carts.product_id);
@@ -104,13 +99,9 @@
                       </div>
                     </li>
                   `);
-
-
                 let rating_show =
                 document.getElementById('rating_show'+cartsproducts.id);
-
                   let rating_count = 0;
-
                   response.product_ratting.forEach(function(product_ratting_row){
                     if(product_ratting_row.product_id === cartsproducts.id){
                       rating_count += product_ratting_row.rating;
@@ -121,25 +112,15 @@
                       style="color:#FFDA25;"></i>${sum}(${response.product_ratting_count})`;
                     }
                   });
-
-
-
-
                 //  $('#rating_show').append(`
                  //   <i class="bi bi-star-fill" style="color:#FFDA25;"></i>${rating_count}(${response.product_ratting_count})
                 //  `);
-
-
-
                   if ( carts.status === 'Ordered' ) { chackout( cartid ); }
-
-
                 });
               }
             });
             //end peoduct fetch
           });
-
         }
         
         
