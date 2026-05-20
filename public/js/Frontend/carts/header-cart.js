@@ -21,9 +21,9 @@
       countcarts.innerText= cart.length;
       if(cart.length === 0){
           cart.forEach(function(carts) {
-          //  let cartPrice  =`${carts.product_price }`;
-          //  let cartid     =`${carts.id}`;
-          //  let quantity   =`${carts.quantity}`;
+            let cartPrice  =`${carts.product_price }`;
+            let cartid     =`${carts.id}`;
+            let quantity   =`${carts.quantity}`;
              //কষকদকদ
 
             //cart product show
