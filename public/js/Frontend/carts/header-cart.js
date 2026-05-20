@@ -408,12 +408,10 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       let cart = [
-        'id' => productId,
-        'price' => cartPrice,
-        'contity' => '1'
+        { id: productId, price: cartPrice, quantity: 1 }
       ];
       
-      localStorage.setItem('carts',cart);
+      localStorage.setItem('carts', JSON.stringify(cart));
       
       
       
