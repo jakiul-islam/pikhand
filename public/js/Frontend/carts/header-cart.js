@@ -407,7 +407,7 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
-      
+      let cart = [];
       
       
       let exists = cart.some(item => item.id === productId);
