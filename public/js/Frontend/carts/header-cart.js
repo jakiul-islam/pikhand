@@ -21,6 +21,10 @@
       countcarts.innerText= cart.length;
       if(cart.length === 0){
           cart.forEach(function(carts) {
+            
+            
+            alert(carts.id);
+            
             let cartPrice  =`${carts.price }`;
             let cartid     =`${carts.id}`;
             let quantity   =`${carts.quantity}`;
