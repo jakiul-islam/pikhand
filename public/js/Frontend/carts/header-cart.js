@@ -18,7 +18,6 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      
       countcarts.innerText= cart.length;
       if(cart.length === 0){
           
