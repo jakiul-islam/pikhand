@@ -422,9 +422,6 @@
         showalert( "Product add to cart",'#ffffff','showalert');
       }
       
-     // localStorage.setItem('cart', JSON.stringify(cart));
-     //console.log( localStorage.getItem('cart') );
-      
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
