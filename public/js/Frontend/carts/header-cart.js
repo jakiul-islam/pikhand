@@ -409,9 +409,8 @@
       let cart = [
         {
             id: productId,
-            name: "T-Shirt",
             price: cartPrice,
-            quantity: 2
+            quantity: 1
         },
     }else{
       let formData = new FormData();
