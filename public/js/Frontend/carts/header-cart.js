@@ -122,7 +122,7 @@
         $('#cartsProdectshow').append(`cart is not found`);
       }
     }
-    if(loginOrnotFor == 'userNotLogin'){
+    if(loginOrnotFor !== 'userNotLogin'){
       $.ajax({
       url : '/cart/index',
       type :'POST',
