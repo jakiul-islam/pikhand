@@ -22,7 +22,7 @@
       if(cart.length > 0){
           cart.forEach(function(carts) {
             
-            
+            alert(carts.id);
             
             let cartPrice  =`${carts.price }`;
             let cartid     =`${carts.id}`;
