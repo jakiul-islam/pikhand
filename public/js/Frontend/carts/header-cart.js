@@ -25,7 +25,7 @@
       success:function(response){
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         if(response.countProduct){
-          countcarts.innerText= response.sessioncountProduct + + + response.countProduct;
+          countcarts.innerText= cart.length + + + response.countProduct;
         }
         $('#cartsProdectshow').html('');
        
