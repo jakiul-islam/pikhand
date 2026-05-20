@@ -407,29 +407,23 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
-      let cart = [];
-      
-      
-      let exists = cart.some(item =>String(item.id) === String(productId));
-      
-      console.log("productId:", productId, "Type:", typeof productId);
-      
-      alert(exists);
-      
-      console.log(cart)
-      
-      if (exists) {
-        // quantity বাড়াও
-        cart = cart.map(item => 
-          item.id === productId 
-            ? { ...item, quantity: item.quantity + 1 } 
-            : item
-        );
-      } else {
-        // নতুন প্রোডাক্ট যোগ করো
-        cart.push({ id: productId, price: cartPrice, quantity: 1 });
-        showalert( 'Products add to cart','#ffffff','showalert');
-      }
+      // let cart = [];
+      // let exists = cart.some(item =>String(item.id) === String(productId));
+      // console.log("productId:", productId, "Type:", typeof productId);
+      // alert(exists);
+      // console.log(cart)
+      // if (exists) {
+      //   // quantity বাড়াও
+      //   cart = cart.map(item => 
+      //     item.id === productId 
+      //       ? { ...item, quantity: item.quantity + 1 } 
+      //       : item
+      //   );
+      // } else {
+      //   // নতুন প্রোডাক্ট যোগ করো
+      //   cart.push({ id: productId, price: cartPrice, quantity: 1 });
+      //   showalert( 'Products add to cart','#ffffff','showalert');
+      // }
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
