@@ -408,7 +408,7 @@
     if(loginOrnotFor == 'userNotLogin'){
       let exists = cart.some(item => item.id === productId);
       if(exists){
-        
+        showalert( 'this products is allready add in cart','#ffffff','showalert');
       }else{
         let cart = [
           {
