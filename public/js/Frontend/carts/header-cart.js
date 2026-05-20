@@ -407,11 +407,11 @@
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       
-      // let cart = [
-      //   { id: productId, price: cartPrice, quantity: 1 }
-      // ];
+      let cart = [
+        { id: productId, price: cartPrice, quantity: 1 }
+      ];
       
-      localStorage.setItem('carts', 'product carts system');
+      localStorage.setItem('arry_cart', JSON.stringify(cart));
       
       
       
