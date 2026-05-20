@@ -406,7 +406,13 @@
   window.addCart = function(productId,cartPrice){
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
-      alert('jakiyl islam')
+      let cart = [
+        {
+            id: productId,
+            name: "T-Shirt",
+            price: cartPrice,
+            quantity: 2
+        },
     }else{
       let formData = new FormData();
         formData.append('productId',productId);
