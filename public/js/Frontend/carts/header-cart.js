@@ -144,7 +144,7 @@
         
         let cart = JSON.parse(localStorage.getItem("cart")) || [];
         
-        if(response.sessioncountProduct){
+        if(cart.length === 0){
           
           response.sessioncarts.forEach(function(carts) {
             let cartPrice  =`${carts.product_price }`;
