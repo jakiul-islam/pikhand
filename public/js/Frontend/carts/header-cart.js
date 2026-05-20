@@ -47,44 +47,68 @@
                         <div class="row g-0">
                           <div class="col-4">
                             <img src="/storage/${cartsproducts.image}"
-                            style='height:100px; width:100px;' class="img-fluid rounded-start"
+                            style='height:80px; width:100px; margin:5px;' class="img-fluid rounded-start"
                             alt="...">
                           </div>
                           <div class="col-8">
                             <div class="card-body">
-                              <p class="card-text">${cartsproducts.name}</p>
-                              <input type='checkbox' onclick='chackout(  );' class='cart-checkbox' id='product-' value='' style='position:absolute; top:5px; right:5px;' >
+                              <p class="card-text" style="margin-bottom:-0px;
+                              margin-top:-10px;
+                              line-height:1;">${cartsproducts.name}</p>
+                              <input type='checkbox' onclick='chackout(${cartid});' class='cart-checkbox'
+                              ${ carts.status == 'Ordered' ? 'checked' :'' }
+                              id='product-${cartid}' value='${cartid}' style='position:absolute; top:5px; right:5px;' >
                            <table border='1px solid black' style='position:absolute; right:6px;
                              bottom:8px; border-radius: 20px;'>
                                <tr>
-                                 <th style='font-size:16px; width:20px;
+                                 <th style='font-size:12px; width:17px;
                                  cursor: pointer;'><button
-                                 onclick='addquantity( 1111111
+                                 onclick='addquantity(${cartid}, 1111111
                                  ,${cartsproducts.stock} );'><i
                                  class="bi
                                  bi-plus-lg"></i></button></th>
-                                 <input type='hidden' id='inputQuantity' value='${quantity}'>
-                                 <th style='font-size:20px; width:20px; '
-                                 id='quantity-'>${quantity}</th>
-                                 <th style='font-size:16px; width:20px;
+                                 <input type='hidden' id='inputQuantity${cartid}' value='${quantity}'>
+                                 <th style='font-size:15px; width:17px; '
+                                 id='quantity-${cartid}'>${quantity}</th>
+                                 <th style='font-size:12px; width:20px;
                                  cursor: pointer;'><button
-                                 id="misnesquantity"
-                                 onclick='addquantity(,${Number(quantity)-1});'><i
+                                 id="misnesquantity${cartid}"
+                                 onclick='addquantity(${cartid},${Number(quantity)-1});'><i
                                  class="bi
                                  bi-dash-lg"></i></button></th>
                                </tr>
                              </table>
-                              <p class="card-text"
-                              style='display:inline;'>${cartPrice}<small
-                             class="text-body-secondary" style=""> <i class="bi bi-star-fill"
-                             style="color:#FFDA25;"></i>4.5(777)
-                                 </small></p>
+                              <p class="card-text" style='display:inline; '>$${cartPrice}
+                                <small class="text-body-secondary"
+                                id="rating_show${cartsproducts.id}">
+                                </small>
+                              </p>
+                              <p style='margin-bottom:-10px;'>
+                                <del>$${cartsproducts.price}</del>
+                              </p>
                             </div>
                           </div>
                         </div>
                       </div>
                     </li>
                   `);
+                let rating_show =
+                document.getElementById('rating_show'+cartsproducts.id);
+                  let rating_count = 0;
+                  response.product_ratting.forEach(function(product_ratting_row){
+                    if(product_ratting_row.product_id === cartsproducts.id){
+                      rating_count += product_ratting_row.rating;
+
+                      let sum = rating_count / response.product_ratting_count;
+
+                      rating_show.innerHTML = `<i class="bi bi-star-fill"
+                      style="color:#FFDA25;"></i>${sum}(${response.product_ratting_count})`;
+                    }
+                  });
+                //  $('#rating_show').append(`
+                 //   <i class="bi bi-star-fill" style="color:#FFDA25;"></i>${rating_count}(${response.product_ratting_count})
+                //  `);
+                  if ( carts.status === 'Ordered' ) { chackout( cartid ); }
                 });
               },
               error:function(xhr,status,error){
