@@ -412,8 +412,8 @@
       ];
       
       localStorage.setItem('cart', JSON.stringify(cart));
-      
-     console.log( localStorage.getItem('cart') );
+      let cartindex=localStorage.getItem('cart')
+     console.log(  );
       
       
       // let cart = [];
