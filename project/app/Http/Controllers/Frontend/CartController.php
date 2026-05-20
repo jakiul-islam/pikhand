@@ -93,23 +93,23 @@ class CartController extends Controller
             'productId'      => 'required|numeric',
           ]
       );
-        if($validateUser->fails()){
-            return response()->json([
-              'ststus' => false,
-              'message'=>'Validation Error Is',
-              'errors' =>$validateUser->errors()->all(),
-            ],401);
-        }else{
-          $show_cart_product          = product::where('id',$request->productId)->get();
-          $product_ratting            = product_reviews::where('product_id',$request->productId)->get();
-          $product_ratting_count      = $product_ratting->count();
-
+      if($validateUser->fails()){
           return response()->json([
-            'show_cart_product'     => $show_cart_product,
-            'product_ratting'       => $product_ratting,
-            'product_ratting_count' => $product_ratting_count,
-          ]);
-        }
+            'ststus' => false,
+            'message'=>'Validation Error Is',
+            'errors' =>$validateUser->errors()->all(),
+          ],401);
+      }else{
+        $show_cart_product          = product::where('id',$request->productId)->get();
+        $product_ratting            = product_reviews::where('product_id',$request->productId)->get();
+        $product_ratting_count      = $product_ratting->count();
+
+        return response()->json([
+          'show_cart_product'     => $show_cart_product,
+          'product_ratting'       => $product_ratting,
+          'product_ratting_count' => $product_ratting_count,
+        ]);
+      }
     }
     //add addquantity
     public function quantity(request $request){
