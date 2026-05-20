@@ -428,7 +428,7 @@
 
       
       
-     console.log( localStorage.getItem('cart') );
+     //console.log( localStorage.getItem('cart') );
       
       
       // let cart = [];
