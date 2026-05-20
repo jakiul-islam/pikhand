@@ -419,7 +419,9 @@
          quantity: 1 
       });
       
-      localStorage.setItem('cart', JSON.stringify(cart));
+      localStorage.setItem("cart",JSON.stringify(cart)
+      
+     // localStorage.setItem('cart', JSON.stringify(cart));
      //console.log( localStorage.getItem('cart') );
       
     }else{
