@@ -424,9 +424,8 @@
       // 89 id এর প্রথমটা নাও
       let item89 = flatCart.find(item => item.id === 89);
 
-console.log(item89);
-// {id: 89, price: 593.53, quantity: 1}
-      
+      console.log(item89);
+
       
       
      console.log( localStorage.getItem('cart') );
