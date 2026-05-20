@@ -410,7 +410,7 @@
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingProduct = cart.find(item => item.id === productId);
       if(existingProduct){
-        console.log('cart'+existingProduct);
+
       }else{
         cart.push({
            id: productId,
