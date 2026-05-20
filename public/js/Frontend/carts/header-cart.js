@@ -404,10 +404,13 @@
   }
   // usershownotise();
   window.addCart = function(productId,cartPrice){
-  let formData = new FormData();
-    formData.append('productId',productId);
-    formData.append('cartPrice',cartPrice);
-    sendDataAjax('/cart/create',formData,'post','addCartForGuestUser','Nan','Nan','Nan','Nan');
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+  
+  
+    let formData = new FormData();
+      formData.append('productId',productId);
+      formData.append('cartPrice',cartPrice);
+      sendDataAjax('/cart/create',formData,'post','addCartForGuestUser','Nan','Nan','Nan','Nan');
   }
   window.addCartForGuestUser = function( response ){
     if(response.user == 'guest'){
