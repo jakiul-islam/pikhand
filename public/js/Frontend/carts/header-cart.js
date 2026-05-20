@@ -408,17 +408,16 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
-      
       let existingProduct = cart.find(item => item.id === productId);
-
-      console.log('cart'+existingProduct);
-      
-      cart.push({
-         id: productId,
-         price: cartPrice,
-         quantity: 1 
-      });
-      
+      if(existingProduct){
+        console.log('cart'+existingProduct);
+      }else{
+        cart.push({
+           id: productId,
+           price: cartPrice,
+           quantity: 1 
+        });
+      }
       localStorage.setItem("cart",JSON.stringify(cart));
       
      // localStorage.setItem('cart', JSON.stringify(cart));
