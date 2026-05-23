@@ -142,16 +142,8 @@
  <div class="modal fade" id="categoryForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Create new category</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body row">
-          </div>
-          <div class="modal-footer">
-            <button type="reset" id="insertclose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="submit" id="insertCatagory" class="btn btn-primary">Create</button>
-          </div>
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="userInfo">
+          </ul>
         </div>
       </div>
     </div>
