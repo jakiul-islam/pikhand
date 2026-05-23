@@ -68,7 +68,7 @@
       
       
       if(containerId == "loginFormForCheckout"){
-        var modal = bootstrap.Modal.getInstance($('#'+models)[0]);
+        var modal = bootstrap.Modal.getInstance($('#loginForm')[0]);
             modal.hide();
       }
       
