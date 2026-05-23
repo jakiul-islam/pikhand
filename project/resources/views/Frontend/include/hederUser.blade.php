@@ -141,10 +141,10 @@
 <!-- user login for checkuot  -->
  <div class="modal fade" id="categoryForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-header">
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
       <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
         <div class="modal-body">
           <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="loginFormForCheckout">
           </ul>
