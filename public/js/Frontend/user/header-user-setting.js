@@ -1,6 +1,6 @@
   window.originalContent = $("#userInfo").html();
 
-    window.loginOrsignup = function(){
+    window.loginOrsignup = function( containerId ){
       let webLogoForUseScript = document.getElementById('webLogoForUseScript').value;
 
         let googleLoginUrl = "{{ route('auth.google') }}";
