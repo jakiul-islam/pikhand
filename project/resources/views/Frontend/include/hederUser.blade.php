@@ -142,7 +142,7 @@
  <div class="modal fade" id="categoryForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
-          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="userInfo">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="">
           </ul>
         </div>
       </div>
