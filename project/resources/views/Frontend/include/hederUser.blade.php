@@ -130,7 +130,7 @@
           @if (session()->has('user_email'))
          <button type="button" onclick="orderinsert();"  id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;'  class="btn btn-success shadow-none" >chackout</button>
          @else
-            <button class="justify-content-end btn btn-outline-success" id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;' onclick="loginOrsignup()">LOGIN/SIGNUP</button>
+            <button class="edit-button" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#categoryForm" id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;' onclick="loginOrsignup()">LOGIN/SIGNUP</button>
          @endif
        </div>
        <!-- href='/home/chackout' -->
