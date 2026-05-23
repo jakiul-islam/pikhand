@@ -10,9 +10,8 @@
       //const loginOrsignupBody =document.getElementById('userInfo');
       const loginOrsignupBody =document.getElementById(containerId);
       loginOrsignupBody.innerHTML =`
-        <button onclick='back();' style=' background:none; border:none;
-        width:60px;'><i style='font-size:25px;' class="bi
-        bi-arrow-left"></i></button>
+      ${ containerId == 'userInfo' ? "<button onclick='back();' style=' background:none; border:none;  width:60px;'><i style='font-size:25px;' class='bi  bi-arrow-left'></i></button>" : ""}
+       
 
          <div style='height:auto; width:320px; overflow:auto; margin:auto; padding:10px; background-color:#C4E9FF;'>
 
