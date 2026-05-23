@@ -127,9 +127,7 @@
        <div style='height:50px; width:100%; background-color:black;
        position:absolute; bottom:0px; color:#ffffff;'>
          <h5> <small id="showPrice" > price: </small></h5>
-         <button type="button" onclick="orderinsert();"  id='chackoutbutton'
-         style='display:none; position:absolute; right:6px; bottom:5px;'
-         class="btn btn-success shadow-none" >chackout</button>
+         <button type="button" onclick="orderinsert();"  id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;'  class="btn btn-success shadow-none" >chackout</button>
        </div>
        <!-- href='/home/chackout' -->
      </div>
