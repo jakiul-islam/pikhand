@@ -17,7 +17,7 @@
         if(response.namecount > 0){  
           $('#nameInput').val(response.name.name);
           usernameshow.innerHTML = `${response.name.name}`;
-          phoneNumber.innerHTML = `${response.name.Phonenumber}`;
+          phoneNumber.innerHTML = `${response.name.phone_number}`;
         }
         if(response.profilecount  > 0){
           $('#timeInput').val(response.profile.date_of_birth);
