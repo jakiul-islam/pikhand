@@ -130,7 +130,7 @@
           @if (session()->has('user_email'))
          <button type="button" onclick="orderinsert();"  id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;'  class="btn btn-success shadow-none" >chackout</button>
          @else
-            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#categoryForm" id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;' onclick="loginOrsignup( 'loginFormForCheckout' )">LOGIN/SIGNUP</button>
+            <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#loginForm" id='chackoutbutton' style='display:none; position:absolute; right:6px; bottom:5px;' onclick="loginOrsignup( 'loginFormForCheckout' )">LOGIN/SIGNUP</button>
          @endif
        </div>
        <!-- href='/home/chackout' -->
@@ -139,7 +139,7 @@
  <!--  end carts offcanvas -->
 
 <!-- user login for checkuot  -->
- <div class="modal fade" id="categoryForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal fade" id="loginForm" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
