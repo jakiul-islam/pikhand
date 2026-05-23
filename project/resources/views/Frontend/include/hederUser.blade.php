@@ -143,7 +143,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-body">
-          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="userInfo">
+          <ul class="navbar-nav justify-content-start flex-grow-1 pe-3"  id="loginFormForCheckout">
           </ul>
         </div>
       </div>
