@@ -20,7 +20,7 @@
       let formData = new FormData();
         formData.append('email', email );
         formData.append('password', password );
-        detailsDataAjax('/user/login',formData,'post','userDeshboard','Nan','LoginSubmit','LOGIN','loginForm');
+        detailsDataAjax('/user/login',formData,'post','userDeshboard','Nan','LoginSubmit','LOGIN','Nan');
     }
     //logout user
     window.Logout = function (){
