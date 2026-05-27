@@ -126,6 +126,12 @@
       </div>
       `;
       FetchCarts();
+      
+      var modal = bootstrap.Modal.getInstance($('#'+models)[0]);
+            modal.hide();
+      
+      
+      
     }else{
       showalert('Internal server error ','#ffffff','showalert');
     }
