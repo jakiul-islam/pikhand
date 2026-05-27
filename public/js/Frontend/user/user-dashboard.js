@@ -130,7 +130,12 @@
       var modal = bootstrap.Modal.getInstance($('#loginForm')[0]);
             modal.hide();
       
-      
+      var modalEl = document.getElementById('loginForm');
+var modal = bootstrap.Modal.getInstance(modalEl);
+
+if (modal && modal._isShown) {
+    modal.hide();
+}
       
     }else{
       showalert('Internal server error ','#ffffff','showalert');
