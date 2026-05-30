@@ -30,7 +30,7 @@ class CheckAdmin
 
 
         }
-        return redirect()->route('Control-panel');
+        return redirect()->route('/Control-panel');
 
     }
 }
