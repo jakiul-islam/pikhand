@@ -86,27 +86,27 @@ Route::middleware([CheckAdmin::class])->group(function () {
 
   Route::get('/admin/dashboord/', [DashboardController::class,'dashboord'])->name('admin.dashboord');
 
-  Route::get('/admin/user/', function () {return view('admin.user.user'); });
-  Route::get('/admin/order/', function () {return view('admin.order.order'); });
-  Route::get('/admin/order_items/', function () {return view('admin.order.order_items'); });
-  Route::get('/admin/Payment/', function () {return view('admin.Payment'); });
-  Route::get('/admin/Review/', function () {return view('admin.Review'); });
-  Route::get('/admin/cart/', function () {return view('admin.cart'); });
-  Route::get('/admin/Security/', function () {return view('admin.Security'); });
-  Route::get('/admin/genaler_setting/', function () {return view('admin.genarel-setting.genarel_setting'); });
-  Route::get('/admin/product', function () {return view('admin.products.product');})->name('admin.product');
-  Route::get('/admin/banner', function () {return view('admin.banner');})->name('admin.banner');
-  Route::get('/admin/edite_product', function () {return view('admin.product_edit'); });
-  Route::get('/admin/category', function () {return view('admin.category-subcategory.category'); });
-  Route::get('/admin/seo_satting', function () {return view('admin.seo-setting.seo_setting'); });
+  Route::get('/admin/user/', function () {return view('Admin.user.user'); });
+  Route::get('/admin/order/', function () {return view('Admin.order.order'); });
+  Route::get('/admin/order_items/', function () {return view('Admin.order.order_items'); });
+  Route::get('/admin/Payment/', function () {return view('Admin.Payment'); });
+  Route::get('/admin/Review/', function () {return view('Admin.Review'); });
+  Route::get('/admin/cart/', function () {return view('Admin.cart'); });
+  Route::get('/admin/Security/', function () {return view('Admin.Security'); });
+  Route::get('/admin/genaler_setting/', function () {return view('Admin.genarel-setting.genarel_setting'); });
+  Route::get('/admin/product', function () {return view('Admin.products.product');})->name('admin.product');
+  Route::get('/admin/banner', function () {return view('Admin.banner');})->name('admin.banner');
+  Route::get('/admin/edite_product', function () {return view('Admin.product_edit'); });
+  Route::get('/admin/category', function () {return view('Admin.category-subcategory.category'); });
+  Route::get('/admin/seo_satting', function () {return view('Admin.seo-setting.seo_setting'); });
   Route::get('123', function () {return view('admin.admin'); })->name('admin.123');
   //page route
-  Route::get('/admin/comment', function () {return view('admin.admin'); });
-  Route::get('/admin/Brand', function () {return view('admin.Brand'); });
-  Route::get('/admin/Vouchers/', function () {return view('admin.Voucher'); })->name('admin.Voucher');
-  Route::get('/admin/Help/', function () {return view('admin.Help'); })->name('admin.Help');
-  Route::get('/admin/Policies/', function () {return view('admin.Policies'); })->name('admin.Policies');
-  Route::get('/admin/About/', function () {return view('admin.About'); })->name('admin.About');
+  Route::get('/admin/comment', function () {return view('Admin.admin'); });
+  Route::get('/admin/Brand', function () {return view('Admin.Brand'); });
+  Route::get('/admin/Vouchers/', function () {return view('Admin.Voucher'); })->name('admin.Voucher');
+  Route::get('/admin/Help/', function () {return view('Admin.Help'); })->name('admin.Help');
+  Route::get('/admin/Policies/', function () {return view('Admin.Policies'); })->name('admin.Policies');
+  Route::get('/admin/About/', function () {return view('Admin.About'); })->name('admin.About');
 
 
   //dashboard
