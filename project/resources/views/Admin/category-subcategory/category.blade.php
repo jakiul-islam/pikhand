@@ -224,12 +224,4 @@
     <script src="{ asset('public/js/Admin/category-subcategory/category-deteails.js') }}"></script>
     <script src="{ asset('public/js/Admin/category-subcategory/subcategory-deteails.js') }}"></script>
     <script src="{ asset('public/js/Admin/category-subcategory/subcategory.js') }}"></script>
-
-    
-        'resources/js/Admin/common.js',
-        'resources/js/Admin/category-subcategory/category.js',
-        'resources/js/Admin/category-subcategory/category-deteails.js',
-        'resources/js/Admin/category-subcategory/subcategory-deteails.js',
-        'resources/js/Admin/category-subcategory/subcategory.js',
-    ])
 </html>
