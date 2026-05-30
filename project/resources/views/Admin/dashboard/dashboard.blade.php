@@ -25,7 +25,7 @@
     </style>
   </head>
   <body>
-   @include("Admin.Include.header")
+   @include("Admin.Include.Header")
     <div class="main-contain" id="maindiv">
       <input type="hidden" value="{{ $webInfo->logo }}" id="webLogo">
       <button class="btn btn-outline-success" onclick="googlechart();">Dashboard</button>
