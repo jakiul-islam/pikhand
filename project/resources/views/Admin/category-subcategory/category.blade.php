@@ -13,7 +13,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
   <body>
-    @include("Admin.include.Header")
+    @include("Admin.Include.Header")
     <div class="main-contain" id="mainContain">
       <div id='showmanicatagry'>
         <div class="name-2">
