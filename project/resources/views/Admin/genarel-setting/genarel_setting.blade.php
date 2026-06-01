@@ -6,7 +6,7 @@
     <title>jis food admin panale</title>
     <link rel="stylesheet" href="{{ asset('css/Admin/Common.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}"> 
-    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('public/tinymce/tinymce.min.js') }}"></script>
     <script>
   tinymce.init({
     selector: '.description',
@@ -21,7 +21,7 @@
 </script>
   </head>
   <body>
-   @include("Admin.Include.header")
+   @include("Admin.Include.Header")
     <div class="main-contain">
 
       <div class="name-2">
@@ -180,11 +180,11 @@
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="{{ asset('js/Admin/common.js') }}"></script>
-    <script src="{{ asset('js/Admin/genarel-setting/newsletter.js') }}"></script>
-    <script src="{{ asset('js/Admin/genarel-setting/index.js') }}"></script>
-    <script src="{{ asset('js/Admin/genarel-setting/web-logo.js') }}"></script>
-    <script src="{{ asset('js/Admin/media-links.js') }}"></script>
+    <script src="{{ asset('public/js/Admin/common.js') }}"></script>
+    <script src="{{ asset('public/js/Admin/genarel-setting/newsletter.js') }}"></script>
+    <script src="{{ asset('public/js/Admin/genarel-setting/index.js') }}"></script>
+    <script src="{{ asset('public/js/Admin/genarel-setting/web-logo.js') }}"></script>
+    <script src="{{ asset('public/js/Admin/media-links.js') }}"></script>
 
   </body>
 </html>
