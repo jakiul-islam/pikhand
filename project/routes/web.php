@@ -256,7 +256,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::get('/admin/about/index',[AboutController::class,'index'])->name('admin.about.index');
 
 });
-Route::get('/Control-panel', function () {return view('Admin.admin.Control_panel');})->name('admin.login');
+Route::get('/Control-panel', function () {return view('Admin.admin.Control_panel');})->name('control.panel');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
 
 //end admin route section
