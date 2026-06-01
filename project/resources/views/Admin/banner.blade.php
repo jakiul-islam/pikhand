@@ -14,6 +14,7 @@
       function tinymceditor(){
         tinymce.init({
           selector: '.description',
+           license_key: 'gpl',
           plugins: 'autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table help wordcount',
           toolbar: 'undo redo | bold italic underline strikethrough | link image media table | alignleft aligncenter alignright alignjustify | numlist bullist | removeformat',
           setup: function (editor) {
