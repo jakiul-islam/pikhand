@@ -27,7 +27,7 @@
     </script>
   </head>
   <body>
-    @include("Admin.Include.header")
+    @include("Admin.Include.Header")
     <div class="main-contain" id="product_detels_show">
       <div class="name-2">
         <h1>Create new product</h1>
