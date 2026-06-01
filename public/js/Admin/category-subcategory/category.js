@@ -79,7 +79,7 @@
           <td onclick='subcatagoryIndex( ${category.id} );'>${subcategoryCount}</td>
           <td onclick='subcatagoryIndex( ${category.id} );'>${category.order}</td>
           <td onclick='subcatagoryIndex( ${category.id} );'>0</td>
-          <td onclick='subcatagoryIndex( ${category.id} );'><img src="/public/storage/${category.image}" width="50" height='50' alt="${category.name}"></td>
+          <td onclick='subcatagoryIndex( ${category.id} );'><img src="/storage/${category.image}" width="50" height='50' alt="${category.name}"></td>
           <td class='category-action' style='text-align:right; width:100px;'>
             <i onclick='ActionPoopUpShow(${category.id})' class='bi bi-three-dots-vertical'></i>
             <div id='ActionPoopUp${category.id}' class='Action-poopUp'>
