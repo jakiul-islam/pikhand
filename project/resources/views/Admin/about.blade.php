@@ -27,7 +27,7 @@
   </head>
 
   <body>
-   @include("Admin.include.header")
+   @include("Admin.include.Header")
     <div class="main-contain">
       <div class="name-2">
         <h1>Insert about</h1>
