@@ -241,17 +241,8 @@
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       let existingProduct = cart.find(item => item.id === productId);
       if(existingProduct){
-          showalert( 'This product already in your cart','#ffffff','showalert');
-      }else{
-        cart.push({
-           id: productId,
-           price: cartPrice,
-           quantity: 1 
-        });
         
-        localStorage.setItem("cart",JSON.stringify(cart));
-          showalert( 'product add to cart','#ffffff','showalert');
-          FetchCarts();
+          cart[existingProduct].quantity += 1;
       }
       
     }else{
