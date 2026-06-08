@@ -235,44 +235,66 @@
   FetchCarts();
 
   window.addquantity = function(cartid,addquantitynum,stock){
-
-    let input = $('#inputQuantity' + cartid);
-    let count = parseInt(input.val()) || 0;
-
-    if( addquantitynum == 1111111 ){
-      if(count < stock){
-        count ++;
-        input.val(count);
-        $('#quantity-'+cartid).text(count);
-      }
-    }else{
-      if(count > 1){
-        count --;
-        input.val(count);
-        $('#quantity-'+cartid).text(count);
-      }
-    }
-
-    let formData = new FormData();
-    formData.append('cartid',cartid);
-    formData.append('addquantitynum',count);
-
-    $.ajax({
-      url : '/cart/quantity',
-      type :'POST',
-      processData: false,
-      contentType: false,
-      data: formData,
-      headers: {
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-      },
-      success:function(response){
-        response.user.forEach(function(quantityNum) {
-          let quantity   =`${quantityNum.quantity}`;
-          chackout();
+    
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    if(loginOrnotFor == 'userNotLogin'){
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      let existingProduct = cart.find(item => item.id === productId);
+      if(existingProduct){
+          showalert( 'This product already in your cart','#ffffff','showalert');
+      }else{
+        cart.push({
+           id: productId,
+           price: cartPrice,
+           quantity: 1 
         });
+        
+        localStorage.setItem("cart",JSON.stringify(cart));
+          showalert( 'product add to cart','#ffffff','showalert');
+          FetchCarts();
       }
-    });
+      
+    }else{
+    
+    
+      let input = $('#inputQuantity' + cartid);
+      let count = parseInt(input.val()) || 0;
+  
+      if( addquantitynum == 1111111 ){
+        if(count < stock){
+          count ++;
+          input.val(count);
+          $('#quantity-'+cartid).text(count);
+        }
+      }else{
+        if(count > 1){
+          count --;
+          input.val(count);
+          $('#quantity-'+cartid).text(count);
+        }
+      }
+  
+      let formData = new FormData();
+      formData.append('cartid',cartid);
+      formData.append('addquantitynum',count);
+  
+      $.ajax({
+        url : '/cart/quantity',
+        type :'POST',
+        processData: false,
+        contentType: false,
+        data: formData,
+        headers: {
+          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        success:function(response){
+          response.user.forEach(function(quantityNum) {
+            let quantity   =`${quantityNum.quantity}`;
+            chackout();
+          });
+        }
+      });
+    }
   }
   //chackout section
   window.chackout = function(){
