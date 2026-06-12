@@ -246,6 +246,7 @@
           cart[xistingProduct].quantity += 1;
       }
       console.log(existingProduct);
+      alert('jakiul isla.');
     }else{
     
     
