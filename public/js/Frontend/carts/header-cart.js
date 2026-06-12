@@ -12,6 +12,7 @@
     }
   }
   // Fetct to carts section
+
   window.FetchCarts = function(){
     const countcarts =document.getElementById('countcarts');
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
