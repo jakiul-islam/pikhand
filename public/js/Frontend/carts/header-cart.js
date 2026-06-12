@@ -243,7 +243,7 @@
       let existingProduct = cart.find(item => item.id === productId);
       if(existingProduct){
         
-          cart[existingProduct].quantity += 1;
+          cart[xistingProduct].quantity += 1;
       }
       
     }else{
