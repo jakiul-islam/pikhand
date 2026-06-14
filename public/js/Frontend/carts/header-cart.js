@@ -244,10 +244,13 @@
       if(existingProduct){
         
         alert(existingProduct.quantity);
-        
-        existingProduct.quantity += 1;
-        localStorage.setItem("cart", JSON.stringify(cart)); 
-        
+        if( addquantitynum == 1111111 ){
+          existingProduct.quantity += 1;
+          localStorage.setItem("cart", JSON.stringify(cart)); 
+        }else{
+          existingProduct.quantity -= 1;
+          localStorage.setItem("cart", JSON.stringify(cart)); 
+        }
       }
       
     }else{
