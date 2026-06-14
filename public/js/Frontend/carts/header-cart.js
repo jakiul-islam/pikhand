@@ -253,12 +253,14 @@
         let localcount = existingProduct.quantity;
         if( addquantitynum == 1111111 ){
           localcount ++;
-          input.val(localcount);
+         // input.val(localcount);
+          $('#quantity-'+cartid).text(localcount);
           existingProduct.quantity += 1;
           localStorage.setItem("cart", JSON.stringify(cart)); 
         }else{
           localcount --;
-          input.val(localcount);
+          $('#quantity-'+cartid).text(localcount);
+        //  input.val(localcount);
           existingProduct.quantity -= 1;
           localStorage.setItem("cart", JSON.stringify(cart)); 
         }
