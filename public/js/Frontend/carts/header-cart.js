@@ -361,6 +361,17 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart = cart.filter(item => !selectedIds.includes(item.id.toString()));
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+
+        selectedIds.forEach(id => {
+          $(`.cart-item[data-id="${id}"]`).remove(); // কার্ডের div এ data-id="101" থাকতে হবে
+        });
+
+      
+      
     }else{
     
       let formData = new FormData();
