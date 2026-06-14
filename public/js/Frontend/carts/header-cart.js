@@ -357,35 +357,37 @@
     });
     
     
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    if(loginOrnotFor == 'userNotLogin'){
     
     
+    }else{
     
-    
-    
-    let formData = new FormData();
-    formData.append('ids',selectedIds);
-    $.ajax({
-      url: '/cart/delete', // change to your actual route
-      type: 'POST',
-      processData: false,
-      contentType: false,
-      data: formData,
-      headers: {
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-      },
-      success: function(response) {
-       FetchCarts();
-       chackout();
-       cartdeletebutton.style.display='none';
-       chackoutbutton.style.display='none';
-
-        showalert('Cart delete' , '#ffffff' ,'showallalert');
-      },
-      error: function(xhr) {
-          console.error("Error fetching product data:", xhr);
-          showalert('Try agian later' , '#ffffff' ,'showallalert');
-      }
-    });
+      let formData = new FormData();
+      formData.append('ids',selectedIds);
+      $.ajax({
+        url: '/cart/delete', // change to your actual route
+        type: 'POST',
+        processData: false,
+        contentType: false,
+        data: formData,
+        headers: {
+          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        success: function(response) {
+         FetchCarts();
+         chackout();
+         cartdeletebutton.style.display='none';
+         chackoutbutton.style.display='none';
+  
+          showalert('Cart delete' , '#ffffff' ,'showallalert');
+        },
+        error: function(xhr) {
+            console.error("Error fetching product data:", xhr);
+            showalert('Try agian later' , '#ffffff' ,'showallalert');
+        }
+      });
+    }
   }
 
   window.orderinsert = function(){
