@@ -355,6 +355,13 @@
     $('.cart-checkbox:checked').each(function() {
       selectedIds.push($(this).val());
     });
+    
+    
+    
+    
+    
+    
+    
     let formData = new FormData();
     formData.append('ids',selectedIds);
     $.ajax({
