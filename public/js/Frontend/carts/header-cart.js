@@ -361,6 +361,8 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       
+      alert('jakuul islam')
+      
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart = cart.filter(item => !selectedIds.includes(item.id.toString()));
       localStorage.setItem("cart", JSON.stringify(cart));
