@@ -243,11 +243,13 @@
       let existingProduct = cart.find(item => item.id === cartid);
       if(existingProduct){
         
-        alert(existingProduct.quantity);
+        let localcount = existingProduct.quantity;
         if( addquantitynum == 1111111 ){
+          localcount ++;
           existingProduct.quantity += 1;
           localStorage.setItem("cart", JSON.stringify(cart)); 
         }else{
+          localcount --;
           existingProduct.quantity -= 1;
           localStorage.setItem("cart", JSON.stringify(cart)); 
         }
