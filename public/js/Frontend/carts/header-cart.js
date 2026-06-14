@@ -359,8 +359,8 @@
     
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
-    
-    
+      
+      
     }else{
     
       let formData = new FormData();
