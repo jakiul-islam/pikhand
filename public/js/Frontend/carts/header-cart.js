@@ -243,10 +243,12 @@
       let existingProduct = cart.find(item => item.id === cartid);
       if(existingProduct){
         
-          cart[existingProduct].quantity += 1;
-      }
-      console.log(existingProduct);
+        console.log(existingProduct);
       alert('jakiul isla.');
+        
+        //  cart[existingProduct].quantity += 1;
+      }
+      
     }else{
     
     
