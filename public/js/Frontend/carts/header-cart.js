@@ -237,6 +237,13 @@
 
   window.addquantity = function(cartid,addquantitynum,stock){
     
+      let input = $('#inputQuantity' + cartid);
+      let count = parseInt(input.val()) || 0;
+  
+    
+    
+    
+    
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -260,9 +267,7 @@
     }else{
     
     
-      let input = $('#inputQuantity' + cartid);
-      let count = parseInt(input.val()) || 0;
-  
+
       if( addquantitynum == 1111111 ){
         if(count < stock){
           count ++;
