@@ -243,6 +243,7 @@
       let existingProduct = cart.find(item => item.id === cartid);
       if(existingProduct){
         
+        alert(existingProduct.quantity);
         
         existingProduct.quantity += 1;
         
