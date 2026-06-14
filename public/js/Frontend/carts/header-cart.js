@@ -246,6 +246,7 @@
         alert(existingProduct.quantity);
         
         existingProduct.quantity += 1;
+        localStorage.setItem("cart", JSON.stringify(cart)); 
         
       }
       
