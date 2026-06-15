@@ -313,39 +313,42 @@
     $('.cart-checkbox:checked').each(function() {
       selectedIds.push($(this).val());
     });
-
-    if(selectedIds.length === 0 ){
-      show.innerText = `0`;
-      cartdeletebutton.style.display='none';
-      chackoutbutton.style.display='none'
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    if(loginOrnotFor == 'userNotLogin'){
     }else{
-      cartdeletebutton.style.display='block';
-      chackoutbutton.style.display='block'
-      let formData = new FormData();
-      formData.append('ids',selectedIds);
-
-      $.ajax({
-        url: '/chackout/index', // change to your actual route
-        type: 'POST',
-        processData: false,
-        contentType: false,
-        data: formData,
-        headers: {
-          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-        },
-        success: function(response) {
-          let total_price = response.products.reduce((sum, product) => sum +
-          (parseFloat(product.product_price * product.quantity ) || 0),
-          0).toFixed(1);
-
-          show.innerText  ='price: $'+ total_price;
-          $('#showPriceForVoucher').val(total_price);
-        },
-        error: function(xhr) {
-          console.error("Error fetching product data:", xhr);
-          showalert('Try agian later' , '#ffffff' ,'showallalert');
-        }
-      });
+      if(selectedIds.length === 0 ){
+        show.innerText = `0`;
+        cartdeletebutton.style.display='none';
+        chackoutbutton.style.display='none'
+      }else{
+        cartdeletebutton.style.display='block';
+        chackoutbutton.style.display='block'
+        let formData = new FormData();
+        formData.append('ids',selectedIds);
+  
+        $.ajax({
+          url: '/chackout/index', // change to your actual route
+          type: 'POST',
+          processData: false,
+          contentType: false,
+          data: formData,
+          headers: {
+            'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+          },
+          success: function(response) {
+            let total_price = response.products.reduce((sum, product) => sum +
+            (parseFloat(product.product_price * product.quantity ) || 0),
+            0).toFixed(1);
+  
+            show.innerText  ='price: $'+ total_price;
+            $('#showPriceForVoucher').val(total_price);
+          },
+          error: function(xhr) {
+            console.error("Error fetching product data:", xhr);
+            showalert('Try agian later' , '#ffffff' ,'showallalert');
+          }
+        });
+      }
     }
   }
   //end chackout section
