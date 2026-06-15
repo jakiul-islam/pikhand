@@ -371,7 +371,6 @@
     if(loginOrnotFor == 'userNotLogin'){
       
       
-      alert('jakuul islam')
       
       let cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart = cart.filter(item => !selectedIds.includes(item.id.toString()));
@@ -382,7 +381,8 @@
           $(`.cart-item[data-id="${id}"]`).remove(); // কার্ডের div এ data-id="101" থাকতে হবে
         });
 
-      
+            alert('jakuul islam')
+
       
     }else{
     
