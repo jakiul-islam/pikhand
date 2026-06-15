@@ -381,8 +381,7 @@
           $(`.cart-item[data-id="${id}"]`).remove(); // কার্ডের div এ data-id="101" থাকতে হবে
         });
 
-            alert('jakuul islam')
-
+      FetchCarts();
       
     }else{
     
