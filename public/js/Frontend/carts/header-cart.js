@@ -315,6 +315,8 @@
     });
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
+      cartdeletebutton.style.display='block';
+      chackoutbutton.style.display='block'
     }else{
       if(selectedIds.length === 0 ){
         show.innerText = `0`;
