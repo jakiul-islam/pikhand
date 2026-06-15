@@ -315,8 +315,13 @@
     });
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     if(loginOrnotFor == 'userNotLogin'){
-      cartdeletebutton.style.display='block';
-      chackoutbutton.style.display='block'
+      if(selectedIds.length === 0 ){
+        cartdeletebutton.style.display='none';
+        chackoutbutton.style.display='none'
+      }else{
+        cartdeletebutton.style.display='block';
+        chackoutbutton.style.display='block';
+      }
     }else{
       if(selectedIds.length === 0 ){
         show.innerText = `0`;
