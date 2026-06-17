@@ -4,10 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jis food admin panale</title>
-    @vite([
-        'resources/css/Admin/common.css',
-        'resources/css/Admin/Order.css'
-    ])
+   
       <link rel="stylesheet" href="{{ asset('public/css/Admin/Common.css') }}">
       <link rel="stylesheet" href="{{ asset('public/css/Admin/Order.css') }}">
 
@@ -87,6 +84,9 @@
         'resources/js/Admin/common.js',
         'resources/js/Admin/order/order.js'
     ])
+          <script src="{{ asset('public/js/Admin/common.js') }} " ></script>
+          <script src="{{ asset('public/js/Admin/order/order.js') }} " ></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
