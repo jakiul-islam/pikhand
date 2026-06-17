@@ -56,7 +56,7 @@
   </head>
   
   <body>
-   @include("Admin.include.header")
+   @include("Admin.Include.Header")
    <div class="main-contain">
        <div class="name-2">
            <h1>Site-wide SEO Settings</h1>
