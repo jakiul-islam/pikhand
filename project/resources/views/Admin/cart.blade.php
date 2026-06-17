@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>jis food admin panale</title>
-    @vite([
-        'resources/css/Admin/Common.css',
-        'resources/css/Admin/Order.css'
-    ])
+   
+            <link rel="stylesheet" href="{{ asset('public/css/Admin/Common.css') }}">
+            <link rel="stylesheet" href="{{ asset('public/css/Admin/Order.css') }}">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
   </head>
 <body>
