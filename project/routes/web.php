@@ -89,7 +89,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::get('/admin/user/', function () {return view('Admin.user.user'); });
   Route::get('/admin/order/', function () {return view('Admin.order.order'); });
   Route::get('/admin/order_items/', function () {return view('Admin.order.order_items'); });
-  Route::get('/admin/Payment/', function () {return view('Admin.Payment'); });
+  Route::get('/admin/Payment/', function () {return view('Admin.payment'); });
   Route::get('/admin/Review/', function () {return view('Admin.review'); });
   Route::get('/admin/cart/', function () {return view('Admin.cart'); });
   Route::get('/admin/Security/', function () {return view('Admin.Security'); });
