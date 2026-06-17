@@ -183,7 +183,7 @@ class VouchersController extends Controller
           ], 200);
         }
         
-        $userid = session('user');
+        $userid = session('user_id');
         
         $chack = DB::table('voucher_usages')
                 ->where('user_id',$userid)
