@@ -6,7 +6,7 @@
     <title>jis food admin panale</title>
         <link rel="stylesheet" href="{{ asset('public/css/Admin/Common.css') }}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <script src="{{ asset('tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('public/tinymce/tinymce.min.js') }}"></script>
    <!-- <script type="text/javascript"
    src="https://www.gstatic.com/charts/loader.js"></script>-->
     <style>
