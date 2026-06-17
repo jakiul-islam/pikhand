@@ -102,7 +102,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::get('123', function () {return view('admin.admin'); })->name('admin.123');
   //page route
   Route::get('/admin/comment', function () {return view('Admin.admin'); });
-  Route::get('/admin/Brand', function () {return view('Admin.Brand'); });
+  Route::get('/admin/Brand', function () {return view('Admin.brand'); });
   Route::get('/admin/Vouchers/', function () {return view('Admin.Voucher'); })->name('admin.Voucher');
   Route::get('/admin/Help/', function () {return view('Admin.Help'); })->name('admin.Help');
   Route::get('/admin/Policies/', function () {return view('Admin.Policies'); })->name('admin.Policies');
