@@ -90,7 +90,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::get('/admin/order/', function () {return view('Admin.order.order'); });
   Route::get('/admin/order_items/', function () {return view('Admin.order.order_items'); });
   Route::get('/admin/Payment/', function () {return view('Admin.Payment'); });
-  Route::get('/admin/Review/', function () {return view('Admin.Review'); });
+  Route::get('/admin/Review/', function () {return view('Admin.review'); });
   Route::get('/admin/cart/', function () {return view('Admin.cart'); });
   Route::get('/admin/Security/', function () {return view('Admin.Security'); });
   Route::get('/admin/genaler_setting/', function () {return view('Admin.genarel-setting.genarel_setting'); });
