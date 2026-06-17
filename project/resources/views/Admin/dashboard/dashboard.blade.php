@@ -190,11 +190,5 @@
   <script src="{{ asset('public/js/Admin/dashboard/DashboardStokLimit.js') }} " ></script>
   <script src="{{ asset('public/js/Admin/dashboard/google-chart.js') }} " ></script>
 
-  @vite([
-    'resources/js/Admin/common.js',
-    'resources/js/Admin/dashboard/dashboard.js',
-    'resources/js/Admin/dashboard/DashboardStokLimit.js',
-    'resources/js/Admin/dashboard/google-chart.js'
-  ])
-
+  
 </html>
