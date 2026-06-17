@@ -8,6 +8,9 @@
         'resources/css/Admin/common.css',
         'resources/css/Admin/Order.css'
     ])
+      <link rel="stylesheet" href="{{ asset('public/css/Admin/Common.css') }}">
+      <link rel="stylesheet" href="{{ asset('public/css/Admin/product.css') }}">
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
