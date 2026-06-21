@@ -146,6 +146,7 @@
   <script src="{{ asset('public/js/Frontend/common/common.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/show-user-order.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/carts/header-cart.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/carts/geastCartDataInsert.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/search.js') }}"></script>
     
   <script src="{{ asset('public/js/Frontend/user/header-user-setting.js') }}"></script>
