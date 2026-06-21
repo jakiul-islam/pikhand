@@ -14,6 +14,7 @@
           let formData = new FormData();
           formData.append('productId',carts.id);
           formData.append('cartPrice',carts.price);
+          formData.append('cartQuantity',carts.quantity);
             
           sendDataAjax('/cart/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
