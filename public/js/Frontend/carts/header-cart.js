@@ -380,7 +380,7 @@
         selectedIds.forEach(id => {
           $(`.cart-item[data-id="${id}"]`).remove(); // কার্ডের div এ data-id="101" থাকতে হবে
         });
-
+      showalert('Cart delete' , '#ffffff' ,'showallalert');
       FetchCarts();
       
     }else{
