@@ -71,6 +71,7 @@ public function create(request $request){
         [
           'productId'      => 'required|numeric',
           'cartPrice'      => 'required|numeric',
+          'cartPrice'      => 'required|numeric',
         ]
     );
 
