@@ -19,6 +19,8 @@
           detailsDataAjax('/cart/gest/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
         })
+
+        localStorage.setItem("cart", JSON.stringify([]));
         FetchCarts()
       }
 }
