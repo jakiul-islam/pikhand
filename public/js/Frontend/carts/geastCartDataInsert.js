@@ -13,7 +13,7 @@
           //cart product show
           let formData = new FormData();
           formData.append('productId',carts.id);
-          formData.append('cartPrice',cartPrice);
+          formData.append('cartPrice',carts.price);
             
           sendDataAjax('/cart/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
