@@ -92,6 +92,7 @@ public function gestCartCreate(request $request){
             'ipAddress'     =>$ipAddress,
             'product_id'    =>$request->productId,
             'product_price' =>$request->cartPrice,
+            'product_price' =>$request->cartQuantity,
           ]);
           return response()->json([
             'status' => true,
