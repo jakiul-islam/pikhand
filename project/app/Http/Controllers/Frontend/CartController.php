@@ -64,6 +64,60 @@ class CartController extends Controller
     }
   }
 
+//gast cart store
+public function create(request $request){
+    $validateUser =validator::make(
+      $request->all(),
+        [
+          'productId'      => 'required|numeric',
+          'cartPrice'      => 'required|numeric',
+        ]
+    );
+
+    if($validateUser->fails()){
+      return response()->json([
+        'ststus' => false,
+        'message'=>'Validation Error Is',
+        'errors' =>$validateUser->errors()->all(),
+      ],401);
+    }else{
+      $ipAddress = request()->ip();
+      if(session()->has('user_id')){
+        $userid = session('user_id');
+        $countProduct = crats::where('user_id', $userid)->where('product_id', $request->productId)->whereIn('status', ['Active', 'Ordered'])->count();
+        if($countProduct < 1 ){
+          $user = crats::create([
+            'user_id'        =>$userid,
+            'ipAddress'     =>$ipAddress,
+            'product_id'    =>$request->productId,
+            'product_price' =>$request->cartPrice,
+          ]);
+          return response()->json([
+            'status' => true,
+            'message'=>'Products add to cart',
+            'errors' =>$validateUser->errors()->all(),
+          ],200);
+        }else{
+          return response()->json([
+            'status' => true,
+            'message'=>'this products is allready add in cart',
+            'errors' =>$validateUser->errors()->all(),
+          ],200);
+        }
+      }else{
+        return response()->json([
+          'ststus' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>'Internal server error',
+        ],401);
+      }
+    }
+  }
+
+
+
+
+
     //products carts section
     public function index(){
       
