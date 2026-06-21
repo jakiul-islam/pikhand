@@ -1,4 +1,4 @@
-  window.FetchCarts = function(){
+  window.gestCartDataCreate = function(){
   
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
@@ -19,5 +19,7 @@
           detailsDataAjax('/cart/gest/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
         })
+        
+        FetchCarts()
       }
 }
