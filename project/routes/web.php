@@ -318,6 +318,7 @@ Route::middleware([CheckUserLogin::class])->group(function () {
 
 //crat route section
   Route::POST('/cart/create',[CartController::class,'create'])->name('cart.create');
+  Route::POST('/cart/gest/create',[CartController::class,'create'])->name('cart.create');
   Route::POST('/cart/index',[CartController::class,'index'])->name('cart.index');
   Route::POST('/carts/product/index',[CartController::class,'cartsProductIndex'])->name('carts.product.index');
   Route::POST('/cart/quantity',[CartController::class,'quantity'])->name('cart.quantity');
