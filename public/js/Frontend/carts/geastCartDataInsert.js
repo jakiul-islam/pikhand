@@ -19,7 +19,6 @@
           detailsDataAjax('/cart/gest/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
         })
-        
         FetchCarts()
       }
 }
