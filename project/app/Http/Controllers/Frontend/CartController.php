@@ -65,7 +65,7 @@ class CartController extends Controller
   }
 
 //gast cart store
-public function create(request $request){
+public function gestCartCreate(request $request){
     $validateUser =validator::make(
       $request->all(),
         [
