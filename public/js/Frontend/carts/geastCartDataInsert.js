@@ -16,7 +16,7 @@
           formData.append('cartPrice',carts.price);
           formData.append('cartQuantity',carts.quantity);
             
-          sendDataAjax('/cart/gest/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
+          detailsDataAjax('/cart/gest/create',formData,'post','FetchCarts','Nan','Nan','Nan','Nan');
 
         })
       }
