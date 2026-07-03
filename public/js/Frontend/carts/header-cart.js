@@ -16,6 +16,9 @@
   window.FetchCarts = function(){
     const countcarts =document.getElementById('countcarts');
     let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    
+    alert(loginOrnotFor);
+    
     $('#cartsProdectshow').html('');
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
