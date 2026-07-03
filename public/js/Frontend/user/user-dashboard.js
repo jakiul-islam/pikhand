@@ -133,7 +133,7 @@
       </div>
       `;
       
-      
+      alert(response.user.uuid);
       
       document.getElementById("loginOrnotFor").value = response.user.uuid;
       
