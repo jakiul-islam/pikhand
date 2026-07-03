@@ -135,7 +135,7 @@
       
       
       
-      document.getElementById("loginOrnotFor").value;
+      document.getElementById("loginOrnotFor").value.response.user.email;
       
       
       
