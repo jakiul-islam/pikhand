@@ -132,6 +132,14 @@
 
       </div>
       `;
+      
+      
+      
+      document.getElementById("loginOrnotFor").value;
+      
+      
+      
+      
       FetchCarts();
       
       var modal = bootstrap.Modal.getInstance($('#loginForm')[0]);
