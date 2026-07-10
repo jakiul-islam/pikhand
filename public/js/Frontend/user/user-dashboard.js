@@ -137,7 +137,7 @@
     let useruuuid = document.getElementById("loginOrnotFor").value;
 
       
-      alert(useruuid);
+      alert(useruuuid);
       alert(response.user.uuid);
       
       FetchCarts();
