@@ -133,8 +133,9 @@
       
       //document.getElementById("loginOrnotFor").value = response.user.uuid;
       
-      $("#loginOrnotFor").val(response.user.uuid);
-     let useruuid= $("#loginOrnotFor").val();
+      $("#loginOrnotFor").val(response.user.uuid);    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
+    let useruuuid = document.getElementById("loginOrnotFor").value;
+
       
       alert(useruuid);
       alert(response.user.uuid);
