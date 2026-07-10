@@ -227,7 +227,7 @@ public function gestCartCreate(request $request){
       }
       //$ipAddress = request()->ip();
 
-        $carts          = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->orderBy('id','desc')->get();
+       // $carts          = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->orderBy('id','desc')->get();
 
 
 
