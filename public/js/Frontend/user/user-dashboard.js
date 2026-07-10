@@ -7,11 +7,7 @@
     let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
       
-      
-      
       gestCartDataCreate();
-      
-      
       
       userDeshbordShow.innerHTML=`
       <div style='overflow-y:auto; overflow-x:hidden;'>
