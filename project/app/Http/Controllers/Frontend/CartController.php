@@ -225,7 +225,7 @@ public function gestCartCreate(request $request){
       if (is_string($ids)) {
         $id = explode(',', $ids);
       }
-      $ipAddress = request()->ip();
+      //$ipAddress = request()->ip();
 
       $cartsdelete =  crats::where('ipAddress',$ipAddress)->whereIn('id',$id)->delete();
 
