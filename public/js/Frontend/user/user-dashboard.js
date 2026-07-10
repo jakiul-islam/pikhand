@@ -130,8 +130,8 @@
       `;
       
      
-      $("#loginOrnotFor").val(response.user.uuid);    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
-    let useruuuid = document.getElementById("loginOrnotFor").value;
+      $("#loginOrnotFor").val(response.user.uuid); 
+    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
 
       
       alert(useruuuid);
