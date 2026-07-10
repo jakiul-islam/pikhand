@@ -227,7 +227,11 @@ public function gestCartCreate(request $request){
       }
       //$ipAddress = request()->ip();
 
-      $cartsdelete =  crats::where('ipAddress',$ipAddress)->whereIn('id',$id)->delete();
+        $carts          = crats::where('user_id',$userid)->whereIn('status', ['Active', 'Ordered'])->orderBy('id','desc')->get();
+
+
+
+      $cartsdelete =  crats::whereIn('status', ['Active', 'Ordered'])->whereIn('id',$id)->delete();
 
       //$products  = DB::table('carts')->whereIn('id',$id)->get();
       return response()->json([
