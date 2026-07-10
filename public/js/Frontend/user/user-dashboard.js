@@ -134,7 +134,7 @@
       let loginOrnotFor = document.getElementById("loginOrnotFor").value;
 
 
-      
+      console.log($("#loginOrnotFor").length);
 
       
       alert(useruuuid);
