@@ -134,9 +134,9 @@
       //document.getElementById("loginOrnotFor").value = response.user.uuid;
       
       $("#loginOrnotFor").val(response.user.uuid);
-     let useruuid12= $("#loginOrnotFor").val();
+     let useruuid= $("#loginOrnotFor").val();
       
-      alert(useruuid12);
+      alert(useruuid);
       alert(response.user.uuid);
       
       FetchCarts();
