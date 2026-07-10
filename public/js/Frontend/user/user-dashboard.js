@@ -129,10 +129,7 @@
       </div>
       `;
       
-     // alert(response.user.uuid);
-      
-      //document.getElementById("loginOrnotFor").value = response.user.uuid;
-      
+     
       $("#loginOrnotFor").val(response.user.uuid);    let loginOrnotFor = document.getElementById("loginOrnotFor").value;
     let useruuuid = document.getElementById("loginOrnotFor").value;
 
