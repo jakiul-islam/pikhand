@@ -131,14 +131,12 @@
       
      
       $("#loginOrnotFor").val(response.user.uuid); 
-      let loginOrnotFor = document.getElementById("loginOrnotFor").value;
 
 
       console.log($("#loginOrnotFor").length);
 
       
-      alert(useruuuid);
-      alert(response.user.uuid);
+      
       
       FetchCarts();
       
