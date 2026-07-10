@@ -135,6 +135,7 @@
       
       $("#loginOrnotFor").val(response.user.uuid);
       
+      alert($("#loginOrnotFor").val());
       
       FetchCarts();
       
