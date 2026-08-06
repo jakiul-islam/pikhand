@@ -153,7 +153,7 @@
     <input type="hidden" id="webLogoForUseScript" value="{{$webInfo->logo}}">
   <!--   <br style='display:none;' id='notise_br'> -->
 
-
+<br>
 
  @include("Frontend.include.userSetting")
  @include("Frontend.include.hederUser")
