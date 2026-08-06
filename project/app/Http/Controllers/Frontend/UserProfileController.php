@@ -28,7 +28,7 @@ class UserProfileController extends Controller
         // 'dd' => dd(request()->all());
       ],401);
     }else{
-      $userid = session('user');
+      $userid = session('user_id');
       
       $chack = DB::table('user_profile')->where('user_id',$userid)->count();
       
