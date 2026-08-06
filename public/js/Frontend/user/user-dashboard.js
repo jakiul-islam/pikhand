@@ -1,4 +1,4 @@
- window.userDeshboard = function(){
+  window.userDeshboard = function(){
     fetchDataAjax('/user/session/chack','POST','userDeshboardData','Nan');
   }
 
