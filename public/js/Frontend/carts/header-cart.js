@@ -21,7 +21,7 @@
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
       countcarts.innerText= cart.length;
       if(cart.length > 0){
-          cart.forEach(function(carts) {
+        cart.forEach(function(carts) {
             
             let cartPrice  =`${carts.price }`;
             let cartid     =`${carts.id}`;
@@ -93,8 +93,7 @@
                       </div>
                     </li>
                   `);
-                let rating_show =
-                document.getElementById('rating_show'+cartsproducts.id);
+                let rating_show = document.getElementById('rating_show'+cartsproducts.id);
                   let rating_count = 0;
                   response.product_ratting.forEach(function(product_ratting_row){
                     if(product_ratting_row.product_id === cartsproducts.id){
