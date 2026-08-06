@@ -105,9 +105,6 @@
                       style="color:#FFDA25;"></i>${sum}(${response.product_ratting_count})`;
                     }
                   });
-                //  $('#rating_show').append(`
-                 //   <i class="bi bi-star-fill" style="color:#FFDA25;"></i>${rating_count}(${response.product_ratting_count})
-                //  `);
                   if ( carts.status === 'Ordered' ) { chackout( cartid ); }
                 });
               },
