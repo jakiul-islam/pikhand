@@ -16,7 +16,7 @@
          <div style='height:auto; width:320px; overflow:auto; margin:auto; padding:10px; background-color:#C4E9FF;'>
 
             <img src="/storage/${webLogoForUseScript}" alt="Picklet Logo"
-            class='logoCenter' >
+            class='logoCenter' height='100' width='100'>
 
             <div class="row">
               <div class="col-6 text-center" onclick='loginst();'>
