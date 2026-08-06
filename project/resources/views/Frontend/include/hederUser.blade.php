@@ -11,9 +11,7 @@
           </div>
           <div class="col-5" id="sessionDashbordLink">
             @if (session()->has('user_email'))
-              <button class="justify-content-end btn btn-outline-success"
-              style='margin-top:-10px;margin-bottom:5px;'
-              onclick='userDeshboard();'>
+              <button class="justify-content-end btn btn-outline-success" style='margin-top:-10px;margin-bottom:5px;' onclick='userDeshboard();'>
                 {{ session('name') }}
               </button>
               <input type='hidden' id="loginOrnotFor" value="{{ session('user_uuid') }}">
