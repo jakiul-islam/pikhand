@@ -154,6 +154,7 @@
   <!--   <br style='display:none;' id='notise_br'> -->
 
 <br>
+<br>
 
  @include("Frontend.include.userSetting")
  @include("Frontend.include.hederUser")
