@@ -33,7 +33,7 @@ class ProductPaginateController extends Controller
     $rating = product_reviews::get();
     $weblogo = web_logo::first();
    
-    return view('Frontend.All_product', [
+    return view('Frontend.all_product', [
       'posts' => $posts,
       'productcount' => $productcount,
       'Categoryall' => $Categoryall,
