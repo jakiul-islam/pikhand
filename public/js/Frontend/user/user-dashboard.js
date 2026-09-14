@@ -6,8 +6,8 @@
     
     let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
-      alert(response.user.profile_picture);
-      
+      // alert(response.user.profile_picture);
+      console.log(response);
       // gestCartDataCreate();
       
       userDeshbordShow.innerHTML=`
