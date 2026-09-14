@@ -10,7 +10,7 @@
 
       //alert(response.user.user_profile.profile_picture);
       console.log(response.user.user_profile)
-      console.log(response.user.user_profile.[0].user_id);
+      console.log(response.user.user_profile[0].user_id);
       // gestCartDataCreate();
 
       userDeshbordShow.innerHTML=`
