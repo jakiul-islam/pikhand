@@ -98,7 +98,7 @@
     window.eyechange = function(condition){
       if( condition==11){
         const icone      = document.getElementById('icone');
-        const password   = document.getElementById('password');
+        const password   = document.getElementById('loginPassword');
 
         if( password.type === "password"){
           password.type = "text";
