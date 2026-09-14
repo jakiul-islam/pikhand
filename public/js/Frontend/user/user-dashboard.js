@@ -8,8 +8,8 @@
     if(response.status){
 
 
-      alert(response.user.user_profile.profile_picture);
-      
+      //alert(response.user.user_profile.profile_picture);
+      console.log(response.user.user_profile)
       // gestCartDataCreate();
       
       userDeshbordShow.innerHTML=`
