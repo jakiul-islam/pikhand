@@ -7,7 +7,7 @@
     let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
       // alert(response.user.profile_picture);
-      console.log(response);
+      console.log(response.user.user_profile.profile_picture);
       // gestCartDataCreate();
       
       userDeshbordShow.innerHTML=`
