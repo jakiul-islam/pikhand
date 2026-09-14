@@ -12,7 +12,6 @@
       console.log(response.user.user_profile)
       console.log(response.user.user_profile.profile_picture);
       // gestCartDataCreate();
-      profile_picture
 
       userDeshbordShow.innerHTML=`
       <div style='overflow-y:auto; overflow-x:hidden;'>
