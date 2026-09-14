@@ -6,8 +6,7 @@
     
     let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
-      // alert(response.user.profile_picture);
-      console.log(response.user.user_profile.profile_picture);
+      
       // gestCartDataCreate();
       
       userDeshbordShow.innerHTML=`
@@ -27,7 +26,7 @@
 
       <div style="display: flex; align-items: center;">
         <div style="height: 70px; width: 70px; margin: 10px;  border-radius: 50%; position: relative;">
-          <img src="/storage/${response.user.profile_picture}" style='height:70px; width:70px; border-radius: 50%;' id='user_profile'>
+          <img src="/storage/${response.user.user_profile.profile_picture}" style='height:70px; width:70px; border-radius: 50%;' id='user_profile'>
 
           <div style='position: absolute; top: 55px; left: 55px; transform: translate(-50%, -50%);'>
             <div style='position:relative; '>
