@@ -10,6 +10,7 @@
 
       //alert(response.user.user_profile.profile_picture);
       console.log(response.user.user_profile)
+      console.log(response.user.user_profile.profile_picture);
       // gestCartDataCreate();
       
       userDeshbordShow.innerHTML=`
