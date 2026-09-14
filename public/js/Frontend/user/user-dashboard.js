@@ -6,6 +6,7 @@
     
     let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
+      alert(response.user.profile_picture);
       
       // gestCartDataCreate();
       
