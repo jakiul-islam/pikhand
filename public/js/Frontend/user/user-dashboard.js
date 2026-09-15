@@ -4,7 +4,7 @@
 
   window.userDeshboardData = function ( response ){
     
-  //  let  userDeshbordShow  = document.getElementById('userInfo');
+   let  userDeshbordShow  = document.getElementById('userInfo');
     if(response.status){
 
 
