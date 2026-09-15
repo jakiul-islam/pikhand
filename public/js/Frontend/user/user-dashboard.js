@@ -131,10 +131,10 @@
       `;
       
      
-      $("#loginOrnotFor").val(response.user.uuid); 
+    //  $("#loginOrnotFor").val(response.user.uuid); 
 
 
-      console.log($("#loginOrnotFor").length);
+    //  console.log($("#loginOrnotFor").length);
 
       
       
