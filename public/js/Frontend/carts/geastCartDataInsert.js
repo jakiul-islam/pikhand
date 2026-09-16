@@ -21,6 +21,7 @@
         })
 
         localStorage.setItem("cart", JSON.stringify([]));
+        cart = []; 
         FetchCarts()
       }
 }
