@@ -30,6 +30,20 @@ class UserProfileController extends Controller
         // 'dd' => dd(request()->all());
       ],401);
     }else{
+
+      $file = $request->file('image');
+
+      $filename = time() . '.webp';
+
+      $image = Image::read($file);
+
+      // সর্বোচ্চ width 1200px
+      $image->scaleDown(width: 1200);
+
+
+
+
+      
       $userid = session('user_id');
       
       $chack = DB::table('user_profile')->where('user_id',$userid)->count();
