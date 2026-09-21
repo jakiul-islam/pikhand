@@ -19,7 +19,7 @@ class UserProfileController extends Controller
     $validateUser =Validator::make(
       $request->all(),
         [
-          'profile_input' => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+          'profile_input' => 'required|image|max:10250',
         ]
     );
     if($validateUser->fails()){
