@@ -31,16 +31,36 @@ class UserProfileController extends Controller
       ],401);
     }else{
 
-      $file = $request->file('image');
+      $$file = $request->file('profile_input');
 
-      $filename = time() . '.webp';
+    // Intervention Image
+    $manager = new ImageManager(new Driver());
 
-      $image = Image::read($file);
+    $image = $manager->read($file);
 
-      // সর্বোচ্চ width 1200px
-      $image->scaleDown(width: 1200);
+    // সর্বোচ্চ width 1200px
+    $image->scaleDown(width: 1200);
+
+    // WebP filename
+    $filename = time() . '_' . uniqid() . '.webp';
+
+    // Storage path
+    $path = 'user_profile/' . $filename;
+
+    // WebP encode + save
+    Storage::disk('public')->put(
+        $path,
+        $image->toWebp(quality: 80)
+    );
+
+    // আগের profile আছে কিনা
+    $profile = DB::table('user_profile')
+        ->where('user_id', $userid)
+        ->first();
 
 
+
+      
 
 
       
