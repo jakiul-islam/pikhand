@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   </head>
   <body>
-    <a class="backbutton" href="/home"> <i class="bi bi-arrow-left"></i> </a>
+    <a class="backbutton" href="/"> <i class="bi bi-arrow-left"></i> </a>
     <!-- show product slider  -->
       
       @php
