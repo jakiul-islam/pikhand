@@ -54,11 +54,6 @@ class UserProfileController extends Controller
     );
 
     // আগের profile আছে কিনা
-    $profile = DB::table('user_profile')
-        ->where('user_id', $userid)
-        ->first();
-
-
 
       
 
