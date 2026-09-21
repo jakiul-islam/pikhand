@@ -27,7 +27,7 @@ class UserProfileController extends Controller
         'ststus' => false,
         'message'=>'Validation Error Is',
         'errors' =>$validateUser->errors()->all(),
-        // 'dd' => dd(request()->all());
+        'dd' => dd(request()->all());
       ],401);
     }else{
 
