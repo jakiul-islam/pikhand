@@ -34,7 +34,7 @@ class UserProfileController extends Controller
       $file = $request->file('profile_input');
 
       // Intervention Image
-      $manager = new ImageManager(new Driver());
+     // $manager = new ImageManager(new Driver());
 
       $image = $manager->read($file);
 
