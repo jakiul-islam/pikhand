@@ -60,7 +60,7 @@ class RatingController extends Controller
       ], 401);
     }else{
     
-      $userid = session('user');
+      $userid = session('user_id');
       $ProductId = $request->ProductId;
     
       $ratingchack = product_reviews::where('user_id' , $userid )->where('product_id',$ProductId)->count();
@@ -200,7 +200,7 @@ class RatingController extends Controller
         'errors' => $validateUser->errors()->all(),
       ], 401);
     }else{
-      $userid      = session('user');
+      $userid      = session('user_id');
       $product     =  product::where('id',$request->ProductId)->first();
       $rating      =  product_reviews::where('user_id',$userid)->where('product_id',$request->ProductId)->first();
       $ratingcount =  product_reviews::where('user_id',$userid)->where('product_id',$request->ProductId)->count();
