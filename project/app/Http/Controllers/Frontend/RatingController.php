@@ -20,7 +20,7 @@ class RatingController extends Controller
   public function productdetels( $slug ){
     $products       = product::where('slug',$slug)->where('status','1')->first();
     $productsid     = $products->id;
-    $userid         = session('user');
+    $userid         = session('user_id');
     $productsimg    = product_review_img::where('product_id',$productsid)->get();
     $Categoryall    = categories::all();
     $subcategoryall = product_subcategories::all();
