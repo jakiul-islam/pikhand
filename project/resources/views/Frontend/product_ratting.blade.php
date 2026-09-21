@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content=''>
-    <link rel="stylesheet" href="{{ asset('css/Ratting.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/Ratting.css') }}">
     <title></title>
    
     <!-- bootstrap link -->
