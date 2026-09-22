@@ -158,6 +158,12 @@
   //insert_profile
   window.createUserProfile = function (){
     let formData = new FormData();
+
+   alert( $('#profile_input')[0].files[0] );
+
+
+
+    
     formData.append('profile_input', $('#profile_input')[0].files[0]);
     sendDataAjax('/user/profile/create',formData,'post','userDeshboard','Nan','Nan','Nan','Nan');
   }
