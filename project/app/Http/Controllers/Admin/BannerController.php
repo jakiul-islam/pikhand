@@ -42,7 +42,7 @@ class BannerController extends Controller
 
         $file = $request->file('imageInput');
 
-        $image = Image::read($file);
+      //  $image = Image::read($file);
 
         // সর্বোচ্চ width 1200px
         $image->scaleDown(width: 1200);
