@@ -24,7 +24,7 @@
               $('#bannerName').val('');
               $('#bannerSlog').val('');
               $('#bannerDescription').val('');
-
+              previewImage.style.disply = "none";
           });
         });
         //index
