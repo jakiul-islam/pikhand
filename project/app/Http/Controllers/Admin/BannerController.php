@@ -155,7 +155,7 @@ class BannerController extends Controller
     
           $banner_delete = banner::where('id', $request->deleteId)->first();
           if ($banner_delete) {
-            //$imagePath = storage_path('app/public/' . $brand_delete->logo);
+            
            $imagePath = $banner_delete->image;
             // $imagePathpub = public_path('public/' . $brand_delete->logo);
             // ইমেজ ফাইল এক্সিস্ট করে কি না চেক করে ডিলিট করুন
