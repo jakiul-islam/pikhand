@@ -133,7 +133,7 @@
             <div class="input-group flex-nowrap">
               <input type='hidden' id='Editeid' value='${banners.id}'>
               <span class="input-group-text" id="addon-wrapping">name</span>
-              <input type="text" id="Editeservicename" value='${banners.name}' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
+              <input type="text" id="EditBannerName" value='' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <br>
             <div class="input-group flex-nowrap">
