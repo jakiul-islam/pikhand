@@ -73,7 +73,7 @@
            bannerId.innerHtml = id;
            bannerSlug.innerHTML = slug;
            bannerDescription.innerHTML = description;
-          
+           bannerImg.src = "/storage/${response.product_subcategories.icon}"
         }
 
 
