@@ -63,7 +63,11 @@
 
 
         window.viewDateSet = function(id , name , slug , image, description ){
-          let Bannerneme = document.getElementById('bannerName');
+          let bannerName = document.getElementById('bannerName');
+          let bannerId = document.getElementById('bannerId');
+          let bannerSlug = document.getElementById('bannerSlug');
+          let bannerDescription = document.getElementById('bannerDescription');
+          let bannerImg = document.getElementById('bannerImg');
           
         }
 
