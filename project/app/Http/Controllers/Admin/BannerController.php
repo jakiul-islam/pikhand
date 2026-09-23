@@ -57,7 +57,7 @@ class BannerController extends Controller
         // WebP filename
         $filename = time() . '_' . uniqid() . '.webp';
         
-        $path = 'user_profile/' . $filename;
+        $path = 'service/' . $filename;
         
         // WebP encode + save
         Storage::disk('public')->put(
