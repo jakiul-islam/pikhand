@@ -122,7 +122,7 @@
       </div>
     </div>
 
-    <div class="modal fade editor-modal  editeModel" id="${editeId}" tabindex="-1" aria-labelledby="${editeId}Label" aria-hidden="true">
+    <div class="modal fade editor-modal  editeModel" id="EditBannerModel" tabindex="-1" aria-labelledby="${editeId}Label" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
