@@ -96,6 +96,7 @@ class BannerController extends Controller
           ],401);
         }else{
 
+            $file = $request->file('imageInput1');
 
             $path = $imageService->upload(
                 $file,
