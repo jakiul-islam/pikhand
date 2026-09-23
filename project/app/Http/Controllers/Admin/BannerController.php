@@ -60,11 +60,17 @@ class BannerController extends Controller
         $path = 'service/' . $filename;
         
         // WebP encode + save
-        Storage::disk('public')->put(
-            $path,
-            $image->toWebp(quality: 80)
-        );
+        // Storage::disk('public')->put(
+        //     $path,
+        //     $image->toWebp(quality: 80)
+        // );
 
+        $encoded = $image->encode(
+            new WebpEncoder(quality: 80)
+        );
+        
+        // Save
+        Storage::disk('public')->put($path, $encoded);
 
 
 
