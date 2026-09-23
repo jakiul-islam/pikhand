@@ -73,6 +73,13 @@
            bannerSlug.innerHTML = slug;
            bannerDescription.innerHTML = description;
            bannerImg.src = "/storage/" +image;
+
+              console.log(image);
+              console.log(name);
+              console.log(description);
+
+
+          
         }
 
 
