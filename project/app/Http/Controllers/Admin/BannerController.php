@@ -36,7 +36,39 @@ class BannerController extends Controller
         ],401);
       }else{
 
-        $path = $request->file('imageInput')->store('service', 'public');
+
+
+        $file = $request->file('imageInput');
+
+      // Intervention Image
+     // $manager = new ImageManager(new Driver());
+
+      $image = $manager->read($file);
+
+      // সর্বোচ্চ width 1200px
+      $image->scaleDown(width: 1200);
+
+      // WebP filename
+      $filename = time() . '_' . uniqid() . '.webp';
+
+      // Storage path
+      $path = 'user_profile/' . $filename;
+
+      // WebP encode + save
+      Storage::disk('public')->put(
+        $path,
+        $image->toWebp(quality: 80)
+      );
+
+
+
+
+
+
+
+
+        
+       // $path = $request->file('imageInput')->store('service', 'public');
        
         $banner_create = banner::create([
           'name'         =>$request->bannerName,
