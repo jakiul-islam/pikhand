@@ -101,7 +101,7 @@
     
    <!-- editor model -->
     
-    <div class="modal fade editor-modal" id="viewModel" tabindex="-1" aria-labelledby="${vewlId}Label" aria-hidden="true">
+    <div class="modal fade editor-modal" id="viewModel" tabindex="-1" aria-labelledby="viewModelLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
