@@ -45,7 +45,7 @@ class BannerController extends Controller
       //  $image = Image::read($file);
 
         // সর্বোচ্চ width 1200px
-        $image->scaleDown(width: 1200);
+        $file->scaleDown(width: 1200);
         
         // WebP filename
         $filename = time() . '_' . uniqid() . '.webp';
