@@ -72,7 +72,7 @@
            bannerId.innerHTML = id;
            bannerSlug.innerHTML = slug;
            bannerDescription.innerHTML = description;
-           bannerImg.src = "/storage/".response.product_subcategories.icon;
+           bannerImg.src = "/storage/".image;
         }
 
 
