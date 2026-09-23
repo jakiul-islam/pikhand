@@ -57,6 +57,8 @@
                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#${DelmodalId}">delete</button></td>
               </tr>
             `);
+
+            
             $('body').append(`
               <div class="modal fade editor-modal" id="${vewlId}" tabindex="-1" aria-labelledby="${vewlId}Label" aria-hidden="true">
                 <div class="modal-dialog">
