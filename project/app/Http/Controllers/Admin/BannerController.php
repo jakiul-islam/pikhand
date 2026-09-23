@@ -54,7 +54,7 @@ class BannerController extends Controller
     // Width সর্বোচ্চ 1200px
     $image->scaleDown(width: 1200);
 
-    // নতুন filename
+    /* // নতুন filename
     $filename = uniqid() . '.webp';
 
     $path = storage_path('app/public/banner/' . $filename);
@@ -78,7 +78,7 @@ class BannerController extends Controller
 
         // সর্বোচ্চ width 1200px
         $file->scaleDown(width: 1200);
-        
+        */
         // WebP filename
         $filename = time() . '_' . uniqid() . '.webp';
         
