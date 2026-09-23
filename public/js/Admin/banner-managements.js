@@ -68,6 +68,11 @@
           let bannerSlug = document.getElementById('bannerSlug');
           let bannerDescription = document.getElementById('bannerDescription');
           let bannerImg = document.getElementById('bannerImg');
+
+           bannerName.innerHTML = name;
+           bannerId.innerHtml = id;
+          bannerSlug.innerHTML = slug;
+          bannerDescription.innerHTML = description;
           
         }
 
