@@ -168,7 +168,7 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <input type='hidden' id='deleteId' value='${banners.id}'>
+                      <input type='hidden' id='deleteBannerId' >
                       <p>${banners.name}</p>
                       <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
                     </div>
