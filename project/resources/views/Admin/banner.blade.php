@@ -109,7 +109,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <h1 class='text-center' id='bannerName'></h1>
+            <h1 class='text-center' id='bannerNameView'></h1>
             <p id='bannerId'></p>
             <p id='bannerSlug'></p>
             <p id='bannerDescription'></p>
