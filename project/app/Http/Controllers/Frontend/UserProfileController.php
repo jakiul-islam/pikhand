@@ -27,11 +27,11 @@ class UserProfileController extends Controller
         'ststus' => false,
         'message'=>'Validation Error Is',
         'errors' =>$validateUser->errors()->all(),
-        'dd' => $request->file('profile_input');
+       // 'dd' => $request->file('profile_input');
       ],401);
     }else{
 
-      $file = $request->file('profile_input');
+     /* $file = $request->file('profile_input');
 
       // Intervention Image
      // $manager = new ImageManager(new Driver());
@@ -57,7 +57,7 @@ class UserProfileController extends Controller
 
       
 
-
+*/
       
       $userid = session('user_id');
       
