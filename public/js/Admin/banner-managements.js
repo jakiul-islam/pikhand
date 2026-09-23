@@ -52,7 +52,7 @@
                 <td>${banners.slug}</td>
                 <td>${banners.description}</td>
                 <td><img src="/storage/${banners.image}" width="100" alt="${banners.name}"></td>
-                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${vewlId}">View</button></td>
+                <td><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModel">View</button></td>
                 <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#${editeId}">edite</button></td>
                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#${DelmodalId}">delete</button></td>
               </tr>
