@@ -170,7 +170,7 @@
                     <div class="modal-body">
                       <input type='hidden' id='deleteBannerId' >
                       <p id="deleteBannerName">banners.name</p>
-                      <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
+                      <img id="deleteBannerimg" src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
