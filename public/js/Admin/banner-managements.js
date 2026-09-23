@@ -65,7 +65,7 @@
           let bannerName = document.getElementById('bannerNameView');
           let bannerId = document.getElementById('bannerId');
           let bannerSlug = document.getElementById('bannerSlug');
-          let bannerDescription = document.getElementById('bannerDescription');
+          let bannerDescription = document.getElementById('bannerDescriptionView');
           let bannerImg = document.getElementById('bannerImg');
 
            bannerName.innerHTML = name;
