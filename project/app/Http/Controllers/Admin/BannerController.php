@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Intervention\Image\Laravel\Facades\Image;
+
+
 
 use App\Models\Admin\banner;
 use App\Models\Admin\notice;
