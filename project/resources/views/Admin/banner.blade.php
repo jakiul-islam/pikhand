@@ -113,7 +113,7 @@
             <p id='bannerId'>id:${banners.id}</p>
             <p id='bannerSlug'>${banners.slug}</p>
             <p id='bannerDescription'>${banners.description}</p>
-            <img id='bannerimg' src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
+            <img id='bannerImg' src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
