@@ -173,7 +173,7 @@ class BannerController extends Controller
           } else {
             return response()->json([
                 'status' => false,
-                'message'=>'banner img is not found',
+                'message'=>$imagePath,
             ],404);
           }
         }
