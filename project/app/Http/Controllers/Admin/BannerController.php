@@ -49,7 +49,7 @@ class BannerController extends Controller
     $manager = new ImageManager(new Driver());
 
     // UploadedFile → Intervention Image object
-    $image = $manager->read($file);
+    $image = $manager->decode($file);
 
     // Width সর্বোচ্চ 1200px
     $image->scaleDown(width: 1200);
