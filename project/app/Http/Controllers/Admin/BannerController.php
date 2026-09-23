@@ -41,7 +41,7 @@ class BannerController extends Controller
         $file = $request->file('imageInput');
 
       // Intervention Image
-     // $manager = new ImageManager(new Driver());
+      $manager = new ImageManager(new Driver());
 
       $image = $manager->read($file);
 
