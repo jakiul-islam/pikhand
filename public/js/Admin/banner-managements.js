@@ -71,8 +71,8 @@
 
            bannerName.innerHTML = name;
            bannerId.innerHtml = id;
-          bannerSlug.innerHTML = slug;
-          bannerDescription.innerHTML = description;
+           bannerSlug.innerHTML = slug;
+           bannerDescription.innerHTML = description;
           
         }
 
