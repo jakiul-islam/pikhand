@@ -71,7 +71,7 @@ class BannerController extends Controller
         return response()->json($notice);
     }
     //eidte brands 
-    public function update(request $request){
+    public function update(request $request ,ImageService $imageService){
       $validateUser =Validator::make(
         $request->all(),
           [
