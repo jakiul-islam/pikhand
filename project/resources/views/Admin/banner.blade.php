@@ -138,11 +138,10 @@
             <br>
             <div class="input-group flex-nowrap">
               <span class="input-group-text" id="addon-wrapping">slug</span>
-              <input type="text" id="EditeserviceSlug" value='${banners.slug}' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
+              <input type="text" id="EditBannerSlug" value='${banners.slug}' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
             <br>
             <div class="input-group flex-nowrap">
-              <input type="hidden" id="old_image" value="${banners.image}">
               <input type="file"  id="imageInput1" class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
               <img id="previewImage1" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
               <img id="oldImg" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; ">
