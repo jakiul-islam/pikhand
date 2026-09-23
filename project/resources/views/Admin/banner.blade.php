@@ -112,7 +112,7 @@
             <h1 class='text-center' id='bannerNameView'></h1>
             <p id='bannerId'></p>
             <p id='bannerSlug'></p>
-            <p id='bannerDescription'></p>
+            <p id='bannerDescriptionView'></p>
             <img id='bannerImg' class="img-fluid" alt="banner Img ">
           </div>
           <div class="modal-footer">
