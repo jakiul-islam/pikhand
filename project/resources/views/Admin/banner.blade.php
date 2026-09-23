@@ -101,8 +101,86 @@
     
    <!-- editor model -->
     
-      
-    
+    <div class="modal fade editor-modal" id="viewModel" tabindex="-1" aria-labelledby="${vewlId}Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="${vewlId}Label">banner motels</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h1 class='text-center'>${banners.name}</h1>
+            <p>id:${banners.id}</p>
+            <p>${banners.slug}</p>
+            <p>${banners.description}</p>
+            <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade editor-modal  editeModel" id="${editeId}" tabindex="-1" aria-labelledby="${editeId}Label" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="${editeId}Label">edit  this banner</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="input-group flex-nowrap">
+              <input type='hidden' id='Editeid' value='${banners.id}'>
+              <span class="input-group-text" id="addon-wrapping">name</span>
+              <input type="text" id="Editeservicename" value='${banners.name}' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <br>
+            <div class="input-group flex-nowrap">
+              <span class="input-group-text" id="addon-wrapping">slug</span>
+              <input type="text" id="EditeserviceSlug" value='${banners.slug}' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
+            </div>
+            <br>
+            <div class="input-group flex-nowrap">
+              <input type="hidden" id="old_image" value="${banners.image}">
+              <input type="file"  id="imageInput1" class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
+              <img id="previewImage1" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
+              <img id="oldImg" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; ">
+            </div><br>
+              <span class="input-group-text"
+              id="addon-wrapping">banner description</span>
+            <div class="input-group flex-nowrap">
+              <textarea id="bannersBescription" class='editedescription'>${banners.description}</textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id='editebutton${banners.id}' class="btn
+            btn-primary EditeSaveButton">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade deleteModel editor-modal" id="${DelmodalId}" tabindex="-1" aria-labelledby="${DelmodalId}Label" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="${DelmodalId}Label">${banners.name}</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <input type='hidden' id='deleteId' value='${banners.id}'>
+                      <p>${banners.name}</p>
+                      <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" id="deletebutton" class="btn btn-danger deletebutton${banners.id}">delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
     
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
