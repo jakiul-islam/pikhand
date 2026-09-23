@@ -142,13 +142,6 @@ class BannerController extends Controller
           // Save
           Storage::disk('public')->put($path, $encoded);
   
-  
-
-
-
-
-          
-          $path = $request->file('imageInput1')->store('service', 'public');
           $banner = banner::where('id',$request->Editeid)->first();
           Storage::disk('public')->delete($banner->image); 
         }
