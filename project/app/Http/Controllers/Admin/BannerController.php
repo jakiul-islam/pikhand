@@ -44,6 +44,36 @@ class BannerController extends Controller
 
         $file = $request->file('imageInput');
 
+
+
+    $manager = new ImageManager(new Driver());
+
+    // UploadedFile → Intervention Image object
+    $image = $manager->read($file);
+
+    // Width সর্বোচ্চ 1200px
+    $image->scaleDown(width: 1200);
+
+    // নতুন filename
+    $filename = uniqid() . '.webp';
+
+    $path = storage_path('app/public/banner/' . $filename);
+
+    // directory না থাকলে তৈরি
+    if (!file_exists(dirname($path))) {
+        mkdir(dirname($path), 0755, true);
+    }
+
+    // WebP হিসেবে save
+    $image->toWebp(80)->save($path);
+
+
+
+
+
+
+
+        
       //  $image = Image::read($file);
 
         // সর্বোচ্চ width 1200px
