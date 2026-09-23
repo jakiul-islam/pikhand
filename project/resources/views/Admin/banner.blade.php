@@ -174,7 +174,7 @@
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      <button type="button" id="deletebutton" class="btn btn-danger deletebutton${banners.id}">delete</button>
+                      <button type="button" id="bannerDeletebutton" class="btn btn-danger deletebutton${banners.id}">delete</button>
                     </div>
                   </div>
                 </div>
