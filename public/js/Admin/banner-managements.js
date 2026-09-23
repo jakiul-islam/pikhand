@@ -36,8 +36,6 @@
 
         fetchBanner();
 
-
-
         window.bannersData  = function( response ){
           $('.editor-modal').remove();
           $('#allbanners').html(''); // পুরানো ডাটা মুছে ফেলবে
@@ -62,6 +60,15 @@
            
           });
         }
+
+
+        window.viewDateSet = function(id , name , slug , image, description ){
+          let Bannerneme = document.getElementById('bannerName');
+          
+        }
+
+
+
         //banner update
         $(document).ready(function(){
           $(document).on("click", ".EditeSaveButton", function(){
