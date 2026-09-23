@@ -159,7 +159,7 @@ class BannerController extends Controller
            $imagePath = $banner_delete->image;
 
             if ($imagePath && Storage::disk('public')->exists($imagePath)) {
-             // File::delete($imagePath);
+             
               Storage::disk('public')->delete($imagePath);
             //  File::delete($imagePathpub);
               $deteletdata = banner::where('id', $request->deleteId)->delete();
