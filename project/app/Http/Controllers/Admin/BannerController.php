@@ -84,11 +84,8 @@ class BannerController extends Controller
           ],401);
         }else{
           $path = $request->file('imageInput1')->store('service', 'public');
-          $brand = banner::where('id',$request->Editeid)->first();
-          $editeimagePath = storage_path('app/public/' . $brand->logo);
-          $editeimagePathpub = public_path('public/' . $brand->logo);
-          File::delete($editeimagePath);
-          File::delete($editeimagePathpub);
+          $banner = banner::where('id',$request->Editeid)->first();
+          Storage::disk('public')->delete($banner->image); 
         }
       }else {
         $validateUser =Validator::make(
@@ -125,7 +122,7 @@ class BannerController extends Controller
             'name' => $request->EditeBannersName,
             'slug' => $request->EditeBannersSlug,
             'st_price' => $request->EditeMinPrice,
-            'logo' =>$path,
+            'image' =>$path,
           ]);
           return response()->json([
             'ststus' => true,
