@@ -45,9 +45,8 @@ class BannerController extends Controller
 
         $file = $request->file('imageInput');
 
-
         $manager = new ImageManager(new Driver());
-
+        
         // UploadedFile → Intervention Image object
         $image = $manager->decode($file);
 
@@ -118,6 +117,37 @@ class BannerController extends Controller
             'errors' =>$validateUser->errors()->all(),
           ],401);
         }else{
+
+
+          $file = $request->file('imageInput1');
+  
+          $manager = new ImageManager(new Driver());
+          
+          // UploadedFile → Intervention Image object
+          $image = $manager->decode($file);
+  
+          // Width সর্বোচ্চ 1200px
+          $image->scaleDown(width: 1200);
+  
+          // WebP filename
+          $filename = time() . '_' . uniqid() . '.webp';
+          
+          $path = 'service/' . $filename;
+          
+         
+          $encoded = $image->encode(
+              new WebpEncoder(quality: 80)
+          );
+          
+          // Save
+          Storage::disk('public')->put($path, $encoded);
+  
+  
+
+
+
+
+          
           $path = $request->file('imageInput1')->store('service', 'public');
           $banner = banner::where('id',$request->Editeid)->first();
           Storage::disk('public')->delete($banner->image); 
