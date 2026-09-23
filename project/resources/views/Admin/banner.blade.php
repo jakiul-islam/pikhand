@@ -169,7 +169,7 @@
                     </div>
                     <div class="modal-body">
                       <input type='hidden' id='deleteBannerId' >
-                      <p>${banners.name}</p>
+                      <p id="deleteBannerName">banners.name</p>
                       <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
                     </div>
                     <div class="modal-footer">
