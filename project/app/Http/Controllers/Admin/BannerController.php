@@ -69,11 +69,6 @@ class BannerController extends Controller
 
 
 
-
-
-
-        
-       // $path = $request->file('imageInput')->store('service', 'public');
        
         $banner_create = banner::create([
           'name'         =>$request->bannerName,
