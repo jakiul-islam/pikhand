@@ -37,7 +37,6 @@
         fetchBanner();
 
         window.bannersData  = function( response ){
-          $('.editor-modal').remove();
           $('#allbanners').html(''); // পুরানো ডাটা মুছে ফেলবে
           $.each(response, function(index, banners) {
             let vewlId = `vew${index}`;
