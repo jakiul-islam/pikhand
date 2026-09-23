@@ -46,26 +46,20 @@ class BannerController extends Controller
         $file = $request->file('imageInput');
 
 
+        $manager = new ImageManager(new Driver());
 
-    $manager = new ImageManager(new Driver());
+        // UploadedFile → Intervention Image object
+        $image = $manager->decode($file);
 
-    // UploadedFile → Intervention Image object
-    $image = $manager->decode($file);
-
-    // Width সর্বোচ্চ 1200px
-    $image->scaleDown(width: 1200);
+        // Width সর্বোচ্চ 1200px
+        $image->scaleDown(width: 1200);
 
         // WebP filename
         $filename = time() . '_' . uniqid() . '.webp';
         
         $path = 'service/' . $filename;
         
-        // WebP encode + save
-        // Storage::disk('public')->put(
-        //     $path,
-        //     $image->toWebp(quality: 80)
-        // );
-
+       
         $encoded = $image->encode(
             new WebpEncoder(quality: 80)
         );
