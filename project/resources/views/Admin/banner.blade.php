@@ -144,24 +144,23 @@
             <div class="input-group flex-nowrap">
               <input type="file"  id="imageInput1" class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
               <img id="previewImage1" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
-              <img id="oldImg" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; ">
             </div><br>
               <span class="input-group-text"
               id="addon-wrapping">banner description</span>
             <div class="input-group flex-nowrap">
-              <textarea id="bannersBescription" class='editedescription'>${banners.description}</textarea>
+              <textarea id="bannersBescription" class='editedescription'>banners.description</textarea>
             </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" id='editebutton${banners.id}' class="btn
+            <button type="button" id='editebuttonbanner' class="btn
             btn-primary EditeSaveButton">Save changes</button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="modal fade deleteModel editor-modal" id="${DelmodalId}" tabindex="-1" aria-labelledby="${DelmodalId}Label" aria-hidden="true">
+    <div class="modal fade deleteModel editor-modal" id="deleteBannerModel" tabindex="-1" aria-labelledby="${DelmodalId}Label" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
                     <div class="modal-header">
