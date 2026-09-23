@@ -159,7 +159,7 @@
   window.createUserProfile = function (){
     let formData = new FormData();
 
-   alert( $('#profile_input')[0].files[0] );
+   console.log( $('#profile_input')[0].files[0] );
 
 
 
