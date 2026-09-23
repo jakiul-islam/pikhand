@@ -97,7 +97,7 @@ class BannerController extends Controller
         }else{
 
 
-             $path = $imageService->upload(
+            $path = $imageService->upload(
                 $file,
                 'service',
                 1200,
