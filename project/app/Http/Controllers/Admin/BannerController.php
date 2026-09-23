@@ -161,7 +161,8 @@ class BannerController extends Controller
             // ইমেজ ফাইল এক্সিস্ট করে কি না চেক করে ডিলিট করুন
            // if (File::exists($imagePath)) {
             if ($imagePath && Storage::disk('public')->exists($imagePath)) {
-              File::delete($imagePath);
+             // File::delete($imagePath);
+              Storage::disk('public')->delete($imagePath);
             //  File::delete($imagePathpub);
               $deteletdata = banner::where('id', $request->deleteId)->delete();
               return response()->json([
