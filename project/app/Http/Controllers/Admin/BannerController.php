@@ -9,14 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
-
-// use Intervention\Image\ImageManager;
-// use Intervention\Image\Drivers\Gd\Driver;
-// use Intervention\Image\Encoders\WebpEncoder;
-
-// use Intervention\Image\Laravel\Facades\Image;
-
-
 use App\Services\ImageService;
 
 use App\Models\Admin\banner;
@@ -43,34 +35,7 @@ class BannerController extends Controller
         ],401);
       }else{
 
-
-
         $file = $request->file('imageInput');
-
-        // $manager = new ImageManager(new Driver());
-        
-        // // UploadedFile → Intervention Image object
-        // $image = $manager->decode($file);
-
-        // // Width সর্বোচ্চ 1200px
-        // $image->scaleDown(width: 1200);
-
-        // // WebP filename
-        // $filename = time() . '_' . uniqid() . '.webp';
-        
-        // $path = 'service/' . $filename;
-        
-       
-        // $encoded = $image->encode(
-        //     new WebpEncoder(quality: 80)
-        // );
-        
-        // // Save
-        // Storage::disk('public')->put($path, $encoded);
-
-
-
-
 
         $path = $imageService->upload(
                 $file,
@@ -132,28 +97,13 @@ class BannerController extends Controller
         }else{
 
 
-          $file = $request->file('imageInput1');
-  
-          $manager = new ImageManager(new Driver());
-          
-          // UploadedFile → Intervention Image object
-          $image = $manager->decode($file);
-  
-          // Width সর্বোচ্চ 1200px
-          $image->scaleDown(width: 1200);
-  
-          // WebP filename
-          $filename = time() . '_' . uniqid() . '.webp';
-          
-          $path = 'service/' . $filename;
-          
-         
-          $encoded = $image->encode(
-              new WebpEncoder(quality: 80)
-          );
-          
-          // Save
-          Storage::disk('public')->put($path, $encoded);
+             $path = $imageService->upload(
+                $file,
+                'service',
+                1200,
+                80
+            );
+      
   
           $banner = banner::where('id',$request->Editeid)->first();
           Storage::disk('public')->delete($banner->image); 
