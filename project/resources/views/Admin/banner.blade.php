@@ -110,10 +110,10 @@
           </div>
           <div class="modal-body">
             <h1 class='text-center' id='bannerName'></h1>
-            <p>id:${banners.id}</p>
-            <p>${banners.slug}</p>
-            <p>${banners.description}</p>
-            <img src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
+            <p id='bannerId'>id:${banners.id}</p>
+            <p id='bannerSlug'>${banners.slug}</p>
+            <p id='bannerDescription'>${banners.description}</p>
+            <img id='bannerName' src="/storage/${banners.image}" class="img-fluid" alt="${banners.name}">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
