@@ -104,6 +104,8 @@
           let bannerSlug = document.getElementById('EditBannerSlug').value;
           let bannerDescription = tinymce.get('EditBannersDescription').getContent()
 
+          let fileInput = document.getElementById('imageInput1');
+
             
             let formData = new FormData();
             if (fileInput.files.length > 0) {
