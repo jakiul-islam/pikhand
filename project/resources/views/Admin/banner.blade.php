@@ -143,7 +143,7 @@
             <br>
             <div class="input-group flex-nowrap">
               <input type="file"  id="imageInput1" class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
-              <img id="previewImage1"  alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
+              <img id="previewImage1"  alt="Image Preview" style="max-width: 200px; max-height:100px;">
             </div><br>
               <span class="input-group-text"
               id="addon-wrapping">banner description</span>
