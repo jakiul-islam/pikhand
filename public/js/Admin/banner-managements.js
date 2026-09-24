@@ -50,7 +50,7 @@
                 <td>${banners.description}</td>
                 <td><img src="/storage/${banners.image}" width="100" alt="${banners.name}"></td>
                 <td><button type="button" onclick="viewDateSet('${banners.id}','${banners.name}','${banners.slug}','${banners.description}','${banners.image}')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModel">View</button></td>
-                <td><button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#EditBannerModel">edite</button></td>
+                <td><button type="button" onclick="EditDateSet('${banners.id}','${banners.name}','${banners.slug}','${banners.description}','${banners.image}')" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#EditBannerModel">edite</button></td>
                 <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteBannerModel">delete</button></td>
               </tr>
             `);
@@ -67,6 +67,27 @@
           let bannerSlug = document.getElementById('bannerSlug');
           let bannerDescription = document.getElementById('bannerDescriptionView');
           let bannerImg = document.getElementById('bannerImg');
+
+           bannerName.innerHTML = name;
+           bannerId.innerHTML = id;
+           bannerSlug.innerHTML = slug;
+           bannerDescription.innerHTML = description;
+           bannerImg.src = "/storage/" +image;
+
+              console.log(image);
+              console.log(name);
+              console.log(description);
+
+
+          
+        }
+       
+        window.EditDateSet = function(id , name , slug , description ,image ){
+          let bannerName = document.getElementById('EditBannerName');
+          let bannerId = document.getElementById('EditBannerId');
+          let bannerSlug = document.getElementById('EditBannerSlug');
+          let bannerDescription = document.getElementById('EditBannersDescription');
+          let bannerImg = document.getElementById('imageInput1');
 
            bannerName.innerHTML = name;
            bannerId.innerHTML = id;
