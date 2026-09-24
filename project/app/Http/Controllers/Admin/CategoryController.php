@@ -45,7 +45,7 @@ class CategoryController extends Controller
           // 'dd' => dd(request()->all());
         ],401);
       }else{
-        $img_path    = $request->file('imageInput')->store('catagory', 'public');
+        $img_path    = $request->file('imageInput')->store('cetagory', 'public');
         $banner_path = $request->file('categoryBanner')->store('catagory/banner', 'public');
         $icon_path  = $request->file('categoryIcon')->store('catagory/icon', 'public');
 
