@@ -136,7 +136,7 @@
       $(document).ready(function(){
         $(document).on("click", "#bannerDeletebutton", function(){
 
-
+          let bannerId = document.getElementById('deleteBannerId').value;
           let formData = new FormData();
           formData.append('deleteId', bannerDescription);
 
