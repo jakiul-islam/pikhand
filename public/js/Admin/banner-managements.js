@@ -31,7 +31,7 @@
               $('#bannerName').val('');
               $('#bannerSlog').val('');
               $('#bannerDescription').val('');
-              previewImage.style.disply = "none";
+              previewImage.style.display = "none";
           });
         });
         //index
