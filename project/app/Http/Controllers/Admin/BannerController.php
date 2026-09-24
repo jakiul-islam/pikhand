@@ -111,7 +111,7 @@ class BannerController extends Controller
           
           $bannerUpdate = $banner->update([
             'image' => $path,
-          )];
+          ]);
         }
       }
         if($validateUser->fails()){
