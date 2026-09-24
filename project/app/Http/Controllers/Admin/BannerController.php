@@ -45,7 +45,7 @@ class BannerController extends Controller
             );
 
         
-        $banner = banner::where('name',$request->bannerName)->where('slug',$request->bannerSlog)->first();
+        $banner = banner::where('name',$request->bannerName)->where('slug',$request->bannerSlog)->count();
        
         $banner_create = banner::create([
           'name'         =>$request->bannerName,
