@@ -135,7 +135,11 @@
 
       $(document).ready(function(){
         $(document).on("click", "#bannerDeletebutton", function(){
-          /admin/deleteservices
+          
+          formData.append('bannerDescription', bannerDescription);
+
+           sendDataAjax('/admin/deleteservices',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
+
         });
       });
 
