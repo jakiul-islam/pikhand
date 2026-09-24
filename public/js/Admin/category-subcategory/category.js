@@ -20,12 +20,18 @@
       const IconPreviewImage = document.querySelector("#IconPreviewImage");
       const BannerPreviewImage = document.querySelector("#BannerPreviewImage");
 
+
+        let imageInput =  $('#imageInput')[0].files[0];
+
+      
       let formData = new FormData();
       formData.append('categoryName', $('#categoryName').val());
       formData.append('categorySlug', $('#categorySlug').val());
+      
       formData.append('imageInput', $('#imageInput')[0].files[0]);
       formData.append('categoryIcon', $('#categoryIcon')[0].files[0]);
       formData.append('categoryBanner', $('#categoryBanner')[0].files[0]);
+      
       formData.append('categorymetatitle', $('#categorymetatitle').val());
       formData.append('categoryMetaKayword', $('#categoryMetaKayword').val());
       formData.append('featured', featuredValue);
