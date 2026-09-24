@@ -140,7 +140,7 @@
           let formData = new FormData();
           formData.append('deleteId', bannerId);
 
-           sendDataAjax('/admin/deleteservices',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
+           sendDataAjax('/admin/delete_banner',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
 
         });
       });
