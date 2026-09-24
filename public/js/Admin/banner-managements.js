@@ -88,6 +88,7 @@
           let bannerSlug = document.getElementById('EditBannerSlug');
           let bannerDescription = document.getElementById('EditBannersDescription');
           let bannerImg = document.getElementById('imageInput1');
+          let previewImage1 = document.getElementById('previewImage1');
 
            bannerName.innerHTML = name;
            bannerId.innerHTML = id;
