@@ -13,7 +13,7 @@
 
   // category insert
   $(document).ready(function(){
-    $("#insertCatagory").click(function(){
+    $("#insertCatagory").click(async function(){
       // e.preventDefault();
       let featuredValue = $('#categoryFeatured').prop('checked') ? 1 : 0;
       const previewImage = document.querySelector("#previewImage");
