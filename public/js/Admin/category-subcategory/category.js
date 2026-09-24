@@ -188,6 +188,7 @@
 
       if (EditCategoryIcon.files.length > 0) {
         
+
         let editCompressicon = EditCategoryIcon.files[0]
         const editcompressedBlobicon = await compressWithCanvas(editCompressicon);
         
@@ -199,6 +200,12 @@
 
       if (EditCategoryBanner.files.length > 0) {
         formData.append('EditCategoryBanner', EditCategoryBanner.files[0]);
+       
+        let editCompressbanner = EditCategoryBanner.files[0]
+        const editcompressedBlobbanner = await compressWithCanvas(editCompressbanner);
+        
+        formData.append('EditCategoryImg', editcompressedBlobbanner, editCompressbanner.name);
+
       }else{
         formData.append('EditCategoryBanner', '');
       }
