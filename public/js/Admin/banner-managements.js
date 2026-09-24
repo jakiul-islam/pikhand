@@ -115,7 +115,7 @@
             formData.append('EditeBannersSlug', bannerSlug);
             formData.append('bannerDescription', bannerDescription);
 
-            sendDataAjax('/admin/edite_banners',formData,'post','fetchBanner','Nan','editebutton'+Editeid,'Save change','edite'+Editeid );
+            sendDataAjax('/admin/edite_banners',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
 
           });
         });
