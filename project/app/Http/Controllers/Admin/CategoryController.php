@@ -146,7 +146,7 @@ class CategoryController extends Controller
 
               $edit_img_path = $imageService->upload(
                 $edit_img_file,
-                'service',
+                'category',
                 1200,
                 80
               );
