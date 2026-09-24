@@ -135,43 +135,7 @@
 
       $(document).ready(function(){
         $(document).on("click", "#deletebutton", function(){
-          let deleteId = $(this).closest('.modal-content').find('#deleteId').val();
-          const prodectInsertButton =document.querySelector(".deletebutton"+deleteId);
-          prodectInsertButton.innerHTML = `
-            <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
-            <span role="status">Loading...</span>
-          `;
-          prodectInsertButton.disabled = true;
-
-          const DeleteInputerror =document.querySelector("#editeInputerror");
-
-          let formData = new FormData();
-          formData.append('deleteId', deleteId);
-          $.ajax({
-            url : '/admin/deleteservices',
-            type :'POST',
-            processData: false,
-            contentType: false,
-            data: formData,
-            headers: {
-              'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-            },
-            success:function(response){
-              prodectInsertButton.innerHTML = `delete`;
-              prodectInsertButton.disabled = false;
-
-              var modal = bootstrap.Modal.getInstance(document.querySelector('.deleteModel.show'));
-              modal.hide();
-              fetchBanner();
-            },
-            error:function(xhr,status,error){
-              prodectInsertButton.innerHTML = `delete`;
-              prodectInsertButton.disabled = false;
-
-              alert ('Error:'+ xhr.responseText);
-              console.log(xhr.responseText);
-            }
-          });
+          
         });
       });
 
