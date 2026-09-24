@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
 
-use App\Service\ImageService;
+use App\Services\ImageService;
 
 
 use App\Models\Admin\categories;
