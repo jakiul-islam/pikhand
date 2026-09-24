@@ -91,6 +91,20 @@
            previewImage1.src = "/storage/" +image;
           
         }
+       
+        window.deleteDateSet = function(id , name , slug , description ,image ){
+          let bannerName = document.getElementById('EditBannerName');
+          let bannerId = document.getElementById('EditBannerId');
+          let bannerSlug = document.getElementById('EditBannerSlug');
+          let previewImage1 = document.getElementById('previewImage1');
+
+           bannerName.value = name;
+           bannerId.value = id;
+           bannerSlug.value = slug;
+           tinymce.get('EditBannersDescription').setContent(description);
+           previewImage1.src = "/storage/" +image;
+          
+        }
 
 
 
