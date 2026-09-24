@@ -45,7 +45,7 @@ class BannerController extends Controller
             );
 
         
-
+        $banner = banner::where('name',$request->bannerName)->where('slug',$request->bannerSlog)->first();
        
         $banner_create = banner::create([
           'name'         =>$request->bannerName,
@@ -53,6 +53,8 @@ class BannerController extends Controller
           'description'  =>$request->bannerDescription,
           'image'        =>$path,
         ]);
+
+        
         return response()->json([
           'ststus' => true,
           'message'=>'banner create Successfull',
