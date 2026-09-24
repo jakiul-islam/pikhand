@@ -22,7 +22,7 @@
             let formData = new FormData();
               formData.append('bannerName', $('#bannerName').val());
               formData.append('bannerSlog', $('#bannerSlog').val());
-              formData.append('imageInput', compressedBlob, imageInput.name);
+              formData.append('imageInput', imageInput );
 
              // formData.append('imageInput', compressedBlob, imageInput.name);
              
