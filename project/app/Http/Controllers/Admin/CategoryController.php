@@ -104,7 +104,7 @@ class CategoryController extends Controller
       ]);
     }
     //edite catagory function 
-    public function update(request $request){
+    public function update(request $request , ImageService $imageService){
       $validateUser =Validator::make(
         $request->all(),
           [
