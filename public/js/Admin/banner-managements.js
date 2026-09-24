@@ -138,7 +138,7 @@
 
           let bannerId = document.getElementById('deleteBannerId').value;
           let formData = new FormData();
-          formData.append('deleteId', bannerDescription);
+          formData.append('deleteId', bannerId);
 
            sendDataAjax('/admin/deleteservices',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
 
