@@ -46,14 +46,20 @@ class BannerController extends Controller
 
         
         $banner = banner::where('name',$request->bannerName)->where('slug',$request->bannerSlog)->count();
-       
-        $banner_create = banner::create([
-          'name'         =>$request->bannerName,
-          'slug'         =>$request->bannerSlog,
-          'description'  =>$request->bannerDescription,
-          'image'        =>$path,
-        ]);
-
+        if($banner > 0 ){
+          return response()->json([
+          'status' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>'Use unic name and slug ',
+        ],401);
+        }else{
+          $banner_create = banner::create([
+            'name'         =>$request->bannerName,
+            'slug'         =>$request->bannerSlog,
+            'description'  =>$request->bannerDescription,
+            'image'        =>$path,
+          ]);
+        }
         
         return response()->json([
           'ststus' => true,
