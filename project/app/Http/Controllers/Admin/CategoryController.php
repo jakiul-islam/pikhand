@@ -46,8 +46,8 @@ class CategoryController extends Controller
         ],401);
       }else{
         $img_path    = $request->file('imageInput')->store('cetagory', 'public');
-        $banner_path = $request->file('categoryBanner')->store('catagory/banner', 'public');
-        $icon_path  = $request->file('categoryIcon')->store('catagory/icon', 'public');
+        $banner_path = $request->file('categoryBanner')->store('cetagory/banner', 'public');
+        $icon_path  = $request->file('categoryIcon')->store('cetagory/icon', 'public');
 
 
          $img_path = $imageService->upload(
