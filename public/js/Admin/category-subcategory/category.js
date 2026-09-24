@@ -176,7 +176,11 @@
 
       let formData = new FormData();
       if (EditCategoryImg.files.length > 0) {
-        formData.append('EditCategoryImg', EditCategoryImg.files[0]);
+
+        let editCompressimg = EditCategoryImg.files[0]
+        const editcompressedBlobimg = await compressWithCanvas(editCompressimg);
+        
+        formData.append('EditCategoryImg', editcompressedBlobimg, editCompressimg.name);
       }else{
         formData.append('EditCategoryImg', '');
       }
@@ -184,6 +188,12 @@
 
       if (EditCategoryIcon.files.length > 0) {
         formData.append('EditCategoryIcon', EditCategoryIcon.files[0]);
+
+        let editCompressicon = EditCategoryIcon.files[0]
+        const editcompressedBlobicon = await compressWithCanvas(editCompressicon);
+        
+        formData.append('EditCategoryImg', editcompressedBlobicon, editCompressicon.name);
+        
       }else{
         formData.append('EditCategoryIcon', '');
       }
