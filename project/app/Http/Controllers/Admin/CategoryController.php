@@ -120,7 +120,7 @@ class CategoryController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=> "Validation errors is",
           'errors' =>$validateUser->errors()->all(),
         ],401);
@@ -128,9 +128,7 @@ class CategoryController extends Controller
           
         $edit_category = categories::where('id',$request->EditCategoryId)->first();
         // Category img edit systym
-        if(empty($request->EditCategoryImg)){
-          $img_path = $edit_category->image;
-        }else{
+        if($request->EditCategoryImg){
           $validateUser =Validator::make(
             $request->all(),
               [
@@ -139,16 +137,14 @@ class CategoryController extends Controller
             );
             if($validateUser->fails()){
               return response()->json([
-                'ststus' => false,
+                'status' => false,
                 'message'=> "Validation errors is",
                 'errors' =>$validateUser->errors()->all(),
               ],401);
             }else{
               $img_path = $request->file('EditCategoryImg')->store('catagory', 'public');
-              $storage_img_path = storage_path('app/public/' . $edit_category->image);
-              $public_img_path = public_path('public/' . $edit_category->image);
-              File::delete($storage_img_path);
-              File::delete($public_img_path);
+              Storage::disk('public')->delete($edit_category->image); 
+              
             }
         }
         
