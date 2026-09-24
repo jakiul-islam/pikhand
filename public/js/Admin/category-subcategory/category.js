@@ -39,16 +39,12 @@
       formData.append('categoryName', $('#categoryName').val());
       formData.append('categorySlug', $('#categorySlug').val());
       
-     // formData.append('imageInput', compressedBlobimg, imageInput.name);
-   //   formData.append('categoryIcon', compressedBlobicon, categoryIcon.name);
-   //   formData.append('categoryBanner', compressedBlobbanner, categoryBanner.name);
+      formData.append('imageInput', compressedBlobimg, imageInput.name);
+      formData.append('categoryIcon', compressedBlobicon, categoryIcon.name);
+      formData.append('categoryBanner', compressedBlobbanner, categoryBanner.name);
 
 
-      formData.append('imageInput', imageInput);
-      formData.append('categoryIcon', categoryIcon);
-      formData.append('categoryBanner', categoryBanner);
-
-
+      
 
 
       
