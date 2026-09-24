@@ -12,6 +12,13 @@
         $(document).ready(function(){
           $("#insertBannerButton").click(function(){
             const previewImage = document.querySelector("#previewImage");
+            
+            
+            let imageInput =  $('#imageInput')[0].files[0];
+            
+            const compressedBlob = await compressWithCanvas(imageInput);
+            
+            
             let formData = new FormData();
               formData.append('bannerName', $('#bannerName').val());
               formData.append('bannerSlog', $('#bannerSlog').val());
@@ -196,3 +203,54 @@
             reader.readAsDataURL(file);
         }
     });
+
+
+
+
+
+
+
+
+
+
+//img chack for yous 
+
+
+function compressWithCanvas(file) {
+    return new Promise((resolve) => {
+        const img = new Image();
+        img.src = URL.createObjectURL(file);
+        img.onload = () => {
+            const canvas = document.createElement('canvas');
+            const MAX_WIDTH = 1024;
+            let width = img.width;
+            let height = img.height;
+
+            if (width > MAX_WIDTH) {
+                height *= MAX_WIDTH / width;
+                width = MAX_WIDTH;
+            }
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, width, height);
+
+            // 0.7 মানে 70% quality তে jpg বানাবে
+            canvas.toBlob((blob) => {
+                resolve(blob);
+            }, 'image/jpeg', 0.7);
+        }
+    });
+}
+
+// ব্যবহার:
+
+// async function uploadImage() {
+//     const file = document.getElementById('imageInput').files[0];
+//     const compressedBlob = await compressWithCanvas(file);
+
+//     let formData = new FormData();
+//     formData.append('image', compressedBlob, file.name);
+
+//     // তারপর তোমার $.ajax...
+// }
