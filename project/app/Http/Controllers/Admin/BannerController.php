@@ -78,6 +78,7 @@ class BannerController extends Controller
             'Editeid'           => 'required',
             'EditeBannersName'  => 'required|string',
             'EditeBannersSlug'  => 'required|string',
+            'bannerDescription'  => 'required|string',
           ]
         );
       if(!empty($request->imageInput1)){
@@ -107,6 +108,11 @@ class BannerController extends Controller
   
           $banner = banner::where('id',$request->Editeid)->first();
           Storage::disk('public')->delete($banner->image); 
+          
+          $bannerUpdate = $banner->update([
+            'name' => $request->EditeBannersName,
+            'slug' => $request->EditeBannersSlug,
+          )];
         }
       }
         if($validateUser->fails()){
@@ -120,7 +126,7 @@ class BannerController extends Controller
           $bannerUpdate = $banner->update([
             'name' => $request->EditeBannersName,
             'slug' => $request->EditeBannersSlug,
-            'st_price' => $request->EditeMinPrice,
+            'description' => $request->bannerDescription,
           ]);
           return response()->json([
             'ststus' => true,
