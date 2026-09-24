@@ -95,11 +95,11 @@
         window.deleteDateSet = function(id , name , slug , description ,image ){
           let bannerName = document.getElementById('deleteBannerName');
           let bannerId = document.getElementById('deleteBannerId');
-          let previewImage1 = document.getElementById('deleteBannerimg');
+          let deleteBannerimg = document.getElementById('deleteBannerimg');
 
-           bannerName.value = name;
+           bannerName.innerHTML = name;
            bannerId.value = id;
-           previewImage1.src = "/storage/" +image;
+           deleteBannerimg.src = "/storage/" +image;
           
         }
 
