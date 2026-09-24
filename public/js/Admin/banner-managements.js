@@ -109,11 +109,11 @@
             if (fileInput.files.length > 0) {
               formData.append('imageInput1', fileInput.files[0]);
             }
-            formData.append('Editeid', Editeid);
-            formData.append('EditeBannersName', EditeBannersName);
-            formData.append('EditeBannersSlug', EditeBannersSlug);
+            formData.append('Editeid', bannerId);
+            formData.append('EditeBannersName', bannerName);
+            formData.append('EditeBannersSlug', bannerSlug);
             formData.append('EditeMinPrice', Editeminprice);
-            formData.append('old_image', old_image);
+            formData.append('old_image', bannerDescription);
 
             sendDataAjax('/admin/edite_banners',formData,'post','fetchBanner','Nan','editebutton'+Editeid,'Save change','edite'+Editeid );
 
