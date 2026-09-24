@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Session;
 use Intervention\Image\Laravel\Facades\Image;
 
 
+use App\Services\ImageService;
+
+
 class UserProfileController extends Controller
 {
   public function create(request $request){
@@ -31,33 +34,13 @@ class UserProfileController extends Controller
       ],401);
     }else{
 
-     /* $file = $request->file('profile_input');
 
-      // Intervention Image
-     // $manager = new ImageManager(new Driver());
-
-      $image = $manager->read($file);
-
-      // সর্বোচ্চ width 1200px
-      $image->scaleDown(width: 1200);
-
-      // WebP filename
-      $filename = time() . '_' . uniqid() . '.webp';
-
-      // Storage path
-      $path = 'user_profile/' . $filename;
-
-      // WebP encode + save
-      Storage::disk('public')->put(
-        $path,
-        $image->toWebp(quality: 80)
-      );
-
-    // আগের profile আছে কিনা
-
-      
-
-*/
+          $path = $imageService->upload(
+                $file,
+                'service',
+                1200,
+                80
+            );
       
       $userid = session('user_id');
       
@@ -67,7 +50,7 @@ class UserProfileController extends Controller
           $path = $request->file('profile_input')->store('user_profile', 'public');
           $user = DB::table('user_profile')->insert([
             'user_id'=>$userid,
-            'profile_picture' => $path,
+            'profile_picture' =>$path,
           ]);
         }else{
           $path = $request->file('profile_input')->store('user_profile', 'public');
