@@ -28,7 +28,7 @@ class BannerController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validateUser->errors()->all(),
           // 'dd' => dd(request()->all());
