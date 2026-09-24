@@ -78,7 +78,6 @@ class BannerController extends Controller
             'Editeid'           => 'required',
             'EditeBannersName'  => 'required|string',
             'EditeBannersSlug'  => 'required|string',
-            'EditeMinPrice'     =>'required|string',
           ]
         );
       if(!empty($request->imageInput1)){
