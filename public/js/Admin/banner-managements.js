@@ -102,8 +102,7 @@
           let bannerName = document.getElementById('EditBannerName').value;
           let bannerId = document.getElementById('EditBannerId').value;
           let bannerSlug = document.getElementById('EditBannerSlug').value;
-          let bannerDescription = document.getElementById('EditBannersDescription');
-          let bannerDescription = tinymce.get('EditMetaDescription').getContent()
+          let bannerDescription = tinymce.get('EditBannersDescription').getContent()
 
             
             let formData = new FormData();
