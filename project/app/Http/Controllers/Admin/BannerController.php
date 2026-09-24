@@ -137,7 +137,7 @@ class BannerController extends Controller
     
     //end edite brand 
     //delete brand
-    public function deleteservices(request $request){
+    public function delete(request $request){
       $validateUser =validator::make(
         $request->all(),
           [
