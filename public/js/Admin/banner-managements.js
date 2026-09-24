@@ -135,7 +135,7 @@
 
       $(document).ready(function(){
         $(document).on("click", "#bannerDeletebutton", function(){
-          
+          /admin/deleteservices
         });
       });
 
