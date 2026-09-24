@@ -49,7 +49,11 @@ class CategoryController extends Controller
         $banner_file = $request->file('categoryBanner');
         $icon_file  = $request->file('categoryIcon');
 
+//asdyfhasjdfhkjsahdfsad fausdf basdfb asdfr
 
+
+
+        
          $img_path = $imageService->upload(
                 $img_file,
                 'cetagory',
