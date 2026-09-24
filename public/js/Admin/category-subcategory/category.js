@@ -25,14 +25,23 @@
         let categoryIcon =  $('#categoryIcon')[0].files[0];
         let categoryBanner =  $('#categoryBanner')[0].files[0];
 
+
+        const compressedBlobimg = await compressWithCanvas(imageInput);
+        const compressedBlobicon = await compressWithCanvas(categoryIcon);
+        const compressedBlobbanner = await compressWithCanvas(categoryBanner);
+            
+            
+
+
+
       
       let formData = new FormData();
       formData.append('categoryName', $('#categoryName').val());
       formData.append('categorySlug', $('#categorySlug').val());
       
-      formData.append('imageInput', $('#imageInput')[0].files[0]);
-      formData.append('categoryIcon', $('#categoryIcon')[0].files[0]);
-      formData.append('categoryBanner', $('#categoryBanner')[0].files[0]);
+      formData.append('imageInput', compressedBlobimg, imageInput.name);
+      formData.append('categoryIcon', compressedBlobicon, categoryIcon.name);
+      formData.append('categoryBanner', compressedBlobbanner, categoryBanner.name);
       
       formData.append('categorymetatitle', $('#categorymetatitle').val());
       formData.append('categoryMetaKayword', $('#categoryMetaKayword').val());
