@@ -126,7 +126,7 @@ class CategoryController extends Controller
         ],401);
       }else{
           
-        $edit_category = categories::where('id',$request->EditCategoryId)->first();
+        $edit_cetegory = categories::where('id',$request->EditCategoryId)->first();
         // Category img edit systym
         if($request->EditCategoryImg){
           $validateUser =Validator::make(
@@ -143,7 +143,9 @@ class CategoryController extends Controller
               ],401);
             }else{
               $img_path = $request->file('EditCategoryImg')->store('catagory', 'public');
-              Storage::disk('public')->delete($edit_category->image); 
+              Storage::disk('public')->delete($edit_cetegory->image); 
+
+
               
             }
         }
