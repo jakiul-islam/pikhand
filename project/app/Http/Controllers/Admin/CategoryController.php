@@ -52,19 +52,19 @@ class CategoryController extends Controller
 
          $img_path = $imageService->upload(
                 $file,
-                'service',
+                'cetagory',
                 1200,
                 80
             );
          $banner_path = $imageService->upload(
                 $file,
-                'service',
+                'cetagory/banner',
                 1200,
                 80
             );
          $icon_path = $imageService->upload(
                 $file,
-                'service',
+                'cetagory/icon',
                 1200,
                 80
             );
