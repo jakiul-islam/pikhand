@@ -51,7 +51,7 @@
                 <td><img src="/storage/${banners.image}" width="100" alt="${banners.name}"></td>
                 <td><button type="button" onclick="viewDateSet('${banners.id}','${banners.name}','${banners.slug}','${banners.description}','${banners.image}')" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#viewModel">View</button></td>
                 <td><button type="button" onclick="EditDateSet('${banners.id}','${banners.name}','${banners.slug}','${banners.description}','${banners.image}')" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#EditBannerModel">edite</button></td>
-                <td><button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteBannerModel">delete</button></td>
+                <td><button type="button" onclick="EditDateSet('${banners.id}','${banners.name}','${banners.slug}','${banners.description}','${banners.image}')" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteBannerModel">delete</button></td>
               </tr>
             `);
 
