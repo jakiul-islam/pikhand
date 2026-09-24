@@ -109,12 +109,6 @@ class BannerController extends Controller
           Storage::disk('public')->delete($banner->image); 
         }
       }
-      if(empty($path)){
-        return response()->json([
-          'ststus' => false,
-          'message'=> "pless give me veleate img",
-        ],401);
-      }else{
         if($validateUser->fails()){
           return response()->json([
             'ststus' => false,
@@ -127,7 +121,6 @@ class BannerController extends Controller
             'name' => $request->EditeBannersName,
             'slug' => $request->EditeBannersSlug,
             'st_price' => $request->EditeMinPrice,
-            'image' =>$path,
           ]);
           return response()->json([
             'ststus' => true,
@@ -136,7 +129,6 @@ class BannerController extends Controller
           ],200);
         }
       }
-    }
     
     //end edite brand 
     //delete brand
