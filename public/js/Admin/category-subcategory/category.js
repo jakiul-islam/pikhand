@@ -22,6 +22,8 @@
 
 
         let imageInput =  $('#imageInput')[0].files[0];
+        let categoryIcon =  $('#categoryIcon')[0].files[0];
+        let categoryBanner =  $('#categoryBanner')[0].files[0];
 
       
       let formData = new FormData();
