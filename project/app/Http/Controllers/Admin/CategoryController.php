@@ -209,12 +209,7 @@ class CategoryController extends Controller
                 'errors' =>$validateUser->errors()->all(),
               ],401);
             }else{
-              $banner_path = $request->file('EditCategoryBanner')->store('catagory/banner','public');
-              $storage_banner_path = storage_path('app/public/' . $edit_category->banner);
-              $public_banner_path = public_path('public/' . $edit_category->banner);
-              File::delete($storage_banner_path);
-              File::delete($public_banner_path);
-
+     
                             
               $edit_banner_file = $request->file('EditCategoryBanner');
 
