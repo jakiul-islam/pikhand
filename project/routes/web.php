@@ -222,7 +222,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::POST('/admin/insert_banners',[BannerController::class,'create'])->name('admin.insert_banners');
   Route::get('/admin/fetch_banner',[BannerController::class,'index'])->name('admin.fetch_banner');
   Route::POST('/admin/edite_banners',[BannerController::class,'update'])->name('admin.edite_banners');
-  Route::POST('/admin/delete_banner',[BannerController::class,'deleteservices'])->name('deleteservices');
+  Route::POST('/admin/delete_banner',[BannerController::class,'delete'])->name('deleteservices');
   //ganaral satting
   Route::POST('/admin/insertnoise',[NotiseController::class,'insertnoise'])->name('insertnoise');
   Route::POST('/admin/notisefetch',[NotiseController::class,'notisefetch'])->name('notisefetch');
