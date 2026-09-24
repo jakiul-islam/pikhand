@@ -99,12 +99,11 @@
         $(document).ready(function(){
           $(document).on("click", ".EditeSaveButton", function(){
 
-          let bannerName = document.getElementById('EditBannerName');
-          let bannerId = document.getElementById('EditBannerId');
-          let bannerSlug = document.getElementById('EditBannerSlug');
+          let bannerName = document.getElementById('EditBannerName').value;
+          let bannerId = document.getElementById('EditBannerId').value;
+          let bannerSlug = document.getElementById('EditBannerSlug').value;
           let bannerDescription = document.getElementById('EditBannersDescription');
-          let previewImage1 = document.getElementById('previewImage1');
-
+          let bannerDescription = tinymce.get('EditMetaDescription').getContent()
 
             
             let formData = new FormData();
