@@ -10,7 +10,7 @@
         });
         //banner create
         $(document).ready(function(){
-          $("#insertBannerButton").click(function(){
+          $("#insertBannerButton").click(async function(){
             const previewImage = document.querySelector("#previewImage");
             
             
