@@ -93,10 +93,9 @@
         }
        
         window.deleteDateSet = function(id , name , slug , description ,image ){
-          let bannerName = document.getElementById('EditBannerName');
-          let bannerId = document.getElementById('EditBannerId');
-          let bannerSlug = document.getElementById('EditBannerSlug');
-          let previewImage1 = document.getElementById('previewImage1');
+          let bannerName = document.getElementById('deleteBannerName');
+          let bannerId = document.getElementById('deleteBannerId');
+          let previewImage1 = document.getElementById('deleteBannerimg');
 
            bannerName.value = name;
            bannerId.value = id;
