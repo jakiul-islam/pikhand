@@ -99,14 +99,14 @@
         $(document).ready(function(){
           $(document).on("click", ".EditeSaveButton", function(){
 
-            let Editeid         = $(this).closest('.modal-content').find('#Editeid').val();
+          let bannerName = document.getElementById('EditBannerName');
+          let bannerId = document.getElementById('EditBannerId');
+          let bannerSlug = document.getElementById('EditBannerSlug');
+          let bannerDescription = document.getElementById('EditBannersDescription');
+          let previewImage1 = document.getElementById('previewImage1');
 
-            let fileInput         = document.getElementById('imageInput1');
-            let EditeBannersName    = $(this).closest('.modal-content').find('#Editeservicename').val();
-            let EditeBannersSlug    = $(this).closest('.modal-content').find('#EditeserviceSlug').val();
-            let old_image         = $(this).closest('.modal-content').find('#old_image').val();
-            let Editeminprice     = $(this).closest('.modal-content').find('#editemin_price').val();
 
+            
             let formData = new FormData();
             if (fileInput.files.length > 0) {
               formData.append('imageInput1', fileInput.files[0]);
