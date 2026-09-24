@@ -20,7 +20,7 @@ use App\Models\Admin\product;
 
 class CategoryController extends Controller
 {
-    public function create(request $request){
+    public function create(request $request , ImageService $imageService){
       $validateUser =validator::make(
         $request->all(),
           [
