@@ -74,10 +74,6 @@
            bannerDescription.innerHTML = description;
            bannerImg.src = "/storage/" +image;
 
-              console.log(image);
-              console.log(name);
-              console.log(description);
-
 
           
         }
@@ -90,15 +86,13 @@
           let bannerImg = document.getElementById('imageInput1');
           let previewImage1 = document.getElementById('previewImage1');
 
-           bannerName.innerHTML = name;
-           bannerId.innerHTML = id;
-           bannerSlug.innerHTML = slug;
-           bannerDescription.innerHTML = description;
-           bannerImg.src = "/storage/" +image;
+           bannerName.value = name;
+           bannerId.value = id;
+           bannerSlug.value = slug;
+           bannerDescription.value = description;
+           previewImage1.src = "/storage/" +image;
 
-              console.log(image);
-              console.log(name);
-              console.log(description);
+              
 
 
           
