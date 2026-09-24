@@ -110,8 +110,7 @@ class BannerController extends Controller
           Storage::disk('public')->delete($banner->image); 
           
           $bannerUpdate = $banner->update([
-            'name' => $request->EditeBannersName,
-            'slug' => $request->EditeBannersSlug,
+            'image' => path,
           )];
         }
       }
