@@ -148,7 +148,7 @@
               <span class="input-group-text"
               id="addon-wrapping">banner description</span>
             <div class="input-group flex-nowrap">
-              <textarea id="EditBannersDescription" class='description'>banners.description</textarea>
+              <textarea id="EditBannersDescription" class='description'></textarea>
             </div>
           </div>
           <div class="modal-footer">
