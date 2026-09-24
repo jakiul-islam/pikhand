@@ -239,9 +239,6 @@ class CategoryController extends Controller
             'meta_description'   => $request->EditMetaDescription,
             'short_description'  => $request->EditShortDescription,
             'description'        => $request->EditLanghDescription,
-            'image'              => $img_path,
-            'icon'               => $icon_path,
-            'banner'             => $banner_path,
           ]);
           return response()->json([
             'status' => true,
