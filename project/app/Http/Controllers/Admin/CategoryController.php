@@ -144,7 +144,7 @@ class CategoryController extends Controller
             }else{
               $edit_img_file = $request->file('EditCategoryImg');
 
-              $edit_path = $imageService->upload(
+              $edit_img_path = $imageService->upload(
                 $edit_img_file,
                 'service',
                 1200,
@@ -154,7 +154,7 @@ class CategoryController extends Controller
               Storage::disk('public')->delete($edit_cetegory->image); 
 
               $categories->update([
-                'image'              => $img_path,
+                'image'              => $edit_img_path,
               ]);
               
             }
@@ -180,6 +180,22 @@ class CategoryController extends Controller
               $public_icon_path = public_path('public/' . $edit_category->icon);
               File::delete($storage_icon_path);
               File::delete($public_icon_path);
+              
+              $edit_icon_file = $request->file('EditCategoryIcon');
+
+              $edit_path = $imageService->upload(
+                $edit_icon_file,
+                'service',
+                1200,
+                80
+              );
+              
+              Storage::disk('public')->delete($edit_cetegory->image); 
+
+              $categories->update([
+                'image'              => $img_path,
+              ]);
+              
             }  
         }
         
