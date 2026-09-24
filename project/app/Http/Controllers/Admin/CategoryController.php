@@ -142,10 +142,20 @@ class CategoryController extends Controller
                 'errors' =>$validateUser->errors()->all(),
               ],401);
             }else{
-              $img_path = $request->file('EditCategoryImg')->store('catagory', 'public');
+              $edit_img_file = $request->file('EditCategoryImg');
+
+              $edit_path = $imageService->upload(
+                $edit_img_file,
+                'service',
+                1200,
+                80
+              );
+              
               Storage::disk('public')->delete($edit_cetegory->image); 
 
-
+              $categories->update([
+                'image'              => $img_path,
+              ]);
               
             }
         }
