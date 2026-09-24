@@ -161,9 +161,7 @@ class CategoryController extends Controller
         }
         
         // Category icom edit systym
-        if(empty($request->EditCategoryIcon)){
-          $icon_path = $edit_category->icon;
-        }else{
+        if($request->EditCategoryIcon){
           $validateUser =Validator::make(
             $request->all(),
               [
