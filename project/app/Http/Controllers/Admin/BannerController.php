@@ -108,22 +108,6 @@ class BannerController extends Controller
           $banner = banner::where('id',$request->Editeid)->first();
           Storage::disk('public')->delete($banner->image); 
         }
-      }else {
-        $validateUser =Validator::make(
-          $request->all(),
-            [
-              'old_image' => 'required',
-            ]
-        );
-        if($validateUser->fails()){
-          return response()->json([
-            'ststus' => false,
-            'message'=> "Validation errors is",
-            'errors' =>$validateUser->errors()->all(),
-          ],401);
-        }else{
-          $path = $request->input('old_image');
-        }
       }
       if(empty($path)){
         return response()->json([
