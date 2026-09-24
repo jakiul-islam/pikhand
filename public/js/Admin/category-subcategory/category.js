@@ -187,8 +187,7 @@
 
 
       if (EditCategoryIcon.files.length > 0) {
-        formData.append('EditCategoryIcon', EditCategoryIcon.files[0]);
-
+        
         let editCompressicon = EditCategoryIcon.files[0]
         const editcompressedBlobicon = await compressWithCanvas(editCompressicon);
         
