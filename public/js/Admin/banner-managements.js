@@ -115,7 +115,7 @@
             formData.append('EditeBannersName', bannerName);
             formData.append('EditeBannersSlug', bannerSlug);
             formData.append('EditeMinPrice', Editeminprice);
-            formData.append('old_image', bannerDescription);
+            formData.append('bannerDescription', bannerDescription);
 
             sendDataAjax('/admin/edite_banners',formData,'post','fetchBanner','Nan','editebutton'+Editeid,'Save change','edite'+Editeid );
 
