@@ -134,7 +134,7 @@
         //delete
 
       $(document).ready(function(){
-        $(document).on("click", "#deletebutton", function(){
+        $(document).on("click", "#bannerDeletebutton", function(){
           
         });
       });
