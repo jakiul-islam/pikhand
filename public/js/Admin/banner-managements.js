@@ -217,8 +217,6 @@
 
 
 //img chack for yous 
-
-
 function compressWithCanvas(file) {
     return new Promise((resolve) => {
         const img = new Image();
