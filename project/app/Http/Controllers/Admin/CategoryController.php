@@ -271,23 +271,11 @@ class CategoryController extends Controller
         }else{
           $category = categories::where('id', $request->deleteId)->first();
           if ($category) {
-            $imgPath = storage_path('app/public/' . $category->image);
-            $imgPathpublic = public_path('public/' . $category->image);
-            //icone path
-            $iconPath = storage_path('app/public/' . $category->icon);
-            $iconPathpublic = public_path('public/' . $category->icon);
-            //banner 
-            $bannerPath = storage_path('app/public/' . $category->banner);
-            $bannerPathpublic = public_path('public/' . $category->banner);
-              File::delete($imgPath);
-              File::delete($imgPathpublic);
-              
-              File::delete($iconPath);
-              File::delete($iconPathpublic);
-              
-              File::delete($bannerPath);
-              File::delete($bannerPathpublic);
-              
+            Storage::disk('public')->delete($category->image); 
+            Storage::disk('public')->delete($category->icon); 
+            Storage::disk('public')->delete($category->banner); 
+          
+         
               $deteletdata = categories::where('id', $request->deleteId)->delete();
               return response()->json([
                 'status' => true,
