@@ -39,7 +39,7 @@ class CategoryController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validateUser->errors()->all(),
           // 'dd' => dd(request()->all());
@@ -88,7 +88,7 @@ class CategoryController extends Controller
           'banner' => $banner_path,
         ]);
         return response()->json([
-          'ststus' => true,
+          'status' => true,
           'message'=>'Category insert Successfull',
           'category' =>$category,
         ],200);
@@ -170,39 +170,32 @@ class CategoryController extends Controller
             );
             if($validateUser->fails()){
               return response()->json([
-                'ststus' => false,
+                'status' => false,
                 'message'=> "Validation errors is",
                 'errors' =>$validateUser->errors()->all(),
               ],401);
             }else{
-              $icon_path = $request->file('EditCategoryIcon')->store('catagory/icon', 'public');
-              $storage_icon_path = storage_path('app/public/' . $edit_category->icon);
-              $public_icon_path = public_path('public/' . $edit_category->icon);
-              File::delete($storage_icon_path);
-              File::delete($public_icon_path);
               
               $edit_icon_file = $request->file('EditCategoryIcon');
 
-              $edit_path = $imageService->upload(
+              $edit_icon_path = $imageService->upload(
                 $edit_icon_file,
-                'service',
+                'category/icon',
                 1200,
                 80
               );
               
-              Storage::disk('public')->delete($edit_cetegory->image); 
+              Storage::disk('public')->delete($edit_cetegory->icon); 
 
               $categories->update([
-                'image'              => $img_path,
+                'icon'              => $edit_icon_path,
               ]);
               
             }  
         }
         
          // Category banner edit systym
-        if(empty($request->EditCategoryBanner)){
-          $banner_path = $edit_category->banner;
-        }else{
+        if($request->EditCategoryBanner){
           $validateUser =Validator::make(
             $request->all(),
               [
@@ -211,7 +204,7 @@ class CategoryController extends Controller
             );
             if($validateUser->fails()){
               return response()->json([
-                'ststus' => false,
+                'status' => false,
                 'message'=> "Validation errors is",
                 'errors' =>$validateUser->errors()->all(),
               ],401);
@@ -221,6 +214,24 @@ class CategoryController extends Controller
               $public_banner_path = public_path('public/' . $edit_category->banner);
               File::delete($storage_banner_path);
               File::delete($public_banner_path);
+
+                            
+              $edit_banner_file = $request->file('EditCategoryBanner');
+
+              $edit_banner_path = $imageService->upload(
+                $edit_banner_file,
+                'category/banner',
+                1200,
+                80
+              );
+              
+              Storage::disk('public')->delete($edit_cetegory->icon); 
+
+              $categories->update([
+                'banner'              => $edit_banner_path,
+              ]);
+
+              
             }
         }
         
@@ -238,7 +249,7 @@ class CategoryController extends Controller
             'banner'             => $banner_path,
           ]);
           return response()->json([
-            'ststus' => true,
+            'status' => true,
             'message'=>'Category update successfull ',
             'categories' =>$categories,
           ],200);
@@ -254,7 +265,7 @@ class CategoryController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validateUser->errors()->all(),
         ],401);
@@ -311,7 +322,7 @@ class CategoryController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validateUser->errors()->all(),
         ],401);
@@ -337,7 +348,7 @@ class CategoryController extends Controller
       );
       if($validateUser->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validateUser->errors()->all(),
         ],401);
