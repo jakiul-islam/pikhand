@@ -89,12 +89,7 @@
            bannerId.value = id;
            bannerSlug.value = slug;
           tinymce.get('EditBannersDescription').setContent(description);
-           //bannerDescription.value = description;
            previewImage1.src = "/storage/" +image;
-
-              
-
-
           
         }
 
