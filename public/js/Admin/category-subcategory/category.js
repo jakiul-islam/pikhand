@@ -168,7 +168,7 @@
 
   //category change function
   $(document).ready(function(){
-    $(document).on("click", "#EditeSaveButton", function(){
+    $(document).on("click", "#EditeSaveButton", async function(){
       let EditCategoryImg = document.getElementById('EditCategoryImg');
       let EditCategoryIcon = document.getElementById('EditCategoryIcon');
       let EditCategoryBanner = document.getElementById('EditCategoryBanner');
