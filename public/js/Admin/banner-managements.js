@@ -246,14 +246,3 @@ function compressWithCanvas(file) {
     });
 }
 
-// ব্যবহার:
-
-// async function uploadImage() {
-//     const file = document.getElementById('imageInput').files[0];
-//     const compressedBlob = await compressWithCanvas(file);
-
-//     let formData = new FormData();
-//     formData.append('image', compressedBlob, file.name);
-
-//     // তারপর তোমার $.ajax...
-// }
