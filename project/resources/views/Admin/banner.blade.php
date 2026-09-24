@@ -131,7 +131,7 @@
           </div>
           <div class="modal-body">
             <div class="input-group flex-nowrap">
-              <input type='hidden' id='Editeid' value='${banners.id}'>
+              <input type='hidden' id='EditBannerId'>
               <span class="input-group-text" id="addon-wrapping">name</span>
               <input type="text" id="EditBannerName" value='' class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
             </div>
@@ -143,7 +143,7 @@
             <br>
             <div class="input-group flex-nowrap">
               <input type="file"  id="imageInput1" class="form-control" placeholder="prodect-name" aria-label="Username" aria-describedby="addon-wrapping">
-              <img id="previewImage1" src="/storage/${banners.image}" alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
+              <img id="previewImage1"  alt="Image Preview" style="max-width: 200px; max-height:100px; display: none;">
             </div><br>
               <span class="input-group-text"
               id="addon-wrapping">banner description</span>
