@@ -135,7 +135,9 @@
 
       $(document).ready(function(){
         $(document).on("click", "#bannerDeletebutton", function(){
-          
+
+
+          let formData = new FormData();
           formData.append('deleteId', bannerDescription);
 
            sendDataAjax('/admin/deleteservices',formData,'post','fetchBanner','Nan','editebuttonbanner','Save change','EditBannerModel' );
