@@ -295,7 +295,7 @@ class SubcategoryController extends Controller
           $validateUser =Validator::make(
             $request->all(),
               [
-                'EditCategoryIcon'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+                'Icon'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
               ]
             );
             if($validateUser->fails()){
@@ -306,18 +306,18 @@ class SubcategoryController extends Controller
               ],401);
             }else{
               
-              $edit_icon_file = $request->file('EditCategoryIcon');
+              $edit_icon_file = $request->file('Icon');
 
               $edit_icon_path = $imageService->upload(
                 $edit_icon_file,
-                'category/icon',
+                'subcatagory/icon',
                 1200,
                 80
               );
               
-              Storage::disk('public')->delete($edit_cetegory->icon); 
+              Storage::disk('public')->delete($product_subcategories->icon); 
 
-              $categories->update([
+              $product_subcategories->update([
                 'icon'              => $edit_icon_path,
               ]);
               
@@ -329,7 +329,7 @@ class SubcategoryController extends Controller
           $validateUser =Validator::make(
             $request->all(),
               [
-                'EditCategoryBanner'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+                'Banner'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
               ]
             );
             if($validateUser->fails()){
@@ -341,18 +341,18 @@ class SubcategoryController extends Controller
             }else{
      
                             
-              $edit_banner_file = $request->file('EditCategoryBanner');
+              $edit_banner_file = $request->file('Banner');
 
               $edit_banner_path = $imageService->upload(
                 $edit_banner_file,
-                'category/banner',
+                'subcategory/banner',
                 1200,
                 80
               );
               
-              Storage::disk('public')->delete($edit_cetegory->icon); 
+              Storage::disk('public')->delete($product_subcategories->banner); 
 
-              $categories->update([
+              $product_subcategories->update([
                 'banner'              => $edit_banner_path,
               ]);
 
