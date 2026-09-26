@@ -169,11 +169,9 @@ class BrandController extends Controller
         }else{
           $brand_delete = brand::where('id', $request->id)->first();
           if ($brand_delete) {
-            $imagePath = storage_path('app/public/' . $brand_delete->logo);
-            $imagePathpub = public_path('public/' . $brand_delete->logo);
-            // ইমেজ ফাইল এক্সিস্ট করে কি না চেক করে ডিলিট করুন
-              File::delete($imagePath);
-              File::delete($imagePathpub);
+           
+             Storage::disk('public')->delete( $brand_delete->logo); 
+            
               $deteletdata = brand::where('id', $request->id)->delete();
               return response()->json([
                 'status' => true,
