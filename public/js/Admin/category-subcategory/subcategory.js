@@ -23,12 +23,11 @@
       formData.append('subcategorySlug', $('#subcategorySlug').val());
 
 
-    
-      formData.append('subcategoryImg', $('#subcategoryImg')[0].files[0]);
-      formData.append('subcategoryIcon', $('#subcategoryIcon')[0].files[0]);
-      formData.append('subcategoryBanner', $('#subcategoryBanner')[0].files[0]);
+      formData.append('subcategoryImg', compressedBlobimg, subcategoryImg.name);
+      formData.append('subcategoryIcon', compressedBlobicon, subcategoryIcon.name);
+      formData.append('subcategoryBanner', compressedBlobbanner, subcategoryBanner.name);
 
-    
+
       formData.append('subcategoryMetaTitle', $('#subcategoryMetaTitle').val());
       formData.append('subcategoryMetaKayword', $('#subcategoryMetaKayword').val());
       formData.append('featured', featuredValue);
