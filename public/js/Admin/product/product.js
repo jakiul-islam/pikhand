@@ -1,8 +1,16 @@
   //product input section
   $(document).ready(function(){
-    $("#productCreateButton").click(function(){
+    $("#productCreateButton").click( async function(){
       const previewImage = document.querySelector("#previewImage");
 
+
+     let imageInput =  $('#imageInput')[0].files[0];
+            
+     const compressedBlob = await compressWithCanvas(imageInput);
+             
+
+
+      
       let formData = new FormData();
         formData.append('name', $('#productName').val());
         formData.append('keyword', $('#productKeyword').val());
