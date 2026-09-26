@@ -9,12 +9,15 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
+use App\Services\ImageService;
+
+
 use App\Models\Admin\web_logo;
 
 
 class WebLogoController extends Controller
 {
-  public function insertWebLogo(request $request){
+  public function insertWebLogo(request $request , ImageService $imageService){
       $validateUser =Validator::make(
         $request->all(),
           [
@@ -35,6 +38,9 @@ class WebLogoController extends Controller
           if( isset($request->Web_Iogo)){
             
             $Newpath = $request->file('Web_Iogo')->store('logo', 'public');
+           
+            
+            
             $editeimagePath = storage_path('app/public/' . $logo->logo);
             File::delete($editeimagePath);
             
