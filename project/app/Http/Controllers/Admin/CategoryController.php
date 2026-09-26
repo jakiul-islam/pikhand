@@ -75,7 +75,7 @@ class CategoryController extends Controller
 
 
         $categoryChack      = product_subcategories::where('name',$request->categoryName)->where('slug',$request->categorySlug)->count();
-        if($subcategory > 0){
+        if($categoryChack > 0){
           return response()->json([
             'status' => false,
             'message'=>'Validation Error Is',
@@ -102,6 +102,7 @@ class CategoryController extends Controller
           'message'=>'Category insert Successfull',
           'category' =>$category,
         ],200);
+        }
       }
     }
     //fetch category
