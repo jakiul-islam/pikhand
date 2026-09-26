@@ -94,7 +94,15 @@
     let formData = new FormData();
       let editBrandImg = document.getElementById('editBrandImg');
       if (editBrandImg.files.length > 0) {
+
+        let imageInput =  editBrandImg.files[0];   
+        const compressedBlob = await compressWithCanvas(imageInput);
+
+        
         formData.append('img', editBrandImg.files[0]);
+
+
+        
       }else{
         formData.append('img', '');
       }
