@@ -100,6 +100,17 @@ class BrandController extends Controller
             'errors' =>$validateUser->errors()->all(),
           ],401);
         }else{
+
+          $Edit_img_file = $request->file('img')
+
+          $Edit_img_path = $imageService->upload(
+            $Edit_img_file,
+            'brand',
+            1200,
+            80
+          );
+
+          
           $path = $request->file('img')->store('brand', 'public');
           $editeimagePath = storage_path('app/public/' . $brand->logo);
           $editeimagePathpub = public_path('public/' . $brand->logo);
@@ -107,7 +118,7 @@ class BrandController extends Controller
           File::delete($editeimagePathpub);
         }
       }else {
-        $path = $brand->logo;
+        $Edit_img_path = $brand->logo;
       }
       if(empty($path)){
         return response()->json([
@@ -129,7 +140,7 @@ class BrandController extends Controller
             'meta_keyword' => $request->meta_keyword,
             'meta_description' => $request->meta_description,
             'description' => $request->description,
-            'logo' =>$path,
+            'logo' =>$Edit_img_path,
           ]);
           return response()->json([
             'ststus' => true,
