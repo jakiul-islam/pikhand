@@ -515,7 +515,7 @@ class ProductController extends Controller
   //end delete product img
     
   // product_detels section
-  public function admin_product_detels(request $request){
+  public function admin_product_details(request $request){
     $validateUser =Validator::make(
       $request->all(),
         [
