@@ -409,7 +409,17 @@ class SubcategoryController extends Controller
           'errors' =>$validateUser->errors()->all(),
         ],401);
       }else{
+
+
+        $product_subcategories = product_subcategories::where('id',$request->Id)->first();
+
+        
         $product_subcategories =  product_subcategories::where('id',$request->Id)->delete();
+
+
+
+
+
         
         if($product_subcategories){
           return response()->json([
