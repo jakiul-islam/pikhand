@@ -53,7 +53,7 @@
   
   
   //edit product section
-  function updateProduct(){
+  window.updateProduct = async function(){
    
     /*const selectedIds = [...new Set(
       $('.eeditCheckboxvalue:checked')
@@ -68,7 +68,17 @@
     let formData = new FormData();
              
     if ( editProductImg.files.length > 0 ) {
-      formData.append('editProductImg',editProductImg.files[0]);
+
+        let editProductImg =  $('#editProductImg')[0].files[0];
+      
+        const compressedEditProductImg = await compressWithCanvas(editProductImg);
+
+      
+      formData.append('editProductImg',compressedEditProductImg ,editProductImg.name);
+
+
+
+      
     }
     formData.append('editProductId', $('#editProductId').val());
     formData.append('editProductName', $('#editProductName').val());
