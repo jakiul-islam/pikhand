@@ -22,7 +22,7 @@ class BannerController extends Controller
           [
             'bannerName'         => 'required|string',
             'bannerSlog'         => 'required|string',
-            'imageInput'         => 'required|image|mimes:jpeg,png,jpg,gif,jpej,webp|max:10250',
+            'imageInput'         => 'required|image|mimes:jpeg,png,jpg,gif,jpej,webp,mp3|max:10250',
             'bannerDescription'  =>'required|string',
           ]
       );
