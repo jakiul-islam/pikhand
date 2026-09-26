@@ -1,17 +1,34 @@
   //create subsubcategory
-  window.subinsert = function(){
+  window.subinsert = async function(){
     let featuredValue = $('#subcategoryFeatured').prop('checked') ? 1 : 0;
       const previewImage = document.querySelector("#subcategoryPreviewImage");
       const IconPreviewImage = document.querySelector("#subcategoryIconPreviewImage");
       const BannerPreviewImage = document.querySelector("#subcategoryBannerPreviewImage");
 
+        let subcategoryImg =  $('#subcategoryImg')[0].files[0];
+        let subcategoryIcon =  $('#subcategoryIcon')[0].files[0];
+        let subcategoryBanner =  $('#subcategoryBanner')[0].files[0];
+
+
+        const compressedBlobimg = await compressWithCanvas(subcategoryImg);
+        const compressedBlobicon = await compressWithCanvas(subcategoryIcon);
+        const compressedBlobbanner = await compressWithCanvas(subcategoryBanner);
+            
+            
+
+    
     let formData = new FormData();
       formData.append('categoryId', $('#subcategoryCategoryId').val());
       formData.append('subcategoryName', $('#subcategoryName').val());
       formData.append('subcategorySlug', $('#subcategorySlug').val());
+
+
+    
       formData.append('subcategoryImg', $('#subcategoryImg')[0].files[0]);
       formData.append('subcategoryIcon', $('#subcategoryIcon')[0].files[0]);
       formData.append('subcategoryBanner', $('#subcategoryBanner')[0].files[0]);
+
+    
       formData.append('subcategoryMetaTitle', $('#subcategoryMetaTitle').val());
       formData.append('subcategoryMetaKayword', $('#subcategoryMetaKayword').val());
       formData.append('featured', featuredValue);
