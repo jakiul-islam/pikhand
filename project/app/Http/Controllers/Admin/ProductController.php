@@ -216,7 +216,7 @@ class ProductController extends Controller
   }
   
   //product edit section 
-  public function update(request $request){
+  public function update(request $request , ImageService $imageService){
     $validateEditProduct =Validator::make(
       $request->all(),
         [ 
