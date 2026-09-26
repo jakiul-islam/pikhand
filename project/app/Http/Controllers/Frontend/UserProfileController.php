@@ -54,7 +54,6 @@ class UserProfileController extends Controller
           ]);
         }else{
           $profile= DB::table('user_profile')->where('user_id',$userid)->first();
-          $editeimagePath = storage_path('app/public/' . $profile->profile_picture);
 
           Storage::disk('public')->delete($profile->profile_picture); 
 
