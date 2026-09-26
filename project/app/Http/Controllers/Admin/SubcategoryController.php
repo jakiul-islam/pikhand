@@ -253,6 +253,20 @@ class SubcategoryController extends Controller
               File::delete($public_banner_path);
             }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
         $product_subcategories->update([
