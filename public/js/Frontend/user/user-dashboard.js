@@ -159,8 +159,14 @@
   window.createUserProfile = async function (){
     let formData = new FormData();
 
+    let profile_img =  $('#profile_input')[0].files[0];
+            
+    const compressedBlob = await compressWithCanvas(profile_img);
+          
+
+    
   
-    formData.append('profile_input', $('#profile_input')[0].files[0]);
+    formData.append('profile_input', compressedBlob ,profile_img.name);
     sendDataAjax('/user/profile/create',formData,'post','userDeshboard','Nan','Nan','Nan','Nan');
   }
 
