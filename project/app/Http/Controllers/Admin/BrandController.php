@@ -101,7 +101,7 @@ class BrandController extends Controller
           ],401);
         }else{
 
-          $Edit_img_file = $request->file('img')
+          $Edit_img_file = $request->file('img');
 
           $Edit_img_path = $imageService->upload(
             $Edit_img_file,
