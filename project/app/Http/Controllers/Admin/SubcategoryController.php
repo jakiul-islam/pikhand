@@ -9,6 +9,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
+use App\Services\ImageService;
+
+
 use App\Models\Admin\categories;
 use App\Models\Admin\product_subcategories;
 use App\Models\Admin\product;
@@ -18,7 +21,7 @@ use App\Models\Admin\product;
 class SubcategoryController extends Controller
 {
     // insert subcategory 
-    public function create(request $request){
+    public function create(request $request , ImageService $imageService){
       $validateUser =validator::make(
         $request->all(),
           [
@@ -47,6 +50,44 @@ class SubcategoryController extends Controller
         $img_path    = $request->file('subcategoryImg')->store('subcategory', 'public');
         $icon_path= $request->file('subcategoryIcon')->store('subcategory/banner', 'public');
         $banner_path  = $request->file('subcategoryBanner')->store('subcategory/icon', 'public');
+
+
+
+        $img_file    = $request->file('subcategoryImg');
+        $banner_file = $request->file('subcategoryIcon');
+        $icon_file  = $request->file('subcategoryBanner');
+
+//asdyfhasjdfhkjsahdfsad fausdf basdfb asdfr
+
+
+
+        
+         $img_path = $imageService->upload(
+                $img_file,
+                'category',
+                1200,
+                80
+            );
+         $banner_path = $imageService->upload(
+                $banner_file,
+                'category/banner',
+                1200,
+                80
+            );
+         $icon_path = $imageService->upload(
+                $icon_file,
+                'category/icon',
+                1200,
+                80
+            );
+
+
+
+
+        
+
+
+
         
         // data insert section
         $product_subcategories = product_subcategories::create([
