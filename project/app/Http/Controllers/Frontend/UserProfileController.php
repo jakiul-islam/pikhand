@@ -37,7 +37,7 @@ class UserProfileController extends Controller
 
           $path = $imageService->upload(
                 $file,
-                'service',
+                'user_profile',
                 1200,
                 80
             );
