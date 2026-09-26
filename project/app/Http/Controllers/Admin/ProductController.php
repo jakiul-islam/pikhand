@@ -292,12 +292,22 @@ class ProductController extends Controller
         
         }
       }
+
+
+       $productChack = product::where('name',$request->editProductName)->where('slug',$request->editProductName)->count();
+      if($productChack > 0){
+        return response()->json([
+          'status' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>'use an unic name and slug',
+        ],422);
+      }else{
       
       
         $product = product::where('id',$request->editProductId)->first();
         $product->update([
           'name' => $request->editProductName,
-          'slug' => $request->editProductKeyword,
+          'slug' => $request->editProductName,
           'mata_title' => $request->editProductmetatitle,
           'price' => $request->editProductPrice,
           'discount' => $request->editProductDiscount,
@@ -341,9 +351,8 @@ class ProductController extends Controller
               $rows[] = ['product_id' => $request->editProductId, 'subcategory_id' => $cid];
             }
             category_product::insert($rows);
-            
+            }
           }
-        }
 
 
         
@@ -352,6 +361,7 @@ class ProductController extends Controller
           'message'=>'product updata Successfull',
           'product' =>$product,
         ],200);
+      }
     }
   }
 
