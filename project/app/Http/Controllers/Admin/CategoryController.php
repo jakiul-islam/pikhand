@@ -73,6 +73,16 @@ class CategoryController extends Controller
                 80
             );
 
+
+        $subcategory       = product_subcategories::where('name',$request->name)->where('slug',$request->slug)->count();
+        if($subcategory > 0){
+          return response()->json([
+            'status' => false,
+            'message'=>'Validation Error Is',
+            'errors' =>'use an unic name and slug',
+          ],401);
+        }else{
+        
         
         $category = categories::create([
           'name'=>$request->categoryName,
