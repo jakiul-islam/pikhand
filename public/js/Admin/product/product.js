@@ -4,9 +4,9 @@
       const previewImage = document.querySelector("#previewImage");
 
 
-     let imageInput =  $('#imageInput')[0].files[0];
+     let productImg =  $('#productImg')[0].files[0];
             
-     const compressedBlob = await compressWithCanvas(imageInput);
+     const compressedBlobProductImg = await compressWithCanvas(productImg);
              
 
 
@@ -17,7 +17,10 @@
         formData.append('metaTitle', $('#productmatatitle').val());
         formData.append('category', $('#checkboxvalue').val() );
         formData.append('brand', $('#productBrand').val());
-        formData.append('image', $('#productImg')[0].files[0]);
+      
+        formData.append('image',compressedBlobProductImg, productImg.name);
+
+      
         formData.append('price', $('#productPrice').val());
         formData.append('avolalabe', $('#productAvolalabe').val());
         formData.append('discount', $('#productDiscount').val());
