@@ -1,7 +1,7 @@
 //update deta set for input 
    let subcategoryId = [];
   let productId = [];
-  function updateDataSet( product , response){
+  window.updateDataSet = function( product , response){
     
     subcategoryId = [];
     
@@ -106,11 +106,11 @@
 
   }
   
-  function editcategoryshow(){
+  window.editcategoryshow = function(){
     fetchDataAjax('/admin/category/index','post','editcategoryData','Nan');
   }
   
-  function editcategoryData( response ){
+  window.editcategoryData = function( response ){
     let container = document.querySelector('.categoryContainer'+productId);
     const editselectedSet = new Set(
       document.getElementById('editCheckboxvalue').value
@@ -173,7 +173,7 @@
     });
   }
   
-  function editsubcategory( Category ){
+  window.editsubcategory = function( Category ){
     let subcategoryshow = document.getElementById('editsubcategoryshow_'+Category);
     let subbuttonicon = document.getElementById('editsubbuttonicon_'+Category);
     if (subbuttonicon.classList.contains('bi-caret-down')) {
@@ -187,7 +187,7 @@
     }
   }
   
-  function editcloseAndok(){
+  window.editcloseAndok= function(){
     let editCategoryshowbutton = document.getElementById('editCategoryshowbutton');
     const selectedIds = $('.edit-category-checkbox:checked')
     .map(function () {
