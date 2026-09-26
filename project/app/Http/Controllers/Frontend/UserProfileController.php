@@ -34,6 +34,7 @@ class UserProfileController extends Controller
       ],401);
     }else{
 
+          $file = $request->file('profile_input');
 
           $path = $imageService->upload(
                 $file,
@@ -47,18 +48,16 @@ class UserProfileController extends Controller
       $chack = DB::table('user_profile')->where('user_id',$userid)->count();
       
         if($chack < 1){
-          $path = $request->file('profile_input')->store('user_profile', 'public');
           $user = DB::table('user_profile')->insert([
             'user_id'=>$userid,
             'profile_picture' =>$path,
           ]);
         }else{
-          $path = $request->file('profile_input')->store('user_profile', 'public');
           $profile= DB::table('user_profile')->where('user_id',$userid)->first();
           $editeimagePath = storage_path('app/public/' . $profile->profile_picture);
-          $editeimagePathpub = public_path('public/' . $profile->profile_picture);
-          File::delete($editeimagePath);
-          File::delete($editeimagePathpub);
+
+          Storage::disk('public')->delete($profile->profile_picture); 
+
           
           $user = DB::table('user_profile')->where('user_id',$userid)->update([
             'profile_picture' => $path,
