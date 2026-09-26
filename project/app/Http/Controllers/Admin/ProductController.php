@@ -392,7 +392,7 @@ class ProductController extends Controller
         }
         if ($productdeletepath) {
           
-           Storage::disk('public')->delete($productdeletepath->images); 
+           Storage::disk('public')->delete($productdeletepath->image); 
           
             $deteletdata = product::where('id', $request->id)->delete();
             return response()->json([
