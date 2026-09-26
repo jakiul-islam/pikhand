@@ -27,7 +27,7 @@
       }
     });
     
-    console.log(subcategoryId);
+  //  console.log(subcategoryId);
     //$('#editCheckboxvalue').val(subcategoryId);
     
     //$('#editProductBrand').val();
