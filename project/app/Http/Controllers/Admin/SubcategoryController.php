@@ -74,12 +74,6 @@ class SubcategoryController extends Controller
             );
 
 
-
-
-        
-
-
-
         
         // data insert section
         $product_subcategories = product_subcategories::create([
