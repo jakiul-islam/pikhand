@@ -391,7 +391,7 @@ class ProductController extends Controller
     }
  
   //add photo
-  public function productAddImg(Request $request){
+  public function productAddImg(Request $request , ImageService $imageService){
     $validateImg = Validator::make(
       $request->all(),
       [
@@ -424,11 +424,19 @@ class ProductController extends Controller
             ], 401);
           }
           // Store file
-          $path = $file->store('product-img', 'public');
+
+            $Imgpath = $imageService->upload(
+                $file,
+                'service',
+                1200,
+                80
+              );
+
+          
           // Insert into database
           table_product_imgs::create([
             'product_id' => $request->imgAddId,
-            'images' => $path,
+            'images' => $Imgpath,
           ]);
         }
         return response()->json([
