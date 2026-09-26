@@ -37,7 +37,7 @@ class BrandController extends Controller
           'errors' =>$validate_brand->errors()->all(),
         ],401);
       }else{
-        $file = $request->file('imageInput')
+        $file = $request->file('imageInput');
 
           $path = $imageService->upload(
                 $file,
