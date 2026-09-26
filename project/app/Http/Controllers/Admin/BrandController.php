@@ -41,7 +41,7 @@ class BrandController extends Controller
 
           $path = $imageService->upload(
                 $file,
-                'service',
+                'brand',
                 1200,
                 80
             );
