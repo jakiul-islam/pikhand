@@ -74,27 +74,36 @@ class SubcategoryController extends Controller
             );
 
 
-        
+
+        $subcategory       = product_subcategories::where('name',$request->subcategoryName)->where('slug',$request->subcategorySlug)->count();
+        if($subcategory > 0){
+          return response()->json([
+            'status' => false,
+            'message'=>'Validation Error Is',
+            'errors' =>'use an unic name and slug',
+          ],401);
+        }else{
         // data insert section
-        $product_subcategories = product_subcategories::create([
-          'name'               =>$request->subcategoryName,
-          'slug'               =>$request->subcategorySlug,
-          'meta_title'         =>$request->subcategoryMetaTitle,
-          'image'              =>$img_path,
-          'icon'               =>$icon_path,
-          'banner'             =>$banner_path,
-          'meta_keyword'       =>$request->subcategoryMetaKayword,
-          'featured'           =>$request->featured,
-          'meta_description'   =>$request->subcategoryMetaDescription,
-          'short_description'  =>$request->subcategoryShortDescription,
-          'long_description'  =>$request->subcategoryLongDescription,
-          'category_id'        => $request->categoryId,
-        ]);
-        return response()->json([
-          'ststus' => true,
-          'message'=>'Subcategory insert successfull',
-          'product_subcategories' =>$product_subcategories,
-        ],200);
+          $product_subcategories = product_subcategories::create([
+            'name'               =>$request->subcategoryName,
+            'slug'               =>$request->subcategorySlug,
+            'meta_title'         =>$request->subcategoryMetaTitle,
+            'image'              =>$img_path,
+            'icon'               =>$icon_path,
+            'banner'             =>$banner_path,
+            'meta_keyword'       =>$request->subcategoryMetaKayword,
+            'featured'           =>$request->featured,
+            'meta_description'   =>$request->subcategoryMetaDescription,
+            'short_description'  =>$request->subcategoryShortDescription,
+            'long_description'  =>$request->subcategoryLongDescription,
+            'category_id'        => $request->categoryId,
+          ]);
+          return response()->json([
+            'ststus' => true,
+            'message'=>'Subcategory insert successfull',
+            'product_subcategories' =>$product_subcategories,
+          ],200);
+        }
       }
     }
     
