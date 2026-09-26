@@ -74,7 +74,7 @@ class BrandController extends Controller
       
     }
     //eidte brands 
-    public function update(request $request){
+    public function update(request $request ,ImageService $imageService){
       $validateUser =Validator::make(
         $request->all(),
           [
