@@ -116,6 +116,10 @@ class BrandController extends Controller
           $editeimagePathpub = public_path('public/' . $brand->logo);
           File::delete($editeimagePath);
           File::delete($editeimagePathpub);
+
+          $brand_update = $brand->update([
+            'logo' => $Edit_img_path,
+          )];
         }
       }
         if($validateUser->fails()){
@@ -132,6 +136,7 @@ class BrandController extends Controller
             'meta_keyword' => $request->meta_keyword,
             'meta_description' => $request->meta_description,
             'description' => $request->description,
+            'logo' =>$Edit_img_path,
           ]);
           return response()->json([
             'ststus' => true,
