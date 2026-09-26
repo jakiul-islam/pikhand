@@ -95,7 +95,7 @@
       let editBrandImg = document.getElementById('editBrandImg');
       if (editBrandImg.files.length > 0) {
 
-        let editbrandimg =  editBrandImg.files[0];   
+        let editbrandimg =  editBrandImg[0].files[0];   
         const compressedBlobbrandImg = await compressWithCanvas(editbrandimg);
 
         
