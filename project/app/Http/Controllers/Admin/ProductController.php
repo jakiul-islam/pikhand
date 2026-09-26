@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
 
-use App\Services\ImageServices;
+use App\Services\ImageService;
 
 
 use App\Models\Admin\product;
