@@ -514,46 +514,6 @@ class ProductController extends Controller
   }
   //end delete product img
     
-  // product_detels section
-  public function admin_product_details(request $request){
-    $validateUser =Validator::make(
-      $request->all(),
-        [
-          'product_detels_Id'  => 'required|integer',
-        ]
-    );
-    if($validateUser->fails()){
-      return response()->json([
-        'ststus' => false,
-        'message'=>'Validation Error Is',
-        'errors' =>$validateUser->errors()->all(),
-      ],401);
-    }else{
-      
-      $products           = product::where('id', $request->product_detels_Id)->first();
-      $table_product_imgs = table_product_imgs::where('product_id', $request->product_detels_Id)->all();
-      
-      $subcategory_product = category_product::where('product_id', $request->product_detels_Id)->get();
-
-      $subcategory_id = $subcategory_product->pluck('subcategory_id');
-      
-      $subcategory = product_subcategories::whereIn('id', $subcategory_id )->all();
-        
-      if($products){
-        return response()->json([
-          'products'   => $products,
-          'subcategory' => $subcategory,
-          'product_img'=> $table_product_imgs,
-        ]);
-      }else{
-        return response()->json([
-          'status' => false,
-          'message'=>'product is not found',
-        ],404);
-      }
-    }
-  }
-    
   //product fetch for category 
   public function Fetch_subcategory_product(request $request){
     $validateUser =Validator::make(
