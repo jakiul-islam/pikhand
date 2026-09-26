@@ -40,7 +40,7 @@
         sendDataAjax('/admin/product/create',formData,'post','productCreateSuccess','Nan','productCreateButton','create','createProductForm');
     });
   });
-  function productCreateSuccess(){
+  window.productCreateSuccess = function(){
     insertclose();
     let currentPage = 1;
     let loading = false;
@@ -49,14 +49,14 @@
     indexProduct( currentPage );
   }
   //model close section
-  function insertclose(){
+  window.insertclose = function(){
     $('.form-control').val('');
     tinymce.get('matadescription').setContent('');
     tinymce.get('shortdescription').setContent('');
     tinymce.get('longdescription').setContent('');
   }
   // সার্চ ইনপুটের জন্য নতুন ফাংশন বানাও
-  function searchProduct(){
+  window.searchProduct = function(){
     currentPage = 1;  // পেজ 1 এ নিয়ে যাও
     nextPage = 1;
     $('#ProductShowTable').html(''); // টেবিল ক্লিয়ার
@@ -308,13 +308,13 @@
     }
   });
   //mode close img
-  function imgmodelclose(productId){
+  window.imgmodelclose = function(productId){
     const previewImage = document.querySelector(".preview-container"+productId);
     $('.product_img_fild' + productId).val('').trigger('change');
     previewImage.style.display = 'none';
   }
 
-  function addfilter(){
+  window.addfilter = function(){
       let addfilterdiv = document.getElementById('addfilterdiv');
       if(addfilterdiv.style.display === 'block'){
         addfilterdiv.style.display = 'none';
@@ -341,7 +341,7 @@
       }
     }
 
-  function closeAndok(){
+  windowcloseAndok = function(){
     let categoryshowbutton = document.getElementById('categoryshowbutton');
     const selectedIds = $('.cart-checkbox:checked')
     .map(function () {
@@ -354,7 +354,7 @@
     categoryshow();
   }
   //getchackbooksvalue
-  function subcategory( Category ){
+  window.subcategory = function( Category ){
     let subcategoryshow = document.getElementById('subcategoryshow_'+Category);
     let subbuttonicon = document.getElementById('subbuttonicon_'+Category);
     if (subbuttonicon.classList.contains('bi-caret-down')) {
