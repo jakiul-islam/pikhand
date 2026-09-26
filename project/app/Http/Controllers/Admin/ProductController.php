@@ -268,7 +268,7 @@ class ProductController extends Controller
   
           $editImgPath = $imageService->upload(
                   $editfile,
-                  'service',
+                  'productDifolt',
                   1200,
                   80
               );
