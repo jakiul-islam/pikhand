@@ -292,7 +292,7 @@ class SubcategoryController extends Controller
             }
         }
 
-        $subcategory       = product_subcategories::where('name',$request->name)->where('slug',slug->subcategorySlug)->count();
+        $subcategory       = product_subcategories::where('name',$request->name)->where('slug',$request->slug)->count();
         if($subcategory > 0){
           return response()->json([
             'status' => false,
