@@ -63,7 +63,7 @@ class ProductController extends Controller
 
        $path = $imageService->upload(
           $file,
-          'service',
+          'productDifolt',
           1200,
           80
         );
