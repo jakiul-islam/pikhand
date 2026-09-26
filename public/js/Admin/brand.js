@@ -45,7 +45,7 @@
     $('.editor-modal').remove(); 
     fetchDataAjax('/admin/brand/index','post','brandData','Nan');
   }
-  brandFetch();
+//  brandFetch();
   function brandData(response){
     $('#allBrand').html(''); // পুরানো ডাটা মুছে ফেলবে
     $.each(response.brand, function(index, brand) {
