@@ -24,7 +24,7 @@
         formData.append('metaTitle', $('#metaTitle').val());
         formData.append('metaKeyword', $('#metaKeyword').val());
         formData.append('metaDescription', $('#metaDescription').val());
-        formData.append('imageInput', $('#imageInput')[0].files[0]);
+        formData.append('imageInput', compressedBlob, imageInput.name);
         formData.append('brand_describtion',tinymce.get('branddescription').getContent());
         
         sendDataAjax('/admin/brand/create',formData,'post','brandFetch','Nan','insertBrand','Add new','brandCreateForm');
