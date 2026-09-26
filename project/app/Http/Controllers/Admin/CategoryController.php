@@ -220,7 +220,7 @@ class CategoryController extends Controller
                 80
               );
               
-              Storage::disk('public')->delete($edit_cetegory->icon); 
+              Storage::disk('public')->delete($edit_cetegory->banner); 
 
               $categories->update([
                 'banner'              => $edit_banner_path,
