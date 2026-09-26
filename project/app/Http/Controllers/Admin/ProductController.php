@@ -68,7 +68,7 @@ class ProductController extends Controller
           80
         );
 
-      $productChack = product::where('id',$request->id)->where('id',$request->id)->first();
+      $productChack = product::where('id',$request->name)->where('id',$request->keyword)->first();
       
       $productId = product::create([
         'name'            =>$request->name,
