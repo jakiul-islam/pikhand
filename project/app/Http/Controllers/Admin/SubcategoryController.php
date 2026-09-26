@@ -83,7 +83,7 @@ class SubcategoryController extends Controller
             'errors' =>'use an unic name and slug',
           ],401);
         }else{
-        // data insert section
+          // data insert section
           $product_subcategories = product_subcategories::create([
             'name'               =>$request->subcategoryName,
             'slug'               =>$request->subcategorySlug,
