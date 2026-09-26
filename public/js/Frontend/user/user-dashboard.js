@@ -156,7 +156,7 @@
     }
   }
   //insert_profile
-  window.createUserProfile = function (){
+  window.createUserProfile = async function (){
     let formData = new FormData();
 
    console.log( $('#profile_input')[0].files[0] );
