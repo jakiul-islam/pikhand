@@ -284,18 +284,6 @@ class SubcategoryController extends Controller
         }
 
         
-
-
-
-
-
-
-
-
-
-
-
-        
         
         $product_subcategories->update([
           'name'             => $request->name,
