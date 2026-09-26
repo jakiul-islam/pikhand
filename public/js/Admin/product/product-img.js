@@ -1,5 +1,5 @@
   $(document).ready(function(){
-    $(document).on("click", "#addphotobutton", function(){
+    $(document).on("click", "#addphotobutton", async function(){
 
       let myltipulImg = document.getElementById('myltipulImg');
 
