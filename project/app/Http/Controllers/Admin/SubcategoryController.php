@@ -276,12 +276,12 @@ class SubcategoryController extends Controller
 
               $edit_img_path = $imageService->upload(
                 $edit_img_file,
-                'category',
+                'subcatagory',
                 1200,
                 80
               );
               
-              Storage::disk('public')->delete($edit_cetegory->image); 
+              Storage::disk('public')->delete($product_subcategories->image); 
 
               $product_subcategories->update([
                 'image'              => $edit_img_path,
