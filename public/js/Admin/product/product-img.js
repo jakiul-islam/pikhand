@@ -6,7 +6,14 @@
       let formData = new FormData();
       formData.append('imgAddId',$('#photoProductId').val());
       for (let i = 0; i < myltipulImg.files.length; i++) {
-        formData.append('myltipulImg[]', myltipulImg.files[i]);
+
+        let productAllImg =  myltipulImg.files[i];
+        const compressedBlobAll = await compressWithCanvas(productAllImg);
+
+        formData.append('myltipulImg[]',compressedBlobAll , productAllImg.name);
+
+
+        
       }
       sendDataAjax('/admin/product/add/img',formData,'post','productImgIndex','Nan','addphotobutton','Add photo','productAddPhoto');
       previewContainer.style.display="none";
