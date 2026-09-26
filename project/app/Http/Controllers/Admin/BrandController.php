@@ -111,11 +111,8 @@ class BrandController extends Controller
           );
 
           
-          $path = $request->file('img')->store('brand', 'public');
-          $editeimagePath = storage_path('app/public/' . $brand->logo);
-          $editeimagePathpub = public_path('public/' . $brand->logo);
-          File::delete($editeimagePath);
-          File::delete($editeimagePathpub);
+        
+          Storage::disk('public')->delete( $brand->logo); 
 
           $brand_update = $brand->update([
             'logo' => $Edit_img_path,
