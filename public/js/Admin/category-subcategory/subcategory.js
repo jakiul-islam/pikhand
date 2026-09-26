@@ -158,7 +158,7 @@
     }
   }
   //update subsubcategory
-  window.update = function(){
+  window.update = async function(){
 
       let EditSubcategoryImg = document.getElementById('editSubcategoryImg');
       let EditSubcategoryIcon = document.getElementById('editSubcategoryIcon');
@@ -168,19 +168,31 @@
       let formData = new FormData();
 
       if (EditSubcategoryImg.files.length > 0) {
-        formData.append('Img', EditSubcategoryImg.files[0]);
+
+         let editCompressimg = EditSubcategoryImg.files[0]
+        const editcompressedBlobimg = await compressWithCanvas(editCompressimg);
+        
+        formData.append('Img', editcompressedBlobimg, editCompressimg.name);
+ 
       }else{
         formData.append('Img', '');
       }
 
       if (EditSubcategoryIcon.files.length > 0) {
-        formData.append('Icon', EditSubcategoryIcon.files[0]);
+         let editCompressicon = EditSubcategoryIcon.files[0]
+        const editcompressedBlobicon = await compressWithCanvas(editCompressicon);
+        
+        formData.append('Icon', editcompressedBlobicon, editCompressicon.name);
       }else{
         formData.append('Icon', '');
       }
 
       if (EditSubcategoryBanner.files.length > 0) {
-        formData.append('Banner', EditSubcategoryBanner.files[0]);
+        
+         let editCompressbanner = EditSubcategoryBanner.files[0]
+        const editcompressedBlobbanner = await compressWithCanvas(editCompressbanner);
+        
+        formData.append('Icon', editcompressedBlobimg, editcompressedBlobbanner.name);
       }else{
         formData.append('Banner', '');
       }
