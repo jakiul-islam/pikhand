@@ -17,7 +17,7 @@ use App\Models\admin\product;
 
 class BrandController extends Controller
 {
-    public function create(request $request){
+    public function create(request $request , , ImageService $imageService){
       $validate_brand =Validator::make(
         $request->all(),
           [
@@ -37,7 +37,15 @@ class BrandController extends Controller
           'errors' =>$validate_brand->errors()->all(),
         ],401);
       }else{
-        $path = $request->file('imageInput')->store('brand', 'public');
+        $file = $request->file('imageInput')
+
+          $path = $imageService->upload(
+                $file,
+                'service',
+                1200,
+                80
+            );
+        
         $brand = brand::create([
           'name'              =>$request->brandName,
           'slug'              =>$request->brandSlog,
