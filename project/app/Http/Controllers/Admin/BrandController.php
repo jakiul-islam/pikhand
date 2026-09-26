@@ -116,7 +116,7 @@ class BrandController extends Controller
 
           $brand_update = $brand->update([
             'logo' => $Edit_img_path,
-          )];
+          ]);
         }
       }
         if($validateUser->fails()){
