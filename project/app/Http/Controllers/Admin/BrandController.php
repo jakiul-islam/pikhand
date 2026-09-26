@@ -64,8 +64,8 @@ class BrandController extends Controller
     }
     //fetch brands
     public function index(){
-      $brand = brand::all();
-      $product = product::all();
+      $brand = brand::get();
+      $product = product::get();
       return response()->json([
         'brand' => $brand,
         'product' => $product,
