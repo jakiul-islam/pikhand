@@ -1,6 +1,6 @@
   //product detels section  
   window.originalContent = $("#product_detels_show").html();
-  function productDetails(productId , pageNumber){
+  window.productDetails = function(productId , pageNumber){
     
     
     let product_detels_show =document.querySelector("#product_detels_show");
