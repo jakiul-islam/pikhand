@@ -366,11 +366,9 @@ class ProductController extends Controller
         $FetchProductImg = table_product_imgs::where('product_id',$request->id)->get();
         
         if($FetchProductImg){
+
           foreach ($FetchProductImg as $productImgs ){
-             $image = storage_path('app/public/' . $productImgs->images);
-             $imagepub = public_path('public/' . $productImgs->images);
-             File::delete($image);
-             File::delete($imagepub);
+             Storage::disk('public')->delete($FetchProductImg->images); 
           }
           $deteletdata = table_product_imgs::where('product_id', $request->id)->delete();
         }
