@@ -20,7 +20,7 @@
     });
   });
   //index product img 
-  function productImgIndex(productid){
+  window.productImgIndex = function(productid){
     
     $('#photoProductId').val(productid);
     
@@ -28,7 +28,7 @@
     formData.append('productId',productid);
     detailsDataAjax('/admin/product/images/index',formData,'post','productImgIndexData','Nan','Nan','Nan','Nan');
   }
-  function productImgIndexData( response ){
+  window.productImgIndexData = function( response ){
     let preview_img = document.getElementById('preview_img');
     preview_img.innerHTML = "";
     response.products_img.forEach(function(img) {
@@ -41,7 +41,7 @@
     });
   }
   //product img delete
-  function productImgDelete(imgid,productId){
+  window.productImgDelete = function(imgid,productId){
     let formData = new FormData();
     formData.append('imgId',imgid);
     sendDataAjax('/admin/product/images/delete',formData,'post','Nan','Nan','Nan','Nan','Nan');
