@@ -164,8 +164,6 @@
     const compressedBlob = await compressWithCanvas(profile_img);
           
 
-    
-  
     formData.append('profile_input', compressedBlob ,profile_img.name);
     sendDataAjax('/user/profile/create',formData,'post','userDeshboard','Nan','Nan','Nan','Nan');
   }
