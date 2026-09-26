@@ -292,7 +292,14 @@ class SubcategoryController extends Controller
             }
         }
 
-        
+        $subcategory       = product_subcategories::where('name',$request->name)->where('slug',slug->subcategorySlug)->count();
+        if($subcategory > 0){
+          return response()->json([
+            'status' => false,
+            'message'=>'Validation Error Is',
+            'errors' =>'use an unic name and slug',
+          ],401);
+        }else{
         
         $product_subcategories->update([
           'name'             => $request->name,
@@ -316,7 +323,7 @@ class SubcategoryController extends Controller
           'message'=>'Subcategory updete faild .',
           'errors' =>$validateUser->errors()->all(),
         ],401);
-        
+        }
       }
     }
     //featured update 
