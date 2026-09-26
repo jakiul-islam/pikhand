@@ -46,37 +46,29 @@ class SubcategoryController extends Controller
           'errors' =>$validateUser->errors()->all(),
         ],401);
       }else{
-        // file moved section
-        $img_path    = $request->file('subcategoryImg')->store('subcategory', 'public');
-        $icon_path= $request->file('subcategoryIcon')->store('subcategory/banner', 'public');
-        $banner_path  = $request->file('subcategoryBanner')->store('subcategory/icon', 'public');
-
+        // file moved se
 
 
         $img_file    = $request->file('subcategoryImg');
         $banner_file = $request->file('subcategoryIcon');
         $icon_file  = $request->file('subcategoryBanner');
 
-//asdyfhasjdfhkjsahdfsad fausdf basdfb asdfr
-
-
-
         
          $img_path = $imageService->upload(
                 $img_file,
-                'category',
+                'subcategory',
                 1200,
                 80
             );
          $banner_path = $imageService->upload(
                 $banner_file,
-                'category/banner',
+                'subcategory/banner',
                 1200,
                 80
             );
          $icon_path = $imageService->upload(
                 $icon_file,
-                'category/icon',
+                'subcategory/icon',
                 1200,
                 80
             );
