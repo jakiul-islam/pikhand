@@ -22,7 +22,7 @@ use App\Models\product_reviews;
 class ProductController extends Controller
 {
   //insert prodect section
-  public function create(Request $request){
+  public function create(Request $request ,  ImageService $imageService){
     $validateProduct =Validator::make(
       $request->all(),
       [
@@ -59,7 +59,15 @@ class ProductController extends Controller
       ],422);
     }else{
       
-      $path = $request->file('image')->store('productDifolt', 'public');
+      $file = $request->file('image');
+
+       $path = $imageService->upload(
+          $file,
+          'service',
+          1200,
+          80
+        );
+      
       $productId = product::create([
         'name'            =>$request->name,
         'slug'            =>$request->keyword,
