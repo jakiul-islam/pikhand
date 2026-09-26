@@ -257,6 +257,111 @@ class SubcategoryController extends Controller
 
 
 
+       // Category img edit systym
+        if($request->Img){
+          $validateUser =Validator::make(
+            $request->all(),
+              [
+                'Img'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+              ]
+            );
+            if($validateUser->fails()){
+              return response()->json([
+                'status' => false,
+                'message'=> "Validation errors is",
+                'errors' =>$validateUser->errors()->all(),
+              ],401);
+            }else{
+              $edit_img_file = $request->file('Img');
+
+              $edit_img_path = $imageService->upload(
+                $edit_img_file,
+                'category',
+                1200,
+                80
+              );
+              
+              Storage::disk('public')->delete($edit_cetegory->image); 
+
+              $product_subcategories->update([
+                'image'              => $edit_img_path,
+              ]);
+              
+            }
+        }
+        
+        // Category icom edit systym
+        if($request->Icon){
+          $validateUser =Validator::make(
+            $request->all(),
+              [
+                'EditCategoryIcon'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+              ]
+            );
+            if($validateUser->fails()){
+              return response()->json([
+                'status' => false,
+                'message'=> "Validation errors is",
+                'errors' =>$validateUser->errors()->all(),
+              ],401);
+            }else{
+              
+              $edit_icon_file = $request->file('EditCategoryIcon');
+
+              $edit_icon_path = $imageService->upload(
+                $edit_icon_file,
+                'category/icon',
+                1200,
+                80
+              );
+              
+              Storage::disk('public')->delete($edit_cetegory->icon); 
+
+              $categories->update([
+                'icon'              => $edit_icon_path,
+              ]);
+              
+            }  
+        }
+        
+         // Category banner edit systym
+        if($request->Banner){
+          $validateUser =Validator::make(
+            $request->all(),
+              [
+                'EditCategoryBanner'       => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
+              ]
+            );
+            if($validateUser->fails()){
+              return response()->json([
+                'status' => false,
+                'message'=> "Validation errors is",
+                'errors' =>$validateUser->errors()->all(),
+              ],401);
+            }else{
+     
+                            
+              $edit_banner_file = $request->file('EditCategoryBanner');
+
+              $edit_banner_path = $imageService->upload(
+                $edit_banner_file,
+                'category/banner',
+                1200,
+                80
+              );
+              
+              Storage::disk('public')->delete($edit_cetegory->icon); 
+
+              $categories->update([
+                'banner'              => $edit_banner_path,
+              ]);
+
+              
+            }
+        }
+
+        
+
 
 
 
