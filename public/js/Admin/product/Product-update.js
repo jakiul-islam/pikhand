@@ -74,7 +74,7 @@
         const compressedEditProductImg = await compressWithCanvas(editProductImg);
 
       
-      formData.append('editProductImg',compressedEditProductImg ,editProductImg.name);
+      formData.append('editProductImg',compressedEditProductImg , editProductImg.name);
 
 
 
