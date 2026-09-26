@@ -263,12 +263,20 @@ class ProductController extends Controller
             'errors' => $validateEditProduct->errors()->all(),
             ],401);
         }else{
-          $path = $request->file('editProductImg')->store('productDifolt', 'public');
-            
+          
+          $editfile = $request->file('editProductImg');
+  
+          $editImgPath = $imageService->upload(
+                  $editfile,
+                  'service',
+                  1200,
+                  80
+              );
+          
           $product_img = product::where('id',$request->editProductId)->first();
           
           $product_img->update([
-            'image' => $path,
+            'image' => $editImgPath,
           ]);
           
           
