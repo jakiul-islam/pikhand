@@ -11,8 +11,13 @@
   });
   //Create brand
   $(document).ready(function(){
-    $("#insertBrand").click(function(){
+    $("#insertBrand").click(async function(){
       const previewImage = document.querySelector("#previewImage");
+
+      let imageInput =  $('#imageInput')[0].files[0];
+      const compressedBlob = await compressWithCanvas(imageInput);
+
+      
       let formData = new FormData();
         formData.append('brandName', $('#brandName').val());
         formData.append('brandSlog', $('#brandSlog').val());
