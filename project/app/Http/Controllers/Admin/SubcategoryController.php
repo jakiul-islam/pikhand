@@ -411,10 +411,14 @@ class SubcategoryController extends Controller
       }else{
 
 
-        $product_subcategories = product_subcategories::where('id',$request->Id)->first();
+        $product_subcategories_fetch = product_subcategories::where('id',$request->Id)->first();
 
         
         $product_subcategories =  product_subcategories::where('id',$request->Id)->delete();
+
+          Storage::disk('public')->delete($product_subcategories_fetch->image); 
+          Storage::disk('public')->delete($product_subcategories_fetch->icon); 
+          Storage::disk('public')->delete($product_subcategories_fetch->banner); 
 
 
 
