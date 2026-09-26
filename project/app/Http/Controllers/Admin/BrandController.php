@@ -17,7 +17,7 @@ use App\Models\admin\product;
 
 class BrandController extends Controller
 {
-    public function create(request $request  , ImageService $imageService){
+    public function create(request $request , ImageService $imageService){
       $validate_brand =Validator::make(
         $request->all(),
           [
