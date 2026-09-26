@@ -279,13 +279,8 @@ class ProductController extends Controller
             'image' => $editImgPath,
           ]);
           
-          
-          $editeimagePath = storage_path('app/public/' . $product_img->image);
-          $editeimagePathpub = public_path('public/' . $product_img->image);
+          Storage::disk('public')->delete($product_img->image); 
         
-        
-          File::delete($editeimagePath);
-          File::delete($editeimagePathpub);
         }
       }
       
