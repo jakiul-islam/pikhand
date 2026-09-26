@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\File;
 use Carbon\Carbon;
 
 use App\Services\ImageServices;
-ImageService
+
 
 use App\Models\Admin\product;
 use App\Models\Admin\category_product;
