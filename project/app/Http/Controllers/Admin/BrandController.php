@@ -117,15 +117,7 @@ class BrandController extends Controller
           File::delete($editeimagePath);
           File::delete($editeimagePathpub);
         }
-      }else {
-        $Edit_img_path = $brand->logo;
       }
-      if(empty($path)){
-        return response()->json([
-          'ststus' => false,
-          'message'=> "please give me veleate img",
-        ],401);
-      }else{
         if($validateUser->fails()){
           return response()->json([
             'ststus' => false,
@@ -140,7 +132,6 @@ class BrandController extends Controller
             'meta_keyword' => $request->meta_keyword,
             'meta_description' => $request->meta_description,
             'description' => $request->description,
-            'logo' =>$Edit_img_path,
           ]);
           return response()->json([
             'ststus' => true,
@@ -148,7 +139,6 @@ class BrandController extends Controller
             'brand_update' =>$brand_update,
           ],200);
         }
-      }
     }
     
     //end edite brand 
