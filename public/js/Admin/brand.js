@@ -89,7 +89,7 @@
   }
   //brand update
   $(document).ready(function(){
-    $(document).on("click", "#updateBrand", function(){
+    $(document).on("click", "#updateBrand", async function(){
       
     let formData = new FormData();
       let editBrandImg = document.getElementById('editBrandImg');
