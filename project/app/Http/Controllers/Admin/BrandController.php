@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 
+use App\Services\ImageService;
+
 use App\Models\admin\brand;
 use App\Models\admin\product;
 
