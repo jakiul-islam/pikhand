@@ -492,13 +492,13 @@ class ProductController extends Controller
     }else{
       $pImgpath = table_product_imgs::where('id', $request->imgId)->first();
       if ($pImgpath) {
-        $imagePath = storage_path('app/public/' . $pImgpath->images);
-        $imagePathpub = public_path('public/' . $pImgpath->images);
+
+        
+        Storage::disk('public')->delete($pImgpath->images); 
+        
         // ইমেজ ফাইল এক্সিস্ট করে কি না চেক করে ডিলিট করুন
          $deteletdata = table_product_imgs::where('id', $request->imgId)->delete();
-          File::delete($imagePath);
-          File::delete($imagePathpub);
-          
+    
           return response()->json([
             'status' => true,
             'message'=>'product and image deleted successfully',
