@@ -240,22 +240,35 @@ class CategoryController extends Controller
               
             }
         }
+
+
+          $categoryChack      = product_subcategories::where('name',$request->EditCategoryName)->where('slug',$request->EditCategorySlug)->count();
+          if($categoryChack > 0){
+            return response()->json([
+              'status' => false,
+              'message'=>'Validation Error Is',
+              'errors' =>'use an unic name and slug',
+            ],401);
+          }else{
+
         
-          $categories = categories::where('id',$request->EditCategoryId)->first();
-          $categories->update([
-            'name'               => $request->EditCategoryName,
-            'slug'               => $request->EditCategorySlug,
-            'meta_title'         => $request->EditMetaTitle,
-            'meta_keywords'      => $request->EditMetakeyword,
-            'meta_description'   => $request->EditMetaDescription,
-            'short_description'  => $request->EditShortDescription,
-            'description'        => $request->EditLanghDescription,
-          ]);
-          return response()->json([
-            'status' => true,
-            'message'=>'Category update successfull ',
-            'categories' =>$categories,
-          ],200);
+        
+            $categories = categories::where('id',$request->EditCategoryId)->first();
+            $categories->update([
+              'name'               => $request->EditCategoryName,
+              'slug'               => $request->EditCategorySlug,
+              'meta_title'         => $request->EditMetaTitle,
+              'meta_keywords'      => $request->EditMetakeyword,
+              'meta_description'   => $request->EditMetaDescription,
+              'short_description'  => $request->EditShortDescription,
+              'description'        => $request->EditLanghDescription,
+            ]);
+            return response()->json([
+              'status' => true,
+              'message'=>'Category update successfull ',
+              'categories' =>$categories,
+            ],200);
+          }
         }
     }
     //delete catagory
