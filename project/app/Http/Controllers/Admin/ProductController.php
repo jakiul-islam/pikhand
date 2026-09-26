@@ -75,52 +75,53 @@ class ProductController extends Controller
           'message'=>'Validation Error Is',
           'errors' =>'use an unic name and slug',
         ],422);
-      }
-      $productId = product::create([
-        'name'            =>$request->name,
-        'slug'            =>$request->keyword,
-        'mata_title'      =>$request->metaTitle,
-        'price'           =>$request->price,
-        'discount'        =>$request->discount,
-        'stock'           =>$request->avolalabe,
-        'product_code'    =>$request->code,
+      }else{
+        $productId = product::create([
+          'name'            =>$request->name,
+          'slug'            =>$request->keyword,
+          'mata_title'      =>$request->metaTitle,
+          'price'           =>$request->price,
+          'discount'        =>$request->discount,
+          'stock'           =>$request->avolalabe,
+          'product_code'    =>$request->code,
+          
+          'sku'             =>$request->sku,
+          'weight'          =>$request->weight,
+          'dimensions'      =>$request->dimensions,
+          'color'           =>$request->color,
+          'size'            =>$request->size,
+          'material'        =>$request->material,
+          'warranty'        =>$request->warranty,
+          'return_policy'   =>$request->color,
+          
+          'category_id'     => '213' ,
+          'brand_id'        => '213' ,
+          'total_sales'     => '213',
+        'mata_description'  =>$request->MetaDescription,
+        'short_description' =>$request->ShortDescription,
+          'long_description'=>$request->LongDescription,
+          'image'           => $path,
+        ])->id;  
         
-        'sku'             =>$request->sku,
-        'weight'          =>$request->weight,
-        'dimensions'      =>$request->dimensions,
-        'color'           =>$request->color,
-        'size'            =>$request->size,
-        'material'        =>$request->material,
-        'warranty'        =>$request->warranty,
-        'return_policy'   =>$request->color,
         
-        'category_id'     => '213' ,
-        'brand_id'        => '213' ,
-        'total_sales'     => '213',
-      'mata_description'  =>$request->MetaDescription,
-      'short_description' =>$request->ShortDescription,
-        'long_description'=>$request->LongDescription,
-        'image'           => $path,
-      ])->id;  
+        $ids =  $request->category;
+        if (is_string($ids)) {
+          $id = explode(',', $ids);
+        }
+        
+        $rows = [];
+        foreach ( $id as $cid) {
+          $rows[] = ['product_id' => $productId, 'subcategory_id' => $cid];
+        }
+        category_product::insert($rows); 
       
       
-      $ids =  $request->category;
-      if (is_string($ids)) {
-        $id = explode(',', $ids);
+      
+        return response()->json([
+          'status' => true ,
+          'message'=>'Product create successfull',
+        ],201);
       }
-      
-      $rows = [];
-      foreach ( $id as $cid) {
-        $rows[] = ['product_id' => $productId, 'subcategory_id' => $cid];
-      }
-      category_product::insert($rows); 
-      
-      
-      
-      return response()->json([
-        'status' => true ,
-        'message'=>'Product create successfull',
-      ],201);
     }
   }
     
