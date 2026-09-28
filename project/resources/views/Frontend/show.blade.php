@@ -3,12 +3,12 @@
 
 <script>
 const firebaseConfig = {
-    apiKey: "আপনার_API_KEY",
-    authDomain: "আপনার_AUTH_DOMAIN",
-    projectId: "আপনার_PROJECT_ID",
-    storageBucket: "আপনার_STORAGE_BUCKET",
-    messagingSenderId: "আপনার_MESSAGING_SENDER_ID",
-    appId: "আপনার_APP_ID"
+    apiKey: "AIzaSyDImPXFphfurv7endIIYF6tVNH8KSd2HXg",
+    authDomain: "picklet-d14f0.firebaseapp.com",
+    projectId: "picklet-d14f0",
+    storageBucket: "picklet-d14f0.firebasestorage.app",
+    messagingSenderId: "870826237606",
+    appId: "1:870826237606:web:8cf050e339d5aa67541e67"
 };
 
 firebase.initializeApp(firebaseConfig);
