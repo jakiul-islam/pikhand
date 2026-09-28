@@ -43,7 +43,7 @@ async function enablePushNotification() {
         // Service Worker register
         const registration =
             await navigator.serviceWorker.register(
-                '/firebase-messaging-sw.js'
+                'public/js/firebase-messaging-sw.js'
             );
 
         console.log('Service Worker registered');
