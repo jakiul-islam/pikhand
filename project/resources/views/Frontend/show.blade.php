@@ -1,3 +1,14 @@
+
+
+<button type="button"
+        onclick="enablePushNotification()"
+        class="btn btn-primary">
+    🔔 Enable Notifications
+</button>
+
+
+
+
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-messaging-compat.js"></script>
 
