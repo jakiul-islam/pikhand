@@ -261,7 +261,7 @@ Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.logi
 
 //end admin route section
 
-Route::get('Show', function () {return view('Show'); });
+Route::get('Show', function () {return view('show'); });
 
 
 //UserController route section
