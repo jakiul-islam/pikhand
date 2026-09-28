@@ -39,7 +39,7 @@ async function enablePushNotification() {
 
         // FCM Token
         const token = await messaging.getToken({
-            vapidKey: 'এখানে আপনার Key pair বসাবেন',
+            vapidKey: 'BOb1ADUQgAZZL2DzdCduqdfrlF87-zj_Kl712GFI4T-H1TDgn5VHZ1m-diqKNEU3AXec8-o_Xzh9NYzMDc81yJw',
             serviceWorkerRegistration: registration
         });
 
