@@ -20,7 +20,7 @@ use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Frontend\fogotPasswordController;
 use App\Http\Controllers\Frontend\notificationController;
 
-use App\Http\Controllers\Admin\NotificationController;
+use App\Http\Controllers\Admin\NotificationController as AdminNotificationController;
 
 
 
