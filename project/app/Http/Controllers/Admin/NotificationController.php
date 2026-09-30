@@ -6,7 +6,7 @@ use App\Services\FirebaseService;
 
 class NotificationController extends Controller
 {
-    public function send(FirebaseService $firebase)
+    public function send(request $request , FirebaseService $firebase)
     {
         $response = $firebase->sendNotification(
             'USER_FCM_TOKEN',
