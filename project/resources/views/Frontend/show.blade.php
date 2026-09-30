@@ -57,39 +57,31 @@ async function enablePushNotification() {
         if (token) {
 
             console.log('FCM Token:', token);
-
-
-
+          
           let formData = new FormData();
-        formData.append('token', token);
+          formData.append('token', token);
 
   
-      $.ajax({
-        url :'/carts/product/index',
-        type :'POST',
-        processData: false,
-        contentType: false,
-        data: formData,
-        headers: {
-          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-        },
-        success:function(response){
-          alert('Notification send successfull');
-        },
-        error:function(xhr,status,error){
-   
-          const response = JSON.parse(xhr.responseText);
-          console.log(xhr.responseText);
- 
-        }
-      });
-
-
-
-
-
-
-      
+          $.ajax({
+            url :'/carts/product/index',
+            type :'POST',
+            processData: false,
+            contentType: false,
+            data: formData,
+            headers: {
+              'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            success:function(response){
+              alert('Notification send successfull');
+            },
+            error:function(xhr,status,error){
+       
+              const response = JSON.parse(xhr.responseText);
+              console.log(xhr.responseText);
+     
+            }
+          });
+    
 
             // আপাতত শুধু token দেখব
         }
