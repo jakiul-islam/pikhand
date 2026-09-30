@@ -63,7 +63,7 @@ async function enablePushNotification() {
 
   
           $.ajax({
-            url :'/carts/product/index',
+            url :'/test-notification',
             type :'POST',
             processData: false,
             contentType: false,
