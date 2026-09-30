@@ -11,8 +11,11 @@ class NotificationController extends Controller
 {
     public function send(request $request , FirebaseService $firebase)
     {
+
+
+      
         $response = $firebase->sendNotification(
-            'USER_FCM_TOKEN',
+            $request->token,
             'নতুন মেসেজ',
             'আপনার জন্য একটি নতুন notification এসেছে'
         );
