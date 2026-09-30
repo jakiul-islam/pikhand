@@ -59,6 +59,10 @@ async function enablePushNotification() {
             console.log('FCM Token:', token);
 
 
+
+          let formData = new FormData();
+        formData.append('token', token);
+
   
       $.ajax({
         url : url,
