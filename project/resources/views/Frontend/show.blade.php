@@ -32,7 +32,76 @@ firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 
+let firebaseSWRegistration = null;
 
+async function enablePushNotification() {
+    try {
+        const permission = await Notification.requestPermission();
+
+        if (permission !== 'granted') {
+            console.log('Notification permission denied');
+            return;
+        }
+
+        console.log('Notification permission granted');
+
+        firebaseSWRegistration =
+            await navigator.serviceWorker.register(
+                '/public/js/firebase-messaging-sw.js'
+            );
+
+        console.log('Service Worker registered');
+
+        const token = await messaging.getToken({
+            vapidKey: 'BOb1ADUQgAZZL2DzdCduqdfrlF87-zj_Kl712GFI4T-H1TDgn5VHZ1m-diqKNEU3AXec8-o_Xzh9NYzMDc81yJw',
+            serviceWorkerRegistration: firebaseSWRegistration
+        });
+
+        if (token) {
+            console.log('FCM Token:', token);
+
+            let formData = new FormData();
+            formData.append('token', token);
+
+            $.ajax({
+                url: '/test-notification',
+                type: 'POST',
+                processData: false,
+                contentType: false,
+                data: formData,
+                headers: {
+                    'X-CSRF-TOKEN':
+                        document
+                            .querySelector('meta[name="csrf-token"]')
+                            .getAttribute('content')
+                },
+                success: function(response) {
+                    console.log('Notification send successful');
+                },
+                error: function(xhr) {
+                    console.log(xhr.responseText);
+                }
+            });
+        }
+
+    } catch (error) {
+        console.error('FCM Error:', error);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/*
 messaging.onMessage(async (payload) => {
 
     console.log('Foreground message:', payload);
@@ -137,4 +206,6 @@ async function enablePushNotification() {
 
     }
 }
+
+  */
 </script>
