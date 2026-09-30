@@ -31,6 +31,28 @@ firebase.initializeApp(firebaseConfig);
 
 const messaging = firebase.messaging();
 
+
+
+messaging.onMessage((payload) => {
+
+    console.log('Foreground message:', payload);
+
+    if (Notification.permission === 'granted') {
+
+        new Notification(
+            payload.notification?.title || 'Notification',
+            {
+                body: payload.notification?.body || ''
+            }
+        );
+
+    }
+});
+
+
+
+  
+
 async function enablePushNotification() {
 
     try {
