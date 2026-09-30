@@ -16,8 +16,8 @@ class NotificationController extends Controller
       
         $response = $firebase->sendNotification(
             $request->token,
-            'নতুন মেসেজ',
-            'আপনার জন্য একটি নতুন notification এসেছে'
+            'Pikhand',
+            'A new product add and 50 % off this product ';
         );
 
         return response()->json([
