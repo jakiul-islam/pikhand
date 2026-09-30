@@ -33,23 +33,40 @@ const messaging = firebase.messaging();
 
 
 
-messaging.onMessage((payload) => {
+messaging.onMessage(async (payload) => {
 
     console.log('Foreground message:', payload);
 
-    if (Notification.permission === 'granted') {
+    const title =
+        payload.notification?.title || 'Notification';
 
-        new Notification(
-            payload.notification?.title || 'Notification',
-            {
-                body: payload.notification?.body || ''
-            }
+    const options = {
+        body: payload.notification?.body || '',
+        icon: '/favicon.ico',
+        data: payload.data || {}
+    };
+
+    try {
+
+        const registration =
+            await navigator.serviceWorker.ready;
+
+        await registration.showNotification(
+            title,
+            options
+        );
+
+        console.log('Browser notification shown');
+
+    } catch (error) {
+
+        console.error(
+            'Notification display error:',
+            error
         );
 
     }
 });
-
-
 
   
 
