@@ -58,6 +58,18 @@ async function enablePushNotification() {
 
             console.log('FCM Token:', token);
 
+
+
+
+
+
+
+
+
+
+
+      
+
             // আপাতত শুধু token দেখব
         }
 
