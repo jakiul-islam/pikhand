@@ -59,9 +59,7 @@ async function enablePushNotification() {
             console.log('FCM Token:', token);
 
 
-
-
-
+  
       $.ajax({
         url : url,
         type :type,
@@ -75,16 +73,10 @@ async function enablePushNotification() {
           alert('Notification send successfull');
         },
         error:function(xhr,status,error){
-          if(ErrorCollBack !== 'Nan'){
-            window[ErrorCollBack]( response );
-          }
-          if(buttonId !== 'Nan'){
-            pageNameButton.innerHTML = buttonName;
-            pageNameButton.disabled = false;
-          }
+   
           const response = JSON.parse(xhr.responseText);
           console.log(xhr.responseText);
-          showalert( response.errors,'#ffffff','showalert');
+ 
         }
       });
 
