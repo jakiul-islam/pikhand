@@ -77,7 +77,8 @@ async function enablePushNotification() {
               'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
             },
             success:function(response){
-              alert('Notification send successfull');
+              console.log('Notification send successfull');
+              
             },
             error:function(xhr,status,error){
        
