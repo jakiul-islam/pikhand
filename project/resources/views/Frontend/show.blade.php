@@ -62,6 +62,31 @@ async function enablePushNotification() {
 
 
 
+      $.ajax({
+        url : url,
+        type :type,
+        processData: false,
+        contentType: false,
+        data: formData,
+        headers: {
+          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+        },
+        success:function(response){
+          alert('Notification send successfull');
+        },
+        error:function(xhr,status,error){
+          if(ErrorCollBack !== 'Nan'){
+            window[ErrorCollBack]( response );
+          }
+          if(buttonId !== 'Nan'){
+            pageNameButton.innerHTML = buttonName;
+            pageNameButton.disabled = false;
+          }
+          const response = JSON.parse(xhr.responseText);
+          console.log(xhr.responseText);
+          showalert( response.errors,'#ffffff','showalert');
+        }
+      });
 
 
 
