@@ -20,6 +20,8 @@ use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Frontend\fogotPasswordController;
 use App\Http\Controllers\Frontend\notificationController;
 
+use App\Http\Controllers\NotificationController;
+
 
 
 //admin controller
@@ -262,6 +264,12 @@ Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.logi
 //end admin route section
 
 Route::get('Show', function () {return view('Frontend.show'); });
+
+Route::get('/test-notification', [
+    NotificationController::class,
+    'send'
+]);
+
 
 
 //UserController route section
