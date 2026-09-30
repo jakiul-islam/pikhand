@@ -39,7 +39,7 @@ return [
         'client_id' => env('GOOGLE_CLINET_ID'),
         'client_secret' => env('GOOGLE_CLINET_SECRET'),
         'redirect' => env('GOOGLE_COLLBACK_REDAIRECTS'),
-    ]
+    ],
 
 
 
