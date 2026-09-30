@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Services\FirebaseService;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 
 class NotificationController extends Controller
 {
