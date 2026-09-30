@@ -34,6 +34,50 @@ const messaging = firebase.messaging();
 
 let firebaseSWRegistration = null;
 
+
+
+messaging.onMessage(async (payload) => {
+
+    console.log('Foreground message:', payload);
+
+    const title =
+        payload.notification?.title || 'Notification';
+
+    const options = {
+        body: payload.notification?.body || '',
+        icon: '/favicon.ico',
+        data: payload.data || {}
+    };
+
+    try {
+
+        const registration =
+            firebaseSWRegistration ||
+            await navigator.serviceWorker.ready;
+
+        await registration.showNotification(
+            title,
+            options
+        );
+
+        console.log('Browser notification shown');
+
+    } catch (error) {
+
+        console.error(
+            'Notification display error:',
+            error
+        );
+
+    }
+});
+
+
+
+
+
+
+
 async function enablePushNotification() {
     try {
         const permission = await Notification.requestPermission();
