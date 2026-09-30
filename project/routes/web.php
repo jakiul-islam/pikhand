@@ -266,7 +266,7 @@ Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.logi
 Route::get('Show', function () {return view('Frontend.show'); });
 
 Route::get('/test-notification', [
-    NotificationController::class,
+    AdminNotificationController::class,
     'send'
 ]);
 
