@@ -152,7 +152,7 @@
               <div class="toast-body chat-wrapper" style="height:550px;">
                 
                 <div>
-                   <span style="background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
+                   <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
                 </div>
 
 
