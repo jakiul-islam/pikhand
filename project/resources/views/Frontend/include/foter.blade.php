@@ -59,6 +59,7 @@
         left: 0px;
         margin-left: 15px;
         margin-right: 15px;
+        display:flex;
     }
 
     .massage-input-div{
