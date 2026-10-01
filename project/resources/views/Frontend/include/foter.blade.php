@@ -63,12 +63,12 @@
 
     .massage-input-div{
        height: 35px;
-      width: 200px;
-      background-color: #FFFFFF;
-      box-shadow:none ;
-    clip-path: inset(0 0 0 0 round 20px);
+       width: 200px;
+       background-color: #FFFFFF;
+       box-shadow:none ;
+       clip-path: inset(0 0 0 0 round 20px);
        position: absolute;
-       top: 7px;
+       top: 5px;
        right: 50px;
     }
 
