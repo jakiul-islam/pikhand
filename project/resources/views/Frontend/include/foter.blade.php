@@ -81,13 +81,7 @@
     }
 
 
-    .toast-container{
-      height:80%;
-    }
-
-    .toast{
-       z-index:2000;
-    }
+  
 
 
     
