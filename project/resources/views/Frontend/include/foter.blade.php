@@ -59,12 +59,84 @@
     
   </style>
 
+
+
+<style>
+
+
+/* পুরো Chat এর Body */
+.chat-wrapper{
+    position: relative;
+    height: 100vh;
+    padding-bottom: 80px; /* input এর জন্য জায়গা ছাড়া */
+    overflow-y: auto;
+}
+
+/* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
+.send-massage{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 8px 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* toast এর মতো shadow */
+    z-index: 999;
+}
+
+.massage-input-div{
+    flex: 1;
+}
+
+.massage-input{
+    border: none !important;
+    width: 100%;
+    background: transparent;
+}
+.massage-input:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+
+.custom-file-upload, .massage-submit{
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    flex-shrink: 0;
+}
+.massage-submit{
+    background: #0d6efd;
+    color: #fff;
+  }
+
+
+
+  
+</style>
+
+
+
+
+<!--
 <style>
 
   .send-massage{
     display: flex;
     align-items: center;
     position:relative;
+    
     bottom:5px;
     gap: 10px;
     width: 100%;
@@ -102,7 +174,7 @@
 }
 </style>
 
-
+-->
 <!-- 
 
   <style>
