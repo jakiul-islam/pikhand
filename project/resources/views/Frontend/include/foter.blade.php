@@ -79,6 +79,12 @@
       top:7px;
       font-size: 2rem;
     }
+
+
+    .toast-container{
+      height:90%;
+      z-index:300;
+    }
   </style>
 
   <style>
@@ -105,7 +111,11 @@
 
     <div class="chat">
       <div class="c-chat">
-        <button type="button" style="font-size:2rem; color:#FFFFFF;" class="text-button"  id="liveToastBtn"><i class="bi bi-chat-left" style="font-size:2rem; color:#FFFFFF;"></i></button>
+        
+        <button type="button" style="font-size:2rem; color:#FFFFFF;" class="text-button"  id="liveToastBtn">
+          <i class="bi bi-chat-left" style="font-size:2rem; color:#FFFFFF;"></i>
+        </button>
+        
           <div class="toast-container position-fixed bottom-0 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
               <div class="toast-header bg-info">
