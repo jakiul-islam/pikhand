@@ -38,6 +38,7 @@
         bottom: 40px;
         right: 5px;
         z-index: 20;
+        height:200px;
     }
 
     .c-chat{
