@@ -115,9 +115,9 @@
     cursor: pointer;
     border: none;
     flex-shrink: 0;
-    background: #f1f1f1;
+    
 }
-.massage-submit{
+.massage-submit, .custom-file-upload{
     background: #e0ebfd;
     color: #fdbcbc;
   }
