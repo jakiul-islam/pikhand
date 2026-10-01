@@ -72,11 +72,6 @@
        right: 50px;
     }
 
-      .massage-input{
-        
-      }
-
-
 
     
     .massage-submit{
