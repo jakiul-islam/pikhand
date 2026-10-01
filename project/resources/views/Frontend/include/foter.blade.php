@@ -93,7 +93,7 @@
   <style>
     .custom-file-upload {
       display: inline-block;
-      padding-top: 10px;
+      padding-top: 7px;
       cursor: pointer;
       color:black;
       border-radius: 5px;
@@ -144,7 +144,7 @@
                   <div class="massage-input-div">
                       <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
                   </div>
-                  <button type="submit" class="massage-submit search"><i class="bi bi-send-fill"></i></button>
+                  <button type="submit" class="massage-submit"><i class="bi bi-send-fill"></i></button>
                 </div>
 
 
