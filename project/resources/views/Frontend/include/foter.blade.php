@@ -92,6 +92,50 @@
     
   </style>
 
+<style>
+
+  .send-massage{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 6px 12px;
+}
+
+.massage-input-div{
+    flex: 1; /* মাঝের input পুরো জায়গা নিবে */
+}
+
+.massage-input{
+    border: none !important;
+    width: 100%;
+}
+
+.custom-file-upload, .massage-submit{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #f1f1f1;
+    cursor: pointer;
+    border: none;
+    font-size: 18px;
+}
+
+.massage-submit{
+    background: #0d6efd;
+    color: #fff;
+}
+</style>
+
+
+
+
   <style>
     .custom-file-upload {
       display: inline-block;
