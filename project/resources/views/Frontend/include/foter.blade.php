@@ -64,6 +64,8 @@
   .send-massage{
     display: flex;
     align-items: center;
+    position:absolute;
+    bottom:5px;
     gap: 10px;
     width: 100%;
     background: #fff;
