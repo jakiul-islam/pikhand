@@ -68,7 +68,7 @@
        box-shadow:none ;
        clip-path: inset(0 0 0 0 round 20px);
        position: absolute;
-       top: 5px;
+       top: 7px;
        right: 50px;
     }
 
