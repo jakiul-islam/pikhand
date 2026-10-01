@@ -65,6 +65,7 @@
     display: flex;
     align-items: center;
     position:absolute;
+    width:100%;
     bottom:5px;
     gap: 10px;
     width: 100%;
