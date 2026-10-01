@@ -117,8 +117,8 @@
     flex-shrink: 0;
 }
 .massage-submit{
-    background: #0d6efd;
-    color: #fff;
+    background: #e0ebfd;
+    color: #fdbcbc;
   }
 
 
