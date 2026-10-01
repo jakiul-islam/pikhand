@@ -79,6 +79,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
+    margin-left:5px;
     max-width: 600px;
     display: flex;
     align-items: center;
