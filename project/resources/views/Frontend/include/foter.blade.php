@@ -72,6 +72,13 @@
        right: 50px;
     }
 
+      .massage-input{
+        
+      }
+
+
+
+    
     .massage-submit{
       background: none;
       position: absolute;
@@ -140,7 +147,7 @@
                   </label>
                   <input type="file" id="fileInput" style="display: none;" />
                   <div class="massage-input-div">
-                      <input class="form-control shadow-none search" type="text" placeholder="Iam looking for..." aria-label="default input example">
+                      <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
                   </div>
                   <button type="submit" class="massage-submit search"><i class="bi bi-send-fill"></i></button>
                 </div>
