@@ -129,9 +129,13 @@
               </div>
               <hr>
               <div class="toast-body" style="height:550px;">
+                
                 <div>
                    <span style="background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
                 </div>
+
+
+    
                 <div class="send-massage">
                   <label for="fileInput" class="custom-file-upload">
                     <i class="bi bi-folder2-open"></i>
@@ -142,6 +146,10 @@
                   </div>
                   <button type="submit" class="massage-submit search"><i class="bi bi-send-fill"></i></button>
                 </div>
+
+
+
+                
               </div>
             </div>
           </div>
