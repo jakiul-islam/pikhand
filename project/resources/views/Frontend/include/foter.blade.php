@@ -105,8 +105,6 @@
 
     .massage-input-div:hover {
        width: 250px;
-       .massage-submit{
-       }
     }
   </style>
 
