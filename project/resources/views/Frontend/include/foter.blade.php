@@ -78,7 +78,7 @@
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 85%;
     max-width: 600px;
     display: flex;
     align-items: center;
