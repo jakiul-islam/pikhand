@@ -118,7 +118,7 @@
     
 }
 .massage-submit, .custom-file-upload{
-    background: #e0ebfd;
+    background: #bcc6fd;
     color: #fdbcbc;
   }
 
