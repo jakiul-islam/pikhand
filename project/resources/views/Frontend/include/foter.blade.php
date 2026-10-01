@@ -50,40 +50,7 @@
     .home-link{
         color: black;
     }
-    .send-massage{
-        height: 50px;
-        width: 92%;
-        background-color: #99AEFF;
-        position: absolute;
-        bottom:5px;
-        left: 0px;
-        margin-left: 15px;
-        margin-right: 15px;
-        display:flex;
-    }
-
-    .massage-input-div{
-       height: 35px;
-       width: 200px;
-       background-color: #FFFFFF;
-       box-shadow:none ;
-       clip-path: inset(0 0 0 0 round 20px);
-       position: absolute;
-       top: 7px;
-       right: 50px;
-    }
-
-
-    
-    .massage-submit{
-      background: none;
-      position: absolute;
-      right: 10px;
-      top:7px;
-      font-size: 2rem;
-      border:none;
-    }
-
+  
 
     .toast-container{
       height:80%;
