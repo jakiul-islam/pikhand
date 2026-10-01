@@ -81,6 +81,7 @@
       right: 10px;
       top:7px;
       font-size: 2rem;
+      border:none;
     }
 
 
