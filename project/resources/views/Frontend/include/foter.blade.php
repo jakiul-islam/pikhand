@@ -83,7 +83,7 @@
 
     .toast-container{
       height:60%;
-      z-index:1500;
+      z-index:2000;
     }
   </style>
 
