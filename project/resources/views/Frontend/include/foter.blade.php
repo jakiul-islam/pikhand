@@ -134,7 +134,7 @@
 </style>
 
 
-
+<!-- 
 
   <style>
     .custom-file-upload {
@@ -155,7 +155,7 @@
        width: 250px;
     }
   </style>
-
+ -->
     <div class="chat">
       <div class="c-chat">
         
