@@ -83,7 +83,7 @@
     max-width: 600px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 0px;
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 30px;
