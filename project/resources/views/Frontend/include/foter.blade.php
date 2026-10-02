@@ -159,7 +159,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
               </div>
               
-              <div class="" >
+              <div class="toast-body" >
                 <div class='parandDiv'>
                   <div>
                    <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
