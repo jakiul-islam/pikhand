@@ -65,7 +65,7 @@
 
 
 /* পুরো Chat এর Body */
-.chat-wrapper{
+.toast-body{
     position: relative;
     height: 100vh;
     padding-bottom: 80px; /* input এর জন্য জায়গা ছাড়া */
