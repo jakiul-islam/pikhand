@@ -156,10 +156,7 @@
                 <small>11 mins ago</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
               </div>
-
-
               
-              <hr>
               <div class="toast-body" >
                 <div class='parandDiv'>
                   <div>
