@@ -130,7 +130,9 @@
     background: #091b80;
     color: #ffffff;
   }
-
+.toast-body{
+  background-color:#ffffff;
+}
 
 
   
