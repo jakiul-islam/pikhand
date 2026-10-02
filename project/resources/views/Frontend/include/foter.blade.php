@@ -164,8 +164,8 @@
                 </div>
 
 
-    
-                  <div class="send-massage">
+                  <div class='massage-footer'>
+                    <div class="send-massage">
                     <label for="fileInput" class="custom-file-upload">
                       <i class="bi bi-folder2-open"></i>
                     </label>
@@ -175,8 +175,8 @@
                     </div>
                     <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
                   </div>
-
-
+                  </div>
+            
 
                 </div>
               </div>
