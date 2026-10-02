@@ -174,7 +174,7 @@
                     </label>
                     <input type="file" id="fileInput" style="display: none;" />
                     <div class="massage-input-div">
-                        <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
+                        <textarea class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example"></textarea>
                     </div>
                     <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
                   </div>
