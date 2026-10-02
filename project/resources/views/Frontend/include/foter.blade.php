@@ -166,15 +166,15 @@
 
     
                   <div class="send-massage">
-                  <label for="fileInput" class="custom-file-upload">
-                    <i class="bi bi-folder2-open"></i>
-                  </label>
-                  <input type="file" id="fileInput" style="display: none;" />
-                  <div class="massage-input-div">
-                      <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
+                    <label for="fileInput" class="custom-file-upload">
+                      <i class="bi bi-folder2-open"></i>
+                    </label>
+                    <input type="file" id="fileInput" style="display: none;" />
+                    <div class="massage-input-div">
+                        <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
+                    </div>
+                    <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
                   </div>
-                  <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
-                </div>
 
 
 
