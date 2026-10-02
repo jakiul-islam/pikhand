@@ -79,9 +79,11 @@
 }
 
 /* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
-.send-massage{
+  .massage-foote{
     position: fixed;
     bottom: 20px;
+  }
+  .send-massage{
     left: 50%;
     transform: translateX(-50%);
     width: 85%;
