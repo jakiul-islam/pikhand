@@ -201,7 +201,8 @@
   <script src="{{ asset('public/js/Frontend/user/user-info.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/user/set-user-email.js') }}"></script>
   <script src="{{ asset('public/js/Frontend/alert.js') }}"></script>
-  
+  <script src="{{ asset('public/js/Frontend/SMS/message.js') }}"></script>
+
 
   <script>
       const toastTrigger = document.getElementById('liveToastBtn')
