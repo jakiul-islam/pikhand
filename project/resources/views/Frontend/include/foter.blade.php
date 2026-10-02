@@ -66,7 +66,7 @@
 
 /* পুরো Chat এর Body */
 .toast-body{
-    position: relative;
+    position: relative !important;
     height: 100vh;
     padding-bottom: 80px; /* input এর জন্য জায়গা ছাড়া */
     overflow-y: auto;
