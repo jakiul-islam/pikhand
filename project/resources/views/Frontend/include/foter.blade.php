@@ -79,7 +79,7 @@
 }
 
 /* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
-  .massage-foote{
+  .massage-footer{
     position: fixed;
     bottom: 20px;
   }
