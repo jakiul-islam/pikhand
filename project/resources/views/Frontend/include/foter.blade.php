@@ -160,15 +160,15 @@
 
               
               <hr>
-              <div class="parandDiv" >
-                
-                <div>
+              <div class="toast-body" >
+                <div class='parandDiv'>
+                  <div>
                    <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
                 </div>
 
 
     
-                <div class="send-massage">
+                  <div class="send-massage">
                   <label for="fileInput" class="custom-file-upload">
                     <i class="bi bi-folder2-open"></i>
                   </label>
@@ -181,7 +181,7 @@
 
 
 
-                
+                </div>
               </div>
             </div>
           </div>
