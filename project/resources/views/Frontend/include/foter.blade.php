@@ -75,7 +75,7 @@
     position: relative !important;
     height: 100vh;
     padding-bottom: 80px; /* input এর জন্য জায়গা ছাড়া */
-    overflow-y: auto;
+   
 }
 
 /* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
