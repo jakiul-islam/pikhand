@@ -62,568 +62,131 @@
 
 
 
-<!-- Bootstrap CSS -->
-<link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-/>
 
-<!-- Bootstrap Icons -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-/>
+
+
+
 
 <style>
-  * {
-    box-sizing: border-box;
-  }
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #171321, #28183d);
-    font-family: Arial, sans-serif;
-  }
 
-  /* Floating Chat Button */
-  .chat {
-    position: fixed;
-    right: 25px;
-    bottom: 25px;
-    z-index: 9999;
-  }
-
-  .c-chat {
-    position: relative;
-  }
-
-  .text-button {
-    width: 62px;
-    height: 62px;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #9b4dff, #c86cff);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 10px 30px rgba(159, 73, 255, 0.45);
-    transition: 0.25s ease;
-  }
-
-  .text-button:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 14px 35px rgba(159, 73, 255, 0.6);
-  }
-
-  /* Chat Window */
-  .toast-container {
-    padding: 0 !important;
-    right: 20px !important;
-    bottom: 100px !important;
-  }
-
-  .toast {
-    width: 380px;
-    max-width: calc(100vw - 30px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 22px;
-    overflow: hidden;
-    background: #17131f;
-    color: white;
-    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
-  }
-
-  /* Header */
-  .toast-header {
-    height: 75px;
-    padding: 12px 16px;
-    border: none;
-    background: linear-gradient(135deg, #9b4dff, #bd68ff) !important;
-    color: white;
-  }
-
-  .chat-avatar {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 21px;
-  }
-
-  .chat-title {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    line-height: 1.2;
-  }
-
-  .chat-title strong {
-    font-size: 15px;
-  }
-
-  .chat-status {
-    font-size: 11px;
-    opacity: 0.9;
-    margin-top: 3px;
-  }
-
-  .online-dot {
-    width: 7px;
-    height: 7px;
-    background: #62ff9b;
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 4px;
-  }
-
-  .btn-close {
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-  }
-
-  /* Chat Body */
-  .parandDiv {
-    padding: 18px;
-    height: 420px;
-    display: flex;
-    flex-direction: column;
-    background:
-      radial-gradient(
-        circle at top right,
-        rgba(182, 86, 255, 0.08),
-        transparent 35%
-      ),
-      #17131f;
-  }
-
-  .messages {
-    flex: 1;
+/* পুরো Chat এর Body */
+.parandDiv{
+    position: relative !important;
+    height: 100vh;
+    padding-bottom: 80px; /* input এর জন্য জায়গা ছাড়া */
     overflow-y: auto;
-    padding: 5px 2px 15px;
-  }
+}
 
-  .messages::-webkit-scrollbar {
-    width: 4px;
-  }
-
-  .messages::-webkit-scrollbar-thumb {
-    background: #70408d;
-    border-radius: 10px;
-  }
-
-  /* Bot message */
-  .bot-message {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 15px;
-  }
-
-  .bot-mini-avatar {
-    width: 28px;
-    height: 28px;
-    min-width: 28px;
-    border-radius: 50%;
-    background: #b656ff;
+/* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
+.send-massage{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    margin-left:5px;
+    max-width: 600px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-size: 13px;
-  }
+    gap: 0px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 8px 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* toast এর মতো shadow */
+    z-index: 999;
+}
 
-  .bot-bubble {
-    max-width: 78%;
-    background: #292331;
-    color: #f4eff8;
-    padding: 11px 14px;
-    border-radius: 5px 16px 16px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
+.massage-input-div{
+    flex: 1;
+}
 
-  /* User message */
-  .user-message {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 15px;
-  }
+.massage-input{
+    border: none !important;
+    width: 100%;
+    background: transparent;
+}
+.massage-input:focus{
+    outline: none;
+    box-shadow: none !important;
+}
 
-  .user-bubble {
-    max-width: 78%;
-    background: linear-gradient(135deg, #b656ff, #9340df);
-    color: white;
-    padding: 11px 14px;
-    border-radius: 16px 5px 16px 16px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  /* Time */
-  .message-time {
-    display: block;
-    font-size: 9px;
-    opacity: 0.55;
-    margin-top: 5px;
-  }
-
-  /* Input Area */
-  .send-massage {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    padding: 8px;
-    background: #211c29;
-    border: 1px solid #372d42;
-    border-radius: 16px;
-  }
-
-  .custom-file-upload {
+.custom-file-upload, .massage-submit{
     width: 38px;
     height: 38px;
-    flex-shrink: 0;
-    border-radius: 11px;
-    background: #30273a;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #bfb5ca;
+    border-radius: 50%;
     cursor: pointer;
-    transition: 0.2s;
-  }
-
-  .custom-file-upload:hover {
-    color: white;
-    background: #40334c;
-  }
-
-  .massage-input-div {
-    flex: 1;
-  }
-
-  .massage-input {
-    height: 40px;
-    border: none !important;
-    outline: none !important;
-    background: transparent !important;
-    color: white !important;
-    padding: 5px 3px;
-    font-size: 14px;
-  }
-
-  .massage-input::placeholder {
-    color: #84798e;
-  }
-
-  .massage-submit {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
     border: none;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #b656ff, #9137df);
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s;
+    flex-shrink: 0;
+    
+}
+.massage-submit, .custom-file-upload{
+    background: #091b80;
+    color: #ffffff;
   }
 
-  .massage-submit:hover {
-    transform: scale(1.06);
-  }
 
-  .massage-submit:active {
-    transform: scale(0.95);
-  }
 
-  /* Mobile */
-  @media (max-width: 480px) {
-    .chat {
-      right: 15px;
-      bottom: 15px;
-    }
-
-    .toast-container {
-      right: 10px !important;
-      bottom: 90px !important;
-    }
-
-    .toast {
-      width: calc(100vw - 20px);
-      border-radius: 18px;
-    }
-
-    .parandDiv {
-      height: 400px;
-    }
-  }
+  
 </style>
 
 
-<!-- ================= CHATBOT ================= -->
-
-<div class="chat">
-  <div class="c-chat">
-
-    <!-- Floating Button -->
-    <button
-      type="button"
-      class="text-button"
-      id="liveToastBtn"
-      aria-label="Open chat"
-    >
-      <i class="bi bi-chat-left-dots-fill"></i>
-    </button>
 
 
-    <!-- Chat Window -->
-    <div class="toast-container position-fixed">
+    <div class="chat">
+      <div class="c-chat">
+        
+        <button type="button" style="font-size:2rem; color:#FFFFFF;" class="text-button"  id="liveToastBtn">
+          <i class="bi bi-chat-left" style="font-size:2rem; color:#FFFFFF;"></i>
+        </button>
+        
+          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+             
+              
+              <div class="toast-header bg-info">
+                <div class="rounded me-2">
+                  <i class="bi bi-chat-fill" style="font-size:1.3rem;"></i>
+                </div>
+                <strong class="me-auto"><p class="text-center">text-center</p></strong>
+                <small>11 mins ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+              </div>
 
-      <div
-        id="liveToast"
-        class="toast"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
 
-        <!-- Header -->
-        <div class="toast-header">
+              
+              <hr>
+              <div class="parandDiv" >
+                
+                <div>
+                   <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
+                </div>
 
-          <div class="chat-avatar">
-            <i class="bi bi-robot"></i>
+
+    
+                <div class="send-massage">
+                  <label for="fileInput" class="custom-file-upload">
+                    <i class="bi bi-folder2-open"></i>
+                  </label>
+                  <input type="file" id="fileInput" style="display: none;" />
+                  <div class="massage-input-div">
+                      <input class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example">
+                  </div>
+                  <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
+                </div>
+
+
+
+                
+              </div>
+            </div>
           </div>
-
-          <div class="chat-title me-auto">
-
-            <strong>AI Assistant</strong>
-
-            <span class="chat-status">
-              <span class="online-dot"></span>
-              Online
-            </span>
-
-          </div>
-
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="toast"
-            aria-label="Close"
-          ></button>
-
-        </div>
-
-
-        <!-- Chat Body -->
-        <div class="parandDiv">
-
-          <div class="messages" id="messages">
-
-            <!-- Bot Message -->
-            <div class="bot-message">
-
-              <div class="bot-mini-avatar">
-                <i class="bi bi-robot"></i>
-              </div>
-
-              <div class="bot-bubble">
-                👋 Hello! How can I help you today?
-
-                <span class="message-time">
-                  Just now
-                </span>
-              </div>
-
-            </div>
-
-
-            <!-- Example User Message -->
-            <div class="user-message">
-
-              <div class="user-bubble">
-                I'm looking for some information.
-
-                <span class="message-time text-end">
-                  Just now
-                </span>
-              </div>
-
-            </div>
-
-
-            <!-- Bot Message -->
-            <div class="bot-message">
-
-              <div class="bot-mini-avatar">
-                <i class="bi bi-robot"></i>
-              </div>
-
-              <div class="bot-bubble">
-                Sure! 😊 Tell me what you're looking for and I'll help you.
-
-                <span class="message-time">
-                  Just now
-                </span>
-              </div>
-
-            </div>
-
-          </div>
-
-
-          <!-- Input -->
-          <form class="send-massage" id="chatForm">
-
-            <label
-              for="fileInput"
-              class="custom-file-upload"
-              title="Attach file"
-            >
-              <i class="bi bi-paperclip"></i>
-            </label>
-
-            <input
-              type="file"
-              id="fileInput"
-              hidden
-            />
-
-            <div class="massage-input-div">
-
-              <input
-                class="form-control shadow-none massage-input"
-                id="messageInput"
-                type="text"
-                placeholder="Type a message..."
-                autocomplete="off"
-              />
-
-            </div>
-
-            <button
-              type="submit"
-              class="massage-submit"
-              id="messageSubmitButton"
-              aria-label="Send message"
-            >
-              <i class="bi bi-send-fill"></i>
-            </button>
-
-          </form>
-
-        </div>
-
       </div>
-
     </div>
-
-  </div>
-</div>
-
-
-<!-- Bootstrap JS -->
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>
-
-
-<script>
-  const chatButton = document.getElementById("liveToastBtn");
-  const toastElement = document.getElementById("liveToast");
-
-  const toast = new bootstrap.Toast(toastElement, {
-    autohide: false
-  });
-
-  // Open chat
-  chatButton.addEventListener("click", () => {
-    toast.show();
-  });
-
-
-  // Send message
-  const chatForm = document.getElementById("chatForm");
-  const messageInput = document.getElementById("messageInput");
-  const messages = document.getElementById("messages");
-
-  chatForm.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    const message = messageInput.value.trim();
-
-    if (!message) return;
-
-    // User message
-    const userMessage = document.createElement("div");
-
-    userMessage.className = "user-message";
-
-    userMessage.innerHTML = `
-      <div class="user-bubble">
-        ${escapeHTML(message)}
-        <span class="message-time text-end">
-          Just now
-        </span>
-      </div>
-    `;
-
-    messages.appendChild(userMessage);
-
-    messageInput.value = "";
-
-    scrollToBottom();
-
-
-    // Demo bot reply
-    setTimeout(() => {
-
-      const botMessage = document.createElement("div");
-
-      botMessage.className = "bot-message";
-
-      botMessage.innerHTML = `
-        <div class="bot-mini-avatar">
-          <i class="bi bi-robot"></i>
-        </div>
-
-        <div class="bot-bubble">
-          Thanks for your message! 🤖
-          <span class="message-time">
-            Just now
-          </span>
-        </div>
-      `;
-
-      messages.appendChild(botMessage);
-
-      scrollToBottom();
-
-    }, 700);
-  });
-
-
-  function scrollToBottom() {
-    messages.scrollTop = messages.scrollHeight;
-  }
-
-
-  // Prevent HTML injection
-  function escapeHTML(text) {
-    const div = document.createElement("div");
-    div.textContent = text;
-    return div.innerHTML;
-  }
-  </script>
-
 
 
 
