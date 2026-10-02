@@ -75,7 +75,7 @@
 
 /* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
 .send-massage{
-    position: fixed;
+    position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
