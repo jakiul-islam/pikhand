@@ -70,27 +70,4 @@ class message extends Model
         return $this->belongsTo(Order::class);
     }
 
-    /**
-     * Check if message is from customer
-     */
-    public function isFromUser(): bool
-    {
-        return $this->sender_type === 'user';
-    }
-
-    /**
-     * Check if message is from admin
-     */
-    public function isFromAdmin(): bool
-    {
-        return $this->sender_type === 'admin';
-    }
-
-    /**
-     * Check if message is from bot
-     */
-    public function isFromBot(): bool
-    {
-        return $this->sender_type === 'bot';
-    }
 }
