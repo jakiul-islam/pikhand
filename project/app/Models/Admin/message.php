@@ -12,18 +12,21 @@ class message extends Model
 {
 
     use HasFactory, SoftDeletes;
-
+    
+    protected $table = 'messages';
+  
     protected $fillable = [
         'uuid',
         'user_id',
         'product_id',
         'current_price',
         'requested_price',
-        'reply_to_message_id',
-        'product_id',
-        'order_id',
-        'read_at',
-        'edited_at',
+        '1aa',
+        'status',
+        'approved_price',
+        'admin_uuid',
+        'admin_note',
+        'responded_at',
     ];
 
     protected $casts = [
