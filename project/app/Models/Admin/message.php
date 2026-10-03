@@ -52,7 +52,7 @@ class message extends Model
     /**
      * Product
      */
-    public function product()
+    public function productForId()
     {
         return $this->belongsTo(Product::class, 'product_id');
     }
