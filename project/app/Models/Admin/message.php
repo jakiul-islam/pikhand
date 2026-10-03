@@ -11,8 +11,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class message extends Model
 {
 
-class Message extends Model
-{
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
@@ -111,6 +109,4 @@ class Message extends Model
     {
         return $this->sender_type === 'bot';
     }
-}
-
 }
