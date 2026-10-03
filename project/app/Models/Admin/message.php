@@ -44,7 +44,7 @@ class message extends Model
      */
     public function admin()
     {
-        return $this->belongsTo(User::class, 'admin_id');
+        return $this->belongsTo(admin::class, 'admin_id');
     }
 
     /**
