@@ -47,17 +47,7 @@ class message extends Model
         return $this->belongsTo(admin::class, 'admin_id');
     }
 
-    /**
-     * Parent message
-     */
-    public function replyTo()
-    {
-        return $this->belongsTo(
-            Message::class,
-            'reply_to_message_id'
-        );
-    }
-
+    
     /**
      * Replies
      */
