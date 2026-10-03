@@ -3,5 +3,8 @@ $(document).ready(function(){
      let messageInput = document.getElementById('messageInput').value;
      let formData = new FormData();
         formData.append('messageInput',messageInput);
+        formData.append('sender',"user");
+    
+        
   })
 })
