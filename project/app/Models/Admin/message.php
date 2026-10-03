@@ -48,17 +48,7 @@ class message extends Model
     }
 
     
-    /**
-     * Replies
-     */
-    public function replies()
-    {
-        return $this->hasMany(
-            Message::class,
-            'reply_to_message_id'
-        );
-    }
-
+    
     /**
      * Product
      */
