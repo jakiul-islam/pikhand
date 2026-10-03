@@ -21,7 +21,7 @@ class message extends Model
         'product_id',
         'current_price',
         'requested_price',
-        '1aa',
+        'message',
         'status',
         'approved_price',
         'admin_uuid',
