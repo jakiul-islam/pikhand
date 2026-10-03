@@ -16,10 +16,10 @@ return new class extends Migration
 
             $table->uuid('uuid')->unique();
             $table->unsignedBigInteger('user_id'); // কে রিকোয়েস্ট করলো
-            $table->unsignedBigInteger('product_id'); // কোন প্রোডাক্ট
-            $table->decimal('current_price', 10, 2); // তখন দাম কত ছিল
-            $table->decimal('requested_price', 10, 2); // ইউজার কত চায়
-            $table->text('1aa')->nullable(); // ইউজারের মেসেজ
+            $table->unsignedBigInteger('product_id')->nullable(); // কোন প্রোডাক্ট
+            $table->decimal('current_price', 10, 2);->nullable(); // তখন দাম কত ছিল
+            $table->decimal('requested_price', 10, 2);->nullable(); // ইউজার কত চায়
+            $table->text('Message')->nullable(); // ইউজারের মেসেজ
             $table->enum('status', ['pending', 'approved', 'rejected'])->default('pending');
             $table->decimal('approved_price', 10, 2)->nullable(); // এডমিন কত দিলো
             $table->uuid('admin_uuid')->nullable(); // কোন এডমিন অ্যাকশন নিলো
