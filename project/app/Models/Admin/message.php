@@ -14,11 +14,11 @@ class message extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
+        'uuid',
         'user_id',
-        'admin_id',
-        'sender_type',
-        'message_type',
-        'content',
+        'product_id',
+        'current_price',
+        'requested_price',
         'reply_to_message_id',
         'product_id',
         'order_id',
