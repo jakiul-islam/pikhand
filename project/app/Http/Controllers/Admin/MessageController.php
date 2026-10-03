@@ -11,11 +11,11 @@ use Illuminate\Support\Facades\File;
 
 use App\Services\ImageService;
 
-use App\Models\admin\brand;
+use App\Models\admin\admin;
 use App\Models\admin\product;
 
 
-class MessageController extends Controller
+class MessageController  extends Controller
 {
     public function create(request $request , ImageService $imageService){
       $validate_brand =Validator::make(
