@@ -21,7 +21,7 @@ use App\Models\order;
 class MessageController  extends Controller
 {
     public function create(request $request , ImageService $imageService){
-      $validate_brand =Validator::make(
+      $validate_message =Validator::make(
         $request->all(),
           [
             'brandName'          => 'required|string',
