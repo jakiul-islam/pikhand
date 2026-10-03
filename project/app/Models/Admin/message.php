@@ -29,11 +29,7 @@ class message extends Model
         'responded_at',
     ];
 
-    protected $casts = [
-        'read_at' => 'datetime',
-        'edited_at' => 'datetime',
-        'deleted_at' => 'datetime',
-    ];
+ 
 
     /**
      * Customer
