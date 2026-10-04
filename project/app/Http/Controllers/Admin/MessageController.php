@@ -38,8 +38,7 @@ class MessageController  extends Controller
  
         
         $User_message = message::create([
-          'messageInput'              =>$request->brandName,
-          'slug'              =>$request->brandSlog,
+          'messageInput'      =>$request->messageInput,
         ]);
         return response()->json([
           'ststus' => true,
