@@ -40,18 +40,19 @@ class MessageController  extends Controller
       }else{
 
 
-    
+      if(session()->has('id')){
+        $userid = session('id');
+      }else{
+        $userid = "NULL";
+      }
 
         
         $uuid = Str::uuid()->toString();
         
         $User_message = message::create([
           'uuid'         =>$uuid,
-          'message'      =>$request->messageInput,
-
-          if(session()->has('id')){                    
-            'user_id'      => session('id'),
-          }
+          'message'      =>$request->messageInput,       
+          'user_id'      => $userid,
         ]);
         return response()->json([
           'ststus' => true,
