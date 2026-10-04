@@ -69,7 +69,7 @@ class MessageController  extends Controller
       return response()->json([
         'brand' => $brand,
         'product' => $product,
-        'user_id'=> $userid;
+        'user_id'=> $userid,
       ]);
       
     }
