@@ -7,7 +7,5 @@ $(document).ready(function(){
 
         sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
 
-
-    
   })
 })
