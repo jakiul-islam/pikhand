@@ -40,11 +40,7 @@ class MessageController  extends Controller
       }else{
 
 
-      if(session()->has('id')){
-        $userid = session('id');
-      }else{
-        $userid = "NULL";
-      }
+    
 
         
         $uuid = Str::uuid()->toString();
