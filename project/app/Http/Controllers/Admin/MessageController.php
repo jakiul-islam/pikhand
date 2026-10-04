@@ -35,7 +35,7 @@ class MessageController  extends Controller
         return response()->json([
           'ststus' => false,
           'message'=>'Validation Error Is',
-          'errors' =>$validate_brand->errors()->all(),
+          'errors' =>$validate_message->errors()->all(),
         ],401);
       }else{
 
