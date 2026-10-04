@@ -125,8 +125,12 @@
     flex-shrink: 0;
     
 }
-.massage-submit, .custom-file-upload{
+ .custom-file-upload{
     background: #091b80;
+    color: #ffffff;
+  }
+  .massage-submit{
+    background: #DAD1D1;
     color: #ffffff;
   }
 .toast-body{
