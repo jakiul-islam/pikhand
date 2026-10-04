@@ -85,7 +85,7 @@
   }
   .send-massage{
     
-    width: 90%;
+    width: 100%;
     margin-left:5px;
     max-width: 600px;
     display: flex;
