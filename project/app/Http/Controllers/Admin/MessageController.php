@@ -24,13 +24,8 @@ class MessageController  extends Controller
       $validate_message =Validator::make(
         $request->all(),
           [
-            'brandName'          => 'required|string',
+            'messageInput'          => 'required|string',
             'brandSlog'          => 'required|string',
-            'metaTitle'          => 'required|string',
-            'metaKeyword'        => 'required|string',
-            'metaDescription'    => 'required|string',
-            'imageInput'         => 'required|image|mimes:jpeg,png,jpg,gif|max:10250',
-            'brand_describtion'  =>'required|string',
           ]
       );
       if($validate_brand->fails()){
