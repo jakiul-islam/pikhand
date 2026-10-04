@@ -162,9 +162,10 @@
               
               <div class="toast-body" >
                 <div class='parandDiv'>
-                  <div>
-                   <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
-                </div>
+                  <div id="chatBox" style="height: 400px; overflow-y: auto; padding: 10px; border: 1px solid #ccc; display: flex; flex-direction: column; gap: 10px;">
+
+                     <span style=" margin: none;background-color: #B656FF; color:black; padding:8px; clip-path: inset(0 0 0 0 round 8px);">hallo how can I halp you</span>
+                  </div>
 
 
                   <div class='massage-footer'>
