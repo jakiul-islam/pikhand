@@ -38,7 +38,15 @@ class MessageController  extends Controller
           'errors' =>$validate_brand->errors()->all(),
         ],401);
       }else{
- 
+
+
+      if(session()->has('user_uuid')){
+        $userid = session('user_uuid');
+      }else{
+        $userid = "notLogin';
+      }
+
+        
         $uuid = Str::uuid()->toString();
         
         $User_message = message::create([
