@@ -5,7 +5,7 @@ $(document).ready(function(){
         formData.append('messageInput',messageInput);
         formData.append('sender',"user");   
 
-        sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
+        detailsDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
 
   })
 })
