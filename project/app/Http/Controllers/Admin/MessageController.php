@@ -15,7 +15,7 @@ use Illuminate\Support\Str;
 use App\Services\ImageService;
 
 use App\Models\admin\adminModels;
-use App\Models\admin\message;
+use App\Models\Admin\message;
 use App\Models\admin\product;
 use App\Models\User;
 use App\Models\order;
