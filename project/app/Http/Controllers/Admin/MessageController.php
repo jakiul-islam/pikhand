@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Str;
+
+
 
 use App\Services\ImageService;
 
@@ -36,9 +39,11 @@ class MessageController  extends Controller
         ],401);
       }else{
  
+        $uuid = Str::uuid()->toString();
         
         $User_message = message::create([
-          'messageInput'      =>$request->messageInput,
+          'uuid'         =>$uuid,
+          'message'      =>$request->messageInput,
         ]);
         return response()->json([
           'ststus' => true,
