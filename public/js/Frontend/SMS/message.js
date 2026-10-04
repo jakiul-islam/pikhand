@@ -5,7 +5,7 @@ $(document).ready(function(){
         formData.append('messageInput',messageInput);
         formData.append('sender',"user");   
 
-        sendDataAjax('/admin/brand/create',formData,'post','brandFetch','Nan','insertBrand','Add new','brandCreateForm');
+        sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
 
 
     
