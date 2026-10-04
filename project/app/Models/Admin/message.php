@@ -13,7 +13,7 @@ class message extends Model
 
     use HasFactory, SoftDeletes;
     
-    protected $table = 'messages';
+    protected $table = 'message';
   
     protected $fillable = [
         'uuid',
