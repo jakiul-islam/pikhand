@@ -41,9 +41,9 @@ class MessageController  extends Controller
 
 
       if(session()->has('id')){
-        $useruuid = session('id');
+        $userid = session('id');
       }else{
-        $useruuid = "null";
+        $userid = "null";
       }
 
         
@@ -69,6 +69,7 @@ class MessageController  extends Controller
       return response()->json([
         'brand' => $brand,
         'product' => $product,
+        'user_id'=> $userid;
       ]);
       
     }
