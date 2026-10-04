@@ -40,8 +40,8 @@ class MessageController  extends Controller
       }else{
 
 
-      if(session()->has('id')){
-        $userid = session('id');
+      if(session()->has('user_id')){
+        $userid = session('user_id');
       }else{
         $userid = "NULL";
       }
@@ -52,7 +52,7 @@ class MessageController  extends Controller
         $User_message = message::create([
           'uuid'         =>$uuid,
           'message'      =>$request->messageInput,       
-          'user_id'      => $userid,
+          (session()->has('id') ? ['user_id' => session('id')] : [])
         ]);
         return response()->json([
           'ststus' => true,
