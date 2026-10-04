@@ -25,33 +25,21 @@ class MessageController  extends Controller
         $request->all(),
           [
             'messageInput'          => 'required|string',
-            'brandSlog'          => 'required|string',
+            'sender'          => 'required|string',
           ]
       );
-      if($validate_brand->fails()){
+      if($validate_message->fails()){
         return response()->json([
           'ststus' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validate_brand->errors()->all(),
         ],401);
       }else{
-        $file = $request->file('imageInput');
-
-          $path = $imageService->upload(
-                $file,
-                'brand',
-                1200,
-                80
-            );
+ 
         
-        $brand = brand::create([
-          'name'              =>$request->brandName,
+        $User_message = message::create([
+          'messageInput'              =>$request->brandName,
           'slug'              =>$request->brandSlog,
-          'meta_title'        =>$request->brandSlog,
-          'meta_keyword'      =>$request->brandSlog,
-          'meta_description'  =>$request->brandSlog,
-          'description'       =>$request->brand_describtion,
-          'logo'              => $path,
         ]);
         return response()->json([
           'ststus' => true,
