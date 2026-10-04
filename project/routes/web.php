@@ -47,6 +47,7 @@ use App\Http\Controllers\Admin\AdminListController;
 use App\Http\Controllers\Admin\AccessController;
 use App\Http\Controllers\Admin\NotiseController;
 use App\Http\Controllers\Admin\MediaLinksController;
+use App\Http\Controllers\Admin\MessageController;
 
 
 use App\Http\Controllers\Auth\GoogleController;
@@ -269,6 +270,11 @@ Route::POST('/test-notification', [
     AdminNotificationController::class,
     'send'
 ]);
+
+
+
+  Route::post('/user/message/create', [MessageController::class,'create'])->name('user.message.create');
+
 
 
 
