@@ -4,5 +4,10 @@ $(document).ready(function(){
      let formData = new FormData();
         formData.append('messageInput',messageInput);
         formData.append('sender',"user");   
+
+        sendDataAjax('/admin/brand/create',formData,'post','brandFetch','Nan','insertBrand','Add new','brandCreateForm');
+
+
+    
   })
 })
