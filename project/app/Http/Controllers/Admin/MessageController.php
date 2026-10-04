@@ -48,7 +48,7 @@ class MessageController  extends Controller
         return response()->json([
           'ststus' => true,
           'message'=>'insert img Successfull',
-           'brand' =>$brand,
+           'brand' =>$User_message,
         ],200);
       }
     }
