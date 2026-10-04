@@ -20,7 +20,7 @@ use App\Models\order;
 
 class MessageController  extends Controller
 {
-    public function create(request $request , ImageService $imageService){
+    public function create(request $request){
       $validate_message =Validator::make(
         $request->all(),
           [
