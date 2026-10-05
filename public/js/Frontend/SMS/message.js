@@ -28,7 +28,8 @@ $(document).ready(function(){
         
         
         $("#messageSubmitButton").on("click", function(){
-            let messageSubmitButton = document.getElementById('messageSubmitButton');
+        
+          let messageSubmitButton = document.getElementById('messageSubmitButton');
             let messageInput = document.getElementById('messageInput');
            
 
