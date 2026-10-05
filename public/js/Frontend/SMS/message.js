@@ -27,10 +27,6 @@
         
                 detailsDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
 
-
-
-
-
           
             let text = $("#messageInput").val().trim();
             if(text === "") return;
