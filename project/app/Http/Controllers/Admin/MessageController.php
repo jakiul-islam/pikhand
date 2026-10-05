@@ -50,7 +50,7 @@ class MessageController  extends Controller
           ...(session()->has('user_id') ? ['user_id' => session('user_id')] : []),
         ]);
         return response()->json([
-          'ststus' => true,
+          'status' => true,
           'message'=>'insert img Successfull',
            'brand' =>$User_message,
         ],200);
