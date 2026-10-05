@@ -59,7 +59,7 @@
 
 
 window.indexMessage = function(){
-      fetchDataAjax('/admin/message/index','post','messageData','Nan');
+      fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
 indexMessage();
