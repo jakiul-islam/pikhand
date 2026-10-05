@@ -15,7 +15,9 @@
         
         
         $("#messageSubmitButton").on("click", function(){
-        
+
+indexMessage();
+          
           let messageSubmitButton = document.getElementById('messageSubmitButton');
             let messageInput = document.getElementById('messageInput');
            
