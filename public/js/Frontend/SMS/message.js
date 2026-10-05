@@ -1,15 +1,3 @@
-// $(document).ready(function(){
-//   $('#messageSubmitButton').click(function(){
-
-
-    
-  
-//     //detailsDataAjax
-//   })
-// })
-
-
-
 
   
         $("#messageInput").on("input", function(){
@@ -38,7 +26,7 @@
                 formData.append('messageInput',messageInputValue);
                 formData.append('sender',"user");   
         
-                sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
+                detailsDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
 
 
 
