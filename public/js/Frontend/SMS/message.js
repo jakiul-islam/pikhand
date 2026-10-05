@@ -54,3 +54,12 @@
             messageSubmitButton.style.background = '#DAD1D1';
             messageSubmitButton.style.color = '#FFFFFF';
         });
+
+
+
+window.indexMessage = function(){
+      fetchDataAjax('/admin/message/index','post','messageData','Nan');
+}
+window.messageData = function( response ){
+  
+}
