@@ -58,6 +58,7 @@
 
 
 window.indexMessage = function(){
+  alert('jakiul')
       fetchDataAjax('/admin/message/index','post','messageData','Nan');
 }
 
