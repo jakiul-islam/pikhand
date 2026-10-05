@@ -32,9 +32,9 @@ $(document).ready(function(){
             let messageInput = document.getElementById('messageInput');
            
 
-             let messageInput = document.getElementById('messageInput').value;
+             let messageInputValue = document.getElementById('messageInput').value;
              let formData = new FormData();
-                formData.append('messageInput',messageInput);
+                formData.append('messageInput',messageInputValue);
                 formData.append('sender',"user");   
         
                 sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
