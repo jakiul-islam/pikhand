@@ -60,7 +60,6 @@ class MessageController  extends Controller
     public function index(){
       
       $Message = message::get();
-      //$product = product::get();
       return response()->json([
         'message' => $Message,
       ]);
