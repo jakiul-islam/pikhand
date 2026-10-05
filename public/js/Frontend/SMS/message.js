@@ -1,6 +1,7 @@
 $(document).ready(function(){
   $('#messageSubmitButton').click(function(){
      let messageInput = document.getElementById('messageInput').value;
+    alert(messageInput);
      let formData = new FormData();
         formData.append('messageInput',messageInput);
         formData.append('sender',"user");   
