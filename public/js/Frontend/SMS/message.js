@@ -3,13 +3,7 @@ $(document).ready(function(){
 
 
     
-     let messageInput = document.getElementById('messageInput').value;
-     let formData = new FormData();
-        formData.append('messageInput',messageInput);
-        formData.append('sender',"user");   
-
-        sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
-
+  
     //detailsDataAjax
   })
 })
@@ -37,7 +31,19 @@ $(document).ready(function(){
             let messageSubmitButton = document.getElementById('messageSubmitButton');
             let messageInput = document.getElementById('messageInput');
            
-     
+
+             let messageInput = document.getElementById('messageInput').value;
+             let formData = new FormData();
+                formData.append('messageInput',messageInput);
+                formData.append('sender',"user");   
+        
+                sendDataAjax('/user/message/create',formData,'post','messageFetch','Nan','Nan','Nan','Nan');
+
+
+
+
+
+          
             let text = $("#messageInput").val().trim();
             if(text === "") return;
 
