@@ -274,7 +274,7 @@ Route::POST('/test-notification', [
 
 
   Route::post('/user/message/create', [MessageController::class,'create'])->name('user.message.create');
-  Route::post('/admin/message/index', [MessageController::class,'index'])->name('user.message.index');
+  Route::post('/user/message/index', [MessageController::class,'index'])->name('user.message.index');
 
 
 
