@@ -59,13 +59,16 @@
 
 
 window.indexMessage = function(){
-  alert('jakiul')
       fetchDataAjax('/admin/message/index','post','messageData','Nan');
 }
 
 indexMessage();
 
 window.messageData = function( response ){
+
+console.log(response);
+
+  
    let userMsg = `<div style="align-self: flex-end; background: #0084ff; color: white; padding: 8px 12px; border-radius: 18px 18px 0 18px; max-width: 70%;">${response.message}</div>`;
     $("#chatBox").append(userMsg);
 }
