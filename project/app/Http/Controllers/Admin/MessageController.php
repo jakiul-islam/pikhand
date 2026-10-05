@@ -59,8 +59,8 @@ class MessageController  extends Controller
     //fetch brands
     public function index(){
       
-      $brand = brand::get();
-      $product = product::get();
+      $brand = message::get();
+      //$product = product::get();
       return response()->json([
         'brand' => $brand,
         'product' => $product,
