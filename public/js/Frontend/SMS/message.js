@@ -1,5 +1,4 @@
 
-  
         $("#messageInput").on("input", function(){
             let messageSubmitButton = document.getElementById('messageSubmitButton');
             let input = $(this).val();
