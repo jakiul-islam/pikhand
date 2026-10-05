@@ -1,12 +1,12 @@
-$(document).ready(function(){
-  $('#messageSubmitButton').click(function(){
+// $(document).ready(function(){
+//   $('#messageSubmitButton').click(function(){
 
 
     
   
-    //detailsDataAjax
-  })
-})
+//     //detailsDataAjax
+//   })
+// })
 
 
 
