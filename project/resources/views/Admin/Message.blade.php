@@ -33,8 +33,7 @@
         <div class="user-list">
 
             <!-- USER 12 -->
-            <div class="user active"
-                 onclick="openChat(12, 'Hello, how are you?')">
+            <div class="user active"  onclick="openChat(12, 'Hello, how are you?')">
 
                 <div class="avatar">
                     12
