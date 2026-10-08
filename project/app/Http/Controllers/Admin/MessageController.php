@@ -90,15 +90,23 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(){
       
-      $messages = message::whereIn('id', function ($query) {
+     $messages = message::whereIn('id', function ($query) {
         $query->selectRaw('MAX(id)')
-            ->from('messages')
-            ->groupBy('user_id');
-          })->orWhereIn('id', function ($query) {
-            $query->selectRaw('MAX(id)')
-              ->from('messages')
-              ->groupBy('gust_uuid');
-          })->latest('created_at')->get();
+          ->from('messages')
+          ->whereNotNull('user_id')
+          ->groupBy('user_id');
+        })
+    ->orWhereIn('id', function ($query) {
+      $query->selectRaw('MAX(id)')
+        ->from('messages')
+        ->whereNotNull('gust_uuid')
+        ->groupBy('gust_uuid');
+    })
+    ->latest('created_at')
+    ->get();
+
+
+
       
       return response()->json([
         'messageAllUser' => $Message_all_user,
