@@ -66,8 +66,22 @@ class MessageController  extends Controller
     }
     //fetch brands
     public function index(){
+
+       if(session()->has('user_id') ){
+          
+        }else{
+          if(session()->has('gust_uuid')){
+             $gust_uuid_for_DB =  session('gust_uuid');
+
       
-      $Message = message::get();
+             $Message = message::where('gust_uuid', $gust_uuid_for_DB)->get();
+            
+          }
+        }
+
+
+
+
       return response()->json([
         'message' => $Message,
       ]);
