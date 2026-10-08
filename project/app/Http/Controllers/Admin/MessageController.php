@@ -68,7 +68,8 @@ class MessageController  extends Controller
     public function index(){
 
        if(session()->has('user_id') ){
-          
+          $user_id =  session('user_id');
+          $Message = message::where('user_id', $user_id)->get();
         }else{
           if(session()->has('gust_uuid')){
              $gust_uuid_for_DB =  session('gust_uuid');
