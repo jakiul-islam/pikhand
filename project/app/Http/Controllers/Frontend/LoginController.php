@@ -84,7 +84,6 @@ class LoginController extends Controller
       $user_login_time_set = user::where('email',session('email'))->update([
        'Logout_time' => now(),
       ]);
-      session()->flush();
 
       session()->forget('phone_number'); 
       session()->forget('name'); 
