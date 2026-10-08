@@ -94,11 +94,11 @@ class MessageController  extends Controller
         $query->selectRaw('MAX(id)')
             ->from('messages')
             ->groupBy('user_id');
-    })->orWhereIn('id', function ($query) {
-        $query->selectRaw('MAX(id)')
-            ->from('messages')
-            ->groupBy('gust_uuid');
-    })->latest('created_at')->get();
+          })->orWhereIn('id', function ($query) {
+            $query->selectRaw('MAX(id)')
+              ->from('messages')
+              ->groupBy('gust_uuid');
+          })->latest('created_at')->get();
       
       return response()->json([
         'messageAllUser' => $Message_all_user,
