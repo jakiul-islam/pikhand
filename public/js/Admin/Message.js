@@ -1,8 +1,8 @@
   window.indexAllUser = function (){
-    fetchDataAjax('/admin/brand/index','post','brandData','Nan');
+    fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
   }
 
 indexAllUser()
-   window.indexAllUser = function ( response ){
+   window.indexAllUserData = function ( response ){
      
    }
