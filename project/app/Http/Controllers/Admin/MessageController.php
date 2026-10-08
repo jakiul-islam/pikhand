@@ -92,13 +92,13 @@ class MessageController  extends Controller
       
      $messagesAll = message::whereIn('id', function ($query) {
         $query->selectRaw('MAX(id)')
-          ->from('messages')
+          ->from('message')
           ->whereNotNull('user_id')
           ->groupBy('user_id');
         })
     ->orWhereIn('id', function ($query) {
       $query->selectRaw('MAX(id)')
-        ->from('messages')
+        ->from('message')
         ->whereNotNull('gust_uuid')
         ->groupBy('gust_uuid');
     })
