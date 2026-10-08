@@ -53,9 +53,9 @@ class MessageController  extends Controller
         
         $User_message = message::create([
           'uuid'         =>$uuid,
-          'gust_uuid'    => $gust_uuid_for_DB,     
+               
           'Message'      =>$request->messageInput,       
-          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : []),
+          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : ['gust_uuid'    => $gust_uuid_for_DB ]),
         ]);
         return response()->json([
           'status' => true,
