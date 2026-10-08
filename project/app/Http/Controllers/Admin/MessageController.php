@@ -90,7 +90,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(){
       
-     $messages = message::whereIn('id', function ($query) {
+     $messagesAll = message::whereIn('id', function ($query) {
         $query->selectRaw('MAX(id)')
           ->from('messages')
           ->whereNotNull('user_id')
@@ -109,7 +109,7 @@ class MessageController  extends Controller
 
       
       return response()->json([
-        'messageAllUser' => $Message_all_user,
+        'messageAllUser' => $messagesAll,
       ]);
       
     }
