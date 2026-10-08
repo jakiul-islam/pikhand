@@ -259,6 +259,13 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::POST('/admin/about/store',[AboutController::class,'store'])->name('admin.about.store');
   Route::get('/admin/about/index',[AboutController::class,'index'])->name('admin.about.index');
 
+
+
+  Route::post('/admin/message/alluser/index', [MessageController::class,'alluserIndex'])->name('admin.message.alluser.index');
+
+
+
+  
 });
 Route::get('/Control-panel', function () {return view('Admin.admin.Control_panel');})->name('control.panel');
 Route::post('/admin/login', [AdminController::class, 'login'])->name('admin.login.submit');
