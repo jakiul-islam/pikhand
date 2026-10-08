@@ -39,7 +39,12 @@ class MessageController  extends Controller
         ],401);
       }else{
          if(! session()->has('user_id') ){
-           if()
+           if(session()->has('gust_uuid')){
+             $gust_uuid_for_DB =  session('gust_uuid');
+           }else{
+             $gust_uuid_for_DB = Str::uuid()->toString();
+             session(['gust_uuid' => $gust_uuid_for_DB->name]);
+           }
          }
 
     
