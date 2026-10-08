@@ -88,24 +88,10 @@ class MessageController  extends Controller
       
     }
     //admin section 
-    public function index(){
-
-       if(session()->has('user_id') ){
-          $user_id =  session('user_id');
-          $Message = message::where('user_id', $user_id)->get();
-        }else{
-          if(session()->has('gust_uuid')){
-             $gust_uuid_for_DB =  session('gust_uuid');
-
+    public function alluserIndex(){
       
-             $Message = message::where('gust_uuid', $gust_uuid_for_DB)->get();
-            
-          }
-        }
-
-
-
-
+      $Message = message::where('user_id', $user_id)->get();
+      
       return response()->json([
         'message' => $Message,
       ]);
