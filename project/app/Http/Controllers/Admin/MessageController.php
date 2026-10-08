@@ -38,7 +38,9 @@ class MessageController  extends Controller
           'errors' =>$validate_message->errors()->all(),
         ],401);
       }else{
-
+         if(! session()->has('user_id') ){
+           if()
+         }
 
     
         
@@ -46,6 +48,7 @@ class MessageController  extends Controller
         
         $User_message = message::create([
           'uuid'         =>$uuid,
+          'gust_uuid'    =>            
           'Message'      =>$request->messageInput,       
           ...(session()->has('user_id') ? ['user_id' => session('user_id')] : []),
         ]);
