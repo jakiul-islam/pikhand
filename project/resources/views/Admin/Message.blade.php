@@ -30,7 +30,7 @@
             <input type="text" placeholder="Search messages...">
         </div>
 
-        <div class="user-list">
+        <div class="user-list" id='userList'>
 
             <!-- USER 12 -->
             <div class="user active"  onclick="openChat(12, 'Hello, how are you?')">
