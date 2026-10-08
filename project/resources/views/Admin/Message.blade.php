@@ -53,8 +53,7 @@
 
 
             <!-- USER 25 -->
-            <div class="user"
-                 onclick="openChat(25, 'Where is my order?')">
+            <div class="user"  onclick="openChat(25, 'Where is my order?')">
 
                 <div class="avatar">
                     25
@@ -74,8 +73,7 @@
 
 
             <!-- USER 30 -->
-            <div class="user"
-                 onclick="openChat(30, 'When will I receive it?')">
+            <div class="user"  onclick="openChat(30, 'When will I receive it?')">
 
                 <div class="avatar">
                     30
@@ -95,8 +93,7 @@
 
 
             <!-- USER 45 -->
-            <div class="user"
-                 onclick="openChat(45, 'I need help')">
+            <div class="user" onclick="openChat(45, 'I need help')">
 
                 <div class="avatar">
                     45
