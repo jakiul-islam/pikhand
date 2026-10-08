@@ -22,7 +22,7 @@
             max-width: 1100px;
             height: 100%;
             overflow:auto;
-            margin: 30px auto;
+            margin:;
             background: #fff;
             display: flex;
             overflow: hidden;
