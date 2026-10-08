@@ -102,7 +102,12 @@ class AdminController extends Controller
     public function logout(Request $request)
       {
        // Auth::guard('admin')->logout();
-        $request->session()->invalidate();
+
+        
+        session()->forget('admin_id'); 
+        session()->forget('admin_uuid'); 
+        session()->forget('admin_email'); 
+        
         $request->session()->regenerateToken();
     
         return redirect('/Control-panel');
