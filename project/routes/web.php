@@ -110,6 +110,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
   Route::get('/admin/Help/', function () {return view('Admin.Help'); })->name('admin.Help');
   Route::get('/admin/Policies/', function () {return view('Admin.policies'); })->name('admin.Policies');
   Route::get('/admin/About/', function () {return view('Admin.about'); })->name('admin.About');
+  Route::get('/admin/About/', function () {return view('Admin.about'); })->name('admin.About');
 
 
   //dashboard
