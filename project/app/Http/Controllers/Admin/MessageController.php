@@ -43,7 +43,7 @@ class MessageController  extends Controller
              $gust_uuid_for_DB =  session('gust_uuid');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
-             session(['gust_uuid' => $gust_uuid_for_DB->name]);
+             session(['gust_uuid' => $gust_uuid_for_DB]);
            }
          }
 
