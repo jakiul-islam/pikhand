@@ -90,7 +90,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(){
       
-      $Message_all_user = message::where('user_id', $user_id)->get();
+      $Message_all_user = message::where('user_id', $user_id)->latest('created_at')->first();
       
       return response()->json([
         'messageAllUser' => $Message_all_user,
