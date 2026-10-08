@@ -4,5 +4,5 @@
 
 indexAllUser()
    window.indexAllUserData = function ( response ){
-     
+     console.log(response);
    }
