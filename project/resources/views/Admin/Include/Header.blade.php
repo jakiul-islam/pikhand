@@ -81,7 +81,7 @@
           <li class="nav-item"><a class="nav-link" href="/admin/seo_satting">SEO Settings</a></li>
           <li class="nav-item"><a class="nav-link" href="/admin/Vouchers/">Vouchers Management</a></li>
           <li class="nav-item"><a class="nav-link" href="/admin/Help/">Help Management</a></li>
-          <li class="nav-item"><a class="nav-link" href="/admin/message/">Help Message</a></li>
+          <li class="nav-item"><a class="nav-link" href="/admin/message/">Message Management</a></li>
           <li class="nav-item"><a class="nav-link" href="/admin/Policies/">Policy Management</a></li>
           <li class="nav-item"><a class="nav-link" href="/admin/About/">About Management</a></li>
           <li class="nav-item"><a class="nav-link" href="/admin/reports/">Reports</a></li>
