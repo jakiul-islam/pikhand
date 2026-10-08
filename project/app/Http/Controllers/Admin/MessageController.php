@@ -55,7 +55,7 @@ class MessageController  extends Controller
           'uuid'         =>$uuid,
                
           'Message'      =>$request->messageInput,       
-          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : ['gust_uuid'    => $gust_uuid_for_DB ]),
+          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'gust_uuid'    => $gust_uuid_for_DB ]),
         ]);
         return response()->json([
           'status' => true,
