@@ -254,6 +254,8 @@
             font-size: 22px;
             cursor: pointer;
         }
+              <link rel="stylesheet" href="{{ asset('public/css/Admin/Common.css') }}">
+
     </style>
 </head>
 
