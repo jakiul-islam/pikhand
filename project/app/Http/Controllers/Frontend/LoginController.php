@@ -85,5 +85,10 @@ class LoginController extends Controller
        'Logout_time' => now(),
       ]);
       session()->flush();
+
+      session()->forget('guest_uuid'); 
+
+
+      
     }
 }
