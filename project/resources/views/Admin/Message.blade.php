@@ -20,7 +20,7 @@
         .messenger {
             width: 100%;
             max-width: 1100px;
-          
+            height: 100%;
             overflow:auto;
             margin:;
             background: #fff;
