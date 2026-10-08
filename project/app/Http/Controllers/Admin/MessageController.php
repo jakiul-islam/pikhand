@@ -63,7 +63,7 @@ class MessageController  extends Controller
         ],200);
       }
     }
-    //fetch brands
+    //fetch message user section
     public function index(){
 
        if(session()->has('user_id') ){
@@ -87,7 +87,7 @@ class MessageController  extends Controller
       ]);
       
     }
-    //eidte brands 
+    //fetch message user section
     public function update(request $request ,ImageService $imageService){
       $validateUser =Validator::make(
         $request->all(),
