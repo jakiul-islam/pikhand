@@ -86,7 +86,11 @@ class LoginController extends Controller
       ]);
       session()->flush();
 
-      session()->forget('guest_uuid'); 
+      session()->forget('phone_number'); 
+      session()->forget('name'); 
+      session()->forget('user_id'); 
+      session()->forget('user_uuid'); 
+      session()->forget('user_email'); 
 
 
       
