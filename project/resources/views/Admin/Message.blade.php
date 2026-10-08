@@ -157,7 +157,7 @@
 
         .message {
             max-width: 65%;
-            padding: 10px 14px;
+            padding: 0px 14px;
             border-radius: 18px;
             font-size: 14px;
             line-height: 1.4;
