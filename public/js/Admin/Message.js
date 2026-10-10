@@ -7,7 +7,12 @@ indexAllUser()
 
      let userList = document.getElementById('userList');
       $.each(response.message, function(index, messages) {
-      
+          $('#userList').append(`
+          
+          
+          
+          
+          `);
       
       })
 
