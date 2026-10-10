@@ -6,7 +6,7 @@ indexAllUser()
    window.indexAllUserData = function ( response ){
 
      let userList = document.getElementById('userList');
-      $.each(response.brand, function(index, brand) {
+      $.each(response.message, function(index, messages) {
       
       
       })
