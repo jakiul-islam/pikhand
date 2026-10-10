@@ -6,7 +6,10 @@ indexAllUser()
    window.indexAllUserData = function ( response ){
 
      let userList = document.getElementById('userList');
-      $.each(response.message, function(index, messages) {
+     
+     console.log(response);
+     
+     $.each(response.message, function(index, messages) {
           $('#userList').append(`
           
             <div class="user active"  onclick="openChat( ${index} , 'Hello, how are you?')">
