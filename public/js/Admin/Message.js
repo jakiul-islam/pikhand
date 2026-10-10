@@ -9,7 +9,7 @@ indexAllUser()
      
      console.log(response);
      
-     $.each(response.message, function(index, messages) {
+     $.each(response.messageAllUser, function(index, messages) {
           $('#userList').append(`
           
             <div class="user active"  onclick="openChat( ${index} , 'Hello, how are you?')">
