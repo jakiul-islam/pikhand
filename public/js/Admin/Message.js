@@ -6,6 +6,6 @@ indexAllUser()
    window.indexAllUserData = function ( response ){
      console.log(response);
 
-
+     let userList = document.getElementById('userList');
      
    }
