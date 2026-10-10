@@ -12,7 +12,7 @@ indexAllUser()
      $.each(response.messageAllUser, function(index, messages) {
           $('#userList').append(`
           
-            <div class="user active"  onclick="openChat( ${index} , 'Hello, how are you?')">
+            <div class="user"  onclick="openChat( ${index} , 'Hello, how are you?')">
 
                 <div class="avatar">
                     12 12
