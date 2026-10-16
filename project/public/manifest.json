@@ -1,7 +1,7 @@
 
 {
-  "name": "Your App Name",
-  "short_name": "App",
+  "name": "Pikhand",
+  "short_name": "pikhand",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
