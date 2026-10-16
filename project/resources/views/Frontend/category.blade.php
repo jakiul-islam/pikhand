@@ -165,30 +165,30 @@
 
 <script>
 
-// let deferredPrompt;
-// const installBtn = document.getElementById('installBtn');
+ let deferredPrompt;
+ const installBtn = document.getElementById('installBtn');
 
-// window.addEventListener('beforeinstallprompt', (e) => {
-//     e.preventDefault();
-//     deferredPrompt = e;
+ window.addEventListener('beforeinstallprompt', (e) => {
+     e.preventDefault();
+     deferredPrompt = e;
 
 //     // button show
-//     installBtn.style.display = 'block';
+     installBtn.style.display = 'block';
 
-//     installBtn.addEventListener('click', () => {
-//         installBtn.style.display = 'none';
-//         deferredPrompt.prompt();
+     installBtn.addEventListener('click', () => {
+         installBtn.style.display = 'none';
+         deferredPrompt.prompt();
 
-//         deferredPrompt.userChoice.then((choiceResult) => {
-//             if (choiceResult.outcome === 'accepted') {
-//                 console.log('User accepted install');
-//             } else {
-//                 console.log('User dismissed install');
-//             }
-//             deferredPrompt = null;
-//         });
-//     });
-// });
+         deferredPrompt.userChoice.then((choiceResult) => {
+             if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted install');
+             } else {
+                 console.log('User dismissed install');
+             }
+             deferredPrompt = null;
+         });
+     });
+ });
 
 
 
