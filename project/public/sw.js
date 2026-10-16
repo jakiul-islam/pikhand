@@ -1,5 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
 // service-worker.js
-const CACHE_NAME = 'my-app-cache-v1';
+/*const CACHE_NAME = 'my-app-cache-v1';
 
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -37,3 +48,4 @@ self.addEventListener('fetch', event => {
     })()
   );
 });
+*/
