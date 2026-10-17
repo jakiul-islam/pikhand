@@ -172,6 +172,50 @@
     <div id='showallalert' class="alartdiv text-center"></div>
   </body>
 
+
+<script>
+let deferredPrompt = null;
+
+const installBtn = document.getElementById('installBtn');
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+
+    deferredPrompt = e;
+
+    if (installBtn) {
+        installBtn.style.display = 'block';
+    }
+
+    console.log('Install prompt ready');
+});
+
+if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+
+        if (!deferredPrompt) {
+            alert('PWA install prompt এখনো প্রস্তুত নয়। Chrome Menu থেকে Install App চেষ্টা করো।');
+            return;
+        }
+
+        deferredPrompt.prompt();
+
+        const result = await deferredPrompt.userChoice;
+
+        console.log('Install result:', result.outcome);
+
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+    });
+}
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
+<!--
+  
 <script>
 
 let deferredPrompt = null;
@@ -280,7 +324,7 @@ window.addEventListener('appinstalled', () => {
      */
 </script>
 
-
+-->
    <script>
 
       FetchCarts();
