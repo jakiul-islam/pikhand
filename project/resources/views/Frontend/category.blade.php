@@ -12,7 +12,7 @@
     <meta name="description" content="{{ $Category->meta_description }} |{{ $page > 1 ? ' - Page| ' . $page : '' }} picklet ">
 
     <!--  seo section -->
-    <meta property="og:title" content="{{ $Category->name }} | picklet">
+    <meta property="og:title" content="{{ $Category->name }} | Pikhand">
     <meta property="og:description" content="{{ Str::limit(strip_tags($Category->short_description), 150) }}">
     <meta property="og:type" content="product">
     <meta property="og:url" content="{{ url()->current() }}">
