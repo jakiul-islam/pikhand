@@ -174,8 +174,6 @@
 
 <script>
 
-
-<script>
 let deferredPrompt = null;
 
 const installBtn = document.getElementById('installBtn');
@@ -240,9 +238,6 @@ window.addEventListener('appinstalled', () => {
         installBtn.style.display = 'none';
     }
 });
-</script>
-
-
 
   
 
