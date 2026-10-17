@@ -165,7 +165,7 @@
 
 -->
 
-    <button id="installBtn" style=>
+    <button id="installBtn" style="display:none;"">
     Install Pikhand App
 </button>
     
