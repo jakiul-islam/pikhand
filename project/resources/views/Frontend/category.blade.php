@@ -8,7 +8,7 @@
     @php
       $page = request()->get('page', 1);
     @endphp
-    <title>{{ $Category->meta_title }}| {{ $page > 1 ? ' - Page| ' . $page : '' }} picklet</title>
+    <title>{{ $Category->meta_title }}| {{ $page > 1 ? ' - Page| ' . $page : '' }} Pikhand</title>
     <meta name="description" content="{{ $Category->meta_description }} |{{ $page > 1 ? ' - Page| ' . $page : '' }} picklet ">
 
     <!--  seo section -->
