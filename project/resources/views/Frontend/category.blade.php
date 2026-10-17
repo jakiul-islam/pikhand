@@ -9,7 +9,7 @@
       $page = request()->get('page', 1);
     @endphp
     <title>{{ $Category->meta_title }}| {{ $page > 1 ? ' - Page| ' . $page : '' }} Pikhand</title>
-    <meta name="description" content="{{ $Category->meta_description }} |{{ $page > 1 ? ' - Page| ' . $page : '' }} picklet ">
+    <meta name="description" content="{{ $Category->meta_description }} |{{ $page > 1 ? ' - Page| ' . $page : '' }} Pikhand ">
 
     <!--  seo section -->
     <meta property="og:title" content="{{ $Category->name }} | Pikhand">
