@@ -1,7 +1,7 @@
 
 {
   "name": "Pikhand Store",
-  "short_name": "pikhand",
+  "short_name": "Pikhand",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
