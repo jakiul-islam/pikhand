@@ -174,6 +174,78 @@
 
 <script>
 
+
+<script>
+let deferredPrompt = null;
+
+const installBtn = document.getElementById('installBtn');
+
+// PWA Install Event
+window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+
+    deferredPrompt = e;
+
+    if (installBtn) {
+        installBtn.style.display = 'block';
+    }
+
+    console.log('PWA install prompt available');
+});
+
+// Install Button Click
+if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+
+        if (!deferredPrompt) {
+            alert('Install option is not available yet. Please use Chrome menu.');
+            return;
+        }
+
+        deferredPrompt.prompt();
+
+        const choiceResult = await deferredPrompt.userChoice;
+
+        if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted install');
+        } else {
+            console.log('User dismissed install');
+        }
+
+        deferredPrompt = null;
+        installBtn.style.display = 'none';
+    });
+}
+
+// Register Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', async () => {
+        try {
+            const registration =
+                await navigator.serviceWorker.register('/sw.js');
+
+            console.log('Service Worker registered:', registration.scope);
+
+        } catch (error) {
+            console.error('Service Worker registration failed:', error);
+        }
+    });
+}
+
+// Detect already installed PWA
+window.addEventListener('appinstalled', () => {
+    console.log('Pikhand PWA installed');
+
+    if (installBtn) {
+        installBtn.style.display = 'none';
+    }
+});
+</script>
+
+
+
+  
+
  /*let deferredPrompt;
  const installBtn = document.getElementById('installBtn');
 
