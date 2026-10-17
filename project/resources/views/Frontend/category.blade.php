@@ -157,9 +157,14 @@
           </div>
 
       </div>
+
+<!--
       <button id="installBtn" style="padding:10px 15px; background:#000; color:#fff; border:none; border-radius:6px;">
   Install App
 </button> 
+
+-->
+    
     <div id='showallalert' class="alartdiv text-center"></div>
   </body>
 
