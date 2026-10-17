@@ -164,13 +164,17 @@
 </button> 
 
 -->
+
+    <button id="installBtn" style="display: none;">
+    Install Pikhand App
+</button>
     
     <div id='showallalert' class="alartdiv text-center"></div>
   </body>
 
 <script>
 
- let deferredPrompt;
+ /*let deferredPrompt;
  const installBtn = document.getElementById('installBtn');
 
  window.addEventListener('beforeinstallprompt', (e) => {
@@ -205,6 +209,8 @@
      if ('serviceWorker' in navigator) {
          navigator.serviceWorker.register('/sw.js');
      }
+
+     */
 </script>
 
 
