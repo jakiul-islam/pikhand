@@ -32,7 +32,7 @@
     <div class="login">
         <div class="shadow">
             <div class="login-f">
-                <h4 align="center"><img src="{{ asset('storage/' . $webInfo->logo) }}""></h4>
+                <h4 align="center"><img src="{{ asset('storage/' . $webInfo->logo) }}" height="100"></h4>
             <h2>Admin Login</h2>
               <form method="POST" action="{{ route('admin.login.submit') }}">
               <!--  action="{ route('admin.login.submit') }" -->
