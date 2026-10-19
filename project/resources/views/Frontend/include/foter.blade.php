@@ -179,7 +179,7 @@
                     <div class="massage-input-div">
                         <textarea id="messageInput" class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example"></textarea>
                     </div>
-                    <button type="submit" class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
+                    <button type="submit" onclick='indexMessage()' class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
                   </div>
                   </div>
             
