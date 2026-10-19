@@ -147,7 +147,7 @@
     <div class="chat">
       <div class="c-chat">
         
-        <button type="button" style="font-size:2rem; color:#FFFFFF;" class="text-button"  id="liveToastBtn">
+        <button type="button" onclick='indexMessage()' style="font-size:2rem; color:#FFFFFF;" class="text-button"  id="liveToastBtn">
           <i class="bi bi-chat-left" style="font-size:2rem; color:#FFFFFF;"></i>
         </button>
         
@@ -179,7 +179,7 @@
                     <div class="massage-input-div">
                         <textarea id="messageInput" class="form-control shadow-none massage-input" type="text" placeholder="Iam looking for..." aria-label="default input example"></textarea>
                     </div>
-                    <button type="submit" onclick='indexMessage()' class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
+                    <button type="submit"  class="massage-submit" id='messageSubmitButton'><i class="bi bi-send-fill"></i></button>
                   </div>
                   </div>
             
