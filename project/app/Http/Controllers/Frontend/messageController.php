@@ -60,7 +60,7 @@ class messageController  extends Controller
              
          }
 
-    
+      }
         
         $uuid = Str::uuid()->toString();
         
