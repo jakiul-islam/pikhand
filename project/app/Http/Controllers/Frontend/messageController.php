@@ -44,6 +44,27 @@ class messageController  extends Controller
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
              session(['gust_uuid' => $gust_uuid_for_DB]);
+              
+             $guestUuid = (string) Str::uuid();
+             session(['guest_uuid' => $guestUuid]);
+              
+              $lastNumber = DB::table('messages')
+                  ->whereNotNull('guest_name')
+                  ->selectRaw(
+                      "MAX(CAST(SUBSTRING_INDEX(guest_name, '#', -1) AS UNSIGNED)) as number"
+                  )
+                  ->value('number');
+          
+              $guestNumber = max(1000, (int) $lastNumber) + 1;
+              
+              session(['guest_name' => 'Guest #' . $guestNumber]);
+    
+              $guestName = session('guest_name');
+
+
+
+
+             
            }
          }
 
