@@ -61,7 +61,6 @@ window.indexMessage = function(){
       fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
-indexMessage();
 
 window.messageData = function( response ){
 
