@@ -7,7 +7,6 @@ indexAllUser()
 
      let userList = document.getElementById('userList');
      
-     console.log(response);
      
      $.each(response.messageAllUser, function(index, messages) {
           $('#userList').append(`
