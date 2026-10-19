@@ -16,6 +16,7 @@ return new class extends Migration
 
             $table->uuid('uuid')->unique();
             $table->text('gust_uuid')->nullable();
+            $table->text('gust_id')->nullable();
             $table->unsignedBigInteger('user_id'); // কে রিকোয়েস্ট করলো
             $table->unsignedBigInteger('product_id')->nullable(); // কোন প্রোডাক্ট
             $table->decimal('current_price', 10, 2);->nullable(); // তখন দাম কত ছিল
