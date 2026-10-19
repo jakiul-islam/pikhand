@@ -64,7 +64,6 @@ window.indexMessage = function(){
 
 window.messageData = function( response ){
 
-console.log(response);
 
   
   $.each(response.message, function(index, messages) {
