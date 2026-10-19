@@ -48,9 +48,9 @@ class messageController  extends Controller
              $guestUuid = (string) Str::uuid();
              session(['guest_uuid' => $guestUuid]);
               
-              $lastNumber = message::whereNotNull('guest_name')
+              $lastNumber = message::whereNotNull('guest_id')
                   ->selectRaw(
-                      "MAX(CAST(SUBSTRING_INDEX(guest_name, '#', -1) AS UNSIGNED)) as number"
+                      "MAX(CAST(SUBSTRING_INDEX(guest_id, '#', -1) AS UNSIGNED)) as number"
                   )
                   ->value('number');
           
