@@ -21,7 +21,7 @@ use App\Models\User;
 use App\Models\order;
 
 
-class MessageController  extends Controller
+class messageController  extends Controller
 {
     public function create(request $request){
       $validate_message =Validator::make(
