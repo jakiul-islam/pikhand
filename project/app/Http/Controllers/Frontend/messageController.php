@@ -45,8 +45,6 @@ class messageController  extends Controller
              $gust_uuid_for_DB = Str::uuid()->toString();
              session(['gust_uuid' => $gust_uuid_for_DB]);
               
-             $guestUuid = (string) Str::uuid();
-             session(['guest_uuid' => $guestUuid]);
               
               $lastNumber = message::whereNotNull('guest_id')
                   ->selectRaw(
