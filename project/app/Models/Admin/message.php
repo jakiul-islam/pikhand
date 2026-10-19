@@ -18,6 +18,7 @@ class message extends Model
     protected $fillable = [
         'uuid',
         'gust_uuid',
+        'gust_id'
         'user_id',
         'product_id',
         'current_price',
