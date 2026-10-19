@@ -54,7 +54,7 @@ class messageController  extends Controller
           
               $guestNumber = max(1000, (int) $lastNumber) + 1;
               
-              session(['guest_name' => 'Guest #' . $guestNumber]);
+              session(['guest_id' => 'Guest #' . $guestNumber]);
     
               $guestName = session('guest_name');
 
