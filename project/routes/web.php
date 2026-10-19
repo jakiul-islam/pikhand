@@ -48,6 +48,7 @@ use App\Http\Controllers\Admin\AccessController;
 use App\Http\Controllers\Admin\NotiseController;
 use App\Http\Controllers\Admin\MediaLinksController;
 use App\Http\Controllers\Admin\MessageController;
+use App\Http\Controllers\Admin\messageController as userMessageController;
 
 
 use App\Http\Controllers\Auth\GoogleController;
