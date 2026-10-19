@@ -28,7 +28,7 @@ class MessageController  extends Controller
         $request->all(),
           [
             'messageInput'          => 'required|string',
-            'sender'          => 'required|string',
+            'sender'                => 'required|string',
           ]
       );
       if($validate_message->fails()){
