@@ -59,6 +59,7 @@
 
 window.indexMessage = function(){
       fetchDataAjax('/user/message/index','post','messageData','Nan');
+alert('jakiul islam');
 }
 
 
