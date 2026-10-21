@@ -35,8 +35,8 @@ class MessageController  extends Controller
     ->orWhereIn('id', function ($query) {
       $query->selectRaw('MAX(id)')
         ->from('message')
-        ->whereNotNull('gust_uuid')
-        ->groupBy('gust_uuid');
+        ->whereNotNull('guest_uuid')
+        ->groupBy('guest_uuid');
     })
     ->latest('created_at')
     ->get();
