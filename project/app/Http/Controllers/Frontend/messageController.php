@@ -68,7 +68,7 @@ class messageController  extends Controller
           'uuid'         =>$uuid,
           'Message'      =>$request->messageInput,  
           ...(session()->has('user_id') ? ""  
-            : [ ...(session()->has('guest_id')   ? [ 'gust_id' => $guestId, ] : []) ]
+            : [ ...(session()->has('guest_id')   ? [ 'guest_id' => $guestId, ] : []) ]
           ),
 
           ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'gust_uuid'    => $gust_uuid_for_DB ]),
