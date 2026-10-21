@@ -19,7 +19,7 @@ indexAllUser()
 
                 <div class="user-info">
                     <div class="user-id">
-                        ${messages.guest_id}
+                         jsnsjsns
                     </div>
 
                     <div class="last-message">
