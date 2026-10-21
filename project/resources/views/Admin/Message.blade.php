@@ -57,7 +57,7 @@
 
             <div>
                 <div class="chat-user-id" id="chatUserId">
-                    User ID: 12
+                    User
                 </div>
 
                 <small style="color:#65676b;">
