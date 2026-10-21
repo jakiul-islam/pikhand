@@ -1,5 +1,10 @@
   window.indexAllUser = function (){
     fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
+
+
+alert('jakiul islam ');
+
+    
   }
 
 indexAllUser()
