@@ -33,7 +33,7 @@ class messageController  extends Controller
       );
       if($validate_message->fails()){
         return response()->json([
-          'ststus' => false,
+          'status' => false,
           'message'=>'Validation Error Is',
           'errors' =>$validate_message->errors()->all(),
         ],401);
