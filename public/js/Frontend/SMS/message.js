@@ -58,8 +58,8 @@
 
 
 window.indexMessage = function(){
-  $("#chatBox").val('');
-      fetchDataAjax('/user/message/index','post','messageData','Nan');
+  $("#chatBox").empty();
+  fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
 
