@@ -58,7 +58,9 @@
 
 
 window.indexMessage = function(){
-  $("#chatBox").empty();
+  
+  let chatBox = document.getElementById('chatBox');
+  chatBox.innerHTML = "";
   fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
