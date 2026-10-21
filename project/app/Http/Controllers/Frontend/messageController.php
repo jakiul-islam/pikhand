@@ -71,7 +71,7 @@ class messageController  extends Controller
             : [ ...(session()->has('guest_id')   ? [ 'guest_id' => $guestId, ] : []) ]
           ),
 
-          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'gust_uuid'    => $gust_uuid_for_DB ]),
+          ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'guest_uuid'    => $gust_uuid_for_DB ]),
         ]);
 
 
