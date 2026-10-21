@@ -90,11 +90,11 @@ class messageController  extends Controller
           $user_id =  session('user_id');
           $Message = message::where('user_id', $user_id)->get();
         }else{
-          if(session()->has('gust_uuid')){
-             $gust_uuid_for_DB =  session('gust_uuid');
+          if(session()->has('guest_uuid')){
+             $gust_uuid_for_DB =  session('guest_uuid');
 
       
-             $Message = message::where('gust_uuid', $gust_uuid_for_DB)->get();
+             $Message = message::where('guest_uuid', $gust_uuid_for_DB)->get();
             
           }
         }
