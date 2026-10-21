@@ -56,7 +56,7 @@ class messageController  extends Controller
               
               session(['guest_id' => 'Guest #' . $guestNumber]);
     
-              $guestId = session('guest_name');
+              $guestId = session('guest_id');
              
          }
 
@@ -70,6 +70,12 @@ class messageController  extends Controller
           ...(session()->has('user_id') ? "" : [ 'gust_id'    => $guestId ]),
           ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'gust_uuid'    => $gust_uuid_for_DB ]),
         ]);
+
+...(session()->has('user_id') ? ""  
+    : [ 'gust_id' => $guestId,   ...(session()->has('another_id')   ? ['another_id' => session('another_id')] : []) ]
+),
+
+        
         return response()->json([
           'status' => true,
           'message'=>'insert img Successfull',
