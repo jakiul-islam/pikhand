@@ -26,7 +26,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(){
       
-     $messagesAll = message::with('user')->whereIn('id', function ($query) {
+     $messagesAll = message::whereIn('id', function ($query) {
         $query->selectRaw('MAX(id)')
           ->from('message')
           ->whereNotNull('user_id')
