@@ -58,6 +58,7 @@
 
 
 window.indexMessage = function(){
+  $("#chatBox").val('');
       fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
