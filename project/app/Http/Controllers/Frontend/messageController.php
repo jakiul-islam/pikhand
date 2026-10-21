@@ -72,7 +72,7 @@ class messageController  extends Controller
         ]);
 
 ...(session()->has('user_id') ? ""  
-    : [ 'gust_id' => $guestId,   ...(session()->has('another_id')   ? ['another_id' => session('another_id')] : []) ]
+    : [ ...(session()->has('guest_id')   ? [ 'gust_id' => $guestId, ] : []) ]
 ),
 
         
