@@ -79,7 +79,7 @@ class messageController  extends Controller
         return response()->json([
           'status' => true,
           'message'=>'insert img Successfull',
-           'brand' =>$User_message,
+          'user_message' =>$User_message,
         ],200);
       }
     }
