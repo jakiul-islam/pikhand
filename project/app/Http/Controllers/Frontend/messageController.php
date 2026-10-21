@@ -78,7 +78,7 @@ class messageController  extends Controller
         
         return response()->json([
           'status' => true,
-          'message'=>'insert img Successfull',
+          'message'=>'Message insert Successfull',
           'user_message' =>$User_message,
         ],200);
       }
