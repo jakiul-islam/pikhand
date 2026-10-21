@@ -23,7 +23,7 @@ indexAllUser()
                     </div>
 
                     <div class="last-message">
-                        ${messages.guest_id}
+                        ${messages.Message}
                     </div>
                 </div>
 
