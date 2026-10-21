@@ -41,6 +41,7 @@ class messageController  extends Controller
          if(! session()->has('user_id') ){
            if(session()->has('guest_uuid')){
              $gust_uuid_for_DB =  session('guest_uuid');
+             $guestId = session('guest_id');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
              session(['guest_uuid' => $gust_uuid_for_DB]);
