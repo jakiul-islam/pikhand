@@ -14,7 +14,7 @@ indexAllUser()
             <div class="user"  onclick="openChat( ${index} , 'Hello, how are you?')">
 
                 <div class="avatar">
-                    xxxxxx
+                    ${messages.guest_id}
                 </div>
 
                 <div class="user-info">
