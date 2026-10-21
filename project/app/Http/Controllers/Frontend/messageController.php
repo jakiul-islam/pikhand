@@ -39,11 +39,11 @@ class messageController  extends Controller
         ],401);
       }else{
          if(! session()->has('user_id') ){
-           if(session()->has('gust_uuid')){
-             $gust_uuid_for_DB =  session('gust_uuid');
+           if(session()->has('guest_uuid')){
+             $gust_uuid_for_DB =  session('guest_uuid');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
-             session(['gust_uuid' => $gust_uuid_for_DB]);
+             session(['guest_uuid' => $gust_uuid_for_DB]);
               
               
               $lastNumber = message::whereNotNull('guest_id')
