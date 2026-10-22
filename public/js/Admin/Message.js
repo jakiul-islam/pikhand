@@ -45,8 +45,6 @@ window.openCahtData = function( response ){
   // Pure JavaScript
   document.getElementById('chatUserId').innerText = `${response.user !== null ? response.user.name : response.userMessageIndex[0].guest_id}`;
 
-
-console.log(response.userMessageIndex);
   
   document.getElementById('chatAvatar').innerHTML = `<img class='avatar' src="/storage/${response.user !== null  ? response.user.user_profile[0].profile_picture : ''}" height='100'>`;
 
