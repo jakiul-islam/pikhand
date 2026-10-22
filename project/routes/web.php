@@ -267,6 +267,7 @@ Route::middleware([CheckAdmin::class])->group(function () {
 
 
   Route::post('/admin/message/alluser/index', [MessageController::class,'alluserIndex'])->name('admin.message.alluser.index');
+  Route::post('/admin/index/user/message', [MessageController::class,'openChat'])->name('admin.index.user.message');
 
 
 
