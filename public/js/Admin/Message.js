@@ -126,6 +126,11 @@ let user = document.querySelectorAll('.user');
         }
 
 
+            let formData = new FormData();
+                formData.append('messageInput',message);
+                formData.append('sender',"user");   
+        
+                detailsDataAjax('/user/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
 
 
 
