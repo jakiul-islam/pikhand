@@ -64,7 +64,7 @@
     window.openCahtData = function( response ){
           // Header change
         document.getElementById('chatUserId').innerText =
-            'User ID: ' ;
+            response.user.name
 
         document.getElementById('chatAvatar').innerText =
           response.user.name
