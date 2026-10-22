@@ -43,7 +43,7 @@ window.openCahtData = function( response ){
   // Header change
   //document.getElementById('chatUserId').innerText =  `${ response.user !== null ? response.user.name : response[0].guest_id }`;
   // Pure JavaScript
-  document.getElementById('chatUserId').innerText = `${response.user !== null ? response.user.name : response.messages[0].guest_id}`;
+  document.getElementById('chatUserId').innerText = `${response.user !== null ? response.user.name : response.userMessageIndex[0].guest_id}`;
 
   
   document.getElementById('chatAvatar').innerHTML = `<img class='avatar' src="/storage/${response.user.user_profile[0].profile_picture ? response.user.user_profile[0].profile_picture : ''}" height='100'>`;
