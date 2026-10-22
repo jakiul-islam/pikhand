@@ -69,7 +69,7 @@
         document.getElementById('chatAvatar').innerText =
           "jakiul islam"  ;
 
-
+    let hiddenInput = document.getElementById('hiddenInput');
 
     $.each(response.userMessageIndex, function(index, MessageIndex) {
 
