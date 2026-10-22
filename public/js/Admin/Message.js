@@ -20,7 +20,7 @@ indexAllUser()
 
                 <div class="user-info">
                     <div class="user-id">
-                        ${messages.guest_id   == "null"  ?  messages.user.name : messages.guest_id }
+                        ${messages.guest_id   == null  ?  messages.user.name : messages.guest_id }
                     </div>
 
                     <div class="last-message">
