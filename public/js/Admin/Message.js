@@ -70,7 +70,9 @@
           "jakiul islam"  ;
 
     let hiddenInput = document.getElementById('hiddenInput');
-     hiddenInput.value = response.
+     hiddenInput.value = response.userId;
+
+      
     $.each(response.userMessageIndex, function(index, MessageIndex) {
 
       
