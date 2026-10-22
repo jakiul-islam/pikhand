@@ -3,9 +3,6 @@
     fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
   }
 indexAllUser();
-setInterval(function(){
-    indexAllUser();
-}, 60000);
 
 window.indexAllUserData = function ( response ){
    let userList = document.getElementById('userList');
