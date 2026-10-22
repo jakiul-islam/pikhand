@@ -82,7 +82,7 @@ userMessageIndex
             </div>
 
         `);
-
+    })
         // Active user
         document.querySelectorAll('.user').forEach(user => {
             user.classList.remove('active');
