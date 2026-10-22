@@ -11,10 +11,7 @@ window.indexAllUserData = function ( response ){
 
      let id = messages.user_id !== null ? messages.user_id : messages.guest_uuid;
 
-      setInterval(function(){
-          openChat( id );
-      }, 60000);
-
+      
      
      $('#userList').append(`
       <div class="user"  onclick="openChat( '${id}' )">
