@@ -49,11 +49,16 @@
     function openChat(userId) {
 
 
+          let formData = new FormData();
+            formData.append('userId',userId);
+            
+            detailsDataAjax('/admin/index/user/message',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+
+    }
 
 
-
-      
-        // Header change
+    window.openCahtData = function( response ){
+          // Header change
         document.getElementById('chatUserId').innerText =
             'User ID: ' + userId;
 
@@ -84,7 +89,10 @@
         document
             .getElementById('messenger')
             .classList.add('chat-open');
-    }
+}
+
+
+
 
 
     function backToUsers() {
