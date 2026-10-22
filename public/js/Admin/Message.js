@@ -99,7 +99,7 @@ function sendMessage() {
       formData.append('message',message);
       formData.append('userId',hiddenInput.value);
 
-      detailsDataAjax('/admin/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+      detailsDataAjax('/admin/message/create',formData,'POST','Nan','Nan','Nan','Nan','Nan');
 
 
   const messageBox =  document.getElementById('messages');
