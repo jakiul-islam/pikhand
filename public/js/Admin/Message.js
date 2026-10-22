@@ -130,7 +130,7 @@ let user = document.querySelectorAll('.user');
                 formData.append('message',message);
                 formData.append('sender',"admin");   
         
-                detailsDataAjax('/user/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+                detailsDataAjax('/admin/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
 
 
 
