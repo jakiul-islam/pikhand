@@ -77,11 +77,12 @@ window.openCahtData = function( response ){
 }
 
 function backToUsers() {
+     indexAllUser();
+
   document
       .getElementById('messenger')
       .classList.remove('chat-open');
 
-   indexAllUser();
 
  }
 
