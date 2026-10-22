@@ -79,8 +79,8 @@
         // Example conversation
         $("#messages").append(`
             
-            <div class="message received">
-                ${MessageIndex.Message == null ? MessageIndex.admin_note : MessageIndex.Message}sent
+            <div class="message ${MessageIndex.Message == null ? 'sent' : 'received'} ">
+                ${MessageIndex.Message == null ? MessageIndex.admin_note : MessageIndex.Message}
             </div>
 
         `);
