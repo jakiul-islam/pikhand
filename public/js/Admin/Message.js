@@ -74,7 +74,7 @@
         $("#messages").append(`
             
             <div class="message received">
-                ${MessageIndex.message}
+                ${MessageIndex.Message}
             </div>
 
             <div class="message sent">
