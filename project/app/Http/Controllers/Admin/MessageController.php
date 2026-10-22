@@ -90,7 +90,7 @@ class MessageController  extends Controller
       $validate_message =Validator::make(
         $request->all(),
           [
-            'messageInput'          => 'required|string',
+            'message'          => 'required|string',
           ]
       );
       if($validate_message->fails()){
