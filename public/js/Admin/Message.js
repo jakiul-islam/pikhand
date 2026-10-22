@@ -131,10 +131,10 @@ let user = document.querySelectorAll('.user');
 
            let hiddenInput = document.getElementById('hiddenInput');
 
-          alert(hiddenInput.value);
       
             let formData = new FormData();
                 formData.append('message',message);
+                formData.append('userId',hiddenInput.value);
         
                 detailsDataAjax('/admin/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
 
