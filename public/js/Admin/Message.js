@@ -7,8 +7,14 @@ window.indexAllUser = function (){
 window.indexAllUserData = function ( response ){
    let userList = document.getElementById('userList');
    $.each(response.messageAllUser, function(index, messages) {
+
+
+     let id = messages.user_id !== null ? messages.user_id : messages.guest_uuid;
+
+
+     
      $('#userList').append(`
-      <div class="user"  onclick="openChat( ${messages.user_id   !== null  ?  messages.user_id : messages.guest_uuid } )">
+      <div class="user"  onclick="openChat( ${id} )">
         <div class="avatar">
         </div>
         <div class="user-info">
