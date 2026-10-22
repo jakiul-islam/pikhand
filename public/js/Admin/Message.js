@@ -52,7 +52,7 @@
           let formData = new FormData();
             formData.append('userId',userId);
             
-            detailsDataAjax('/admin/index/user/message',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+            detailsDataAjax('/admin/index/user/message',formData,'POST','openCahtData','Nan','Nan','Nan','Nan');
 
     }
 
