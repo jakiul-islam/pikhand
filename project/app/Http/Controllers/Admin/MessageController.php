@@ -80,6 +80,7 @@ class MessageController  extends Controller
       
         return response()->json([
           'userMessageIndex' => $messagesAll,
+          'id_or_uuid'       => $request->userId,
           'user'           => $user,
         ]);
 
