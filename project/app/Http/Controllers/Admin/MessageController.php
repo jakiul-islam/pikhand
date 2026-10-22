@@ -106,7 +106,7 @@ class MessageController  extends Controller
            
            $User_message = message::createadmin_uuid[
             'admin_uuid'    => $admin_uuid,
-            'Message' => $request->message,
+            'admin_note' => $request->message,
             ),
         ]);
 
