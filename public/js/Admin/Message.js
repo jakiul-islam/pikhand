@@ -49,6 +49,10 @@
     function openChat(userId) {
 
 
+
+      let messages = document.getElementById('messages');
+      messages.innerHTML = "";
+
           let formData = new FormData();
             formData.append('userId',userId);
             
