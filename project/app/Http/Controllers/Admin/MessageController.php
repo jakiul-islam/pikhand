@@ -101,42 +101,16 @@ class MessageController  extends Controller
         ],401);
       }else{
          if(session()->has('admin_uuid') ){
-           if(session()->has('guest_uuid')){
-             $gust_uuid_for_DB =  session('guest_uuid');
-             $guestId = session('guest_id');
-           }
-
-      }
-        
-        $uuid = Str::uuid()->toString();
-        
-      //  $User_message = message::create([
-     //     'uuid'         =>$uuid,
-     //     'Message'      =>$request->messageInput,  
-       //   ...(session()->has('user_id') ? ""  
-    //        : [ ...(session()->has('guest_id')   ? [ 'guest_id' => $guestId, ] : []) ]
-     //     ),
-
-    //      ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'guest_uuid'    => $gust_uuid_for_DB ]),
-    //    ]);
-
-
-        $User_message = message::create([
+           $User_message = message::create([
             'uuid'    => $uuid,
             'Message' => $request->messageInput,
-        
-            ...(session()->has('user_id')
-                ? ['user_id' => session('user_id')]
-                : [
-                    'guest_uuid' => $gust_uuid_for_DB,
-                    'guest_id'   => $guestId,
-                ]
             ),
         ]);
 
 
         
 
+        }
         
         return response()->json([
           'status' => true,
