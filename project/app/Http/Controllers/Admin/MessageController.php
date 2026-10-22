@@ -100,7 +100,7 @@ class MessageController  extends Controller
           'errors' =>$validate_message->errors()->all(),
         ],401);
       }else{
-         if(session()->has('user_id') ){
+         if(session()->has('admin_uuid') ){
            if(session()->has('guest_uuid')){
              $gust_uuid_for_DB =  session('guest_uuid');
              $guestId = session('guest_id');
