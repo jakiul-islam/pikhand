@@ -14,7 +14,7 @@ window.indexAllUserData = function ( response ){
 
      
      $('#userList').append(`
-      <div class="user"  onclick="openChat( ${id} )">
+      <div class="user"  onclick="openChat( '${id}' )">
         <div class="avatar">
         </div>
         <div class="user-info">
