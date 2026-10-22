@@ -101,8 +101,11 @@ class MessageController  extends Controller
         ],401);
       }else{
          if(session()->has('admin_uuid') ){
-           $User_message = message::create([
-            'uuid'    => $uuid,
+
+            $admin_uuid =  session('admin_uuid');
+           
+           $User_message = message::createadmin_uuid[
+            'admin_uuid'    => $uuid,
             'Message' => $request->messageInput,
             ),
         ]);
