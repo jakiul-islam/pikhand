@@ -71,7 +71,7 @@ class MessageController  extends Controller
         ],401);
       }else{
       
-           $messagesAll = message::where('user_id', $request->userId )->latest('created_at')->get();
+           $messagesAll = message::where('user_id', $request->userId )->where('guest_uuid', $request->guest_uuid )->latest('created_at')->get();
 
 
 
