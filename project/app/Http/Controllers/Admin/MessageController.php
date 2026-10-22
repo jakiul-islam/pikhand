@@ -71,13 +71,14 @@ class MessageController  extends Controller
         ],401);
       }else{
       
-           $messagesAll = message::where('user_id', $request->userId )->where('guest_uuid', $request->guest_uuid )->latest('created_at')->get();
-
-
+           $$messagesAll = message::where('user_id', $request->userId)
+          ->orWhere('guest_uuid', $request->userId)
+          ->oldest('created_at')
+          ->get();
 
       
       return response()->json([
-        'messageAllUser' => $messagesAll,
+        'userMessageIndex' => $messagesAll,
       ]);
 
 
