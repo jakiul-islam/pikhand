@@ -60,10 +60,10 @@
     window.openCahtData = function( response ){
           // Header change
         document.getElementById('chatUserId').innerText =
-            'User ID: ' + userId;
+            'User ID: ' ;
 
         document.getElementById('chatAvatar').innerText =
-            userId;
+          "jakiul islam"  ;
 
 
 
