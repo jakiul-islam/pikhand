@@ -88,9 +88,12 @@
             user.classList.remove('active');
         });
 
-        if (element) {
-        element.classList.add('active');
-    }
+let user = document.querySelectorAll('.user');
+
+      
+        if (user) {
+            user.classList.add('active');
+        }
 
     // Mobile chat
     document.getElementById('messenger')
