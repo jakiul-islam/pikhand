@@ -85,4 +85,83 @@ class MessageController  extends Controller
       }
     }
 
+
+   public function create(request $request){
+      $validate_message =Validator::make(
+        $request->all(),
+          [
+            'messageInput'          => 'required|string',
+          ]
+      );
+      if($validate_message->fails()){
+        return response()->json([
+          'status' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>$validate_message->errors()->all(),
+        ],401);
+      }else{
+         if(! session()->has('user_id') ){
+           if(session()->has('guest_uuid')){
+             $gust_uuid_for_DB =  session('guest_uuid');
+             $guestId = session('guest_id');
+           }else{
+             $gust_uuid_for_DB = Str::uuid()->toString();
+             session(['guest_uuid' => $gust_uuid_for_DB]);
+              
+              
+              $lastNumber = message::whereNotNull('guest_id')
+                  ->selectRaw(
+                      "MAX(CAST(SUBSTRING_INDEX(guest_id, '#', -1) AS UNSIGNED)) as number"
+                  )
+                  ->value('number');
+          
+              $guestNumber = max(1000, (int) $lastNumber) + 1;
+              
+              session(['guest_id' => 'Guest #' . $guestNumber]);
+    
+              $guestId = session('guest_id');
+             
+         }
+
+      }
+        
+        $uuid = Str::uuid()->toString();
+        
+      //  $User_message = message::create([
+     //     'uuid'         =>$uuid,
+     //     'Message'      =>$request->messageInput,  
+       //   ...(session()->has('user_id') ? ""  
+    //        : [ ...(session()->has('guest_id')   ? [ 'guest_id' => $guestId, ] : []) ]
+     //     ),
+
+    //      ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'guest_uuid'    => $gust_uuid_for_DB ]),
+    //    ]);
+
+
+        $User_message = message::create([
+            'uuid'    => $uuid,
+            'Message' => $request->messageInput,
+        
+            ...(session()->has('user_id')
+                ? ['user_id' => session('user_id')]
+                : [
+                    'guest_uuid' => $gust_uuid_for_DB,
+                    'guest_id'   => $guestId,
+                ]
+            ),
+        ]);
+
+
+        
+
+        
+        return response()->json([
+          'status' => true,
+          'message'=>'Message insert Successfull',
+          'user_message' =>$User_message,
+        ],200);
+      }
+    }
+    //fetch message user section
+
 }
