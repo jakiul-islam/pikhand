@@ -74,11 +74,7 @@
         $("#messages").append(`
             
             <div class="message received">
-                ${MessageIndex.Message}
-            </div>
-
-            <div class="message sent">
-                Hello! How can I help you?
+                ${MessageIndex.Message}sent
             </div>
 
         `);
