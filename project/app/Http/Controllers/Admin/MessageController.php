@@ -57,7 +57,20 @@ class MessageController  extends Controller
   
     public function openChat(){
 
-
+      $validate_message =Validator::make(
+        $request->all(),
+          [
+            'messageInput'          => 'required|string',
+            'sender'                => 'required|string',
+          ]
+      );
+      if($validate_message->fails()){
+        return response()->json([
+          'status' => false,
+          'message'=>'Validation Error Is',
+          'errors' =>$validate_message->errors()->all(),
+        ],401);
+      }else{
 
 
 
@@ -90,8 +103,9 @@ class MessageController  extends Controller
       return response()->json([
         'messageAllUser' => $messagesAll,
       ]);
-      
+
+
+        
     }
 
-  
 }
