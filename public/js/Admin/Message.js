@@ -65,8 +65,13 @@
         document.getElementById('chatAvatar').innerText =
             userId;
 
+userMessageIndex
+
+    $.each(response.message, function(index, messages) {
+
+      
         // Example conversation
-        document.getElementById('messages').innerHTML = `
+        $("#messages").append(`
             
             <div class="message received">
                 ${lastMessage}
@@ -76,7 +81,7 @@
                 Hello! How can I help you?
             </div>
 
-        `;
+        `);
 
         // Active user
         document.querySelectorAll('.user').forEach(user => {
