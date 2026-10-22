@@ -55,7 +55,7 @@ class MessageController  extends Controller
     }
    
   
-    public function openChat(){
+    public function openChat( request $request){
 
       $validate_message =Validator::make(
         $request->all(),
