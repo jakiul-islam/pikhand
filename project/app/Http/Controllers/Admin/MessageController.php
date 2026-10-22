@@ -112,7 +112,7 @@ class MessageController  extends Controller
 
 
            if (Str::isUuid($request->userId)) {
-                $user = message::where('guest_uuid', $request->userId)->first();
+                $userForGuest = message::where('guest_uuid', $request->userId)->first();
 
                 $User_message = message::create([
                   'uuid'     =>  $uuid,
