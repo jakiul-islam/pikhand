@@ -117,7 +117,7 @@ class MessageController  extends Controller
                 $User_message = message::create([
                   'uuid'     =>  $uuid,
                   'guest_uuid'     =>  $request->userId,
-                  'guest_id'     =>  $user->guest_id,
+                  'guest_id'     =>  $userForGuest->guest_id,
                   'admin_uuid'    => $admin_uuid,
                   'admin_note' => $request->message,
                 ]);
