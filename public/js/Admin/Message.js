@@ -46,7 +46,7 @@
 
 
 
-    function openChat(userId, lastMessage) {
+    function openChat(userId) {
 
 
 
