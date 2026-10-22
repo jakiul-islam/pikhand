@@ -113,7 +113,7 @@ let user = document.querySelectorAll('.user');
             .getElementById('messenger')
             .classList.remove('chat-open');
 
-      indexAllUser
+      indexAllUser();
 
     }
 
