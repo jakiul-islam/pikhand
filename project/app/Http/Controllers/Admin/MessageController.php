@@ -53,7 +53,45 @@ class MessageController  extends Controller
       ]);
       
     }
+   
+  
+    public function openChat(){
 
+
+
+
+
+
+
+      
+      
+     $messagesAll = message::with('user')
+    ->where(function ($query) {
+        $query->whereIn('id', function ($subQuery) {
+            $subQuery->selectRaw('MAX(id)')
+                ->from('message')
+                ->whereNotNull('user_id')
+                ->groupBy('user_id');
+        })
+        ->orWhereIn('id', function ($subQuery) {
+            $subQuery->selectRaw('MAX(id)')
+                ->from('message')
+                ->whereNull('user_id')
+                ->whereNotNull('guest_uuid')
+                ->groupBy('guest_uuid');
+        });
+    })
+    ->latest('created_at')
+    ->get();
+
+
+
+      
+      return response()->json([
+        'messageAllUser' => $messagesAll,
+      ]);
+      
+    }
 
   
 }
