@@ -128,6 +128,11 @@ let user = document.querySelectorAll('.user');
         }
 
 
+
+           let hiddenInput = document.getElementById('hiddenInput');
+
+          alert(hiddenInput.value);
+      
             let formData = new FormData();
                 formData.append('message',message);
         
