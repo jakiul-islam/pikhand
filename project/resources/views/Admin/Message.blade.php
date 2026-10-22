@@ -72,7 +72,8 @@
 
         <div class="messages" id="messages">
 
-            <div class="message received">
+        <!--
+          <div class="message received">
                 Hello, how are you?
             </div>
 
@@ -87,7 +88,7 @@
             <div class="message sent">
                 Sure, I will check it for you.
             </div>
-
+-->
         </div>
 
 
