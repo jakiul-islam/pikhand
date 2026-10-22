@@ -24,7 +24,6 @@
                     </div>
 
                     <div class="last-message">
-                        ${messages.Message}
                          ${messages.Message == null ? messages.admin_note : messages.Message}
                     </div>
                 </div>
