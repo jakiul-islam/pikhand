@@ -95,7 +95,7 @@
         <!-- MESSAGE INPUT -->
 
         <div class="message-input">
-
+            <input type="hidden" id="hiddenInput" >
             <input
                 type="text"
                 id="messageInput"
