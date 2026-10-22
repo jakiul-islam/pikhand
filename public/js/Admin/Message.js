@@ -1,5 +1,5 @@
 //all user index 
-window.indexAllUser = function (){
+  window.indexAllUser = function (){
     fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
   }
   indexAllUser()
