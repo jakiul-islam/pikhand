@@ -67,7 +67,7 @@
             'User ID: ' ;
 
         document.getElementById('chatAvatar').innerText =
-          "jakiul islam"  ;
+          response.user.name
 
     let hiddenInput = document.getElementById('hiddenInput');
      hiddenInput.value = response.user.id;
