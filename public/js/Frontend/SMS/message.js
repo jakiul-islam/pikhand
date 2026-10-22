@@ -25,7 +25,7 @@
                 formData.append('messageInput',messageInputValue);
                 formData.append('sender',"user");   
         
-                detailsDataAjax('/user/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+                sendDataAjax('/user/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
 
          // detailsDataAjax
             let text = $("#messageInput").val().trim();
