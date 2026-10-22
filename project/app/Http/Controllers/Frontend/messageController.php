@@ -65,15 +65,7 @@ class messageController  extends Controller
         
         $uuid = Str::uuid()->toString();
         
-      //  $User_message = message::create([
-     //     'uuid'         =>$uuid,
-     //     'Message'      =>$request->messageInput,  
-       //   ...(session()->has('user_id') ? ""  
-    //        : [ ...(session()->has('guest_id')   ? [ 'guest_id' => $guestId, ] : []) ]
-     //     ),
-
-    //      ...(session()->has('user_id') ? ['user_id' => session('user_id')] : [ 'guest_uuid'    => $gust_uuid_for_DB ]),
-    //    ]);
+     
 
 
         $User_message = message::create([
