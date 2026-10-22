@@ -86,7 +86,7 @@ class MessageController  extends Controller
     }
 
 
-   public function create(request $request){
+   public function MessageCreate(request $request){
       $validate_message =Validator::make(
         $request->all(),
           [
