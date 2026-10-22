@@ -76,7 +76,7 @@ class MessageController  extends Controller
           ->oldest('created_at')
           ->get();
 
-         $user = User::with('user_profile')->where('id', $request->userId )->Frist();
+         $user = User::with('user_profile')->where('id', $request->userId )->First();
       
         return response()->json([
           'userMessageIndex' => $messagesAll,
