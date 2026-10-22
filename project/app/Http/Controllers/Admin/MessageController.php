@@ -109,13 +109,27 @@ class MessageController  extends Controller
             $admin_uuid =  session('admin_uuid');
             
            $uuid = Str::uuid()->toString();
-        
-           $User_message = message::create([
-            'uuid'     =>  $uuid,
-            'user_id'     =>  $request->userId,
-            'admin_uuid'    => $admin_uuid,
-            'admin_note' => $request->message,
-          ]);
+
+
+           if (Str::isUuid($request->userId)) {
+                $user = message::where('guest_uuid', $request->userId)->first();
+
+                $User_message = message::create([
+                  'uuid'     =>  $uuid,
+                  'user_id'     =>  $request->userId,
+                  'admin_uuid'    => $admin_uuid,
+                  'admin_note' => $request->message,
+                ]);
+             
+            }else{
+             
+                 $User_message = message::create([
+                  'uuid'     =>  $uuid,
+                  'user_id'     =>  $request->userId,
+                  'admin_uuid'    => $admin_uuid,
+                  'admin_note' => $request->message,
+                ]);
+           } 
         }
         
         return response()->json([
