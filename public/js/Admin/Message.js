@@ -41,7 +41,7 @@ function openChat(userId) {
 
 window.openCahtData = function( response ){
   // Header change
-  document.getElementById('chatUserId').innerText =  `${ response.user ? response.user.name : response[0].guest_id }`;
+  document.getElementById('chatUserId').innerText =  `${ response.user == null ? response.user.name : response[0].guest_id }`;
   // Pure JavaScript
 
 
