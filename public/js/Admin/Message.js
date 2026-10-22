@@ -67,7 +67,7 @@
             response.user.name
 
         document.getElementById('chatAvatar').innerText =
-          response.user.name
+          "<img src='storage/${response.user.	profile_picture.}' height='100'>";
 
     let hiddenInput = document.getElementById('hiddenInput');
      hiddenInput.value = response.user.id;
