@@ -65,16 +65,16 @@
         document.getElementById('chatAvatar').innerText =
             userId;
 
-userMessageIndex
 
-    $.each(response.message, function(index, messages) {
+
+    $.each(response.userMessageIndex, function(index, MessageIndex) {
 
       
         // Example conversation
         $("#messages").append(`
             
             <div class="message received">
-                ${lastMessage}
+                ${MessageIndex.message}
             </div>
 
             <div class="message sent">
