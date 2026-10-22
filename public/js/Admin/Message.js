@@ -41,7 +41,7 @@ window.openCahtData = function( response ){
 
 console.log(response);
   
-  document.getElementById('chatAvatar').innerHTML = `<img src='storage/${response.user.user_profile.profile_picture}' height='100'>`;
+  document.getElementById('chatAvatar').innerHTML = `<img src='storage/.${response.user.user_profile.profile_picture}' height='100'>`;
 
   let hiddenInput = document.getElementById('hiddenInput');
   hiddenInput.value = response.user.id;
