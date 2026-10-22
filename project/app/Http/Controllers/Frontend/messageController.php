@@ -76,18 +76,18 @@ class messageController  extends Controller
     //    ]);
 
 
-$User_message = message::create([
-    'uuid'    => $uuid,
-    'Message' => $request->messageInput,
-
-    ...(session()->has('user_id')
-        ? ['user_id' => session('user_id')]
-        : [
-            'guest_uuid' => $gust_uuid_for_DB,
-            'guest_id'   => $guestId,
-        ]
-    ),
-]);
+        $User_message = message::create([
+            'uuid'    => $uuid,
+            'Message' => $request->messageInput,
+        
+            ...(session()->has('user_id')
+                ? ['user_id' => session('user_id')]
+                : [
+                    'guest_uuid' => $gust_uuid_for_DB,
+                    'guest_id'   => $guestId,
+                ]
+            ),
+        ]);
 
 
         
