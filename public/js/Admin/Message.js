@@ -12,7 +12,7 @@
      $.each(response.messageAllUser, function(index, messages) {
           $('#userList').append(`
           
-            <div class="user"  onclick="openChat( ${messages.user_id   !== null  ?  messages.user_id : messages.guest_uuid } , 'Hello, how are you?')">
+            <div class="user"  onclick="openChat( ${messages.user_id   !== null  ?  messages.user_id : messages.guest_uuid } )">
 
                 <div class="avatar">
                     
@@ -48,6 +48,11 @@
 
     function openChat(userId, lastMessage) {
 
+
+
+
+
+      
         // Header change
         document.getElementById('chatUserId').innerText =
             'User ID: ' + userId;
