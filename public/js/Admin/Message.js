@@ -38,7 +38,8 @@ window.openCahtData = function( response ){
   document.getElementById('chatUserId').innerText =  response.user.name
   // Pure JavaScript
 
-  alert(response.user.user_profile.profile_picture);
+
+console.log(response);
   
   document.getElementById('chatAvatar').innerHTML = `<img src='storage/${response.user.user_profile.profile_picture}' height='100'>`;
 
