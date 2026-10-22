@@ -1,177 +1,119 @@
-  window.indexAllUser = function (){
+//all user index 
+window.indexAllUser = function (){
     fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
-    
   }
-
   indexAllUser()
-   window.indexAllUserData = function ( response ){
 
-     let userList = document.getElementById('userList');
-     
-     
-     $.each(response.messageAllUser, function(index, messages) {
-          $('#userList').append(`
-          
-            <div class="user"  onclick="openChat( ${messages.user_id   !== null  ?  messages.user_id : messages.guest_uuid } )">
-
-                <div class="avatar">
-                    
-                </div>
-
-                <div class="user-info">
-                    <div class="user-id">
-                        ${messages.user_id   !== null  ?  messages.user.name : messages.guest_id }
-                    </div>
-
-                    <div class="last-message">
-                         ${messages.Message == null ? messages.admin_note : messages.Message}
-                    </div>
-                </div>
-
+window.indexAllUserData = function ( response ){
+   let userList = document.getElementById('userList');
+   $.each(response.messageAllUser, function(index, messages) {
+     $('#userList').append(`
+      <div class="user"  onclick="openChat( ${messages.user_id   !== null  ?  messages.user_id : messages.guest_uuid } )">
+        <div class="avatar">
+        </div>
+        <div class="user-info">
+            <div class="user-id">
+                ${messages.user_id   !== null  ?  messages.user.name : messages.guest_id }
             </div>
 
-
-          
-          
-          `);
-      
-      })
-
-
-//admin
-     
-   }
-
-
-
-
-
-    function openChat(userId) {
-
-
-
-      let messages = document.getElementById('messages');
-      messages.innerHTML = "";
-
-          let formData = new FormData();
-            formData.append('userId',userId);
-            
-            detailsDataAjax('/admin/index/user/message',formData,'POST','openCahtData','Nan','Nan','Nan','Nan');
-
-    }
-
-
-    window.openCahtData = function( response ){
-          // Header change
-        document.getElementById('chatUserId').innerText =
-            response.user.name
-
-        // Pure JavaScript
-document.getElementById('chatAvatar').innerHTML = `<img src='storage/${response.user.user_profile.profile_picture}' height='100'>`;
-   
-      let hiddenInput = document.getElementById('hiddenInput');
-     hiddenInput.value = response.user.id;
-
-      
-    $.each(response.userMessageIndex, function(index, MessageIndex) {
-
-      
-        // Example conversation
-        $("#messages").append(`
-            
-            <div class="message ${MessageIndex.Message == null ? 'sent' : 'received'} ">
-                ${MessageIndex.Message == null ? MessageIndex.admin_note : MessageIndex.Message}
+            <div class="last-message">
+                 ${messages.Message == null ? messages.admin_note : messages.Message}
             </div>
+        </div>
+      </div>
+    `);
+  })
+}
+//open user chat 
+function openChat(userId) {
+  let messages = document.getElementById('messages');
+    messages.innerHTML = "";
+   let formData = new FormData();
+      formData.append('userId',userId);
+      detailsDataAjax('/admin/index/user/message',formData,'POST','openCahtData','Nan','Nan','Nan','Nan');
+ }
 
-        `);
-    })
-        // Active user
-        document.querySelectorAll('.user').forEach(user => {
-            user.classList.remove('active');
-        });
+window.openCahtData = function( response ){
+  // Header change
+  document.getElementById('chatUserId').innerText =  response.user.name
+  // Pure JavaScript
+  document.getElementById('chatAvatar').innerHTML = `<img src='storage/${response.user.user_profile.profile_picture}' height='100'>`;
 
-let user = document.querySelectorAll('.user');
+  let hiddenInput = document.getElementById('hiddenInput');
+  hiddenInput.value = response.user.id;
+  $.each(response.userMessageIndex, function(index, MessageIndex) {
+    // Example conversation
+    $("#messages").append(`
+        <div class="message ${MessageIndex.Message == null ? 'sent' : 'received'} ">
+            ${MessageIndex.Message == null ? MessageIndex.admin_note : MessageIndex.Message}
+        </div>
+    `);
+   })
+    // Active user
+    document.querySelectorAll('.user').forEach(user => {
+        user.classList.remove('active');
+    });
 
-      
-      //  if (user) {
-     //       user.classList.add('active');
-     //   }
+    let user = document.querySelectorAll('.user');
+
+  
+    //  if (user) {
+   //       user.classList.add('active');
+   //   }
 
     // Mobile chat
     document.getElementById('messenger')
         ?.classList.add('chat-open');
-      
+  
+}
+
+function backToUsers() {
+  document
+      .getElementById('messenger')
+      .classList.remove('chat-open');
+
+   indexAllUser();
+
+ }
+
+function sendMessage() {
+  
+  const input = document.getElementById('messageInput');
+  const message = input.value.trim();
+  if (message === '') {
+      return;
+  }
+
+  let hiddenInput = document.getElementById('hiddenInput');
+
+  let formData = new FormData();
+      formData.append('message',message);
+      formData.append('userId',hiddenInput.value);
+
+      detailsDataAjax('/admin/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
+
+
+  const messageBox =  document.getElementById('messages');
+
+  const div = document.createElement('div');
+
+  div.className = 'message sent';
+  div.innerText = message;
+  
+  messageBox.appendChild(div);
+  input.value = '';
+  messageBox.scrollTop =
+      messageBox.scrollHeight;
 }
 
 
+// Enter চাপলে message send
+document
+  .getElementById('messageInput')
+  .addEventListener('keydown', function(e) {
 
+      if (e.key === 'Enter') {
+          sendMessage();
+      }
 
-
-    function backToUsers() {
-
-        document
-            .getElementById('messenger')
-            .classList.remove('chat-open');
-
-      indexAllUser();
-
-    }
-
-
-    function sendMessage() {
-
-        const input =
-            document.getElementById('messageInput');
-
-        const message = input.value.trim();
-
-        if (message === '') {
-            return;
-        }
-
-
-
-           let hiddenInput = document.getElementById('hiddenInput');
-
-      
-            let formData = new FormData();
-                formData.append('message',message);
-                formData.append('userId',hiddenInput.value);
-        
-                detailsDataAjax('/admin/message/create',formData,'POST','messageFetch','Nan','Nan','Nan','Nan');
-
-
-
-
-
-
-      
-        const messageBox =
-            document.getElementById('messages');
-
-        const div =
-            document.createElement('div');
-
-        div.className = 'message sent';
-
-        div.innerText = message;
-
-        messageBox.appendChild(div);
-
-        input.value = '';
-
-        messageBox.scrollTop =
-            messageBox.scrollHeight;
-    }
-
-
-    // Enter চাপলে message send
-    document
-        .getElementById('messageInput')
-        .addEventListener('keydown', function(e) {
-
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-
-        });
+  });
