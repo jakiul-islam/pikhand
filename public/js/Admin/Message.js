@@ -80,7 +80,7 @@
         $("#messages").append(`
             
             <div class="message received">
-                ${MessageIndex.Message}sent
+                ${MessageIndex.Message == null ? MessageIndex.admin_note : MessageIndex.Message}sent
             </div>
 
         `);
