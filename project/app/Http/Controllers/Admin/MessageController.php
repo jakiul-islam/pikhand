@@ -60,8 +60,7 @@ class MessageController  extends Controller
       $validate_message =Validator::make(
         $request->all(),
           [
-            'messageInput'          => 'required|string',
-            'sender'                => 'required|string',
+            'userId'          => 'required|string',
           ]
       );
       if($validate_message->fails()){
@@ -71,31 +70,8 @@ class MessageController  extends Controller
           'errors' =>$validate_message->errors()->all(),
         ],401);
       }else{
-
-
-
-
-
       
-      
-     $messagesAll = message::with('user')
-    ->where(function ($query) {
-        $query->whereIn('id', function ($subQuery) {
-            $subQuery->selectRaw('MAX(id)')
-                ->from('message')
-                ->whereNotNull('user_id')
-                ->groupBy('user_id');
-        })
-        ->orWhereIn('id', function ($subQuery) {
-            $subQuery->selectRaw('MAX(id)')
-                ->from('message')
-                ->whereNull('user_id')
-                ->whereNotNull('guest_uuid')
-                ->groupBy('guest_uuid');
-        });
-    })
-    ->latest('created_at')
-    ->get();
+           $messagesAll = message::where('user_id', $request->userId )->latest('created_at')->get();
 
 
 
