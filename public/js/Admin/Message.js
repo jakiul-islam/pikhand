@@ -88,12 +88,14 @@
             user.classList.remove('active');
         });
 
-        event.currentTarget.classList.add('active');
+        if (element) {
+        element.classList.add('active');
+    }
 
-        // Mobile
-        document
-            .getElementById('messenger')
-            .classList.add('chat-open');
+    // Mobile chat
+    document.getElementById('messenger')
+        ?.classList.add('chat-open');
+      
 }
 
 
