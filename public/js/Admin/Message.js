@@ -9,7 +9,7 @@ window.indexAllUserData = function ( response ){
 
 console.log( response );
 
-alert(response);
+
 
   
    let userList = document.getElementById('userList');
