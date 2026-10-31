@@ -1,7 +1,7 @@
 //all user index 
   window.indexAllUser = function (){
-
-alert('send request');
+    let userList = document.getElementById('userList');
+    alert('send request');
     
     input = document.getElementById('messagesUserSearch').value;
     let formData = new FormData();
