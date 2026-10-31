@@ -46,74 +46,39 @@ class MessageController  extends Controller
 
             $search = $request->Search;
 
-
-
-             $messagesAll = message::with('user')
-              ->where(function ($query) use ($request) {
-                  $query->whereIn('id', function ($subQuery) use ($request) {
+            
+            $messagesAll = message::with('user')
+              ->where(function ($query) {
+                  $query->whereIn('id', function ($subQuery) {
                       $subQuery->selectRaw('MAX(id)')
                           ->from('message')
                           ->whereNotNull('user_id')
-                          ->when($request->filled('Search'), function($q) use ($request){
-                              $q->where(function($qq) use ($request){
-                                  $qq->where('Message', 'like', "%{$request->Search}%")
-                                     ->orWhere('guest_id', 'like', "%{$request->Search}%")
-                                     ->orWhereHas('user', function($uq) use ($request){
-                                         $uq->where('name', 'like', "%{$request->Search}%");
-                                     });
-                              });
-                          })
                           ->groupBy('user_id');
                   })
-                  ->orWhereIn('id', function ($subQuery) use ($request) {
+                  ->orWhereIn('id', function ($subQuery) {
                       $subQuery->selectRaw('MAX(id)')
                           ->from('message')
                           ->whereNull('user_id')
                           ->whereNotNull('guest_uuid')
-                          ->when($request->filled('Search'), function($q) use ($request){
-                              $q->where(function($qq) use ($request){
-                                  $qq->where('Message', 'like', "%{$request->Search}%")
-                                     ->orWhere('guest_id', 'like', "%{$request->Search}%");
-                              });
-                          })
                           ->groupBy('guest_uuid');
                   });
               })
+              // Search এর অংশ এখানে
+              ->when($request->filled('Search'), function ($query) use ($request) {
+                  $search = $request->Search;
+                  $query->where(function($q) use ($search){
+                      $q->where('Message', 'like', "%{$search}%")
+                        ->orWhere('guest_id', 'like', "%{$search}%")
+                        ->orWhereHas('user', function($uq) use ($search){
+                            $uq->where('name', 'like', "%{$search}%");
+                        });
+                  });
+              })
               ->latest('created_at')
-              ->get();
-
-
-
-            
-            // $messagesAll = message::with('user')
-            //   ->where(function ($query) {
-            //       $query->whereIn('id', function ($subQuery) {
-            //           $subQuery->selectRaw('MAX(id)')
-            //               ->from('message')
-            //               ->whereNotNull('user_id')
-            //               ->groupBy('user_id');
-            //       })
-            //       ->orWhereIn('id', function ($subQuery) {
-            //           $subQuery->selectRaw('MAX(id)')
-            //               ->from('message')
-            //               ->whereNull('user_id')
-            //               ->whereNotNull('guest_uuid')
-            //               ->groupBy('guest_uuid');
-            //       });
-            //   })
-            //   // Search এর অংশ এখানে
-            //   ->when($request->filled('Search'), function ($query) use ($request) {
-            //       $search = $request->Search;
-            //       $query->where(function($q) use ($search){
-            //           $q->where('Message', 'like', "%{$search}%")
-            //             ->orWhere('guest_id', 'like', "%{$search}%")
-            //             ->orWhereHas('user', function($uq) use ($search){
-            //                 $uq->where('name', 'like', "%{$search}%");
-            //             });
-            //       });
-            //   })
-            //   ->latest('created_at')
-            //   ->get();  
+              ->get();  
+              ->unique(function($item){
+                return $item->user_id ?? $item->guest_uuid;
+              })->values();
 
           }
             
