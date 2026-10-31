@@ -1,6 +1,7 @@
 //all user index 
   window.indexAllUser = function (){
     let userList = document.getElementById('userList');
+    userList.innerHTML = '';
     alert('send request');
     
     input = document.getElementById('messagesUserSearch').value;
