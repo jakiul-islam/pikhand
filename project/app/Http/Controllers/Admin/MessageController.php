@@ -26,26 +26,28 @@ use App\Models\user_profile;
 class MessageController  extends Controller
 {
     //admin section 
-    public function alluserIndex(){
-      
-     $messagesAll = message::with('user')
-    ->where(function ($query) {
-        $query->whereIn('id', function ($subQuery) {
-            $subQuery->selectRaw('MAX(id)')
-                ->from('message')
-                ->whereNotNull('user_id')
-                ->groupBy('user_id');
-        })
-        ->orWhereIn('id', function ($subQuery) {
-            $subQuery->selectRaw('MAX(id)')
-                ->from('message')
-                ->whereNull('user_id')
-                ->whereNotNull('guest_uuid')
-                ->groupBy('guest_uuid');
-        });
-    })
-    ->latest('created_at')
-    ->get();
+    public function alluserIndex(request $request ){
+
+      if($request->Search){
+      }
+       $messagesAll = message::with('user')
+      ->where(function ($query) {
+          $query->whereIn('id', function ($subQuery) {
+              $subQuery->selectRaw('MAX(id)')
+                  ->from('message')
+                  ->whereNotNull('user_id')
+                  ->groupBy('user_id');
+          })
+          ->orWhereIn('id', function ($subQuery) {
+              $subQuery->selectRaw('MAX(id)')
+                  ->from('message')
+                  ->whereNull('user_id')
+                  ->whereNotNull('guest_uuid')
+                  ->groupBy('guest_uuid');
+          });
+      })
+      ->latest('created_at')
+      ->get();
 
 
    $user_profile  = user_profile::get();
