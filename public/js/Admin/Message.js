@@ -32,6 +32,20 @@ console.log( response );
         </div>
       </div>
     `);
+
+
+
+        if(messages.user_id !== null){
+          $.each(response.user_profile, function(index, user_profiles) {
+            if(messages.user_id == user_profiles.user_id){
+              
+            }
+          })
+        }
+
+     
+
+     
   })
 }
 //open user chat 
