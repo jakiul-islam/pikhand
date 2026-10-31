@@ -4,7 +4,7 @@
     input = document.getElementById('messagesUserSearch').value;
     let formData = new FormData();
     
-    formData.append('message',input);
+    formData.append('Search',input);
 
     
     detailsDataAjax('/admin/message/alluser/index',formData,'POST','indexAllUserData','Nan','Nan','Nan','Nan');
