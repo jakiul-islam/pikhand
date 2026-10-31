@@ -40,6 +40,7 @@ class MessageController  extends Controller
             return response()->json([
               'status' => false,
               'message'=>'Validation Error Is',
+               'errors' =>$validate_message->errors()->all(),
             ],401);
           }else{
 
