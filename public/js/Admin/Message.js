@@ -14,15 +14,17 @@ console.log( response );
   
    let userList = document.getElementById('userList');
    $.each(response.messageAllUser, function(index, messages) {
-
-
      let id = messages.user_id !== null ? messages.user_id : messages.guest_uuid;
 
-      
-     
      $('#userList').append(`
       <div class="user"  onclick="openChat( '${id}' )">
         <div class="avatar">
+
+
+
+           ${messages.user_id   !== null  ?  messages.user.name : '' }
+
+
         </div>
         <div class="user-info">
             <div class="user-id">
