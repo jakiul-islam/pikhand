@@ -28,7 +28,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(request $request ){
 
-      if($request->Search){
+      if($request->filled('Search')){
       }
        $messagesAll = message::with('user')
       ->where(function ($query) {
