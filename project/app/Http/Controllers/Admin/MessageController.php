@@ -75,7 +75,7 @@ class MessageController  extends Controller
                   });
               })
               ->latest('created_at')
-              ->get();  
+              ->get()  
               ->unique(function($item){
                 return $item->user_id ?? $item->guest_uuid;
               })->values();
