@@ -58,6 +58,7 @@ class MessageController  extends Controller
       
       return response()->json([
         'messageAllUser' => $messagesAll,
+        'user_profile' => $user_profile,
       ]);
       
     }
