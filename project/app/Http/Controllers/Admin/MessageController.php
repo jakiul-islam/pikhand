@@ -19,7 +19,7 @@ use App\Models\Admin\message;
 use App\Models\admin\product;
 use App\Models\User;
 use App\Models\order;
-use App\models\user_profile;
+use App\Models\user_profile;
 
 
 
