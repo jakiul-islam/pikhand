@@ -65,23 +65,23 @@ class MessageController  extends Controller
             
       }else{
          $messagesAll = message::with('user')
-                ->where(function ($query) {
-                    $query->whereIn('id', function ($subQuery) {
-                        $subQuery->selectRaw('MAX(id)')
-                            ->from('message')
-                            ->whereNotNull('user_id')
-                            ->groupBy('user_id');
-                    })
-                    ->orWhereIn('id', function ($subQuery) {
-                        $subQuery->selectRaw('MAX(id)')
-                            ->from('message')
-                            ->whereNull('user_id')
-                            ->whereNotNull('guest_uuid')
-                            ->groupBy('guest_uuid');
-                    });
-                })
-                ->latest('created_at')
-                ->get();
+          ->where(function ($query) {
+              $query->whereIn('id', function ($subQuery) {
+                  $subQuery->selectRaw('MAX(id)')
+                      ->from('message')
+                      ->whereNotNull('user_id')
+                      ->groupBy('user_id');
+              })
+              ->orWhereIn('id', function ($subQuery) {
+                  $subQuery->selectRaw('MAX(id)')
+                      ->from('message')
+                      ->whereNull('user_id')
+                      ->whereNotNull('guest_uuid')
+                      ->groupBy('guest_uuid');
+              });
+          })
+          ->latest('created_at')
+          ->get();
       }
     
 
