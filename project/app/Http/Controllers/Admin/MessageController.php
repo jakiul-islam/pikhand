@@ -29,6 +29,21 @@ class MessageController  extends Controller
     public function alluserIndex(request $request ){
 
       if($request->filled('Search')){
+
+        $validate_message =Validator::make(
+        $request->all(),
+          [
+            'message'          => 'required|string',
+            'userId'          => 'required|string',
+          ]
+          );
+          if($validate_message->fails()){
+            return response()->json([
+              'status' => false,
+              'message'=>'Validation Error Is',
+            ],401);
+          }else{
+            
       }
        $messagesAll = message::with('user')
       ->where(function ($query) {
