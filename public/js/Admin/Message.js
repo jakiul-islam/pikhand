@@ -2,7 +2,7 @@
   window.indexAllUser = function (){
 
    
-
+    input = document.getElementById('messagesUserSearch').value;
 
 
     
