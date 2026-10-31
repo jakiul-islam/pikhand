@@ -36,7 +36,7 @@ window.indexAllUserData = function ( response ){
 
                let avatar = document.getElementById(`profile_id_${messages.id}`);
 
-                avatar.innerHTML = `<img src='/storage/${user_profiles.profile_picture}' height='100'>`;
+                avatar.innerHTML = `<img src='/storage/${user_profiles.profile_picture}' class='avatar' height='100'>`;
               
 
               
