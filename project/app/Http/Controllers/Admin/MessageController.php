@@ -42,6 +42,12 @@ class MessageController  extends Controller
               'message'=>'Validation Error Is',
             ],401);
           }else{
+
+
+
+              $search = $request->Search;
+
+            
             $messagesAll = message::with('user')
               ->where(function ($query) {
                   $query->whereIn('id', function ($subQuery) {
