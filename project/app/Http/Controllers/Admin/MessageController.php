@@ -28,7 +28,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(request $request ){
 
-      if($request->filled('Search')){
+      if($request->has('Search')){
 
         $validate_message =Validator::make(
         $request->all(),
@@ -63,6 +63,25 @@ class MessageController  extends Controller
 
           }
             
+      }else{
+         $messagesAll = message::with('user')
+                ->where(function ($query) {
+                    $query->whereIn('id', function ($subQuery) {
+                        $subQuery->selectRaw('MAX(id)')
+                            ->from('message')
+                            ->whereNotNull('user_id')
+                            ->groupBy('user_id');
+                    })
+                    ->orWhereIn('id', function ($subQuery) {
+                        $subQuery->selectRaw('MAX(id)')
+                            ->from('message')
+                            ->whereNull('user_id')
+                            ->whereNotNull('guest_uuid')
+                            ->groupBy('guest_uuid');
+                    });
+                })
+                ->latest('created_at')
+                ->get();
       }
     
 
