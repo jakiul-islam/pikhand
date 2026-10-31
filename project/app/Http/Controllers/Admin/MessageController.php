@@ -19,6 +19,8 @@ use App\Models\Admin\message;
 use App\Models\admin\product;
 use App\Models\User;
 use App\Models\order;
+use App\models\user_profile;
+
 
 
 class MessageController  extends Controller
@@ -46,6 +48,12 @@ class MessageController  extends Controller
     ->get();
 
 
+   $user_profile  = user_profile::get();
+
+
+      
+
+      
 
       
       return response()->json([
