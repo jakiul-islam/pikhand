@@ -18,12 +18,7 @@ console.log( response );
 
      $('#userList').append(`
       <div class="user"  onclick="openChat( '${id}' )">
-        <div class="avatar">
-
-
-
-           ${messages.user_id   !== null  ?  messages.user.name : '' }
-
+        <div class="avatar" id=''>
 
         </div>
         <div class="user-info">
