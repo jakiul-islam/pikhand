@@ -28,7 +28,7 @@ class MessageController  extends Controller
     //admin section 
     public function alluserIndex(request $request ){
 
-      if($request->has('Search')){
+      if($request->filled('Search')){
 
         $validate_message =Validator::make(
         $request->all(),
