@@ -1,13 +1,14 @@
 //all user index 
   window.indexAllUser = function (){
 
-   
     input = document.getElementById('messagesUserSearch').value;
-
-      formData.append('message',input);
+    let formData = new FormData();
+    
+    formData.append('message',input);
 
     
-    fetchDataAjax('/admin/message/alluser/index','post','indexAllUserData','Nan');
+    detailsDataAjax('/admin/message/alluser/index',formData,'POST','indexAllUserData','Nan','Nan','Nan','Nan');
+
   }
 indexAllUser();
 
