@@ -29,7 +29,7 @@
         </div>
 
         <div class="search">
-            <input type="text" id='messagesUserSearch' placeholder="Search messages...">
+            <input type="text" id='messagesUserSearch' oninput='indexAllUser()' placeholder="Search messages...">
         </div>
 
         <div class="user-list" id='userList'>
