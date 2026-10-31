@@ -39,7 +39,7 @@ console.log( response );
           $.each(response.user_profile, function(index, user_profiles) {
             if(messages.user_id == user_profiles.user_id){
 
-               let avatar = document.getElementById('profile_id_'+messages.id);
+               let avatar = document.getElementById(`profile_id_${messages.id}`);
 
                 avatar.innerHTML = `<img src='/storage/${user_profiles.profile_picture}' height='100'>`;
               
