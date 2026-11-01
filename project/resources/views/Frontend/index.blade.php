@@ -14,14 +14,14 @@
 
      <!--seo  -->
 
-    <title>{{ index_seo->site_title }} | pikhand</title>
-    <meta name="description" content="{{ index_seo->default_meta_description }}">
+    <title>{{ $index_seo->site_title }} | pikhand</title>
+    <meta name="description" content="{{ $index_seo->default_meta_description }}">
 
     <!--optional-->
-    <meta property="og:title" content="{{ $posts->default_meta_title }}">
-    <meta property="og:description" content="{{ index_seo->default_meta_description }}">
-    <meta property="og:image" content="{{ asset('uploads/products/' . $posts->image) }}">
-    <meta property="og:type" content="product">
+    <meta property="og:title" content="{{ $index_seo->default_meta_title }}">
+    <meta property="og:description" content="{{ $index_seo->default_meta_description }}">
+    <meta property="og:image" content="{{ asset('uploads/products/' . $index_seo->default_og_image) }}">
+    <meta property="og:type" content="Organization">
     <meta property="og:url" content="{{ url()->current() }}">
      @php
 
@@ -33,31 +33,6 @@
      @endphp
 
 
-    <script type="application/ld+json">
-    {!! json_encode([
-      '@context'=> 'https://schema.org/',
-      '@type'=> 'Product',
-      "name"=> "{{ $posts->name }}",
-      "image"=> [
-        "{{ asset('uploads/products/' . $posts->image) }}"
-      ],
-      "description"=> "{{ strip_tags($posts->short_description) }}",
-      "sku"=> "{{ $posts->stock }}",
-      "offers"=> [
-        '@type'=> 'Offer',
-        "priceCurrency"=> "USD",
-        "price"=> "{{ $cartPrice }}",
-        "availability"=> "{{ $posts->stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' }}"
-      ],
-      "aggregateRating"=> [
-        '@type'=> 'AggregateRating',
-        "ratingValue"=> "{{ $count > 0 ? number_format($totalRating / $count, 1) : 0 }}",
-        "reviewCount"=> "({{  $count }})"
-      ]
-    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) !!}
-    </script>
-
-    <!--seo  -->
 
 
     
