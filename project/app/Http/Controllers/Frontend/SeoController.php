@@ -19,6 +19,7 @@ class SeoController extends Controller
         $request->all(),
           [
             'site_name'  => 'required|string',
+            'site_title'  => 'required|string',
             'site_tagline' => 'required|string',
             'default_meta_title' => 'required|string',
             'default_meta_description' => 'required|string',
@@ -68,6 +69,7 @@ class SeoController extends Controller
             $seo_update = seo_settings::first();
               $seo_update->update([
               'site_name'=>$request->site_name,
+              'site_title'=>$request->site_title,
               'site_tagline'=>$request->site_tagline,
               'default_meta_title'=>$request->default_meta_title,
               'default_meta_description'=>$request->default_meta_description,
