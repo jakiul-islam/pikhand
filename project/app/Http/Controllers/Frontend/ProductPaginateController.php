@@ -18,6 +18,10 @@ use App\Models\product_reviews;
 use App\Models\users;
 use App\Models\user_profile;
 
+use App\Models\Admin\seo_settings;
+
+
+
 
 class ProductPaginateController extends Controller
 {
