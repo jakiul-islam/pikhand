@@ -117,7 +117,10 @@ class ProductPaginateController extends Controller
     ->limit(10)
     ->get();
 
-
+   $products = product::where('status', '1')
+    ->inRandomOrder()
+    ->limit(10)
+    ->get();
 
     
         
