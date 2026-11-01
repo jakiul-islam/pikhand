@@ -25,9 +25,9 @@
     <meta property="og:url" content="{{ url()->current() }}">
      @php
 
-
-       index_seo->schema_organization;
-
+        @if(!empty($index_seo->schema_organization))
+            {!! $index_seo->schema_organization !!}
+        @endif
 
     
      @endphp
