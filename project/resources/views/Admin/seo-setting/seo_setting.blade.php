@@ -409,9 +409,21 @@
                   <td>${response.seo_settings.google_analytics_id}</td>
                   <td>${response.seo_settings.bing_webmaster}</td>
                   <td>${response.seo_settings.bing_webmaster}</td>
-                  <td>${response.seo_settings.schema_organization}</td>
+                  <td id='schema_organization'></td>
                 </tr>`;
+
               
+
+                let schema_organization = document.createElement('schema_organization');
+                schema_organization.textContent = response.seo_settings.schema_organization;
+
+
+      
+
+
+
+
+
             },
             
             error:function(xhr,status,error){
