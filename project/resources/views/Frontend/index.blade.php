@@ -8,6 +8,75 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="description" content=''>
     <title></title>
+
+
+
+
+     <!--seo  -->
+
+    <title>{{ $posts->mata_title }} | pikhand</title>
+    <meta name="description" content="{{ Str::limit(strip_tags($posts->mata_description), 150) }}">
+
+    <!--optional-->
+    <meta property="og:title" content="{{ $posts->name }} | picklet">
+    <meta property="og:description" content="{{ Str::limit(strip_tags($posts->short_description), 150) }}">
+    <meta property="og:image" content="{{ asset('uploads/products/' . $posts->image) }}">
+    <meta property="og:type" content="product">
+    <meta property="og:url" content="{{ url()->current() }}">
+     @php
+      $totalRating = 0;
+      $count = 0;
+      @endphp
+      @foreach ($rating as $ratingnumber)
+        @if( $posts->id === $ratingnumber->product_id)
+          @php
+          $totalRating += $ratingnumber->rating;
+          $count++;
+          @endphp
+        @endif
+      @endforeach
+      @php
+        $netprice  = $posts->price * ($posts->discount / 100 );
+        $cartPrice = $posts->price - $netprice;
+      @endphp
+
+
+    <script type="application/ld+json">
+    {!! json_encode([
+      '@context'=> 'https://schema.org/',
+      '@type'=> 'Product',
+      "name"=> "{{ $posts->name }}",
+      "image"=> [
+        "{{ asset('uploads/products/' . $posts->image) }}"
+      ],
+      "description"=> "{{ strip_tags($posts->short_description) }}",
+      "sku"=> "{{ $posts->stock }}",
+      "offers"=> [
+        '@type'=> 'Offer',
+        "priceCurrency"=> "USD",
+        "price"=> "{{ $cartPrice }}",
+        "availability"=> "{{ $posts->stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock' }}"
+      ],
+      "aggregateRating"=> [
+        '@type'=> 'AggregateRating',
+        "ratingValue"=> "{{ $count > 0 ? number_format($totalRating / $count, 1) : 0 }}",
+        "reviewCount"=> "({{  $count }})"
+      ]
+    ], JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES) !!}
+    </script>
+
+    <!--seo  -->
+
+
+    
+
+
+
+    
+
+
+
+
     <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
