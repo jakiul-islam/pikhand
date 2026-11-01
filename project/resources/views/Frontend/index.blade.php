@@ -18,8 +18,8 @@
     <meta name="description" content="{{ index_seo->default_meta_description }}">
 
     <!--optional-->
-    <meta property="og:title" content="{{ $posts->site_name }}">
-    <meta property="og:description" content="{{ Str::limit(strip_tags($posts->short_description), 150) }}">
+    <meta property="og:title" content="{{ $posts->default_meta_title }}">
+    <meta property="og:description" content="{{ index_seo->default_meta_description }}">
     <meta property="og:image" content="{{ asset('uploads/products/' . $posts->image) }}">
     <meta property="og:type" content="product">
     <meta property="og:url" content="{{ url()->current() }}">
