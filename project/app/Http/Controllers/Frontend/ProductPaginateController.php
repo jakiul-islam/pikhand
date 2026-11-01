@@ -116,6 +116,9 @@ class ProductPaginateController extends Controller
     ->inRandomOrder()
     ->limit(10)
     ->get();
+
+
+
     
         
     $Categoryall = categories::get();
