@@ -24,21 +24,13 @@
     <meta property="og:type" content="product">
     <meta property="og:url" content="{{ url()->current() }}">
      @php
-      $totalRating = 0;
-      $count = 0;
-      @endphp
-      @foreach ($rating as $ratingnumber)
-        @if( $posts->id === $ratingnumber->product_id)
-          @php
-          $totalRating += $ratingnumber->rating;
-          $count++;
-          @endphp
-        @endif
-      @endforeach
-      @php
-        $netprice  = $posts->price * ($posts->discount / 100 );
-        $cartPrice = $posts->price - $netprice;
-      @endphp
+
+
+
+
+
+    
+     @endphp
 
 
     <script type="application/ld+json">
