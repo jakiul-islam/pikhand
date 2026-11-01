@@ -14,7 +14,7 @@
 
      <!--seo  -->
 
-    <title> | pikhand</title>
+    <title>{{ index_seo->site_title }} | pikhand</title>
     <meta name="description" content="{{ Str::limit(strip_tags($posts->mata_description), 150) }}">
 
     <!--optional-->
