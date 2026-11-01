@@ -10,6 +10,7 @@ class seo_settings extends Model
   
     protected $fillable = [
         'site_name',
+        'site_title',
         'site_tagline',
         'default_meta_title',
         'default_meta_description',
