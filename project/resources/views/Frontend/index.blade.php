@@ -23,11 +23,10 @@
     <meta property="og:image" content="{{ asset('uploads/products/' . $index_seo->default_og_image) }}">
     <meta property="og:type" content="Organization">
     <meta property="og:url" content="{{ url()->current() }}">
-     @php
-     
-        {!! $index_seo->schema_organization !!}
-     
-     @endphp
+     @if(!empty($index_seo->schema_organization))
+       {!! $index_seo->schema_organization !!}
+    @endif
+
 
 
 
