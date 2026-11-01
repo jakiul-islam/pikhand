@@ -10,7 +10,7 @@
 
     <!--seo  -->
 
-    <title>{{ $posts->mata_title }} | picklet</title>
+    <title>{{ $posts->mata_title }} | pikhand</title>
     <meta name="description" content="{{ Str::limit(strip_tags($posts->mata_description), 150) }}">
 
     <!--optional-->
