@@ -73,6 +73,7 @@
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Site Name</th>
+              <th scope="col">Site Title</th>
               <th scope="col">Tagline</th>
               <th scope="col">Default Meta Title</th>
               <th scope="col">Default Meta Description</th>
@@ -380,6 +381,7 @@
             },
             success:function(response){
               $('#site_name').val(response.seo_settings.site_name);
+              $('#site_title').val(response.seo_settings.site_title);
               $('#site_tagline').val(response.seo_settings.site_tagline);
               $('#default_meta_title').val(response.seo_settings.default_meta_title);
               $('#default_meta_description').val(response.seo_settings.default_meta_description);
@@ -398,6 +400,7 @@
                 <tr>
                   <td>${response.seo_settings.id}</td>
                   <td>${response.seo_settings.site_name}</td>
+                  <td>${response.seo_settings.site_title}</td>
                   <td>${response.seo_settings.site_tagline}</td>
                   <td>${response.seo_settings.default_meta_title}</td>
                   <td>${response.seo_settings.default_meta_description}</td>
