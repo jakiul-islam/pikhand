@@ -32,10 +32,18 @@
 
 
 
-    
+    <!-- google seo services -->
 
 
-
+        @if(!empty($index_seo->google_analytics_id))
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ $index_seo->google_analytics_id }}"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '{{ $index_seo->google_analytics_id }}');
+            </script>
+        @endif
     
 
 
