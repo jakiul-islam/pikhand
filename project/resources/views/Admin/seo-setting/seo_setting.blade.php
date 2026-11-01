@@ -414,7 +414,7 @@
 
               
 
-                let schema_organization = document.createElement('schema_organization');
+                let schema_organization = document.getElementById('schema_organization');
                 schema_organization.textContent = response.seo_settings.schema_organization;
 
 
