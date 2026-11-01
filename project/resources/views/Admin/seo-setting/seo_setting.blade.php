@@ -141,6 +141,10 @@
                         <td><input type="text" class="form-control" id="site_name" ><td>
                       </tr>
                       <tr>
+                        <td><label for="site_title">Site Title</label></td>
+                        <td><input type="text" class="form-control" id="site_title" ><td>
+                      </tr>
+                      <tr>
                         <td><label for="site_tagline">Site Tagline</label></td>
                         <td><input type="text" class="form-control" id="site_tagline"></td>
                       </tr>
@@ -260,6 +264,7 @@
     <script>
       function updateseo(){
         let site_name = document.getElementById('site_name').value;
+        let site_title = document.getElementById('site_title').value;
         let site_tagline = document.getElementById('site_tagline').value;
         let default_meta_title = document.getElementById('default_meta_title').value;
         let default_meta_description = document.getElementById('default_meta_description').value;
@@ -294,6 +299,7 @@
             
             
             formData.append('site_name', site_name);
+            formData.append('site_title', site_title);
             formData.append('site_tagline', site_tagline);
             formData.append('default_meta_title', default_meta_title);
             formData.append('default_meta_description', default_meta_description);
