@@ -143,6 +143,7 @@ class ProductPaginateController extends Controller
       'subcategoryall'  => $subcategoryall,
       'rating'          => $rating,
       'weblogo'         => $weblogo,
+      'index_seo'       => $index_seo,
     ]);
   }
   
