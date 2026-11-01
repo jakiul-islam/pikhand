@@ -15,10 +15,10 @@
      <!--seo  -->
 
     <title>{{ index_seo->site_title }} | pikhand</title>
-    <meta name="description" content="{{ Str::limit(strip_tags($posts->mata_description), 150) }}">
+    <meta name="description" content="{{ index_seo->default_meta_description }}">
 
     <!--optional-->
-    <meta property="og:title" content="{{ $posts->name }} | picklet">
+    <meta property="og:title" content="{{ $posts->site_name }}">
     <meta property="og:description" content="{{ Str::limit(strip_tags($posts->short_description), 150) }}">
     <meta property="og:image" content="{{ asset('uploads/products/' . $posts->image) }}">
     <meta property="og:type" content="product">
