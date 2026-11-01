@@ -26,7 +26,7 @@
      @php
 
 
-
+       index_seo->schema_organization;
 
 
     
