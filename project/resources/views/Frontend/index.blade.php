@@ -24,9 +24,9 @@
     <meta property="og:type" content="Organization">
     <meta property="og:url" content="{{ url()->current() }}">
      @php
-      @if(!empty($index_seo->schema_organization))
+     
         {!! $index_seo->schema_organization !!}
-      @endif
+     
      @endphp
 
 
