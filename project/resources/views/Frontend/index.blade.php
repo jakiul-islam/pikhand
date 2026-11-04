@@ -10,17 +10,17 @@
 
      <!--seo  -->
 
-    <title>{{ $index_seo->site_title }} | pikhand</title>
-    <meta name="description" content="{{ $index_seo->default_meta_description }}">
+    <title>{{ $webseo->site_title }} | pikhand</title>
+    <meta name="description" content="{{ $webseo->default_meta_description }}">
 
     <!--optional-->
-    <meta property="og:title" content="{{ $index_seo->default_meta_title }}">
-    <meta property="og:description" content="{{ $index_seo->default_meta_description }}">
-    <meta property="og:image" content="{{ asset('uploads/products/' . $index_seo->default_og_image) }}">
+    <meta property="og:title" content="{{ $webseo->default_meta_title }}">
+    <meta property="og:description" content="{{ $webseo->default_meta_description }}">
+    <meta property="og:image" content="{{ asset('uploads/products/' . $webseo->default_og_image) }}">
     <meta property="og:type" content="Organization">
     <meta property="og:url" content="{{ url()->current() }}">
-     @if(!empty($index_seo->schema_organization))
-       {!! $index_seo->schema_organization !!}
+     @if(!empty($webseo->schema_organization))
+       {!! $webseo->schema_organization !!}
     @endif
 
 
@@ -30,13 +30,13 @@
     <!-- google seo services -->
 
 
-        @if(!empty($index_seo->google_analytics_id))
-          <script async src="https://www.googletagmanager.com/gtag/js?id={{ $index_seo->google_analytics_id }}"></script>
+        @if(!empty($webseo->google_analytics_id))
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ $webseo->google_analytics_id }}"></script>
             <script>
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '{{ $index_seo->google_analytics_id }}');
+              gtag('config', '{{ $webseo->google_analytics_id }}');
             </script>
         @endif
     
