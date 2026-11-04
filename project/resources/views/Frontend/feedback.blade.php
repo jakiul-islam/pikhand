@@ -11,6 +11,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"/>
   
+
+
+    @if(!empty($webseo->google_analytics_id))
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ $webseo->google_analytics_id }}"></script>
+        <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '{{ $webseo->google_analytics_id }}');
+       </script>
+    @endif
+
+
+
 </head>
 <body>
  
