@@ -44,6 +44,21 @@ foreach ($posts as $index => $product) {
 @endphp
 
 
+        @if(!empty($webseo->google_analytics_id))
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ $webseo->google_analytics_id }}"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '{{ $webseo->google_analytics_id }}');
+            </script>
+        @endif
+
+
+    
+
+
+
     <!--"https://schema.org/"-->
     <script type="application/ld+json">
      {!! json_encode([
