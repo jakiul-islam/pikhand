@@ -56,7 +56,7 @@
   </head>
   <body>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    @include("Frontend.include.header")
+    
     <div id="indexbody" class="row prodect">
       @include("Frontend.include.Swiper.carosul_1.index")
       <h1 class="text-center" ><a style="text-decoration: none;" href="ALL-PRODUCTS">ALL PRODUCTS</a></h1>
