@@ -12,6 +12,20 @@
     <title>
       All Products{{ $page > 1 ? ' - Page ' . $page : '' }} | Picklet - Explore Our Full Range
     </title>
+
+
+    @if(!empty($webseo->google_analytics_id))
+          <script async src="https://www.googletagmanager.com/gtag/js?id={{ $webseo->google_analytics_id }}"></script>
+            <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '{{ $webseo->google_analytics_id }}');
+            </script>
+        @endif
+
+
+
     <meta name="description" content="Browse all products{{ $page > 1 ? ' - Page ' . $page : '' }} available at Picklet. From electronics to fashion, find top-quality items at great prices with fast delivery. Discover your perfect pick today!">
     
     <!-- bootstrap link -->
