@@ -36,6 +36,13 @@ class AppServiceProvider extends ServiceProvider
       View::share('webInfo', $webInfo);
     //web site icone fetch for golobal
 
+     $index_seo = seo_settings::first();
+
+      
+    // seo index for golobal 
+
+      
+
          Paginator::useBootstrap();
     }
 }
