@@ -38,7 +38,7 @@ class AppServiceProvider extends ServiceProvider
 
      $index_seo = seo_settings::first();
 
-      
+      View::share('webInfo', $index_seo);
     // seo index for golobal 
 
       
