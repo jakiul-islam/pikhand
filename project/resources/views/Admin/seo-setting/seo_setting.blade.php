@@ -182,8 +182,8 @@
                         <td><input type="text" class="form-control" id="bing_webmaster" ></td>
                       </tr>
                       <tr>
-                        <td><label for="schema_organization">Schema Organization JSON-LD</label></td>
-                        <td><textarea class="form-control" id="schema_organization" rows="5"></textarea></td>
+                        <td><label for="schema_organization_input">Schema Organization JSON-LD</label></td>
+                        <td><textarea class="form-control" id="schema_organization_input" rows="5"></textarea></td>
                       </tr>
                     </table>
                     
@@ -275,7 +275,7 @@
         let google_analytics_id = document.getElementById('google_analytics_id').value;
         let google_search_console = document.getElementById('google_search_console').value;
         let bing_webmaster = document.getElementById('bing_webmaster').value;
-        let schema_organization = document.getElementById('schema_organization').value;
+        let schema_organization = document.getElementById('schema_organization_input').value;
 
 
       
