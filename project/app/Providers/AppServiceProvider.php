@@ -7,6 +7,8 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\View;
 use App\Models\Admin\web_logo;
+use App\Models\Admin\seo_settings;
+
 
 class AppServiceProvider extends ServiceProvider
 {
