@@ -121,7 +121,7 @@ class ProductPaginateController extends Controller
     ->limit(10)
     ->get();
 
-    $index_seo = seo_settings::first();
+    //$index_seo = seo_settings::first();
     
 
    $products = product::where('status', '1')
@@ -143,7 +143,7 @@ class ProductPaginateController extends Controller
       'subcategoryall'  => $subcategoryall,
       'rating'          => $rating,
       'weblogo'         => $weblogo,
-      'index_seo'       => $index_seo,
+     // 'index_seo'       => $index_seo,
     ]);
   }
   
