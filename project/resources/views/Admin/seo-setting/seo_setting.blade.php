@@ -276,7 +276,16 @@
         let google_search_console = document.getElementById('google_search_console').value;
         let bing_webmaster = document.getElementById('bing_webmaster').value;
         let schema_organization = document.getElementById('schema_organization').value;
+
+
+      
+        alert(schema_organization);
+
+
+
+
         
+
         let default_og_image = document.getElementById('default_og_image');
         
         
