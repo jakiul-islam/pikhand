@@ -14,7 +14,7 @@
     </title>
 
 
-    @if(!empty($webseo->google_analytics_id))
+        @if(!empty($webseo->google_analytics_id))
           <script async src="https://www.googletagmanager.com/gtag/js?id={{ $webseo->google_analytics_id }}"></script>
             <script>
               window.dataLayer = window.dataLayer || [];
