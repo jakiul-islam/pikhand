@@ -65,12 +65,25 @@ window.indexMessage = function(){
 }
 
 
+  setTimeout(function(){
+    fetchDataAjax('/user/message/index','post','messageData','Nan');
+    
+  }, 500);
+
+
+
+
 window.messageData = function( response ){
 
-
-  
   $.each(response.message, function(index, messages) {
-    let userMsg = `<div style="align-self: flex-end; background: #0084ff; color: white; padding: 8px 12px; border-radius: 18px 18px 0 18px; max-width: 70%;">${messages.Message}</div>`;
-     $("#chatBox").append(userMsg);
+
+     if(messages.Message == null){
+          let botMsg = `<div style="align-self: flex-start; background: #f1f0f0; color: black; padding: 8px 12px; border-radius: 18px 18px 18px 0; max-width: 70%;">${messages.admin_note}</div>`;
+            $("#chatBox").append(botMsg);
+            $("#chatBox").scrollTop($("#chatBox")[0].scrollHeight);
+     }else{
+         let userMsg = `<div style="align-self: flex-end; background: #0084ff; color: white; padding: 8px 12px; border-radius: 18px 18px 0 18px; max-width: 70%;">${messages.Message}</div>`;
+         $("#chatBox").append(userMsg);
+     }
   })
 }
