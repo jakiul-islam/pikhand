@@ -79,3 +79,58 @@
      }
   })
 }
+
+
+
+      const toastTrigger = document.getElementById('liveToastBtn')
+      const toastLiveExample = document.getElementById('liveToast')
+      if (toastTrigger) {
+        const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+        toastTrigger.addEventListener('click', () => {
+          toastBootstrap.show()
+        })
+      }
+
+      let mediaRecorder;
+      let audioChunks = [];
+
+      const inputField = document.getElementById('inputRecord');
+      const audioPlayback = document.getElementById('audioPlayback');
+      if(inputField){
+        inputField.addEventListener('click', async () => {
+          if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            alert('Your browser does not support audio recording');
+            return;
+          }
+
+          try {
+            // Request microphone access
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+            // Create a new MediaRecorder instance
+            mediaRecorder = new MediaRecorder(stream);
+            // Collect audio data when available
+            mediaRecorder.addEventListener('dataavailable', event => {
+              audioChunks.push(event.data);
+            });
+            // When recording stops, create and play the audio
+            mediaRecorder.addEventListener('stop', () => {
+              const audioBlob = new Blob(audioChunks, { type: 'audio/wav' });
+              const audioUrl = URL.createObjectURL(audioBlob);
+              audioPlayback.src = audioUrl;
+            });
+
+            // Start recording
+            mediaRecorder.start();
+            inputField.placeholder = "Recording...";
+
+            // Stop recording after 5 seconds (for demo purposes)
+            setTimeout(() => {
+              mediaRecorder.stop();
+              inputField.placeholder = "Click to start recording";
+            }, 5000);
+          } catch (error) {
+            console.error('Error accessing microphone:', error);
+          }
+        });
+      }
+  
