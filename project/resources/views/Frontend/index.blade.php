@@ -110,6 +110,7 @@
       </div>
     </div>
     <div id='showallalert' class=" text-center"></div>
-    @include("Frontend.include.foter2")
-    @include("Frontend.include.foter")
+    
+     @include("Frontend.include.Message")
+     @include("Frontend.include.foter2")
   </body>
