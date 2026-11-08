@@ -2,6 +2,7 @@
 
  <link rel="stylesheet" href="{{ asset('public/css/Header.css')}}">
   <link rel="stylesheet" href="{{ asset('public/css/Header-category.css')}}">
+  <link rel="stylesheet" href="{{ asset('public/css/Message.css')}}">
  
  
 <!--  @import './Header.c hzzbbsdbdss';-->
