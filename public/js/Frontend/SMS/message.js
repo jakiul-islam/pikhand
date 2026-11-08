@@ -67,7 +67,7 @@
 
          window.messageData = function( response ){
 
-  $.each(response.message, function(index, messages) {
+          $.each(response.message, function(index, messages) {
 
      if(messages.Message == null){
           let botMsg = `<div style="align-self: flex-start; background: #f1f0f0; color: black; padding: 8px 12px; border-radius: 18px 18px 18px 0; max-width: 70%;">${messages.admin_note}</div>`;
@@ -78,7 +78,7 @@
          $("#chatBox").append(userMsg);
      }
   })
-}
+        }
 
 
 
