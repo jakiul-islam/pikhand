@@ -312,6 +312,36 @@
     <p class="text-center" style="line-height:0.3;">by <b>Jakiul islam</b></p>
      <p class="text-center"><a class="link" href="">privice</a>   <a
      class="link" href="">Jakiul islam</a></p>
+ 
+   <!-- bootstrap js link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--  <script src="https://kit.fontawesome.com/aa8d5355f9.js" crossorigin="anonymous"></script> -->
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="{{ asset('public/js/Frontend/preloader.js') }}"></script>
  <!--  <br><br>-->
  <script src="{{ asset('public/js/Frontend/subscribers.js') }}" ></script>
  <script src="{{ asset('public/js/Frontend/newsletter.js') }}" ></script>
+    
+
+  <script src="{{ asset('public/js/Frontend/common/common.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/show-user-order.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/carts/header-cart.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/carts/geastCartDataInsert.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/search.js') }}"></script>
+    
+  <script src="{{ asset('public/js/Frontend/user/header-user-setting.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/user-sign_up.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/user-login.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/user-dashboard.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/user-forgot-password.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/voucher.js') }}"></script>
+  
+  <script src="{{ asset('public/js/Frontend/user/user-profile-setting.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/user-info.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/user/set-user-email.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/alert.js') }}"></script>
+  <script src="{{ asset('public/js/Frontend/SMS/message.js') }}"></script>
+
