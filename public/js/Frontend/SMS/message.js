@@ -12,8 +12,7 @@
                 messageSubmitButton.style.color = '#FFFFFF';
             }
         });
-        
-        
+
         $("#messageSubmitButton").on("click", function(){
           
           let messageSubmitButton = document.getElementById('messageSubmitButton');
@@ -54,26 +53,19 @@
             messageSubmitButton.style.background = '#DAD1D1';
             messageSubmitButton.style.color = '#FFFFFF';
         });
-
-
-
-window.indexMessage = function(){
+        window.indexMessage = function(){
   
   let chatBox = document.getElementById('chatBox');
   chatBox.innerHTML = "";
   fetchDataAjax('/user/message/index','post','messageData','Nan');
 }
 
-
-  setTimeout(function(){
+        setTimeout(function(){
     fetchDataAjax('/user/message/index','post','messageData','Nan');
     
   }, 500);
 
-
-
-
-window.messageData = function( response ){
+         window.messageData = function( response ){
 
   $.each(response.message, function(index, messages) {
 
