@@ -80,6 +80,7 @@
 
 
            window.scrollToBottom =  function() {
+             alert('jalijaf');
                const chat = document.querySelector('#chatBox');
                 chat.scrollTop = chat.scrollHeight;
             }
