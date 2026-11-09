@@ -20,19 +20,22 @@
             border-left: 1px solid black;
             height: 100%;
         }
-        .toast-container{
-          height:80%;
-        }
-
+      
     }
     @media (min-width: 500px) {
         .ros{
             display:none;
         }
-        .toast-container{
-          height:100%;
-        }
+        
     }
+
+
+     .toast-container{
+      height:80%;
+      }
+
+
+
     .chat{
         height: 60px;
         width: 60px;
