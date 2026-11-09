@@ -20,7 +20,7 @@
               
               <div class="toast-body" >
                 <div class='parandDiv'>
-                  <div id="chatBox" class="chatBoxformessage" style="     ">
+                  <div id="chatBox" class="chatBoxformessage" >
                  </div>
 
 
