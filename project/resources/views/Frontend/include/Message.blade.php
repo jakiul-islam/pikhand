@@ -20,7 +20,13 @@
               
               <div class="toast-body" >
                 <div class='parandDiv'>
-                  <div id="chatBox" class="chatBox" >
+                  <div id="chatBox" class="chatBox" style="  height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px;     ">
                  </div>
 
 
