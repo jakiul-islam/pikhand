@@ -81,7 +81,7 @@
 
            window.scrollToBottom =  function() {
            
-               const chat = document.querySelector('#chatBox');
+               const chat = document.querySelector('#parandDiv');
                 chat.scrollTop = chat.scrollHeight;
             }
     //toastTrigger script
