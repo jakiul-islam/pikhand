@@ -29,6 +29,9 @@
         .ros{
             display:none;
         }
+        .toast-container{
+          height:80%;
+        }
     }
     .chat{
         height: 60px;
