@@ -74,19 +74,15 @@
                  $("#chatBox").append(userMsg);
              }
           })
-            
-            const chat = document.querySelector('#chatBox');
-
-            function scrollToBottom() {
-                chat.scrollTop = chat.scrollHeight;
-            }
-
-
-
-            
+            scrollToBottom();
 
         }
 
+
+           window.scrollToBottom =  function() {
+               const chat = document.querySelector('#chatBox');
+                chat.scrollTop = chat.scrollHeight;
+            }
     //toastTrigger script
 
       const toastTrigger = document.getElementById('liveToastBtn')
