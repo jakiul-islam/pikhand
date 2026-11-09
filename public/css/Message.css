@@ -78,7 +78,7 @@
 /* তোমার Input Section - এখন toast এর মতো নিচে থাকবে */
   .massage-footer{
     position: fixed;
-    bottom: 20px;
+    bottom: 10px;
   }
   .send-massage{
     
