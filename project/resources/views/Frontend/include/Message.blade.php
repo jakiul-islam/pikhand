@@ -5,7 +5,7 @@
           <i class="bi bi-chat-left" style="font-size:2rem; color:#FFFFFF;"></i>
         </button>
         
-          <div class="toast-container position-fixed bottom-0 end-0 p-3">
+          <div class="toast-container position-fixed bottom-10 end-0 p-3">
             <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
              
               
