@@ -22,7 +22,7 @@
          USER LIST
     ========================== -->
     
-      <div class="sidebar" style="overflow:auto; height:100%;">
+      <div class="sidebar" >
   
           <div class="sidebar-header">
               Messages
