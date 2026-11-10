@@ -27,6 +27,7 @@
         ========================= */
 
         .sidebar {
+            height: 100% !important;
             width: 330px;
             border-right: 1px solid #ddd;
             background: #fff;
