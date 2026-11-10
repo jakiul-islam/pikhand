@@ -68,9 +68,6 @@ class messageController  extends Controller
               );
               
              
-              
-              session(['guest_id' => 'Guest #' . $guestNumber]);
-    
               $guestId = 'Guest #' . $guestNumber ;
              
          }
