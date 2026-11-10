@@ -23,6 +23,8 @@
                   <div id="chatBox" class="chatBoxformessage" >
                  </div>
                     <br>
+                    <br>
+                    <br>
 
                   <div class='massage-footer'>
                     <div class="send-massage">
