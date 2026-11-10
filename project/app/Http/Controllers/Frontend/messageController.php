@@ -39,7 +39,7 @@ class messageController  extends Controller
         ],401);
       }else{
          if(! session()->has('user_id') ){
-           if(session()->has('guest_uuid')){
+           if(request()->hasCookie('user_guest_uuid')){
              $gust_uuid_for_DB =  session('guest_uuid');
              $guestId = session('guest_id');
            }else{
