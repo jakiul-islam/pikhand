@@ -40,6 +40,10 @@ class messageController  extends Controller
       }else{
          if(! session()->has('user_id') ){
            if(request()->hasCookie('user_guest_uuid')){
+             $data = json_decode(
+                  request()->cookie('user_data'),
+                  true
+              );
              $gust_uuid_for_DB = request()->cookie('user_guest_uuid');
              $guestId = session('guest_id');
            }else{
