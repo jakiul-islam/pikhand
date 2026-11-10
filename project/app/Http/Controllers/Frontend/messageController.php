@@ -114,7 +114,7 @@ class messageController  extends Controller
           $user_id =  session('user_id');
           $Message = message::where('user_id', $user_id)->get();
         }else{
-          if(session()->has('guest_uuid')){
+          if(request()->hasCookie('user_guest_uuid')){
              $gust_uuid_for_DB =  session('guest_uuid');
 
       
