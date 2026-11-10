@@ -45,11 +45,17 @@ class messageController  extends Controller
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
 
+              $lastNumber = message::whereNotNull('guest_id')
+                  ->selectRaw(
+                      "MAX(CAST(SUBSTRING_INDEX(guest_id, '#', -1) AS UNSIGNED)) as number"
+                  )
+                  ->value('number');
+          
+              $guestNumber = max(1000, (int) $lastNumber) + 1;
              
                 $data = [
-                    'guest_id' => 'G1001',
-                    'guest_uuid' => $gust_uuid_for_DB,
-                    'name' => 'Jakiul'
+                    'guest_id' => 'Guest #' . $guestNumber,
+                    'guest_uuid' => $gust_uuid_for_DB
                 ];
 
              
@@ -60,13 +66,7 @@ class messageController  extends Controller
                  43200
               );
               
-              $lastNumber = message::whereNotNull('guest_id')
-                  ->selectRaw(
-                      "MAX(CAST(SUBSTRING_INDEX(guest_id, '#', -1) AS UNSIGNED)) as number"
-                  )
-                  ->value('number');
-          
-              $guestNumber = max(1000, (int) $lastNumber) + 1;
+             
               
               session(['guest_id' => 'Guest #' . $guestNumber]);
     
