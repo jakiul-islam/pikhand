@@ -45,7 +45,7 @@ class messageController  extends Controller
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
              
-             Cookie::queue(
+              Cookie::queue(
                'user_guest_uuid',
                 $gust_uuid_for_DB,
                 60 * 24 * 30
