@@ -116,7 +116,7 @@ class messageController  extends Controller
         }else{
           if(request()->hasCookie('user_guest_uuid')){
             $indexdata = json_decode(
-                  request()->cookie('user_data'),
+                  request()->cookie('user_guest_uuid'),
                   true
               );
              $gust_uuid_for_index = $indexdata['guest_uuid'] ?? null;
