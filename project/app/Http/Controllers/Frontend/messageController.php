@@ -44,7 +44,16 @@ class messageController  extends Controller
              $guestId = session('guest_id');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
+
              
+                $data = [
+                    'guest_id' => 'G1001',
+                    'guest_uuid' => $gust_uuid_for_DB,
+                    'name' => 'Jakiul'
+                ];
+
+             
+
               Cookie::queue(
                'user_guest_uuid',
                 $gust_uuid_for_DB,
