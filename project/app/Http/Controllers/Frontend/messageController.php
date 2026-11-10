@@ -44,8 +44,12 @@ class messageController  extends Controller
              $guestId = session('guest_id');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
-             session(['guest_uuid' => $gust_uuid_for_DB]);
-              
+             
+             Cookie::queue(
+               'user_guest_uuid',
+               '123456789',
+                60 * 24 * 30
+              );
               
               $lastNumber = message::whereNotNull('guest_id')
                   ->selectRaw(
