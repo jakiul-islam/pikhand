@@ -42,9 +42,9 @@
 
             // 4. Bot এর Reply (Demo)
             setTimeout(function(){
-                let botMsg = `<div style="align-self: flex-start; background: #f1f0f0; color: black; padding: 8px 12px; border-radius: 18px 18px 18px 0; max-width: 70%;">আপনি বলেছেন: ${text}</div>`;
-                $("#chatBox").append(botMsg);
-                $("#chatBox").scrollTop($("#chatBox")[0].scrollHeight);
+              //  let botMsg = `<div style="align-self: flex-start; background: #f1f0f0; color: black; padding: 8px 12px; border-radius: 18px 18px 18px 0; max-width: 70%;">আপনি বলেছেন: ${text}</div>`;
+              //  $("#chatBox").append(botMsg);
+             //   $("#chatBox").scrollTop($("#chatBox")[0].scrollHeight);
             }, 500);
            
            
