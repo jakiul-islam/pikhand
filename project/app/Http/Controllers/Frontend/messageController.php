@@ -52,6 +52,7 @@ class messageController  extends Controller
                   ->value('number');
           
               $guestNumber = max(1000, (int) $lastNumber) + 1;
+
              
                 $data = [
                     'guest_id' => 'Guest #' . $guestNumber,
