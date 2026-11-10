@@ -44,8 +44,8 @@ class messageController  extends Controller
                   request()->cookie('user_data'),
                   true
               );
-             $gust_uuid_for_DB = request()->cookie('user_guest_uuid');
-             $guestId = session('guest_id');
+             $gust_uuid_for_DB = $data['guest_uuid'];
+             $guestId = $data['guest_id'];
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
 
