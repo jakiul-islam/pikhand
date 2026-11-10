@@ -119,10 +119,12 @@ class messageController  extends Controller
                   request()->cookie('user_data'),
                   true
               );
-             $gust_uuid_for_index = $indexdata['guest_uuid'];
-      
-             $Message = message::where('guest_uuid', $gust_uuid_for_index)->get();
-            
+             $gust_uuid_for_index = $indexdata['guest_uuid'] ?? null;
+             if ($gust_uuid_for_index) {
+               $Message = message::where('guest_uuid', $gust_uuid_for_index)->get();
+             }else{
+               $Message = collect();
+             }
           }
         }
 
