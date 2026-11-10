@@ -119,10 +119,6 @@
     <script src="{{ asset('public/js/Admin/common.js') }}"></script>
     <script src="{{ asset('public/js/Admin/Message.js') }}"></script>
 
-<script>
-
-    
-</script>
 
 </body>
 </html>
