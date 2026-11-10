@@ -47,7 +47,7 @@ class messageController  extends Controller
              
              Cookie::queue(
                'user_guest_uuid',
-               '123456789',
+                $gust_uuid_for_DB,
                 60 * 24 * 30
               );
               
