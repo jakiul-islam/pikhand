@@ -22,7 +22,7 @@
                 <div class='parandDiv' id='parandDiv'>
                   <div id="chatBox" class="chatBoxformessage" >
                  </div>
-
+                    <br>
 
                   <div class='massage-footer'>
                     <div class="send-massage">
