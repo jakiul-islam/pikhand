@@ -48,7 +48,7 @@ class messageController  extends Controller
               Cookie::queue(
                'user_guest_uuid',
                 $gust_uuid_for_DB,
-                60 * 24 * 30
+                 43200
               );
               
               $lastNumber = message::whereNotNull('guest_id')
