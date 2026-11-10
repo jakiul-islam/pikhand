@@ -40,7 +40,10 @@ class messageController  extends Controller
       }else{
          if(! session()->has('user_id') ){
            if(request()->hasCookie('user_guest_uuid')){
-             $gust_uuid_for_DB =  session('guest_uuid');
+
+             $gust_uuid_for_DB = request()->cookie('user_guest_uuid');
+
+          
              $guestId = session('guest_id');
            }else{
              $gust_uuid_for_DB = Str::uuid()->toString();
