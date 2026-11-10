@@ -25,6 +25,9 @@
                     <br class="d-lg-none d-md-none">
                     <br class="d-lg-none d-md-none">
                     <br class="d-lg-none d-md-none">
+                    <br class="d-lg-none d-md-none">
+                    <br class="d-lg-none d-md-none">
+                    <br class="d-lg-none d-md-none">
 
                   <div class='massage-footer'>
                     <div class="send-massage">
