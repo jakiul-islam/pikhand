@@ -29,6 +29,7 @@
         .sidebar {
            
             width: 330px;
+            height: 100%;
             border-right: 1px solid #ddd;
             background: #fff;
             display: flex;
