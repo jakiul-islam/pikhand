@@ -64,6 +64,8 @@
         }
 
         .user-list {
+          position: absolute;
+          top:60px;
            min-height: 0;
            overflow-y: auto;
             flex: 1;
