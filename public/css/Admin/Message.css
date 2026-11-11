@@ -37,7 +37,7 @@
             flex-direction: column;
         }
         .sidebar-header{
-          position: absolute ;
+          position: fixed ;
           top: 0px;
           background-color:#d5d1d1;
           width: 100%;
