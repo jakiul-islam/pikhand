@@ -42,7 +42,7 @@
          CHAT
     ========================== -->
 
-    <div class="chat col-lg-5 col-md-5">
+    <div class="chat col-lg-7 col-md-7">
 
         <div class="chat-header">
 
