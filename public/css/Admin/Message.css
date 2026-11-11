@@ -28,7 +28,7 @@
 
         .sidebar {
            position: fixed;
-           bottom: 0px
+           bottom: 0px;
             width: 330px;
             height: 100%;
             overflow: hidden;
