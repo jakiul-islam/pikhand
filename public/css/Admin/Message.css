@@ -40,7 +40,7 @@
           position: fixed ;
           top: 0px;
           background-color:#d5d1d1;
-          width: 100%;
+          width: 100% !important;
           
         }
         .header-name {
