@@ -24,7 +24,7 @@
     
       <div class="sidebar" >
         <div class="sidebar-header">
-          <div class="sidebar-header">
+          <div class="header-name">
               Messages
           </div>
   
