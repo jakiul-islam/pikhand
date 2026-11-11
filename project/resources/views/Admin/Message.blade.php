@@ -22,7 +22,7 @@
          USER LIST
     ========================== -->
     
-      <div class="sidebar" >
+      <div class="sidebar col-lg-5 col-md-5" >
         <div class="sidebar-header">
           <div class="header-name">
               Messages
@@ -43,7 +43,7 @@
          CHAT
     ========================== -->
 
-    <div class="chat">
+    <div class="chat col-lg-5 col-md-5">
 
         <div class="chat-header">
 
