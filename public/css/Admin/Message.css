@@ -27,8 +27,7 @@
         ========================= */
 
         .sidebar {
-           position: relative;
-           bottom: 0px;
+           position: relative !important;
             width: 330px;
             height: 100%;
             overflow: hidden;
