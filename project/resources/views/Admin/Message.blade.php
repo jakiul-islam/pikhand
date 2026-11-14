@@ -94,7 +94,7 @@
           <br>
 
         <!-- MESSAGE INPUT -->
-         <div class='message-input-container'>
+        
           <div class="message-input">
             
               <input type="hidden" id="hiddenInput" >
@@ -111,7 +111,7 @@
               </button>
   
           </div>
-         </div>
+        
     </div>
   </div>
 
