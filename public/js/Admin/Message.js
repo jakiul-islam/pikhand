@@ -103,6 +103,8 @@ window.openCahtData = function( response ){
     // Mobile chat
     document.getElementById('messenger')
         ?.classList.add('chat-open');
+
+  scrollToBottom();
   
 }
 
