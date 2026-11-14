@@ -263,4 +263,8 @@
             font-size: 22px;
             cursor: pointer;
         }
-             
+
+
+        message-input-container{
+          width: 100% !important;
+        }
