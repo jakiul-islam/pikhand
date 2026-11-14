@@ -66,6 +66,7 @@
         .user-list {
            min-height: 0;
            overflow-y: auto !important;
+          flex: 1 !important;
         }
 
         .user {
