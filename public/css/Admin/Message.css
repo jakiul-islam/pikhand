@@ -192,6 +192,8 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            position: fixed;
+            bottom:0px; 
         }
 
         .message-input input {
