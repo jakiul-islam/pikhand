@@ -89,7 +89,9 @@
             </div>
 -->
         </div>
-
+          <br>
+          <br>
+          <br>
 
         <!-- MESSAGE INPUT -->
 
