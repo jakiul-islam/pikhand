@@ -203,6 +203,7 @@
             background: #f0f2f5;
             padding: 12px 16px;
             border-radius: 22px;
+            height: 100%;
         }
 
         .send-btn {
