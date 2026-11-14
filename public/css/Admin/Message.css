@@ -29,7 +29,7 @@
         .sidebar {
            position: relative !important;
             width: 330px;
-            height: 100%;
+           height: 100vh;
             overflow: hidden;
             border-right: 1px solid #ddd;
             background: #fff;
