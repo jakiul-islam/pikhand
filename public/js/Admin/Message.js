@@ -156,4 +156,11 @@ document
           sendMessage();
       }
 
-  });
+  }); 
+
+
+
+      window.scrollToBottom =  function() {   
+        const chat = document.querySelector('#parandDiv');
+        chat.scrollTop = chat.scrollHeight;
+      }
