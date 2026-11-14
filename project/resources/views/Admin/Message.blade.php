@@ -42,7 +42,7 @@
          CHAT
     ========================== -->
 
-    <div class="chat col-lg-7 col-md-7">
+    < class="chat col-lg-7 col-md-7">
 
         <div class="chat-header">
 
@@ -94,23 +94,24 @@
           <br>
 
         <!-- MESSAGE INPUT -->
-
-        <div class="message-input">
-            <input type="hidden" id="hiddenInput" >
-            <input
-                type="text"
-                id="messageInput"
-                placeholder="Type a message..."
-            >
-
-            <button
-                class="send-btn"
-                onclick="sendMessage()">
-                ➤
-            </button>
-
-        </div>
-
+         <div class='message-input-container'>
+          <div class="message-input">
+            
+              <input type="hidden" id="hiddenInput" >
+              <input
+                  type="text"
+                  id="messageInput"
+                  placeholder="Type a message..."
+              >
+  
+              <button
+                  class="send-btn"
+                  onclick="sendMessage()">
+                  ➤
+              </button>
+  
+          </div>
+         </div>
     </div>
   </div>
 
