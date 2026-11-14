@@ -163,6 +163,6 @@ document
 
 
       window.scrollToBottom =  function() {   
-        const chat = document.querySelector('#parandDiv');
+        const chat = document.querySelector('#messages');
         chat.scrollTop = chat.scrollHeight;
       }
