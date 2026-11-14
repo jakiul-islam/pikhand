@@ -104,7 +104,7 @@ window.openCahtData = function( response ){
     document.getElementById('messenger')
         ?.classList.add('chat-open');
 
-  scrollToBottom();
+     scrollToBottom();
   
 }
 
