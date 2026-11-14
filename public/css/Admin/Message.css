@@ -64,7 +64,7 @@
         }
 
         .user-list {
-           height:200px;
+           height:100%;
            min-height: 0;
            overflow-y: auto !important;
         }
