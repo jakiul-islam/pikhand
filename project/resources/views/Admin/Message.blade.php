@@ -20,8 +20,9 @@
 
     <div class='massanger row'>
       <div class='col-md-5 col-lg-5 user-container'>
-        <div class=>
-      </div>
+        <div class="user-header">
+          <h1>messanger </h1>
+        </div>
       <div class='col-md-5 col-lg-5 message-contaner'>
         <h1>jakiul right</h1>
       </div>
