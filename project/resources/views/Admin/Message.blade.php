@@ -22,6 +22,9 @@
       <div class='col-md-5 col-lg-5 user-container'>
         <div class="user-header">
           <h1>messanger</h1>
+          <div class="search">
+              <input type="text" id='messagesUserSearch' oninput='indexAllUser()' placeholder="Search messages...">
+          </div>
         </div>
       </div>
       <div class='col-md-5 col-lg-5 message-contaner'>
