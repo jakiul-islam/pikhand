@@ -18,6 +18,7 @@ body{
   position: absolute;
   top:0px ;
   left: 0px;
+  background-color: #ffff;
 }
 .header-name {
   padding-left: 20px;
