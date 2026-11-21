@@ -43,12 +43,12 @@
            jakiul islam<br>
            jakiul islam <br>
            jakiul islam<br>
-           jakiul islam<br>
-          jakiul islam<br>
-           jakiul islam<br>
-           jakiul islam <br>
-           jakiul islam<br>
-           jakiul islam<br>
+          6 jakiul islam<br>
+          5 jakiul islam<br>
+          4 jakiul islam<br>
+          3 jakiul islam <br>
+          2 jakiul islam<br>
+          1 jakiul islam<br>
           <br>
         </div>
       </div>
