@@ -14,7 +14,7 @@
             width: 100%;
             max-width: 1100px;
             margin-left:10px ;
-           
+            display: none;
             background: #fff;
             display: flex;
             overflow: hidden;
