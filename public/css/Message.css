@@ -143,3 +143,12 @@
   gap: 10px;      
   scroll-behavior: smooth;
 }
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
