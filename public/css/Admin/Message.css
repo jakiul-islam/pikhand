@@ -34,5 +34,6 @@ body{
   font-size: 14px;
 }
 .user-list{
-  
+  height: 100vh ;
+  overflow: auto;
 }
