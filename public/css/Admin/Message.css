@@ -9,7 +9,7 @@ body{
   box-sizing: border-box ; 
 }
 .user-container{
-  height: 100%;
+  height: 100% !importent;
   width: 100%;
 }
 .user-header{
