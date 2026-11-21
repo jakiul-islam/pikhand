@@ -49,6 +49,7 @@
            jakiul islam <br>
            jakiul islam<br>
            jakiul islam<br>
+          <br>
         </div>
       </div>
       <div class='col-md-5 col-lg-5 message-contaner'>
