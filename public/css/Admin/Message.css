@@ -3,4 +3,12 @@ body{
   margin: 0px;
   padding: 0px;
 }
-
+.massanger{
+  margin: 5px;
+  border-radius: 5px; 
+  
+}
+.user-container{
+  height: 100%;
+  
+}
