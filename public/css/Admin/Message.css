@@ -6,7 +6,7 @@ body{
 .massanger{
   margin: 5px;
   border-radius: 5px; 
-  
+  box-sizing: border-box ; 
 }
 .user-container{
   height: 100%;
