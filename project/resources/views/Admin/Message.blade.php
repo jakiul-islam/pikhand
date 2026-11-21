@@ -28,6 +28,9 @@
               <input type="text" id='messagesUserSearch' oninput='indexAllUser()' placeholder="Search messages...">
           </div>
         </div>
+        <div class="user-list">
+          jakiul islam
+        </div>
       </div>
       <div class='col-md-5 col-lg-5 message-contaner'>
         <h1>jakiul right</h1>
