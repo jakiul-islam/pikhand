@@ -23,6 +23,7 @@ body{
   left: 0px;
   background-color: #ffff;
   z-index: 100;
+  width: 100%;
 }
 .header-name {
   padding-left: 20px;
