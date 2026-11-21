@@ -8,6 +8,8 @@ body{
   border-radius: 5px; 
   box-sizing: border-box ; 
   overflow: hidden;
+  position: fixed;
+  top: 60px;
 }
 .user-container{
   height: 100vh;
