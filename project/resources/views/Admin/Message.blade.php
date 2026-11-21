@@ -15,7 +15,7 @@
 </head>
 
    @include("Admin.Include.Header")
-<div class="messenger row" id="messenger">
+<div class="messenger row" id="messenger" style='display: none '>
 
     <!-- =========================
          USER LIST
