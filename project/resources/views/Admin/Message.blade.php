@@ -19,7 +19,7 @@
   @include("Admin.Include.Header")
 
     <div class='massanger row'>
-      <div class='col-md-5 col-lg-5 user-container'>
+      <div class='col-md-5 col-lg-5 user-container' id='user-container'>
         <div class="user-header">
           <div class="header-name">
               Messages
@@ -43,7 +43,7 @@
           <br>
         </div>
       </div>
-      <div class='col-md-5 col-lg-5 message-contaner'>
+      <div class='col-md-5 col-lg-5 message-contaner'id='message-contaner'>
         <h1>jakiul right</h1>
       </div>
     </div>
