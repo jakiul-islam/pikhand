@@ -63,7 +63,7 @@
             </div>
            
         </div>
-        <div class="message-body">
+        < class="message-body">
           <br>
           <br>
           <br>
@@ -109,6 +109,27 @@
           <br>
           <br>
         </div>
+
+
+          <!-- MESSAGE INPUT -->
+          <div class="message-input">
+            
+              <input type="hidden" id="hiddenInput" >
+              <input
+                  type="text"
+                  id="messageInput"
+                  placeholder="Type a message..."
+              >
+  
+              <button
+                  class="send-btn"
+                  onclick="sendMessage()">
+                  ➤
+              </button>
+  
+          </div>
+
+      
       </div>
     </div>
 
