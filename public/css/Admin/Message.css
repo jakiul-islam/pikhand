@@ -147,5 +147,6 @@ body{
   padding: 5px;
   height: 100vh;
   overflow: auto;
+  scrollbar-width: none;
 }
 
