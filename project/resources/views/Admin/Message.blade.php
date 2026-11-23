@@ -62,6 +62,7 @@
                 </small>
             </div>
         </div>
+        <hr>
         
       </div>
     </div>
