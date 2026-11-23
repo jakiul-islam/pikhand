@@ -63,7 +63,7 @@
             </div>
            
         </div>
-        <hr class='chat-divider'>
+      
         
       </div>
     </div>
