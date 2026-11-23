@@ -127,6 +127,8 @@ body{
     font-size: 22px;
     cursor: pointer;
 }
-
+.chat-divider{
+  margin-top:-5px ;
+}
 
 
