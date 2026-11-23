@@ -44,7 +44,7 @@
         </div>
       </div>
       <!-- message section  -->
-      <div class='col-md-5 col-lg-5 message-contaner'id='message-contaner'>
+      <div class='col-md-7 col-lg-7 message-contaner'id='message-contaner'>
         <div class="chat-header">
             <button class="back-btn" onclick="backToUsers()">
                 ←
