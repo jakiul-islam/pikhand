@@ -145,7 +145,7 @@ body{
   cursor: pointer;
 }
 .message-body{
-  padding: 5px;
+  padding: 10px;
   height: 100vh;
   overflow: auto;
   scrollbar-width: none;
