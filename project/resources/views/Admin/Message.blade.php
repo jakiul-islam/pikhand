@@ -61,8 +61,9 @@
                     Active now
                 </small>
             </div>
+           <hr class='chat-divider'>
         </div>
-        <hr class='chat-divider'>
+       
         
       </div>
     </div>
