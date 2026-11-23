@@ -63,7 +63,7 @@
             </div>
            
         </div>
-        < class="message-body">
+        <div class="message-body">
           <br>
           <br>
           <br>
