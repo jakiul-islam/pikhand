@@ -104,7 +104,7 @@ body{
 
 .chat-header {
     height: 70px;
-  width: 100% !important;
+  width: 100vh;
     border-bottom: 1px solid #ddd;
     display: flex;
     align-items: center;
