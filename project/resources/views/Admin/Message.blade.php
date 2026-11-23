@@ -63,8 +63,9 @@
             </div>
            
         </div>
-      
-        
+        <div class="message-body">
+          jakiul<br>
+        </div>
       </div>
     </div>
 
