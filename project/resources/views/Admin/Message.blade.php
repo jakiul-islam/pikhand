@@ -43,8 +43,9 @@
           <br>
         </div>
       </div>
+      <!-- message section  -->
       <div class='col-md-5 col-lg-5 message-contaner'id='message-contaner'>
-        <h1>jakiul right</h1>
+        
       </div>
     </div>
 
