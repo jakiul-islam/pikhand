@@ -110,6 +110,7 @@ body{
     gap: 12px;
     position: absolute;
     top:0px;
+    background-color:#ffff;
 }
 
 .chat-header .avatar {
