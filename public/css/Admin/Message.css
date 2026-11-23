@@ -162,7 +162,6 @@ body{
     display: flex;
     gap: 10px;
     align-items: center;
-    flex-shrink: 0;
     bottom:0px; 
    z-index: 1500;
 }
