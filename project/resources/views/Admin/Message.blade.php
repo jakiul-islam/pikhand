@@ -45,6 +45,23 @@
       </div>
       <!-- message section  -->
       <div class='col-md-5 col-lg-5 message-contaner'id='message-contaner'>
+        <div class="chat-header">
+            <button class="back-btn" onclick="backToUsers()">
+                ←
+            </button>
+            <div class="avatar" id="chatAvatar">
+                12
+            </div>
+            <div>
+                <div class="chat-user-id" id="chatUserId">
+                    User
+                </div>
+
+                <small style="color:#65676b;">
+                    Active now
+                </small>
+            </div>
+        </div>
         
       </div>
     </div>
