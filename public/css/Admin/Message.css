@@ -95,7 +95,7 @@ body{
     }
 
 
-.chat {
+.message-contaner {
     height: 100vh !important;
     flex: 1;
     display: flex;
