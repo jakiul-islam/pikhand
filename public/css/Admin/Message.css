@@ -191,9 +191,9 @@ body{
     background: #0073e6;
 }
 
-  /* =========================
-     MOBILE
-  ========================= */
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 700px) {
   .message-contaner{
     display: none; 
