@@ -21,8 +21,7 @@ body{
   position: relative;
 }
 .user-header{
-  position: absolute;
-  top:0px ;
+  flex-shrink: 0;
   left: 0px;
   background-color: #ffff;
   z-index: 100;
