@@ -33,14 +33,7 @@
            <div id='userList'>
              
            </div>
-            <br>
-           <br>
-          <br>
-           <br>
-           <br>
-           <br>
-          <br>
-           <br>
+
         </div>
       </div>
       <!-- message section  -->
