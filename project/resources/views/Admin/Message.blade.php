@@ -85,18 +85,10 @@
           jakiul<br>
            jakiul<br>
           jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-           <br>
-          <br>
-          <br>
-           <br>
-          <br>
-          <br>
-           <br>
-          <br>
-          <br>
+          3 jakiul<br>
+         2 jakiul<br>
+           1jakiul<br>
+        
         </div>
 
 
