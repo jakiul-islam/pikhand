@@ -48,7 +48,8 @@ body{
   font-size: 14px;
 }
 .user-list{
- 
+  flex: 1;
+  min-height: 0;
   width: 100% !important;
   overflow-y: auto !important;
  min-height: 0 !important;
