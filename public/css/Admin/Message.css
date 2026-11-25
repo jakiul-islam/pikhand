@@ -237,11 +237,11 @@ body{
   }
 
 
-            .messenger.chat-open .message-contaner {
-                display: flex;
-            }
+  .messenger.chat-open .message-contaner {
+      display: flex;
+  }
 
-            .back-btn {
-                display: block !important;
-            }
+  .back-btn {
+      display: block !important;
+  }
 }
