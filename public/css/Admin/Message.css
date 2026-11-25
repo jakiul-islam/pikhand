@@ -235,4 +235,13 @@ body{
   .messenger.chat-open .user-container {
     display: none;
   }
+
+
+            .messenger.chat-open .chat {
+                display: flex;
+            }
+
+            .back-btn {
+                display: block !important;
+            }
 }
