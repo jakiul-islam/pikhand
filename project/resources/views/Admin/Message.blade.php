@@ -28,10 +28,10 @@
               <input type="text" id='messagesUserSearch' oninput='indexAllUser()' placeholder="Search messages...">
           </div>
         </div>
-        <div class="user-list"  id='userList'>
+        <div class="user-list"  >
         
-          
-
+          <div id='userList'></div>
+          <div style='height: 60px ; '></div>
         </div>
       </div>
       <!-- message section  -->
