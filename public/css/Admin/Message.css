@@ -169,6 +169,8 @@ body{
     align-items: center;
     bottom:0px; 
    z-index: 1500;
+    position: fixed;
+  bottom: 0px;
 }
 
 .message-input input {
