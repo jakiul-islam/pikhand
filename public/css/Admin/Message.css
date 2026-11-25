@@ -119,6 +119,7 @@ body{
     z-index: 10;
     background-color:#ffff;
     margin: 0px !important;
+   position: relative;
 }
 .chat-header::after {
   content: "";
