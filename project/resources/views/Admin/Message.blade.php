@@ -56,38 +56,7 @@
         </div>
         <div class="message-body">
           <div>
-          1jakiul<br>
-          2jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-           jakiul<br>
-          jakiul<br>
-          3 jakiul<br>
-         2 jakiul<br>
-           1jakiul<br>
+        
           </div>
           <div style='height:200px;'>
             
