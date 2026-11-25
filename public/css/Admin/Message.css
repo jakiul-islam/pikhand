@@ -51,7 +51,7 @@ body{
  
   width: 100% !important;
   overflow-y: auto !important;
- min-height: 0;
+ min-height: 0 !important;
   padding: 10px;
   box-sizing:border-box;
   scrollbar-width: none;
