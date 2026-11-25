@@ -24,7 +24,7 @@ body{
   flex-shrink: 0;
   left: 0px;
   background-color: #ffff;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
 }
 .header-name {
