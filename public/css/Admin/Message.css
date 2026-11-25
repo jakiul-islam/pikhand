@@ -232,7 +232,7 @@ body{
   .message-contaner{
     display: none; 
   }
-  .messenger.chat-open .sidebar {
+  .messenger.chat-open .user-container {
     display: none;
   }
 }
