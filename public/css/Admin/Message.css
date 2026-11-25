@@ -6,7 +6,7 @@ body{
 .massanger{
   margin: 0px !important;
   border-radius: 5px; 
-  height: 100% !important;
+   min-height: 0 !important;
   width: 100% !important;
   box-sizing: border-box ; 
   overflow: hidden;
