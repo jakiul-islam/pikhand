@@ -58,9 +58,7 @@
           <div class='messages' id="messages">
         
           </div>
-          <div style='height:200px;'>
-            
-          </div>
+          
         </div>
 
 
