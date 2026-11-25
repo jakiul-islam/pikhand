@@ -29,18 +29,11 @@
           </div>
         </div>
         <div class="user-list">
-          <br>
-          <br>
-          <br>
-         <br>
+        
            <div id='userList'>
              
            </div>
-          <br>
-           <br>
-          <br>
-          <br>
-          <br>
+        
         </div>
       </div>
       <!-- message section  -->
