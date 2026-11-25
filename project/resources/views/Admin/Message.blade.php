@@ -54,8 +54,8 @@
             </div>
            
         </div>
-        <div class="message-body">
-         
+        < class="message-body">
+          <div>
           1jakiul<br>
           2jakiul<br>
           jakiul<br>
@@ -88,7 +88,8 @@
           3 jakiul<br>
          2 jakiul<br>
            1jakiul<br>
-        
+        </div>
+        <div id='height:100px;'></div>
         </div>
 
 
