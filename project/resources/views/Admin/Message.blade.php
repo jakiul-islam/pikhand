@@ -30,9 +30,7 @@
         </div>
         <div class="user-list"  id='userList'>
         
-           <div>
-             
-           </div>
+          
 
         </div>
       </div>
