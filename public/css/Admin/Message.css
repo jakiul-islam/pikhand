@@ -237,7 +237,7 @@ body{
   }
 
 
-  .messenger.chat-open .message-contaner {
+  .chat-open .message-contaner {
       display: flex;
   }
 
