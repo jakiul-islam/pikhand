@@ -28,9 +28,9 @@
               <input type="text" id='messagesUserSearch' oninput='indexAllUser()' placeholder="Search messages...">
           </div>
         </div>
-        <div class="user-list">
+        <div class="user-list"  id='userList'>
         
-           <div id='userList'>
+           <div>
              
            </div>
 
