@@ -63,6 +63,7 @@
         <!-- MESSAGE INPUT -->
         <div class="message-input">
           <input type="hidden" id="hiddenInput" >
+          <i class='card-image'></i>
           <input
               type="text"
               id="messageInput"
