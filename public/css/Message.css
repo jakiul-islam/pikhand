@@ -144,4 +144,6 @@
   scroll-behavior: smooth;
 }
 
-
+.bi-card-image{
+  font-size: 25px;
+}
