@@ -33,7 +33,7 @@
                   <div class='massage-footer'>
                     <div class="send-massage">
                     <label for="fileInput" class="custom-file-upload">
-                      <i class="bi bi-folder2-open"></i>
+                      <i class="bi bi-card-image"></i>
                     </label>
                     <input type="file" id="fileInput" style="display: none;" />
                     <div class="massage-input-div">
