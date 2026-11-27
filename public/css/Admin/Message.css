@@ -248,4 +248,7 @@ body{
   .back-btn {
       display: block !important;
   }
+  .message-input {
+     width: 100% !important;
+  }
 }
