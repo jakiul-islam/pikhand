@@ -179,6 +179,7 @@ body{
 }
 
 .message.sent {
+   padding: 6px;
   align-self: flex-end;
   background: #0084ff;
   color: white;
