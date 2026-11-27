@@ -31,7 +31,7 @@
         <div class="user-list"  >
         
           <div id='userList'></div>
-          <div style='height:160px; '></div>
+          <div style='height:120px; '></div>
         </div>
       </div>
       <!-- message section  -->
