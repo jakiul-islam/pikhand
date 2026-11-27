@@ -153,11 +153,12 @@ body{
   padding: 10px;
   height: 100vh;
   overflow: auto;
-  scrollbar-width: none;
+  
 }
 
 .messages{
   flex: 1;
+  scrollbar-width: none;
   padding: 20px;
   overflow-y: auto !important;
   display: flex;
