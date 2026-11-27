@@ -55,7 +55,7 @@
            
         </div>
         <div class="message-body">
-          <div class='messages' id="">
+          <div class='messages' id="messages">
         
           </div>
           
