@@ -54,10 +54,8 @@
             </div>
            
         </div>
-        <div class="message-body">
-          <div class='messages' id="messages">
-    
-          </div>
+        <div class="message-body" id="messages">
+          
           
         </div>
 
