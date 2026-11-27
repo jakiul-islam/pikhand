@@ -63,7 +63,10 @@
         <!-- MESSAGE INPUT -->
         <div class="message-input">
           <input type="hidden" id="hiddenInput" >
-         <i class="bi bi-card-image"></i>
+          <label for="fileInput" class="custom-file-upload">
+            <i class="bi bi-card-image"></i>
+           </label>
+           <input type="file" id="fileInput" style="display: none;" />
           <input
               type="text"
               id="messageInput"
